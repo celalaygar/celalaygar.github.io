@@ -4,54 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacı Celal Aygar</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f4f4f9;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-5">
+    <header>
         <h1>Hacı Celal Aygar</h1>
-        <p class="lead">Full-Stack Developer & Java Developer</p>
+        <p>Full-Stack Developer & Java Developer</p>
     </header>
-
-    <main class="container my-5">
-        <section id="about-me" class="mb-5">
+    <main>
+        <section>
             <h2>About Me</h2>
-            <p>I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years. My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.</p>
-            <p>Also, I am constantly working to make life easier and trying to find solutions to the common problems of people. I’m currently learning client-side technologies by using especially Github and Stackoverflow.</p>
+            <p>I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer for around 5 years. My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my <a href="https://github.com/celalaygar" target="_blank">GitHub account</a>.</p>
+            <p>I am constantly working to make life easier and trying to find solutions to common problems of people. I’m currently learning client-side technologies by using especially GitHub and StackOverflow.</p>
         </section>
-
-        <section id="experience" class="mb-5">
+        <section>
             <h2>Experience</h2>
             <h3>Backend</h3>
             <ul>
-                <li>Java, Spring Boot, Security, Hibernate/ORM, JPA, Flyway, Liquibase, Maven, Swing, JavaFX, Python, Node JS</li>
+                <li>Java, Spring Boot, Security, Hibernate/ORM, JPA, Flyway, Liquibase, Maven, Swing, JavaFX, Python, Node.js</li>
                 <li>Docker, Kubernetes, Git, Mercurial (TortoiseHg)</li>
             </ul>
-
             <h3>Frontend</h3>
             <ul>
-                <li>React, Next.js, Redux, Context API, Mobx, Angular 5+, HTML5, CSS3, Bootstrap 4, JavaScript, TypeScript, Thymeleaf, Jasper Reports</li>
+                <li>React, Next.js, Redux, Context API, MobX, Angular 5+, HTML5, CSS3, Bootstrap 4, JavaScript, TypeScript, Thymeleaf, Jasper Reports</li>
             </ul>
-
             <h3>Database</h3>
             <ul>
                 <li>MongoDB, MySQL, PostgreSQL, Oracle, IBM DB2, Redis Graph</li>
             </ul>
         </section>
-
-        <section id="contact" class="mb-5">
+        <section>
             <h2>Contact</h2>
             <ul>
                 <li>Email: <a href="mailto:celal.aygar@gmail.com">celal.aygar@gmail.com</a></li>
-                <li>Github: <a href="https://github.com/celalaygar" target="_blank">https://github.com/celalaygar</a></li>
-                <li>Medium: <a href="https://medium.com/@celalaygar" target="_blank">https://medium.com/@celalaygar</a></li>
-                <li>HackerRank: <a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank">https://www.hackerrank.com/celalaygar?hr_r=1</a></li>
-                <li>StackOverflow: <a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar" target="_blank">https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar</a></li>
+                <li>GitHub: <a href="https://github.com/celalaygar" target="_blank">github.com/celalaygar</a></li>
+                <li>Medium: <a href="https://medium.com/@celalaygar" target="_blank">medium.com/@celalaygar</a></li>
+                <li>HackerRank: <a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank">hackerrank.com/celalaygar</a></li>
+                <li>StackOverflow: <a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar" target="_blank">stackoverflow.com/users/12014524</a></li>
             </ul>
         </section>
     </main>
-
-    <footer class="bg-dark text-white text-center py-3">
+    <footer>
         <p>&copy; 2025 Hacı Celal Aygar. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
+
