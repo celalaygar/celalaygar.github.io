@@ -54,6 +54,23 @@ h2:hover {
   color: #ff0266;
 }
 
+.nav h1,
+.slider h4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5vw;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5rem;
+  color: #03dac6;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+h4:hover {
+  transform: translate3d(0, -10px, 22px);
+  color: #ff0266;
+}
+
 .slider h5 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 25px;
