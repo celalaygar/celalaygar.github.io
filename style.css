@@ -131,7 +131,7 @@ h2:hover {
 
 h3.span {
   font-size: 2vw;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   font-family: "ROBOTO", sans-serif;
   font-weight: 300;
   margin-bottom: 10px;
@@ -141,8 +141,8 @@ h3.span {
 
 span:hover {
   color: #ff0266;
-  font-weight: 500;
-  font-size: 2.2vw;
+  font-weight: 600;
+  font-size: 2.3vw;
 }
 
 a {
@@ -258,6 +258,30 @@ a {
   color: #faebd7;
   text-shadow: 0 0 0 #faebd7;
   -webkit-animation: loading 1s ease-in-out infinite alternate;
+}
+
+.contactList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contactList p {
+  margin: 0;
+}
+
+.contactList-container {
+  display: flex;
+  justify-content: center;
+  /* Ekranın ortasında hizalar */
+  align-items: flex-start;
+  /* Dikey hizalama */
+  gap: 200px;
+  /* İki liste arasındaki boşluk */
+  margin-top: 20px;
+  /* Yukarıdan boşluk */
 }
 
 @-webkit-keyframes loading {
