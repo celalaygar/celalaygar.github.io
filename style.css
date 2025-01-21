@@ -38,41 +38,11 @@ h1:hover {
   color: #ff0266;
 }
 
-.slider h2 {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 4vw;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  letter-spacing: 0.5rem;
-  color: #03dac6;
-  transition: all 0.3s ease;
-  z-index: 3;
-}
 
-h2:hover {
-  transform: translate3d(0, -10px, 22px);
-  color: #ff0266;
-}
-
-.slider .sectionTitle {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 30px;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  letter-spacing: 0.5rem;
-  color: #03dac6;
-  transition: all 0.3s ease;
-  z-index: 3;
-}
-
-.sectionTitle:hover {
-  transform: translate3d(0, -10px, 22px);
-  color: #ff0266;
-}
 
 .slider .sectionSmallTitle {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 22px;
+  font-size: 30px;
   margin: 20px 0 0 0;
   padding-bottom: 0.1rem;
   letter-spacing: 0.1rem;
@@ -86,14 +56,6 @@ h2:hover {
   color: #ff0266;
 }
 
-.slider h3 {
-  font-size: 2vw;
-  letter-spacing: 0.3rem;
-  font-family: "ROBOTO", sans-serif;
-  font-weight: 300;
-  color: #faebd7;
-  z-index: 4;
-}
 
 .slider p {
   font-size: 20px;
