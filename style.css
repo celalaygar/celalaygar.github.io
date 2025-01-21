@@ -54,9 +54,9 @@ h2:hover {
   color: #ff0266;
 }
 
-.slider h4 {
+.slider .sectionTitle {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 5vw;
+  font-size: 30px;
   margin: 0;
   padding-bottom: 0.5rem;
   letter-spacing: 0.5rem;
@@ -65,14 +65,14 @@ h2:hover {
   z-index: 3;
 }
 
-h4:hover {
+.sectionTitle:hover {
   transform: translate3d(0, -10px, 22px);
   color: #ff0266;
 }
 
-.slider h5 {
+.slider .sectionSmallTitle {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 25px;
+  font-size: 22px;
   margin: 20px 0 0 0;
   padding-bottom: 0.1rem;
   letter-spacing: 0.1rem;
@@ -81,7 +81,7 @@ h4:hover {
   z-index: 3;
 }
 
-h5:hover {
+.sectionSmallTitle:hover {
   transform: translate3d(0, -10px, 22px);
   color: #ff0266;
 }
@@ -134,6 +134,7 @@ h3.span {
   letter-spacing: 0.4em;
   font-family: "ROBOTO", sans-serif;
   font-weight: 300;
+  margin-bottom: 10px;
   color: #faebd7;
   z-index: 4;
 }
