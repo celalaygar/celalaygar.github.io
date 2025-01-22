@@ -246,6 +246,20 @@ a {
   /* Yukarıdan boşluk */
 }
 
+.books {
+  text-align: left;
+  /* Tüm içerikleri sola hizalar */
+}
+
+.books .book {
+  margin: 15px;
+  /* Varsayılan boşlukları sıfırlar */
+  padding: 0;
+  /* Varsayılan iç boşlukları sıfırlar */
+}
+
+
+
 @-webkit-keyframes loading {
   to {
     text-shadow: 20px 0 70px #ff0266;
