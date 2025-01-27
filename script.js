@@ -57,13 +57,10 @@ class NavigationPage {
       this.setSliderCss();
     }
   }
-
   checkHeaderPosition() {
     const headerHeight = 75;
     if ($(window).scrollTop() > headerHeight) {
       $(".nav-container").addClass("nav-container--scrolled");
-    } else {
-      $(".nav-container").removeClass("nav-container--scrolled");
     }
     let offset =
       $(".nav").offset().top +
@@ -85,9 +82,9 @@ class NavigationPage {
       $(".nav-container").removeClass("nav-container--top-first");
       $(".nav-container").addClass("nav-container--top-second");
     } else {
-      $(".nav-container").removeClass("nav-container--move-up");
+      $(".nav-container").addClass("nav-container--move-up");
       $(".nav-container").removeClass("nav-container--top-first");
-      $(".nav-container").removeClass("nav-container--top-second");
+      $(".nav-container").addClass("nav-container--top-second");
     }
   }
 
