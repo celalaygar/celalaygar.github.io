@@ -262,10 +262,14 @@ a {
 }
 
 .books .book {
-  margin: 15px;
-  /* Varsayılan boşlukları sıfırlar */
-  padding: 0;
-  /* Varsayılan iç boşlukları sıfırlar */
+  color: #ff0266;
+  font-size: 15px;
+  margin: 15px 0;
+  letter-spacing: 0.1rem;
+  font-family: "ROBOTO", sans-serif;
+  font-weight: 50;
+  color: #faebd7;
+  z-index: 4;
 }
 
 
