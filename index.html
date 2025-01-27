@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
-
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -84,12 +84,14 @@
       <span class="m">M</span>
       <span class="m">E</span>
     </h3>
-        <p> I graduated from Karabük University, Department of Computer Engineering. </p>
-        <p> I have been working as a Full Stack developer and Java developer around 5 years. </p>
-        <p> My goal is to work in companies that produce projects using technologies in the fields of computer engineering.  </p>
-        <p> I also continue to share many of my sample works on my <a href="https://github.com/celalaygar" target="_blank">GitHub account</a>.</p>
-        <p> I am constantly working to make life easier and trying to find solutions to common problems of people. </p>
-        <p> I’m currently learning client-side technologies by using especially GitHub and StackOverflow.</p>
+        <div class="text-wrap">
+          <p> I graduated from Karabük University, Department of Computer Engineering. </p>
+          <p> I have been working as a Full Stack developer and Java developer around 5 years. </p>
+          <p> My goal is to work in companies that produce projects using technologies in the fields of computer engineering.  </p>
+          <p> I also continue to share many of my sample works on my <a href="https://github.com/celalaygar" target="_blank">GitHub account</a>.</p>
+          <p> I am constantly working to make life easier and trying to find solutions to common problems of people. </p>
+          <p> I’m currently learning client-side technologies by using especially GitHub and StackOverflow.</p>
+        </div>
   </section>
   <section class="slider" id="tab-experience">
     <h3 class="span loader">
@@ -104,36 +106,36 @@
       <span class="m">C</span>
       <span class="m">E</span>
     </h3>
-    <div class="contactList-container">
-      <ul class="contactList">
+    <div class="grid grid-cols-3 gap-4 contactList-container">
+      <div class="contactList">
           <div class="sectionSmallTitle">FMSS Bilisim Teknoloji </div>
-          <p>
+          <div class="text-wrap">
             <div class="workDate">(June 2024 - Current)</div>
-            <li> Full-Stack Developer & Java Developer at PAYCELL</li>
-          </p>
+            <div class="workDate"> Full-Stack Developer & Java Developer at PAYCELL</div>
+          </div>
           <div class="sectionSmallTitle">Orion BT</div>
-          <p>
+          <div class="text-wrap">
             <div class="workDate">(April 2022 - June 2024)</div>
-            <li>Full-Stack Developer & Java Developer at VODAFONE and The Ministry of Interior</li>
-          </p>
+            <div class="workDate">Full-Stack Developer & Java Developer at VODAFONE and The Ministry of Interior</div>
+          </div>
           <div class="sectionSmallTitle">OBSS</div>
-          <p>
+          <div class="text-wrap">
             <div class="workDate">(August 2021 - February 2022)</div>
-            <li>Full Stack Developer & Java Software Engineer in ASELSAN</li>
-          </p>
-      </ul>
-      <ul class="contactList">
+            <div class="workDate">Full Stack Developer & Java Software Engineer in ASELSAN</div>
+          </div>
+      </div>
+      <div class="contactList">
           <div class="sectionSmallTitle">VİA Computer Systems</div>
-          <p>
+          <div class="text-wrap">
             <div class="workDate">(October 2020 - June 2021)</div>
-            <li>Full Stack Developer & Java Software Engineer</li>
-          </p>
+            <div class="workDate">Full Stack Developer & Java Software Engineer</div>
+          </div>
           <div class="sectionSmallTitle">ERC Mühendislik Danışmanlık ve ARGE Hizmetleri</div>
-          <p>
+          <div class="text-wrap">
             <div class="workDate">(December 2019 - June 2020)</div>
-            <li>Java Software Engineer</li>
-          </p>
-      </ul>
+            <div class="workDate">Java Software Engineer</div>
+          </div>
+      </div>
     </div>
   </section>
   <section class="slider" id="tab-tools">
