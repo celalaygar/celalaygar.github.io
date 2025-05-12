@@ -154,6 +154,8 @@ body {
     white-space: nowrap;
     background: var(--skin-color);
     transition: all .3s ease;
+    margin: 0 0 20px 0;
+
 }
 
 .btn:hover {
@@ -349,9 +351,24 @@ h3.profession {
     color: var(--text-black700);
 }
 
-.home .home-img {
+.home .home-cv {
     flex: 0 0 40%;
     max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.home .home-cv .home-cv-btns {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 150px;
+    text-align: center;
+    position: relative;
+}
+
+.home .home-img {
+    flex: 0 0 100%;
+    max-width: 100%;
     text-align: center;
     position: relative;
 }
@@ -604,6 +621,11 @@ h3.profession {
     transition: all .3s ease;
 }
 
+.service-item-inner .buttons {
+    margin: 10px auto;
+}
+
+
 .service .service-item .service-item-inner:hover {
     box-shadow: 0 0 20px rgba(48, 46, 77, .15);
 }
@@ -642,8 +664,16 @@ h3.profession {
     text-transform: capitalize;
 }
 
+.service .service-item .service-item-inner h6 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--text-black900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
 .service .service-item .service-item-inner p {
-    font-size: 16px;
+    font-size: 12px;
     color: var(--text-black700);
     line-height: 25px;
 }
