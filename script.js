@@ -1,127 +1,97 @@
+/* Toggle Style Switcher */
 
+const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');
+styleSwitcherToggle.addEventListener('click', () => { document.querySelector('.style-switcher').classList.toggle('open'); })
 
-window.onload = function () {
-  Particles.init({
-    selector: ".background"
-  });
-};
-const particles = Particles.init({
-  selector: ".background",
-  color: ["#03dac6", "#ff0266", "#000000"],
-  connectParticles: true,
-  responsive: [
-    {
-      breakpoint: 768,
-      options: {
-        color: ["#faebd7", "#03dac6", "#ff0266"],
-        maxParticles: 43,
-        connectParticles: false
-      }
-    }
-  ]
-});
+window.addEventListener('scroll', () => { if (document.querySelector('.style-switcher').classList.contains('open')) { document.querySelector('.style-switcher').classList.remove('open'); } })
 
-class NavigationPage {
-  constructor() {
-    this.currentId = null;
-    this.currentTab = null;
-    this.tabContainerHeight = 70;
-    this.lastScroll = 0;
-    let self = this;
-    $(".nav-tab").click(function () {
-      self.onTabClick(event, $(this));
-    });
-    $(window).scroll(() => {
-      this.onScroll();
-    });
-    $(window).resize(() => {
-      this.onResize();
-    });
-  }
-
-  onTabClick(event, element) {
-    event.preventDefault();
-    let scrollTop =
-      $(element.attr("href")).offset().top - this.tabContainerHeight + 1;
-    $("html, body").animate({ scrollTop: scrollTop }, 300);
-  }
-
-  onScroll() {
-    this.checkHeaderPosition();
-    this.findCurrentTabSelector();
-    this.lastScroll = $(window).scrollTop();
-  }
-
-  onResize() {
-    if (this.currentId) {
-      this.setSliderCss();
-    }
-  }
-  checkHeaderPosition() {
-    const headerHeight = 75;
-    if ($(window).scrollTop() > headerHeight) {
-      $(".nav-container").addClass("nav-container--scrolled");
-    }
-    let offset =
-      $(".nav").offset().top +
-      $(".nav").height() -
-      this.tabContainerHeight -
-      headerHeight;
-    if (
-      $(window).scrollTop() > this.lastScroll &&
-      $(window).scrollTop() > offset
-    ) {
-      $(".nav-container").addClass("nav-container--move-up");
-      $(".nav-container").removeClass("nav-container--top-first");
-      $(".nav-container").addClass("nav-container--top-second");
-    } else if (
-      $(window).scrollTop() < this.lastScroll &&
-      $(window).scrollTop() > offset
-    ) {
-      $(".nav-container").addClass("nav-container--move-up");
-      $(".nav-container").removeClass("nav-container--top-first");
-      $(".nav-container").addClass("nav-container--top-second");
-    } else {
-      $(".nav-container").addClass("nav-container--move-up");
-      $(".nav-container").removeClass("nav-container--top-first");
-      $(".nav-container").addClass("nav-container--top-second");
-    }
-  }
-
-  findCurrentTabSelector(element) {
-    let newCurrentId;
-    let newCurrentTab;
-    let self = this;
-    $(".nav-tab").each(function () {
-      let id = $(this).attr("href");
-      let offsetTop = $(id).offset().top - self.tabContainerHeight;
-      let offsetBottom =
-        $(id).offset().top + $(id).height() - self.tabContainerHeight;
-      if (
-        $(window).scrollTop() > offsetTop &&
-        $(window).scrollTop() < offsetBottom
-      ) {
-        newCurrentId = id;
-        newCurrentTab = $(this);
-      }
-    });
-    if (this.currentId != newCurrentId || this.currentId === null) {
-      this.currentId = newCurrentId;
-      this.currentTab = newCurrentTab;
-      this.setSliderCss();
-    }
-  }
-
-  setSliderCss() {
-    let width = 0;
-    let left = 0;
-    if (this.currentTab) {
-      width = this.currentTab.css("width");
-      left = this.currentTab.offset().left;
-    }
-    $(".nav-tab-slider").css("width", width);
-    $(".nav-tab-slider").css("left", left);
-  }
+const alternateStyles = document.querySelectorAll('.alternate-style');
+function setActiveStyle(color) {
+    alternateStyles.forEach((style) => {
+        if (color === style.getAttribute('title')) { style.removeAttribute('disabled'); } else { style.setAttribute('disabled', 'true'); }
+    })
 }
 
-new NavigationPage();
+/* Dark/Light Mode */
+
+const dayNight = document.querySelector('.day-night');
+dayNight.addEventListener('click', () => {
+    dayNight.querySelector('i').classList.toggle('fa-sun');
+    dayNight.querySelector('i').classList.toggle('fa-moon');
+    document.body.classList.toggle('dark');
+})
+
+window.addEventListener('load', () => {
+    if (document.body.classList.contains('dark')) { dayNight.querySelector('i').classList.add('fa-sun'); } else { dayNight.querySelector('i').classList.add('fa-moon'); }
+})
+
+/* Typing Animation */
+
+var typed = new Typed('.typing', { strings: ["", "Full Stack Developer ", "Full Stack Developer ", " Java Developer ", "Youtuber"], typeSpeed: 120, Backspeed: 120, loop: true })
+
+/* Changing Aside Active Link */
+
+const nav = document.querySelector('.nav');
+const navList = nav.querySelectorAll('li');
+const totalNavList = navList.length;
+const allSection = document.querySelectorAll('.section');
+const totalSection = allSection.length;
+
+for (let i = 0; i < totalNavList; i++) {
+    const a = navList[i].querySelector('a');
+    a.addEventListener('click', function () {
+        removeBackSection();
+        for (let j = 0; j < totalNavList; j++) {
+            if (navList[j].querySelector('a').classList.contains('active')) { addBackSection(j);/*allSection[j].classList.add('back-section');*/ }
+            navList[j].querySelector('a').classList.remove('active');
+        }
+        this.classList.add('active');
+        showSection(this);
+
+        if (window.innerWidth < 1200) { asideSectionTogglerBtn(); }
+    })
+}
+
+function addBackSection(num) { allSection[num].classList.add('back-section'); }
+
+function removeBackSection() {
+    for (let i = 0; i < totalSection; i++) { allSection[i].classList.remove('back-section'); }
+}
+
+function showSection(element) {
+    for (let i = 0; i < totalSection; i++) { allSection[i].classList.remove('active'); }
+
+    const target = element.getAttribute("href").split("#")[1];
+    document.querySelector('#' + target).classList.add('active');
+}
+
+function updateNav(element) {
+    for (let i = 0; i < totalNavList; i++) {
+        navList[i].querySelector('a').classList.remove('active');
+        const target = element.getAttribute('href').split('#')[1];
+        if (target === navList[i].querySelector('a').getAttribute('href').split('#')[1]) { navList[i].querySelector('a').classList.add('active'); }
+
+    }
+}
+
+document.querySelector('.hire-me').addEventListener('click', function () {
+    const sectionIndex = this.getAttribute('data-section-index');
+    /*console.log(sectionIndex);*/
+    showSection(this);
+    updateNav(this);
+    removeBackSection();
+    addBackSection(sectionIndex);
+})
+
+/* Activating Mobile Menu */
+
+const navTogglerBtn = document.querySelector('.nav-toggler');
+const aside = document.querySelector('.aside');
+
+navTogglerBtn.addEventListener('click', () => { asideSectionTogglerBtn(); })
+
+function asideSectionTogglerBtn() {
+    aside.classList.toggle('open');
+    navTogglerBtn.classList.toggle('open');
+    for (let i = 0; i < totalSection; i++) { allSection[i].classList.toggle('open'); }
+}
