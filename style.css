@@ -87,6 +87,12 @@ body {
 }
 
 /*.main-content { padding-left: 270px; }*/
+.padd-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*.main-content { padding-left: 270px; }*/
 .padd-15 {
     padding-left: 15px;
     padding-right: 15px;
@@ -363,7 +369,7 @@ h3.profession {
 .home .home-cv .home-cv-btns {
     flex: 0 0 100%;
     max-width: 100%;
-    margin: 100px 0 150px 0;
+    margin: 100px 0 30px 0;
     text-align: center;
     position: relative;
 }
@@ -375,27 +381,6 @@ h3.profession {
     position: relative;
 }
 
-.home-img::after {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-}
-
-.home-img::before {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
-}
 
 .home .home-img img {
     height: 400px;
@@ -746,6 +731,55 @@ h3.profession {
     margin-bottom: 60px;
 }
 
+.home-contact {
+    display: flex;
+    flex-wrap: wrap;
+    /* Öğeler arası boşluk */
+    justify-content: center;
+    /* Ortalamak isterseniz */
+}
+
+
+.home-contact .home-contact-info-item {
+    flex: 1 1 calc(33.333% - 16px);
+    /* Satır başına 3 öğe */
+    box-sizing: border-box;
+    max-width: 33%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.home-contact .home-contact-info-item .icon {
+    display: inline-block;
+}
+
+.home-contact .home-contact-info-item .icon .fa {
+    font-size: 25px;
+    color: var(--skin-color);
+}
+
+.home-contact .home-contact-info-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black900);
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+
+.home-contact .home-contact-info-item p {
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black700);
+    font-weight: 400;
+}
+
+.home-contact .home-contact-info-item p a {
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black700);
+    font-weight: 400;
+}
+
 .contact .contact-info-item {
     flex: 0 0 33%;
     max-width: 33%;
@@ -866,19 +900,30 @@ h3.profession {
     .home .home-cv .home-cv-btns {
         flex: 0 0 100%;
         max-width: 100%;
-        margin: 0 0 150px 0;
+        margin: 0 0 30px 0;
         text-align: center;
         position: relative;
     }
 
-    .home-img::before,
-    .home-img::after {
-        display: none;
-    }
+
 
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
+    }
+
+    .home-contact-info-item {
+        flex: 1 1 calc(45.333% - 16px);
+        /* Satır başına 3 öğe */
+        box-sizing: border-box;
+        max-width: 45%;
+        text-align: center;
+        margin-bottom: 10px;
+
+
+        /* flex: 1 1 calc(50% - 16px);
+        /* Tablet görünümünde 2 öğe 
+        margin: 20px; */
     }
 }
 
@@ -889,9 +934,6 @@ h3.profession {
         max-width: 100%;
     }
 
-    .home .home-img {
-        display: none;
-    }
 
     .about .about-content .skills,
     .about .about-content .personal-info,
@@ -913,6 +955,15 @@ h3.profession {
         flex: 0 0 50%;
         max-width: 50%;
     }
+
+    .home-contact-info-item {
+        flex: 1 1 calc(45.333% - 16px);
+        /* Satır başına 3 öğe */
+        box-sizing: border-box;
+        max-width: 45%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -928,6 +979,15 @@ h3.profession {
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    .home-contact-info-item {
+        flex: 1 1 calc(45.333% - 16px);
+        /* Satır başına 3 öğe */
+        box-sizing: border-box;
+        max-width: 45%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 460px) {
@@ -935,6 +995,32 @@ h3.profession {
     .contact .contact-info-item {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .home .home-cv {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    .home-img {
+        width: 100%;
+    }
+
+    .home-contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home-contact-info-item {
+        flex: 0 0 45%;
+        /* yaklaşık 2 kutu yan yana sığacak şekilde */
+        max-width: 45%;
+        box-sizing: border-box;
+        margin: 10px;
+        text-align: center;
     }
 }
 
