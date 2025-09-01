@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celal Aygar Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    /* Custom styles for animations and specific elements */
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skill-progress {
+      transition: width 1.5s ease-in-out;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #3b82f6;
+    }
+
+    .timeline-item:after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 20px;
+      width: 2px;
+      height: calc(100% + 10px);
+      background-color: #e5e7eb;
+    }
+
+    .timeline-item:last-child:after {
+      display: none;
+    }
+
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #3b82f6;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover:after,
+    .nav-link.active:after {
+      width: 100%;
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .typing-effect {
+      border-right: 2px solid #3b82f6;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        border-color: transparent;
+      }
+
+      51%,
+      100% {
+        border-color: #3b82f6;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <!-- Header with Navigation -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 max-w-7xl">
+      <div class="flex justify-between items-center">
+        <div>
+          <h1 class="text-2xl font-bold text-blue-600">Celal Aygar Portfolio</h1>
+          <h2 class="text-lg text-gray-600">Hacı Celal Aygar</h2>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
+          <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium">About</a>
+          <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Experience</a>
+          <a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Technologies</a>
+          <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Certificates</a>
+          <a href="#books" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Books & Hobbies</a>
+          <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+        </nav>
+
+        <!-- Language Selection -->
+        <div class="flex space-x-2">
+          <button id="en-lang" class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">EN</button>
+          <button id="tr-lang" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm font-medium">TR</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
+        <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Home</a>
+        <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">About</a>
+        <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Experience</a>
+        <a href="#technologies" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Technologies</a>
+        <a href="#certificates" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Certificates</a>
+        <a href="#books" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Books & Hobbies</a>
+        <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-6 py-10 max-w-7xl">
+    <!-- Home Section -->
+    <section id="home" class="section active mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h3 class="text-3xl font-bold mb-4">Hello, My name is <span class="text-blue-600">Hacı Celal Aygar</span></h3>
+          <h3 class="text-2xl font-semibold mb-6">I'm a <span id="typing-text" class="text-blue-600 typing-effect">Full
+              Stack Developer</span></h3>
+          <p class="mb-6 text-gray-600">
+            I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer Engineering. I have been
+            working as a Full Stack developer and Java developer around 5 years.
+          </p>
+          <p class="mb-6 text-gray-600">
+            My goal is to work in companies that produce projects using technologies in the fields of computer
+            engineering and to continue to improve myself. I also continue to share many of my sample works on my Github
+            account.
+          </p>
+          <p class="mb-8 text-gray-600">
+            Also I am constantly working to make life easier and trying to find solutions to the common problems of
+            people. I'm currently learning client side technologies by using especially Github and Stackoverflow.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.English.CV.pdf"
+              target="_blank"
+              class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition">Download
+              English CV</a>
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.Turkish.CV.pdf"
+              target="_blank"
+              class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300 transition">Download
+              Turkish CV</a>
+          </div>
+        </div>
+
+        <div class="md:w-2/5">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h4 class="text-xl font-semibold mb-4 text-center">Connect With Me</h4>
+            <div class="grid grid-cols-2 gap-4">
+              <a href="https://celalaygar.github.io/" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                <i class="fas fa-globe text-blue-600 mr-3"></i>
+                <span>Website</span>
+              </a>
+              <a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                <i class="fab fa-linkedin text-blue-600 mr-3"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/celalaygar" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                <i class="fab fa-github text-blue-600 mr-3"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://medium.com/@celalaygar" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                <i class="fab fa-medium text-blue-600 mr-3"></i>
+                <span>Medium</span>
+              </a>
+              <a href="https://www.youtube.com/@celalaygar" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                <i class="fab fa-youtube text-blue-600 mr-3"></i>
+                <span>YouTube</span>
+              </a>
+              <a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                <i class="fab fa-hackerrank text-blue-600 mr-3"></i>
+                <span>HackerRank</span>
+              </a>
+              <a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar" target="_blank"
+                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition col-span-2">
+                <i class="fab fa-stack-overflow text-blue-600 mr-3"></i>
+                <span>StackOverflow</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">About Me</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">I'm Hacı Celal Aygar and <span class="text-blue-600">Full Stack
+              developer and Java developer</span></h3>
+          <p class="mb-4 text-gray-600">
+            I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack
+            developer and Java developer around 5 years.
+          </p>
+          <p class="mb-4 text-gray-600">
+            My goal is to work in companies that produce projects using technologies in the fields of computer
+            engineering and to continue to improve myself. I also continue to share many of my sample works on my Github
+            account.
+          </p>
+          <p class="mb-6 text-gray-600">
+            Also I am constantly working to make life easier and trying to find solutions to the common problems of
+            people. I'm currently learning client side technologies by using especially Github and Stackoverflow.
+          </p>
+
+          <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">Communication</h3>
+            <div class="space-y-3">
+              <div class="flex">
+                <span class="font-medium w-32">Email:</span>
+                <span>celal.aygar@gmail.com</span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">Website:</span>
+                <span><a href="https://celalaygar.github.io/" target="_blank" class="text-blue-600 hover:underline">My
+                    Web page</a></span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">Degree:</span>
+                <span>Computer Engineer</span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">Phone:</span>
+                <span>+90 544 835 8401</span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">City:</span>
+                <span>Turkey / Ankara</span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">Youtube:</span>
+                <span><a href="https://www.youtube.com/@celalaygar/featured" target="_blank"
+                    class="text-blue-600 hover:underline">My Youtube channel</a></span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">Linked In:</span>
+                <span><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+                    class="text-blue-600 hover:underline">My Linked In</a></span>
+              </div>
+              <div class="flex">
+                <span class="font-medium w-32">Freelance:</span>
+                <span>Available</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact"
+            class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Hire
+            me!</a>
+        </div>
+
+        <div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">Education</h3>
+            <div class="space-y-6">
+              <div class="timeline-item">
+                <h3 class="text-lg font-semibold">2013 - 2017</h3>
+                <h4 class="text-md font-medium text-blue-600">Computer Engineer (Bachelor Degree)</h4>
+                <h4 class="text-md font-medium">Karabük University</h4>
+                <p class="text-gray-600">Computer Engineer in Department of Computer Engineering at Karabük University
+                </p>
+              </div>
+              <div class="timeline-item">
+                <h3 class="text-lg font-semibold">2007 - 2012</h3>
+                <h4 class="text-md font-medium text-blue-600">Economics (Bachelor Degree)</h4>
+                <h4 class="text-md font-medium">Anadolu University</h4>
+                <p class="text-gray-600">Economics in Faculty of Economics at Anadolu University</p>
+              </div>
+              <div class="timeline-item">
+                <h3 class="text-lg font-semibold">2003 - 2007</h3>
+                <h4 class="text-md font-medium text-blue-600">High school</h4>
+                <p class="text-gray-600">High school at Mimar Sinan High school</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Experience</h2>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="timeline-item">
+            <h3 class="text-lg font-semibold">06/2024 - Today (11 Months)</h3>
+            <h4 class="text-xl font-bold text-blue-600">FMSS Bilisim Teknoloji</h4>
+            <h4 class="text-lg font-medium">Full-Stack Developer & Java Developer at PAYCELL</h4>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>This project is about money transfer</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Bug fix and build new feature</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="font-semibold">Tools & Technologies:</p>
+              <p class="text-gray-600">Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle,
+                Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="timeline-item">
+            <h3 class="text-lg font-semibold">04/2022 - 06/2024 (26 Months)</h3>
+            <h4 class="text-xl font-bold text-blue-600">Orion BT</h4>
+            <h4 class="text-lg font-medium">Full-Stack Developer & Java Developer at VODAFONE</h4>
+            <p class="text-gray-600 font-medium mb-2">Vodafone E-Commerce Project</p>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some
+                  microservices</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Creating common general library and common authorization library to use for all of java
+                  Microservices.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Using Feign Client for inter-microservice communication.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Usage of Junit and Mockita for Unit Test Coverage.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Using Git as version control system and Using Jira and Confluence to follow tasks</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="font-semibold">Tools & Technologies:</p>
+              <p class="text-gray-600">Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js ·
+                Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis ·
+                Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins</p>
+            </div>
+          </div>
+
+          <div class="timeline-item mt-8">
+            <h4 class="text-lg font-medium">Full-Stack Developer & Java Developer for the Ministry of Interior</h4>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Building over Authorization in frontend and backend for users.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Bug fix, Built the Frontend and Backend</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Creating microservice by using Spring boot, Redis Graph.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Creating microservice by using Spring boot, Kafka to push data to Kafka Topic from Data Base
+                  periodically.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Changing main module template in Frontend</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Using Trigger and Procedure as function on Plpsql for java listener service to listen trigger
+                  action.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Using Git as version control system and Using Redmine to follow tasks</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="font-semibold">Tools & Technologies:</p>
+              <p class="text-gray-600">Microservices Architecture · Java 8-11, Spring Boot, Security, JPA, Hibernate,
+                Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js,
+                Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="timeline-item">
+            <h3 class="text-lg font-semibold">08/2021 - 03/2022 (8 Months)</h3>
+            <h4 class="text-xl font-bold text-blue-600">OBSS</h4>
+            <h4 class="text-lg font-medium">Full Stack Developer & Java Software Engineer in ASELSAN</h4>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Working at ASELSAN project for OBSS</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Bug fix, Built the frontend and backend.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Drawing operations were carried out on the map by communicating with 3rd party services.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Using Git as version control system</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Using TFS and Jira to follow tasks</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="font-semibold">Tools & Technologies:</p>
+              <p class="text-gray-600">Microservices Architecture , Java 11 , Maven , Spring boot, Docker, Kubernetes,
+                TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache
+                Kafka, HTML, CSS</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="timeline-item">
+            <h3 class="text-lg font-semibold">10/2020 - 06/2021 (8 Months)</h3>
+            <h4 class="text-xl font-bold text-blue-600">VİA Bilgisayar Sistemleri</h4>
+            <h4 class="text-lg font-medium">Full Stack Developer & Java Software Engineer</h4>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>An order management system is made for the pharmaceutical warehouse.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Jar management and Git architecture created Project architecture was created.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>I have created Authentication and Authorization in frontend and backend.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Member registration, entry and exit procedures have been created.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>A free theme is determined to be used within the project and is fragmented and placed within the
+                  project.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Export, Campaign Drug, Packaging and some part of Accounting and Logistics modules were made and
+                  built.</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="font-semibold">Tools & Technologies:</p>
+              <p class="text-gray-600">Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA,
+                React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="timeline-item">
+            <h3 class="text-lg font-semibold">12/2019 - 07/2020 (8 Months)</h3>
+            <h4 class="text-xl font-bold text-blue-600">ERC Mühendislik Danışmanlık ve ARGE Hizmetleri</h4>
+            <h4 class="text-lg font-medium">Java Software Engineer</h4>
+            <ul class="mt-3 space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Adding new screens to the modules, adding new features to certain screens.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Building certain updates on the screens and fixing errors and bugs.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>integration, design and using of Jasper report</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                <span>Building R&D project about web push notification</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <p class="font-semibold">Tools & Technologies:</p>
+              <p class="text-gray-600">Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial
+                (TortoiseHg), Oracle, DB2, Python, İReport.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">My Technologies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Backend & Devops</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Java</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Spring Boot</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Spring Security</span>
+                <span>75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Spring Data</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Spring MVC</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">JPA</span>
+                <span>75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Hibernate</span>
+                <span>80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Python</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Node Js</span>
+                <span>70%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Postgre Sql</span>
+                <span>70%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Oracle DB</span>
+                <span>67%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 67%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Mongo DB</span>
+                <span>55%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Docker</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Kubernates</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">OpenShift</span>
+                <span>55%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Git</span>
+                <span>75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Apache Kafka</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Redis</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Frontend</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Java Script</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">TypeScript</span>
+                <span>70%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Next JS</span>
+                <span>75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">React JS</span>
+                <span>75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Angular JS</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">HTML 5</span>
+                <span>96%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 96%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">CSS 3</span>
+                <span>80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Bootstrap</span>
+                <span>80%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="flex justify-between mb-1">
+                <span class="font-medium">Tailwind CSS</span>
+                <span>65%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Certificates</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fas fa-database text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Database Design and Programming with SQL</h4>
+            <h6 class="text-gray-600">ORACLE ACADEMY</h6>
+            <p class="text-gray-500">26 June 2016</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Database_Design_and_Programming_with_SQL.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fab fa-react text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">REACT ile Web Programcılığı</h4>
+            <h6 class="text-gray-600">BTK AKADEMİ</h6>
+            <p class="text-gray-500">May 2025</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/REACT_ile_Web_Programcılığı.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fas fa-server text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Elasticsearch v8</h4>
+            <h6 class="text-gray-600">BTK AKADEMİ</h6>
+            <p class="text-gray-500">June 2025</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Elasticsearch_v8_Sertifika.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fas fa-code text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Apache Kafka</h4>
+            <h6 class="text-gray-600">BTK AKADEMİ</h6>
+            <p class="text-gray-500">May 2025</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Apache_Kafka.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">NoSQL - Doküman Veritabanları</h4>
+            <h6 class="text-gray-600">BTK AKADEMİ</h6>
+            <p class="text-gray-500">May 2025</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/NoSQL_Doküman_Veritabanları.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fab fa-java text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">JAVA ile Programlamaya Giriş</h4>
+            <h6 class="text-gray-600">BTK AKADEMİ</h6>
+            <p class="text-gray-500">May 2025</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/JAVA_ile_Programlamaya_Giriş_Sertifika.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="text-center mb-4">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+              <i class="fab fa-java text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">İleri Seviye Java</h4>
+            <h6 class="text-gray-600">BTK AKADEMİ</h6>
+            <p class="text-gray-500">May 2025</p>
+          </div>
+          <div class="text-center">
+            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/%C4%B0leri_Seviye_Java_Sertifika.pdf"
+              target="_blank"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books & Hobbies Section -->
+    <section id="books" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Books & Hobbies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Books</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Borsa 101</h4>
+                <p class="text-gray-600 text-sm">Aysel Gündoğdu - SCALA Yayıncılık</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Assassin's Creed - Shao Jun'un Kılıcı</h4>
+                <p class="text-gray-600 text-sm">Senpai</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Yönetim Becerileri</h4>
+                <p class="text-gray-600 text-sm">Harvard Business Review Press - OPTMİSİT</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Gerçekten Bilmeniz Gereken 50 Ekonomi Fikri</h4>
+                <p class="text-gray-600 text-sm">Edmund Conways - Domingo Yayınevi</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Siber Araçlar Ansiklopedisi</h4>
+                <p class="text-gray-600 text-sm">Mustafa Atakan Kasacı - ABAKÜS KİTAP</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Bilişimin Karanlık Yüzü</h4>
+                <p class="text-gray-600 text-sm">Kamil Burlu - Nirvana Yayınları</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+              <div>
+                <h4 class="font-medium">Ethical Hacking</h4>
+                <p class="text-gray-600 text-sm">Ömer Çıtak - ABAKÜS KİTAP</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-medium">Spring Framework</h4>
+                <p class="text-gray-600 text-sm">Mimar Aslan - LEVEL</p>
+              </div>
+              <i class="fas fa-book text-blue-600"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Hobbies</h3>
+          <div class="space-y-4">
+            <div class="flex items-center pb-3 border-b border-gray-100">
+              <i class="fas fa-chess text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Playing Chess</h4>
+            </div>
+
+            <div class="flex items-center pb-3 border-b border-gray-100">
+              <i class="fas fa-film text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Watching movies, Series, Anime</h4>
+            </div>
+
+            <div class="flex items-center pb-3 border-b border-gray-100">
+              <i class="fas fa-tv text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Following Technological Channels</h4>
+            </div>
+
+            <div class="flex items-center pb-3 border-b border-gray-100">
+              <i class="fas fa-laptop-code text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Learning New Technologies</h4>
+            </div>
+
+            <div class="flex items-center pb-3 border-b border-gray-100">
+              <i class="fas fa-puzzle-piece text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Solving puzzles (Sudoku, Word games, Logic problems)</h4>
+            </div>
+
+            <div class="flex items-center pb-3 border-b border-gray-100">
+              <i class="fas fa-running text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Running / Gym</h4>
+            </div>
+
+            <div class="flex items-center">
+              <i class="fas fa-users text-blue-600 mr-4 text-xl"></i>
+              <h4 class="font-medium">Attending meetups and conferences</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Contact</h2>
+      </div>
+
+      <div class="text-center mb-10">
+        <h3 class="text-2xl font-semibold mb-2">Any Question? Contact us!</h3>
+        <h4 class="text-xl text-gray-600">I'm at your service</h4>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fas fa-phone text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">Call us on</h4>
+          </div>
+          <p class="text-gray-600">+90 544 835 84 01</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">City / Country</h4>
+          </div>
+          <p class="text-gray-600">Ankara / TURKEY</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fas fa-envelope text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">Email</h4>
+          </div>
+          <p class="text-gray-600">celal.aygar@gmail.com</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fas fa-globe text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">Website</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://celalaygar.github.io/" target="_blank"
+              class="text-blue-600 hover:underline">celalaygar.github.io</a></p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">Linkedin</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+              class="text-blue-600 hover:underline">linkedin.com/in/celalaygar</a></p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fab fa-github text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">GitHub</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://github.com/celalaygar" target="_blank"
+              class="text-blue-600 hover:underline">github.com/celalaygar</a></p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fab fa-medium text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">Medium</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://medium.com/@celalaygar" target="_blank"
+              class="text-blue-600 hover:underline">medium.com/@celalaygar</a></p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fab fa-youtube text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">Youtube</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://www.youtube.com/@celalaygar" target="_blank"
+              class="text-blue-600 hover:underline">youtube.com/@celalaygar</a></p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fab fa-hackerrank text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">HackerRank</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
+              class="text-blue-600 hover:underline">hackerrank.com/celalaygar</a></p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 card-hover md:col-span-2 lg:col-span-1">
+          <div class="flex items-center mb-4">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+              <i class="fab fa-stack-overflow text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-lg font-semibold">StackOverflow</h4>
+          </div>
+          <p class="text-gray-600"><a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar"
+              target="_blank" class="text-blue-600 hover:underline">stackoverflow.com/users/12014524</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 max-w-7xl">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-xl font-bold">Celal Aygar Portfolio</h3>
+          <p class="text-gray-400">Full Stack & Java Developer</p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://github.com/celalaygar" target="_blank" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+            class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="https://medium.com/@celalaygar" target="_blank" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-medium text-xl"></i>
+          </a>
+          <a href="https://www.youtube.com/@celalaygar" target="_blank"
+            class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-youtube text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400">
+        <p>&copy; 2023 Hacı Celal Aygar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Language toggle
+    const enLangBtn = document.getElementById('en-lang');
+    const trLangBtn = document.getElementById('tr-lang');
+
+    enLangBtn.addEventListener('click', () => {
+      enLangBtn.classList.add('bg-blue-600', 'text-white');
+      enLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
+      trLangBtn.classList.add('bg-gray-200', 'text-gray-700');
+      trLangBtn.classList.remove('bg-blue-600', 'text-white');
+      // Add language change logic here
+    });
+
+    trLangBtn.addEventListener('click', () => {
+      trLangBtn.classList.add('bg-blue-600', 'text-white');
+      trLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
+      enLangBtn.classList.add('bg-gray-200', 'text-gray-700');
+      enLangBtn.classList.remove('bg-blue-600', 'text-white');
+      // Add language change logic here
+    });
+
+    // Typing effect
+    const typingText = document.getElementById('typing-text');
+    const roles = ['Full Stack Developer', 'Java Developer', 'Software Engineer'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeEffect, 500);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 50 : 150);
+      }
+    }
+
+    typeEffect();
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Section visibility on scroll
+    const sections = document.querySelectorAll('.section');
+
+    function checkVisibility() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 100) {
+          section.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+
+    // Active navigation link on scroll
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function updateActiveNavLink() {
+      const scrollPosition = window.scrollY + 100;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          navLinks[index].classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNavLink);
+    window.addEventListener('load', updateActiveNavLink);
+
+    // Animate skill bars when visible
+    const skillBars = document.querySelectorAll('.skill-progress');
+
+    function animateSkillBars() {
+      skillBars.forEach(bar => {
+        const barTop = bar.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (barTop < windowHeight - 100 && bar.style.width === '0%') {
+          const width = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
+          bar.style.width = '0%';
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 200);
+        }
+      });
+    }
+
+    // Reset skill bars for animation
+    skillBars.forEach(bar => {
+      const width = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
+      bar.setAttribute('data-width', width);
+      bar.style.width = '0%';
+    });
+
+    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener('load', animateSkillBars);
+  </script>
+</body>
+
+</html>
