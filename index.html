@@ -115,7 +115,7 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="hidden md:flex space-x-8">
+        <nav class="hidden md:flex space-x-6">
           <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
             data-tr="Ana Sayfa">Home</a>
           <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="About"
@@ -133,7 +133,7 @@
         </nav>
 
         <!-- Language Selection -->
-        <div class="flex space-x-2">
+        <div class="flex space-x-2 mr-2">
           <button id="en-lang" class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">EN</button>
           <button id="tr-lang" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm font-medium">TR</button>
         </div>
@@ -838,40 +838,48 @@
 
         <div class="bg-white rounded-lg shadow-md p-6">
           <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
-          <div class="space-y-4">
-            <div class="flex items-center pb-3 border-b border-gray-100">
+          <div class="space-y-4" id="hobbies-container">
+            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Playing Chess"
+              data-tr="Satranç Oynamak">
               <i class="fas fa-chess text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Playing Chess</h4>
+              <h4 class="font-medium hobby-text">Playing Chess</h4>
             </div>
 
-            <div class="flex items-center pb-3 border-b border-gray-100">
+            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+              data-en="Watching movies, Series, Anime" data-tr="Film, Dizi, Anime İzlemek">
               <i class="fas fa-film text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Watching movies, Series, Anime</h4>
+              <h4 class="font-medium hobby-text">Watching movies, Series, Anime</h4>
             </div>
 
-            <div class="flex items-center pb-3 border-b border-gray-100">
+            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+              data-en="Following Technological Channels" data-tr="Teknolojik Kanalları Takip Etmek">
               <i class="fas fa-tv text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Following Technological Channels</h4>
+              <h4 class="font-medium hobby-text">Following Technological Channels</h4>
             </div>
 
-            <div class="flex items-center pb-3 border-b border-gray-100">
+            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Learning New Technologies"
+              data-tr="Yeni Teknolojiler Öğrenmek">
               <i class="fas fa-laptop-code text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Learning New Technologies</h4>
+              <h4 class="font-medium hobby-text">Learning New Technologies</h4>
             </div>
 
-            <div class="flex items-center pb-3 border-b border-gray-100">
+            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+              data-en="Solving puzzles (Sudoku, Word games, Logic problems)"
+              data-tr="Bulmaca Çözmek (Sudoku, Kelime oyunları, Mantık problemleri)">
               <i class="fas fa-puzzle-piece text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Solving puzzles (Sudoku, Word games, Logic problems)</h4>
+              <h4 class="font-medium hobby-text">Solving puzzles (Sudoku, Word games, Logic problems)</h4>
             </div>
 
-            <div class="flex items-center pb-3 border-b border-gray-100">
+            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Running / Gym"
+              data-tr="Koşu / Spor Salonu">
               <i class="fas fa-running text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Running / Gym</h4>
+              <h4 class="font-medium hobby-text">Running / Gym</h4>
             </div>
 
-            <div class="flex items-center">
+            <div class="flex items-center hobby-item" data-en="Attending meetups and conferences"
+              data-tr="Toplantılara ve Konferanslara Katılmak">
               <i class="fas fa-users text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium">Attending meetups and conferences</h4>
+              <h4 class="font-medium hobby-text">Attending meetups and conferences</h4>
             </div>
           </div>
         </div>
@@ -1041,23 +1049,43 @@
           position: "Full-Stack Developer & Java Developer at PAYCELL",
           description: [
             "This project is about money transfer",
-            "Bug fix and build new feature"
+            "Bug fixes, new features created on the frontend and backend, new improvements made on existing features"
           ],
           technologies: "Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
         },
         {
           period: "04/2022 - 06/2024 (26 Months)",
           company: "Orion BT",
-          position: "Full-Stack Developer & Java Developer at VODAFONE",
-          description: [
-            "Vodafone E-Commerce Project",
-            "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
-            "Creating common general library and common authorization library to use for all of java Microservices.",
-            "Using Feign Client for inter-microservice communication.",
-            "Usage of Junit and Mockita for Unit Test Coverage.",
-            "Using Git as version control system and Using Jira and Confluence to follow tasks"
-          ],
-          technologies: "Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+          hasMultipleProjects: true,
+          projects: [
+            {
+              position: "Full-Stack Developer & Java Developer at VODAFONE",
+              projectName: "Vodafone E-Commerce Project",
+              description: [
+                "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
+                "Creating common general library and common authorization library to use for all of java Microservices.",
+                "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                "Using Feign Client for inter-microservice communication.",
+                "Usage of Junit and Mockita for Unit Test Coverage.",
+                "Using Git as version control system and Using Jira and Confluence to follow tasks"
+              ],
+              technologies: "Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+            },
+            {
+              position: "Full-Stack Developer & Java Developer for the Ministry of Interior",
+              projectName: "Ministry of Interior Project",
+              description: [
+                "Building over Authorization in frontend and backend for users.",
+                "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                "Creating microservice by using Spring boot, Redis Graph.",
+                "Creating microservice by using Spring boot, Kafka to push data to Kafka Topic from Data Base periodically.",
+                "Changing main module template in Frontend",
+                "Using Trigger and Procedure as function on Plpsql for java listener service to listen trigger action.",
+                "Using Git as version control system and Using Redmine to follow tasks"
+              ],
+              technologies: "Microservices Architecture · Java 8-11, Spring Boot, Security, JPA, Hibernate, Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js, Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins"
+            }
+          ]
         },
         {
           period: "08/2021 - 03/2022 (8 Months)",
@@ -1092,7 +1120,7 @@
           position: "Java Software Engineer",
           description: [
             "Adding new screens to the modules, adding new features to certain screens.",
-            "Building certain updates on the screens and fixing errors and bugs.",
+            "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
             "integration, design and using of Jasper report",
             "Building R&D project about web push notification"
           ],
@@ -1106,23 +1134,43 @@
           position: "PAYCELL'te Full-Stack Geliştirici & Java Geliştirici",
           description: [
             "Bu proje para transferi hakkında",
-            "Hata düzeltme ve yeni özellik oluşturma"
+            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı"
           ],
           technologies: "Mikroservisler, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
         },
         {
           period: "04/2022 - 06/2024 (26 Ay)",
           company: "Orion BT",
-          position: "VODAFONE'ta Full-Stack Geliştirici & Java Geliştirici",
-          description: [
-            "Vodafone E-Ticaret Projesi",
-            "Bazı mikroservislerde Spring boot sürümünü 2'den 3'e, Java sürümünü Java 11'den Java 17'ye yükseltme",
-            "Tüm java Mikroservisleri için kullanılacak ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma.",
-            "Mikroservisler arası iletişim için Feign Client kullanımı.",
-            "Birim Test Kapsamı için Junit ve Mockita kullanımı.",
-            "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Jira ve Confluence kullanımı"
-          ],
-          technologies: "Mikroservis Mimarisi · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+          hasMultipleProjects: true,
+          projects: [
+            {
+              position: "VODAFONE'ta Full-Stack Geliştirici & Java Geliştirici",
+              projectName: "Vodafone E-Ticaret Projesi",
+              description: [
+                "Bazı mikroservislerde Spring boot sürümünü 2'den 3'e, Java sürümünü Java 11'den Java 17'ye yükseltme",
+                "Tüm java Mikroservisleri için kullanılacak ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma.",
+                "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+                "Mikroservisler arası iletişim için Feign Client kullanımı.",
+                "Birim Test Kapsamı için Junit ve Mockita kullanımı.",
+                "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Jira ve Confluence kullanımı"
+              ],
+              technologies: "Mikroservis Mimarisi · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+            },
+            {
+              position: "İçişleri Bakanlığı için Full-Stack Geliştirici & Java Geliştirici",
+              projectName: "İçişleri Bakanlığı Projesi",
+              description: [
+                "Kullanıcılar için ön yüz ve arka yüzde Yetkilendirme oluşturma.",
+                "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+                "Spring boot, Redis Graph kullanarak mikroservis oluşturma.",
+                "Spring boot, Kafka kullanarak Veri Tabanından düzenli olarak Kafka Topic'ine veri iten mikroservis oluşturma.",
+                "Ön Yüz'de ana modül şablonunu değiştirme",
+                "Java dinleyici servisinin tetikleyici eylemini dinlemek için Plpsql üzerinde Tetikleyici ve Prosedür'ü fonksiyon olarak kullanma.",
+                "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Redmine kullanımı"
+              ],
+              technologies: "Mikroservis Mimarisi · Java 8-11, Spring Boot, Security, JPA, Hibernate, Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js, Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins"
+            }
+          ]
         },
         {
           period: "08/2021 - 03/2022 (8 Ay)",
@@ -1130,8 +1178,8 @@
           position: "ASELSAN'da Full Stack Geliştirici & Java Yazılım Mühendisi",
           description: [
             "OBSS için ASELSAN projesinde çalışma",
-            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı.",
-            "3. part servislerle hizmetlerle iletişim kurarak harita üzerinde çizim işlemleri yapıldı.",
+            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+            "3. taraf hizmetlerle iletişim kurarak harita üzerinde çizim işlemleri yapıldı.",
             "Sürüm kontrol sistemi olarak Git kullanımı",
             "Görevleri takip etmek için TFS ve Jira kullanımı"
           ],
@@ -1157,7 +1205,7 @@
           position: "Java Yazılım Mühendisi",
           description: [
             "Modüllere yeni ekranlar ekleme, belirli ekranlara yeni özellikler ekleme.",
-            "Ekranlarda belirli güncellemeler yapma ve hataları ve hataları düzeltme.",
+            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
             "Jasper raporunun entegrasyonu, tasarımı ve kullanımı",
             "Web push notification hakkında Ar-Ge projesi oluşturma"
           ],
@@ -1385,6 +1433,9 @@
       // Update connect title
       document.querySelector('.connect-title').textContent = t.connectTitle;
 
+      // Update hobbies section
+      updateHobbiesSection();
+
       // Update experience section
       updateExperienceSection();
 
@@ -1392,30 +1443,74 @@
       updateTypingAnimation();
     }
 
+    // Update hobbies section
+    function updateHobbiesSection() {
+      document.querySelectorAll('.hobby-item').forEach(item => {
+        const hobbyText = item.querySelector('.hobby-text');
+        const enText = item.getAttribute('data-en');
+        const trText = item.getAttribute('data-tr');
+
+        if (enText && trText) {
+          hobbyText.textContent = currentLang === 'en' ? enText : trText;
+        }
+      });
+    }
+
     // Update experience section
     function updateExperienceSection() {
       const container = document.getElementById('experience-container');
       const experiences = experienceData[currentLang];
 
-      container.innerHTML = experiences.map(exp => `
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <div class="timeline-item">
-                        <h3 class="text-lg font-semibold">${exp.period}</h3>
-                        <h4 class="text-xl font-bold text-blue-600">${exp.company}</h4>
-                        <h4 class="text-lg font-medium">${exp.position}</h4>
-                        ${exp.description.map(desc => `
-                            <p class="mt-2 text-gray-600">
-                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                                <span>${desc}</span>
-                            </p>
-                        `).join('')}
-                        <div class="mt-4">
-                            <p class="font-semibold">Tools & Technologies:</p>
-                            <p class="text-gray-600">${exp.technologies}</p>
+      container.innerHTML = experiences.map(exp => {
+        if (exp.hasMultipleProjects) {
+          // Special handling for Orion BT with multiple projects
+          return `
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <div class="timeline-item">
+                                <h3 class="text-lg font-semibold">${exp.period}</h3>
+                                <h4 class="text-xl font-bold text-blue-600">${exp.company}</h4>
+                                ${exp.projects.map((project, index) => `
+                                    <div class="mt-4 ${index > 0 ? 'pt-4 border-t border-gray-200' : ''}">
+                                        <h5 class="text-lg font-medium text-blue-500">${project.position}</h5>
+                                        <h6 class="text-md font-medium text-blue-400">${project.projectName}</h6>
+                                        ${project.description.map(desc => `
+                                            <p class="mt-2 text-gray-600">
+                                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                                <span>${desc}</span>
+                                            </p>
+                                        `).join('')}
+                                        <div class="mt-4">
+                                            <p class="font-semibold">Tools & Technologies:</p>
+                                            <p class="text-gray-600">${project.technologies}</p>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
                         </div>
-                    </div>
-                </div>
-            `).join('');
+                    `;
+        } else {
+          // Regular experience item
+          return `
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <div class="timeline-item">
+                                <h3 class="text-lg font-semibold">${exp.period}</h3>
+                                <h4 class="text-xl font-bold text-blue-600">${exp.company}</h4>
+                                <h4 class="text-lg font-medium">${exp.position}</h4>
+                                ${exp.description.map(desc => `
+                                    <p class="mt-2 text-gray-600">
+                                        <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>${desc}</span>
+                                    </p>
+                                `).join('')}
+                                <div class="mt-4">
+                                    <p class="font-semibold">Tools & Technologies:</p>
+                                    <p class="text-gray-600">${exp.technologies}</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+        }
+      }).join('');
     }
 
     // Typing effect
@@ -1542,8 +1637,9 @@
     window.addEventListener('scroll', animateSkillBars);
     window.addEventListener('load', animateSkillBars);
 
-    // Initialize experience section
+    // Initialize experience and hobbies sections
     updateExperienceSection();
+    updateHobbiesSection();
   </script>
 </body>
 
