@@ -116,13 +116,20 @@
 
         <!-- Navigation -->
         <nav class="hidden md:flex space-x-8">
-          <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
-          <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium">About</a>
-          <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Experience</a>
-          <a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Technologies</a>
-          <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Certificates</a>
-          <a href="#books" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Books & Hobbies</a>
-          <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+          <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
+            data-tr="Ana Sayfa">Home</a>
+          <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="About"
+            data-tr="Hakkımda">About</a>
+          <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Experience"
+            data-tr="Deneyim">Experience</a>
+          <a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Technologies"
+            data-tr="Teknolojiler">Technologies</a>
+          <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Certificates"
+            data-tr="Sertifikalar">Certificates</a>
+          <a href="#books" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Books & Hobbies"
+            data-tr="Kitaplar & Hobiler">Books & Hobbies</a>
+          <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
+            data-tr="İletişim">Contact</a>
         </nav>
 
         <!-- Language Selection -->
@@ -139,13 +146,20 @@
 
       <!-- Mobile Navigation -->
       <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
-        <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Home</a>
-        <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">About</a>
-        <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Experience</a>
-        <a href="#technologies" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Technologies</a>
-        <a href="#certificates" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Certificates</a>
-        <a href="#books" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Books & Hobbies</a>
-        <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+        <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
+          data-tr="Ana Sayfa">Home</a>
+        <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="About"
+          data-tr="Hakkımda">About</a>
+        <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Experience"
+          data-tr="Deneyim">Experience</a>
+        <a href="#technologies" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Technologies"
+          data-tr="Teknolojiler">Technologies</a>
+        <a href="#certificates" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Certificates"
+          data-tr="Sertifikalar">Certificates</a>
+        <a href="#books" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Books & Hobbies"
+          data-tr="Kitaplar & Hobiler">Books & Hobbies</a>
+        <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
+          data-tr="İletişim">Contact</a>
       </nav>
     </div>
   </header>
@@ -155,37 +169,37 @@
     <section id="home" class="section active mb-16">
       <div class="flex flex-col md:flex-row items-center justify-between">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <h3 class="text-3xl font-bold mb-4">Hello, My name is <span class="text-blue-600">Hacı Celal Aygar</span></h3>
+          <h3 class="text-3xl font-bold mb-4">
+            <span class="greeting-text">Hello, My name is</span>
+            <span class="text-blue-600">Hacı Celal Aygar</span>
+          </h3>
           <h3 class="text-2xl font-semibold mb-6">I'm a <span id="typing-text" class="text-blue-600 typing-effect">Full
               Stack Developer</span></h3>
-          <p class="mb-6 text-gray-600">
-            I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer Engineering. I have been
-            working as a Full Stack developer and Java developer around 5 years.
-          </p>
-          <p class="mb-6 text-gray-600">
-            My goal is to work in companies that produce projects using technologies in the fields of computer
-            engineering and to continue to improve myself. I also continue to share many of my sample works on my Github
-            account.
-          </p>
-          <p class="mb-8 text-gray-600">
-            Also I am constantly working to make life easier and trying to find solutions to the common problems of
-            people. I'm currently learning client side technologies by using especially Github and Stackoverflow.
-          </p>
+          <div class="description-text mb-6 text-gray-600">
+            <p class="mb-4">I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer
+              Engineering. I have been working as a Full Stack developer and Java developer around 5 years.</p>
+            <p class="mb-4">My goal is to work in companies that produce projects using technologies in the fields of
+              computer engineering and to continue to improve myself. I also continue to share many of my sample works
+              on my Github account.</p>
+            <p class="mb-6">Also I am constantly working to make life easier and trying to find solutions to the common
+              problems of people. I'm currently learning client side technologies by using especially Github and
+              Stackoverflow.</p>
+          </div>
           <div class="flex flex-wrap gap-4">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.English.CV.pdf"
               target="_blank"
-              class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition">Download
+              class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition cv-en">Download
               English CV</a>
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.Turkish.CV.pdf"
               target="_blank"
-              class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300 transition">Download
+              class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300 transition cv-tr">Download
               Turkish CV</a>
           </div>
         </div>
 
         <div class="md:w-2/5">
           <div class="bg-white rounded-lg shadow-lg p-6">
-            <h4 class="text-xl font-semibold mb-4 text-center">Connect With Me</h4>
+            <h4 class="text-xl font-semibold mb-4 text-center connect-title">Connect With Me</h4>
             <div class="grid grid-cols-2 gap-4">
               <a href="https://celalaygar.github.io/" target="_blank"
                 class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
@@ -231,76 +245,74 @@
     <!-- About Section -->
     <section id="about" class="section mb-16">
       <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">About Me</h2>
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block about-title">About Me</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <h3 class="text-xl font-semibold mb-4">I'm Hacı Celal Aygar and <span class="text-blue-600">Full Stack
-              developer and Java developer</span></h3>
-          <p class="mb-4 text-gray-600">
-            I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack
-            developer and Java developer around 5 years.
-          </p>
-          <p class="mb-4 text-gray-600">
-            My goal is to work in companies that produce projects using technologies in the fields of computer
-            engineering and to continue to improve myself. I also continue to share many of my sample works on my Github
-            account.
-          </p>
-          <p class="mb-6 text-gray-600">
-            Also I am constantly working to make life easier and trying to find solutions to the common problems of
-            people. I'm currently learning client side technologies by using especially Github and Stackoverflow.
-          </p>
+          <h3 class="text-xl font-semibold mb-4 about-heading">
+            I'm Hacı Celal Aygar and <span class="text-blue-600">Full Stack developer and Java developer</span>
+          </h3>
+          <div class="about-content mb-6 text-gray-600">
+            <p class="mb-4">I graduated from Karabük University, Department of Computer Engineering. I have been working
+              as a Full Stack developer and Java developer around 5 years.</p>
+            <p class="mb-4">My goal is to work in companies that produce projects using technologies in the fields of
+              computer engineering and to continue to improve myself. I also continue to share many of my sample works
+              on my Github account.</p>
+            <p class="mb-6">Also I am constantly working to make life easier and trying to find solutions to the common
+              problems of people. I'm currently learning client side technologies by using especially Github and
+              Stackoverflow.</p>
+          </div>
 
           <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">Communication</h3>
+            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 comm-title">Communication</h3>
             <div class="space-y-3">
               <div class="flex">
-                <span class="font-medium w-32">Email:</span>
+                <span class="font-medium w-32 email-label">Email:</span>
                 <span>celal.aygar@gmail.com</span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">Website:</span>
+                <span class="font-medium w-32 website-label">Website:</span>
                 <span><a href="https://celalaygar.github.io/" target="_blank" class="text-blue-600 hover:underline">My
                     Web page</a></span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">Degree:</span>
+                <span class="font-medium w-32 degree-label">Degree:</span>
                 <span>Computer Engineer</span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">Phone:</span>
+                <span class="font-medium w-32 phone-label">Phone:</span>
                 <span>+90 544 835 8401</span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">City:</span>
+                <span class="font-medium w-32 city-label">City:</span>
                 <span>Turkey / Ankara</span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">Youtube:</span>
+                <span class="font-medium w-32 youtube-label">Youtube:</span>
                 <span><a href="https://www.youtube.com/@celalaygar/featured" target="_blank"
                     class="text-blue-600 hover:underline">My Youtube channel</a></span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">Linked In:</span>
+                <span class="font-medium w-32 linkedin-label">Linked In:</span>
                 <span><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
                     class="text-blue-600 hover:underline">My Linked In</a></span>
               </div>
               <div class="flex">
-                <span class="font-medium w-32">Freelance:</span>
+                <span class="font-medium w-32 freelance-label">Freelance:</span>
                 <span>Available</span>
               </div>
             </div>
           </div>
 
           <a href="#contact"
-            class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Hire
+            class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block hire-btn">Hire
             me!</a>
         </div>
 
         <div>
           <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">Education</h3>
+            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 edu-title">Education</h3>
             <div class="space-y-6">
               <div class="timeline-item">
                 <h3 class="text-lg font-semibold">2013 - 2017</h3>
@@ -329,233 +341,23 @@
     <!-- Experience Section -->
     <section id="experience" class="section mb-16">
       <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Experience</h2>
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block exp-title">Experience</h2>
       </div>
 
-      <div class="grid grid-cols-1 gap-8">
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <div class="timeline-item">
-            <h3 class="text-lg font-semibold">06/2024 - Today (11 Months)</h3>
-            <h4 class="text-xl font-bold text-blue-600">FMSS Bilisim Teknoloji</h4>
-            <h4 class="text-lg font-medium">Full-Stack Developer & Java Developer at PAYCELL</h4>
-            <ul class="mt-3 space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>This project is about money transfer</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Bug fix and build new feature</span>
-              </li>
-            </ul>
-            <div class="mt-4">
-              <p class="font-semibold">Tools & Technologies:</p>
-              <p class="text-gray-600">Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle,
-                Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <div class="timeline-item">
-            <h3 class="text-lg font-semibold">04/2022 - 06/2024 (26 Months)</h3>
-            <h4 class="text-xl font-bold text-blue-600">Orion BT</h4>
-            <h4 class="text-lg font-medium">Full-Stack Developer & Java Developer at VODAFONE</h4>
-            <p class="text-gray-600 font-medium mb-2">Vodafone E-Commerce Project</p>
-            <ul class="mt-3 space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some
-                  microservices</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Creating common general library and common authorization library to use for all of java
-                  Microservices.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Using Feign Client for inter-microservice communication.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Usage of Junit and Mockita for Unit Test Coverage.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Using Git as version control system and Using Jira and Confluence to follow tasks</span>
-              </li>
-            </ul>
-            <div class="mt-4">
-              <p class="font-semibold">Tools & Technologies:</p>
-              <p class="text-gray-600">Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js ·
-                Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis ·
-                Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins</p>
-            </div>
-          </div>
-
-          <div class="timeline-item mt-8">
-            <h4 class="text-lg font-medium">Full-Stack Developer & Java Developer for the Ministry of Interior</h4>
-            <ul class="mt-3 space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Building over Authorization in frontend and backend for users.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Bug fix, Built the Frontend and Backend</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Creating microservice by using Spring boot, Redis Graph.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Creating microservice by using Spring boot, Kafka to push data to Kafka Topic from Data Base
-                  periodically.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Changing main module template in Frontend</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Using Trigger and Procedure as function on Plpsql for java listener service to listen trigger
-                  action.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Using Git as version control system and Using Redmine to follow tasks</span>
-              </li>
-            </ul>
-            <div class="mt-4">
-              <p class="font-semibold">Tools & Technologies:</p>
-              <p class="text-gray-600">Microservices Architecture · Java 8-11, Spring Boot, Security, JPA, Hibernate,
-                Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js,
-                Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <div class="timeline-item">
-            <h3 class="text-lg font-semibold">08/2021 - 03/2022 (8 Months)</h3>
-            <h4 class="text-xl font-bold text-blue-600">OBSS</h4>
-            <h4 class="text-lg font-medium">Full Stack Developer & Java Software Engineer in ASELSAN</h4>
-            <ul class="mt-3 space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Working at ASELSAN project for OBSS</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Bug fix, Built the frontend and backend.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Drawing operations were carried out on the map by communicating with 3rd party services.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Using Git as version control system</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Using TFS and Jira to follow tasks</span>
-              </li>
-            </ul>
-            <div class="mt-4">
-              <p class="font-semibold">Tools & Technologies:</p>
-              <p class="text-gray-600">Microservices Architecture , Java 11 , Maven , Spring boot, Docker, Kubernetes,
-                TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache
-                Kafka, HTML, CSS</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <div class="timeline-item">
-            <h3 class="text-lg font-semibold">10/2020 - 06/2021 (8 Months)</h3>
-            <h4 class="text-xl font-bold text-blue-600">VİA Bilgisayar Sistemleri</h4>
-            <h4 class="text-lg font-medium">Full Stack Developer & Java Software Engineer</h4>
-            <ul class="mt-3 space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>An order management system is made for the pharmaceutical warehouse.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Jar management and Git architecture created Project architecture was created.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>I have created Authentication and Authorization in frontend and backend.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Member registration, entry and exit procedures have been created.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>A free theme is determined to be used within the project and is fragmented and placed within the
-                  project.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Export, Campaign Drug, Packaging and some part of Accounting and Logistics modules were made and
-                  built.</span>
-              </li>
-            </ul>
-            <div class="mt-4">
-              <p class="font-semibold">Tools & Technologies:</p>
-              <p class="text-gray-600">Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA,
-                React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <div class="timeline-item">
-            <h3 class="text-lg font-semibold">12/2019 - 07/2020 (8 Months)</h3>
-            <h4 class="text-xl font-bold text-blue-600">ERC Mühendislik Danışmanlık ve ARGE Hizmetleri</h4>
-            <h4 class="text-lg font-medium">Java Software Engineer</h4>
-            <ul class="mt-3 space-y-2 text-gray-600">
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Adding new screens to the modules, adding new features to certain screens.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Building certain updates on the screens and fixing errors and bugs.</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>integration, design and using of Jasper report</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                <span>Building R&D project about web push notification</span>
-              </li>
-            </ul>
-            <div class="mt-4">
-              <p class="font-semibold">Tools & Technologies:</p>
-              <p class="text-gray-600">Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial
-                (TortoiseHg), Oracle, DB2, Python, İReport.</p>
-            </div>
-          </div>
-        </div>
+      <div class="grid grid-cols-1 gap-8" id="experience-container">
+        <!-- Experience content will be dynamically loaded based on language -->
       </div>
     </section>
 
     <!-- Technologies Section -->
     <section id="technologies" class="section mb-16">
       <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">My Technologies</h2>
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block tech-title">My Technologies</h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Backend & Devops</h3>
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 backend-title">Backend & Devops</h3>
           <div class="space-y-4">
             <div class="skill-item">
               <div class="flex justify-between mb-1">
@@ -740,7 +542,7 @@
         </div>
 
         <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Frontend</h3>
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 frontend-title">Frontend</h3>
           <div class="space-y-4">
             <div class="skill-item">
               <div class="flex justify-between mb-1">
@@ -839,7 +641,7 @@
     <!-- Certificates Section -->
     <section id="certificates" class="section mb-16">
       <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Certificates</h2>
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block cert-title">Certificates</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -855,7 +657,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Database_Design_and_Programming_with_SQL.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
 
@@ -871,7 +673,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/REACT_ile_Web_Programcılığı.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
 
@@ -887,7 +689,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Elasticsearch_v8_Sertifika.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
 
@@ -903,7 +705,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Apache_Kafka.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
 
@@ -919,7 +721,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/NoSQL_Doküman_Veritabanları.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
 
@@ -935,7 +737,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/JAVA_ile_Programlamaya_Giriş_Sertifika.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
 
@@ -951,7 +753,7 @@
           <div class="text-center">
             <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/%C4%B0leri_Seviye_Java_Sertifika.pdf"
               target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block">Download!</a>
+              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
       </div>
@@ -960,12 +762,13 @@
     <!-- Books & Hobbies Section -->
     <section id="books" class="section mb-16">
       <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Books & Hobbies</h2>
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block books-title">Books & Hobbies
+        </h2>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Books</h3>
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 books-section-title">Books</h3>
           <div class="space-y-4">
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
@@ -1034,7 +837,7 @@
         </div>
 
         <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200">Hobbies</h3>
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
           <div class="space-y-4">
             <div class="flex items-center pb-3 border-b border-gray-100">
               <i class="fas fa-chess text-blue-600 mr-4 text-xl"></i>
@@ -1078,12 +881,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section mb-16">
       <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block">Contact</h2>
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
       </div>
 
       <div class="text-center mb-10">
-        <h3 class="text-2xl font-semibold mb-2">Any Question? Contact us!</h3>
-        <h4 class="text-xl text-gray-600">I'm at your service</h4>
+        <h3 class="text-2xl font-semibold mb-2 contact-subtitle">Any Question? Contact us!</h3>
+        <h4 class="text-xl text-gray-600 contact-description">I'm at your service</h4>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1092,7 +895,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fas fa-phone text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">Call us on</h4>
+            <h4 class="text-lg font-semibold contact-phone-label">Call us on</h4>
           </div>
           <p class="text-gray-600">+90 544 835 84 01</p>
         </div>
@@ -1102,7 +905,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">City / Country</h4>
+            <h4 class="text-lg font-semibold contact-location-label">City / Country</h4>
           </div>
           <p class="text-gray-600">Ankara / TURKEY</p>
         </div>
@@ -1112,7 +915,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fas fa-envelope text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">Email</h4>
+            <h4 class="text-lg font-semibold contact-email-label">Email</h4>
           </div>
           <p class="text-gray-600">celal.aygar@gmail.com</p>
         </div>
@@ -1122,7 +925,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fas fa-globe text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">Website</h4>
+            <h4 class="text-lg font-semibold contact-website-label">Website</h4>
           </div>
           <p class="text-gray-600"><a href="https://celalaygar.github.io/" target="_blank"
               class="text-blue-600 hover:underline">celalaygar.github.io</a></p>
@@ -1133,7 +936,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fab fa-linkedin text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">Linkedin</h4>
+            <h4 class="text-lg font-semibold contact-linkedin-label">Linkedin</h4>
           </div>
           <p class="text-gray-600"><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
               class="text-blue-600 hover:underline">linkedin.com/in/celalaygar</a></p>
@@ -1144,7 +947,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fab fa-github text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">GitHub</h4>
+            <h4 class="text-lg font-semibold contact-github-label">GitHub</h4>
           </div>
           <p class="text-gray-600"><a href="https://github.com/celalaygar" target="_blank"
               class="text-blue-600 hover:underline">github.com/celalaygar</a></p>
@@ -1155,7 +958,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fab fa-medium text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">Medium</h4>
+            <h4 class="text-lg font-semibold contact-medium-label">Medium</h4>
           </div>
           <p class="text-gray-600"><a href="https://medium.com/@celalaygar" target="_blank"
               class="text-blue-600 hover:underline">medium.com/@celalaygar</a></p>
@@ -1166,7 +969,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fab fa-youtube text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">Youtube</h4>
+            <h4 class="text-lg font-semibold contact-youtube-label">Youtube</h4>
           </div>
           <p class="text-gray-600"><a href="https://www.youtube.com/@celalaygar" target="_blank"
               class="text-blue-600 hover:underline">youtube.com/@celalaygar</a></p>
@@ -1177,7 +980,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fab fa-hackerrank text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">HackerRank</h4>
+            <h4 class="text-lg font-semibold contact-hackerrank-label">HackerRank</h4>
           </div>
           <p class="text-gray-600"><a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
               class="text-blue-600 hover:underline">hackerrank.com/celalaygar</a></p>
@@ -1188,7 +991,7 @@
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
               <i class="fab fa-stack-overflow text-blue-600 text-xl"></i>
             </div>
-            <h4 class="text-lg font-semibold">StackOverflow</h4>
+            <h4 class="text-lg font-semibold contact-stackoverflow-label">StackOverflow</h4>
           </div>
           <p class="text-gray-600"><a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar"
               target="_blank" class="text-blue-600 hover:underline">stackoverflow.com/users/12014524</a></p>
@@ -1229,6 +1032,251 @@
   </footer>
 
   <script>
+    // Experience data in English and Turkish
+    const experienceData = {
+      en: [
+        {
+          period: "06/2024 - Today (11 Months)",
+          company: "FMSS Bilisim Teknoloji",
+          position: "Full-Stack Developer & Java Developer at PAYCELL",
+          description: [
+            "This project is about money transfer",
+            "Bug fix and build new feature"
+          ],
+          technologies: "Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
+        },
+        {
+          period: "04/2022 - 06/2024 (26 Months)",
+          company: "Orion BT",
+          position: "Full-Stack Developer & Java Developer at VODAFONE",
+          description: [
+            "Vodafone E-Commerce Project",
+            "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
+            "Creating common general library and common authorization library to use for all of java Microservices.",
+            "Using Feign Client for inter-microservice communication.",
+            "Usage of Junit and Mockita for Unit Test Coverage.",
+            "Using Git as version control system and Using Jira and Confluence to follow tasks"
+          ],
+          technologies: "Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+        },
+        {
+          period: "08/2021 - 03/2022 (8 Months)",
+          company: "OBSS",
+          position: "Full Stack Developer & Java Software Engineer in ASELSAN",
+          description: [
+            "Working at ASELSAN project for OBSS",
+            "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+            "Drawing operations were carried out on the map by communicating with 3rd party services.",
+            "Using Git as version control system",
+            "Using TFS and Jira to follow tasks"
+          ],
+          technologies: "Microservices Architecture , Java 11 , Maven , Spring boot, Docker, Kubernetes, TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache Kafka, HTML, CSS"
+        },
+        {
+          period: "10/2020 - 06/2021 (8 Months)",
+          company: "VİA Bilgisayar Sistemleri",
+          position: "Full Stack Developer & Java Software Engineer",
+          description: [
+            "An order management system is made for the pharmaceutical warehouse.",
+            "Jar management and Git architecture created Project architecture was created.",
+            "I have created Authentication and Authorization in frontend and backend.",
+            "Member registration, entry and exit procedures have been created.",
+            "A free theme is determined to be used within the project and is fragmented and placed within the project.",
+            "Export, Campaign Drug, Packaging and some part of Accounting and Logistics modules were made and built."
+          ],
+          technologies: "Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA, React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket"
+        },
+        {
+          period: "12/2019 - 07/2020 (8 Months)",
+          company: "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
+          position: "Java Software Engineer",
+          description: [
+            "Adding new screens to the modules, adding new features to certain screens.",
+            "Building certain updates on the screens and fixing errors and bugs.",
+            "integration, design and using of Jasper report",
+            "Building R&D project about web push notification"
+          ],
+          technologies: "Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial (TortoiseHg), Oracle, DB2, Python, İReport."
+        }
+      ],
+      tr: [
+        {
+          period: "06/2024 - Günümüz (11 Ay)",
+          company: "FMSS Bilisim Teknoloji",
+          position: "PAYCELL'te Full-Stack Geliştirici & Java Geliştirici",
+          description: [
+            "Bu proje para transferi hakkında",
+            "Hata düzeltme ve yeni özellik oluşturma"
+          ],
+          technologies: "Mikroservisler, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
+        },
+        {
+          period: "04/2022 - 06/2024 (26 Ay)",
+          company: "Orion BT",
+          position: "VODAFONE'ta Full-Stack Geliştirici & Java Geliştirici",
+          description: [
+            "Vodafone E-Ticaret Projesi",
+            "Bazı mikroservislerde Spring boot sürümünü 2'den 3'e, Java sürümünü Java 11'den Java 17'ye yükseltme",
+            "Tüm java Mikroservisleri için kullanılacak ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma.",
+            "Mikroservisler arası iletişim için Feign Client kullanımı.",
+            "Birim Test Kapsamı için Junit ve Mockita kullanımı.",
+            "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Jira ve Confluence kullanımı"
+          ],
+          technologies: "Mikroservis Mimarisi · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+        },
+        {
+          period: "08/2021 - 03/2022 (8 Ay)",
+          company: "OBSS",
+          position: "ASELSAN'da Full Stack Geliştirici & Java Yazılım Mühendisi",
+          description: [
+            "OBSS için ASELSAN projesinde çalışma",
+            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı.",
+            "3. part servislerle hizmetlerle iletişim kurarak harita üzerinde çizim işlemleri yapıldı.",
+            "Sürüm kontrol sistemi olarak Git kullanımı",
+            "Görevleri takip etmek için TFS ve Jira kullanımı"
+          ],
+          technologies: "Mikroservis Mimarisi , Java 11 , Maven , Spring boot, Docker, Kubernetes, TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache Kafka, HTML, CSS"
+        },
+        {
+          period: "10/2020 - 06/2021 (8 Ay)",
+          company: "VİA Bilgisayar Sistemleri",
+          position: "Full Stack Geliştirici & Java Yazılım Mühendisi",
+          description: [
+            "İlaç deposu için bir sipariş yönetim sistemi yapıldı.",
+            "Jar yönetimi ve Git mimarisi oluşturuldu Proje mimarisi oluşturuldu.",
+            "Ön yüz ve arka yüzde Kimlik Doğrulama ve Yetkilendirme oluşturdum.",
+            "Üye kaydı, giriş ve çıkış işlemleri oluşturuldu.",
+            "Proje içinde kullanılmak üzere ücretsiz bir tema belirlendi ve projeye parçalanarak yerleştirildi.",
+            "İhracat, Kampanya İlaç, Paketleme ve Muhasebe ve Lojistik modüllerinin bazı bölümleri yapıldı ve inşa edildi."
+          ],
+          technologies: "Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA, React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket"
+        },
+        {
+          period: "12/2019 - 07/2020 (8 Ay)",
+          company: "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
+          position: "Java Yazılım Mühendisi",
+          description: [
+            "Modüllere yeni ekranlar ekleme, belirli ekranlara yeni özellikler ekleme.",
+            "Ekranlarda belirli güncellemeler yapma ve hataları ve hataları düzeltme.",
+            "Jasper raporunun entegrasyonu, tasarımı ve kullanımı",
+            "Web push notification hakkında Ar-Ge projesi oluşturma"
+          ],
+          technologies: "Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial (TortoiseHg), Oracle, DB2, Python, İReport."
+        }
+      ]
+    };
+
+    // Translations
+    const translations = {
+      en: {
+        greeting: "Hello, My name is",
+        description: [
+          "I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
+          "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
+          "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
+        ],
+        aboutTitle: "About Me",
+        aboutHeading: "I'm Hacı Celal Aygar and Full Stack developer and Java developer",
+        aboutContent: [
+          "I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
+          "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
+          "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
+        ],
+        commTitle: "Communication",
+        emailLabel: "Email:",
+        websiteLabel: "Website:",
+        degreeLabel: "Degree:",
+        phoneLabel: "Phone:",
+        cityLabel: "City:",
+        youtubeLabel: "Youtube:",
+        linkedinLabel: "Linked In:",
+        freelanceLabel: "Freelance:",
+        eduTitle: "Education",
+        hireBtn: "Hire me!",
+        expTitle: "Experience",
+        techTitle: "My Technologies",
+        backendTitle: "Backend & Devops",
+        frontendTitle: "Frontend",
+        certTitle: "Certificates",
+        booksTitle: "Books & Hobbies",
+        booksSectionTitle: "Books",
+        hobbiesTitle: "Hobbies",
+        contactTitle: "Contact",
+        contactSubtitle: "Any Question? Contact us!",
+        contactDescription: "I'm at your service",
+        contactPhoneLabel: "Call us on",
+        contactLocationLabel: "City / Country",
+        contactEmailLabel: "Email",
+        contactWebsiteLabel: "Website",
+        contactLinkedinLabel: "Linkedin",
+        contactGithubLabel: "GitHub",
+        contactMediumLabel: "Medium",
+        contactYoutubeLabel: "Youtube",
+        contactHackerrankLabel: "HackerRank",
+        contactStackoverflowLabel: "StackOverflow",
+        downloadBtn: "Download!",
+        cvEn: "Download English CV",
+        cvTr: "Download Turkish CV",
+        connectTitle: "Connect With Me",
+        roles: ["Full Stack Developer", "Java Developer", "Software Engineer"]
+      },
+      tr: {
+        greeting: "Merhaba, Benim adım",
+        description: [
+          "Ben Hacı Celal Aygar. Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
+          "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
+          "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
+        ],
+        aboutTitle: "Hakkımda",
+        aboutHeading: "Ben Hacı Celal Aygar ve Full Stack geliştirici ve Java geliştiriciyim",
+        aboutContent: [
+          "Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
+          "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
+          "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
+        ],
+        commTitle: "İletişim Bilgileri",
+        emailLabel: "E-posta:",
+        websiteLabel: "Web sitesi:",
+        degreeLabel: "Eğitim:",
+        phoneLabel: "Telefon:",
+        cityLabel: "Şehir:",
+        youtubeLabel: "Youtube:",
+        linkedinLabel: "Linked In:",
+        freelanceLabel: "Freelance:",
+        eduTitle: "Eğitim",
+        hireBtn: "Beni İşe Alın!",
+        expTitle: "Deneyim",
+        techTitle: "Teknolojilerim",
+        backendTitle: "Backend & Devops",
+        frontendTitle: "Frontend",
+        certTitle: "Sertifikalar",
+        booksTitle: "Kitaplar & Hobiler",
+        booksSectionTitle: "Kitaplar",
+        hobbiesTitle: "Hobiler",
+        contactTitle: "İletişim",
+        contactSubtitle: "Soru mu var? Bize ulaşın!",
+        contactDescription: "Hizmetinizdeyim",
+        contactPhoneLabel: "Bizi arayın",
+        contactLocationLabel: "Şehir / Ülke",
+        contactEmailLabel: "E-posta",
+        contactWebsiteLabel: "Web sitesi",
+        contactLinkedinLabel: "Linkedin",
+        contactGithubLabel: "GitHub",
+        contactMediumLabel: "Medium",
+        contactYoutubeLabel: "Youtube",
+        contactHackerrankLabel: "HackerRank",
+        contactStackoverflowLabel: "StackOverflow",
+        downloadBtn: "İndir!",
+        cvEn: "İngilizce CV İndir",
+        cvTr: "Türkçe CV İndir",
+        connectTitle: "Benimle İletişime Geçin",
+        roles: ["Full Stack Geliştirici", "Java Geliştirici", "Yazılım Mühendisi"]
+      }
+    };
+
+    // Current language
+    let currentLang = 'en';
+
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -1242,27 +1290,148 @@
     const trLangBtn = document.getElementById('tr-lang');
 
     enLangBtn.addEventListener('click', () => {
+      currentLang = 'en';
+      updateLanguage();
       enLangBtn.classList.add('bg-blue-600', 'text-white');
       enLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
       trLangBtn.classList.add('bg-gray-200', 'text-gray-700');
       trLangBtn.classList.remove('bg-blue-600', 'text-white');
-      // Add language change logic here
     });
 
     trLangBtn.addEventListener('click', () => {
+      currentLang = 'tr';
+      updateLanguage();
       trLangBtn.classList.add('bg-blue-600', 'text-white');
       trLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
       enLangBtn.classList.add('bg-gray-200', 'text-gray-700');
       enLangBtn.classList.remove('bg-blue-600', 'text-white');
-      // Add language change logic here
     });
+
+    // Update language function
+    function updateLanguage() {
+      const t = translations[currentLang];
+
+      // Update navigation
+      document.querySelectorAll('.nav-link').forEach(link => {
+        const enText = link.getAttribute('data-en');
+        const trText = link.getAttribute('data-tr');
+        if (enText && trText) {
+          link.textContent = currentLang === 'en' ? enText : trText;
+        }
+      });
+
+      // Update home section
+      document.querySelector('.greeting-text').textContent = t.greeting;
+
+      const descriptionContainer = document.querySelector('.description-text');
+      descriptionContainer.innerHTML = t.description.map(p => `<p class="mb-4">${p}</p>`).join('');
+
+      // Update about section
+      document.querySelector('.about-title').textContent = t.aboutTitle;
+      document.querySelector('.about-heading').innerHTML = `I'm Hacı Celal Aygar and <span class="text-blue-600">${t.aboutHeading.split('and ')[1]}</span>`;
+
+      const aboutContentContainer = document.querySelector('.about-content');
+      aboutContentContainer.innerHTML = t.aboutContent.map(p => `<p class="mb-4">${p}</p>`).join('');
+
+      // Update communication section
+      document.querySelector('.comm-title').textContent = t.commTitle;
+      document.querySelector('.email-label').textContent = t.emailLabel;
+      document.querySelector('.website-label').textContent = t.websiteLabel;
+      document.querySelector('.degree-label').textContent = t.degreeLabel;
+      document.querySelector('.phone-label').textContent = t.phoneLabel;
+      document.querySelector('.city-label').textContent = t.cityLabel;
+      document.querySelector('.youtube-label').textContent = t.youtubeLabel;
+      document.querySelector('.linkedin-label').textContent = t.linkedinLabel;
+      document.querySelector('.freelance-label').textContent = t.freelanceLabel;
+
+      // Update education section
+      document.querySelector('.edu-title').textContent = t.eduTitle;
+
+      // Update buttons
+      document.querySelector('.hire-btn').textContent = t.hireBtn;
+      document.querySelector('.cv-en').textContent = t.cvEn;
+      document.querySelector('.cv-tr').textContent = t.cvTr;
+
+      // Update section titles
+      document.querySelector('.exp-title').textContent = t.expTitle;
+      document.querySelector('.tech-title').textContent = t.techTitle;
+      document.querySelector('.backend-title').textContent = t.backendTitle;
+      document.querySelector('.frontend-title').textContent = t.frontendTitle;
+      document.querySelector('.cert-title').textContent = t.certTitle;
+      document.querySelector('.books-title').textContent = t.booksTitle;
+      document.querySelector('.books-section-title').textContent = t.booksSectionTitle;
+      document.querySelector('.hobbies-title').textContent = t.hobbiesTitle;
+      document.querySelector('.contact-title').textContent = t.contactTitle;
+      document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
+      document.querySelector('.contact-description').textContent = t.contactDescription;
+
+      // Update contact section
+      document.querySelector('.contact-phone-label').textContent = t.contactPhoneLabel;
+      document.querySelector('.contact-location-label').textContent = t.contactLocationLabel;
+      document.querySelector('.contact-email-label').textContent = t.contactEmailLabel;
+      document.querySelector('.contact-website-label').textContent = t.contactWebsiteLabel;
+      document.querySelector('.contact-linkedin-label').textContent = t.contactLinkedinLabel;
+      document.querySelector('.contact-github-label').textContent = t.contactGithubLabel;
+      document.querySelector('.contact-medium-label').textContent = t.contactMediumLabel;
+      document.querySelector('.contact-youtube-label').textContent = t.contactYoutubeLabel;
+      document.querySelector('.contact-hackerrank-label').textContent = t.contactHackerrankLabel;
+      document.querySelector('.contact-stackoverflow-label').textContent = t.contactStackoverflowLabel;
+
+      // Update download buttons
+      document.querySelectorAll('.download-btn').forEach(btn => {
+        btn.textContent = t.downloadBtn;
+      });
+
+      // Update connect title
+      document.querySelector('.connect-title').textContent = t.connectTitle;
+
+      // Update experience section
+      updateExperienceSection();
+
+      // Update typing animation roles
+      updateTypingAnimation();
+    }
+
+    // Update experience section
+    function updateExperienceSection() {
+      const container = document.getElementById('experience-container');
+      const experiences = experienceData[currentLang];
+
+      container.innerHTML = experiences.map(exp => `
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="timeline-item">
+                        <h3 class="text-lg font-semibold">${exp.period}</h3>
+                        <h4 class="text-xl font-bold text-blue-600">${exp.company}</h4>
+                        <h4 class="text-lg font-medium">${exp.position}</h4>
+                        ${exp.description.map(desc => `
+                            <p class="mt-2 text-gray-600">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>${desc}</span>
+                            </p>
+                        `).join('')}
+                        <div class="mt-4">
+                            <p class="font-semibold">Tools & Technologies:</p>
+                            <p class="text-gray-600">${exp.technologies}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+    }
 
     // Typing effect
     const typingText = document.getElementById('typing-text');
-    const roles = ['Full Stack Developer', 'Java Developer', 'Software Engineer'];
+    let roles = translations.en.roles;
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+
+    function updateTypingAnimation() {
+      roles = translations[currentLang].roles;
+      roleIndex = 0;
+      charIndex = 0;
+      isDeleting = false;
+      typeEffect();
+    }
 
     function typeEffect() {
       const currentRole = roles[roleIndex];
@@ -1287,6 +1456,7 @@
       }
     }
 
+    // Initialize typing animation
     typeEffect();
 
     // Smooth scrolling for navigation links
@@ -1371,6 +1541,9 @@
 
     window.addEventListener('scroll', animateSkillBars);
     window.addEventListener('load', animateSkillBars);
+
+    // Initialize experience section
+    updateExperienceSection();
   </script>
 </body>
 
