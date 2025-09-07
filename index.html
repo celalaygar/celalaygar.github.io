@@ -1609,31 +1609,34 @@
     window.addEventListener('scroll', updateActiveNavLink);
     window.addEventListener('load', updateActiveNavLink);
 
-    // Animate skill bars when visible
+    // === ANIMATE SKILL BARS ===
     const skillBars = document.querySelectorAll('.skill-progress');
 
+    // Reset all skill bars to 0% and store the target width in a data attribute
+    skillBars.forEach(bar => {
+      const currentWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/);
+      if (currentWidth) {
+        const widthValue = currentWidth[1];
+        bar.setAttribute('data-width', widthValue); // Store target width
+        bar.style.width = '0%'; // Visually reset
+      }
+    });
+
+    // Animate skill bars when they come into view
     function animateSkillBars() {
       skillBars.forEach(bar => {
         const barTop = bar.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
+        // Check if the bar is in the viewport and hasn't been animated yet
         if (barTop < windowHeight - 100 && bar.style.width === '0%') {
-          const width = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
-          bar.style.width = '0%';
-          setTimeout(() => {
-            bar.style.width = width;
-          }, 200);
+          const targetWidth = bar.getAttribute('data-width');
+          bar.style.width = targetWidth; // Animate to stored width
         }
       });
     }
 
-    // Reset skill bars for animation
-    skillBars.forEach(bar => {
-      const width = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
-      bar.setAttribute('data-width', width);
-      bar.style.width = '0%';
-    });
-
+    // Run on scroll and load
     window.addEventListener('scroll', animateSkillBars);
     window.addEventListener('load', animateSkillBars);
 
