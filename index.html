@@ -1,1481 +1,1552 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Celal Aygar Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <style>
-    /* Custom styles for animations and specific elements */
-    .section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .section.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .skill-progress {
-      transition: width 1.5s ease-in-out;
-    }
-    .timeline-item {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 30px;
-    }
-    .timeline-item:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 5px;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: #3b82f6;
-    }
-    .timeline-item:after {
-      content: "";
-      position: absolute;
-      left: 7px;
-      top: 20px;
-      width: 2px;
-      height: calc(100% + 10px);
-      background-color: #e5e7eb;
-    }
-    .timeline-item:last-child:after {
-      display: none;
-    }
-    .nav-link {
-      position: relative;
-    }
-    .nav-link:after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #3b82f6;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover:after,
-    .nav-link.active:after {
-      width: 100%;
-    }
-    .card-hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-    .typing-effect {
-      border-right: 2px solid #3b82f6;
-      animation: blink 1s infinite;
-    }
-    @keyframes blink {
-      0%,
-      50% {
-        border-color: transparent;
-      }
-      51%,
-      100% {
-        border-color: #3b82f6;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celal Aygar Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* Custom styles for animations and specific elements */
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-progress {
+            transition: width 1.5s ease-in-out;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+
+        .timeline-item:after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 10px);
+            background-color: #e5e7eb;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .typing-effect {
+            border-right: 2px solid #3b82f6;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                border-color: transparent;
+            }
+
+            51%,
+            100% {
+                border-color: #3b82f6;
+            }
+        }
+    </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans">
-  <!-- Header with Navigation -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 max-w-7xl">
-      <div class="flex justify-between items-center">
-        <div>
-          <h1 class="text-2xl font-bold text-blue-600">Celal Aygar Portfolio</h1>
-          <h2 class="text-lg text-gray-600">Hacı Celal Aygar</h2>
-        </div>
-        <!-- Navigation -->
-        <nav class="hidden md:flex space-x-6">
-          <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
-            data-tr="Ana Sayfa">Home</a>
-          <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="About"
-            data-tr="Hakkımda">About</a>
-          <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Experience"
-            data-tr="Deneyim">Experience</a>
-          <a href="#projects" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Projects"
-            data-tr="Projeler">Projects</a>
-          <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Certificates"
-            data-tr="Sertifikalar">Certificates</a>
-          <a href="#books" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Books & Hobbies"
-            data-tr="Kitaplar & Hobiler">Books & Hobbies</a>
-          <a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Technologies"
-            data-tr="Teknolojiler">Technologies</a>
-          <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
-            data-tr="İletişim">Contact</a>
-        </nav>
-        <!-- Language Selection -->
-        <div class="flex space-x-2 mr-2">
-          <button id="en-lang" class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">EN</button>
-          <button id="tr-lang" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm font-medium">TR</button>
-        </div>
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-gray-600">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-      </div>
-      <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
-        <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
-          data-tr="Ana Sayfa">Home</a>
-        <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="About"
-          data-tr="Hakkımda">About</a>
-        <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Experience"
-          data-tr="Deneyim">Experience</a>
-        <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Projects"
-          data-tr="Projeler">Projects</a>
-        <a href="#certificates" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Certificates"
-          data-tr="Sertifikalar">Certificates</a>
-        <a href="#books" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Books & Hobbies"
-          data-tr="Kitaplar & Hobiler">Books & Hobbies</a>
-        <a href="#technologies" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Technologies"
-          data-tr="Teknolojiler">Technologies</a>
-        <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
-          data-tr="İletişim">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <main class="container mx-auto px-6 py-10 max-w-7xl">
-    <!-- Home Section -->
-    <section id="home" class="section active mb-16">
-      <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="md:w-1/2 mb-10 md:mb-0">
-          <h3 class="text-3xl font-bold mb-4">
-            <span class="greeting-text">Hello, My name is</span>
-            <span class="text-blue-600">Hacı Celal Aygar</span>
-          </h3>
-          <h3 class="text-2xl font-semibold mb-6">I'm a <span id="typing-text" class="text-blue-600 typing-effect">Full
-              Stack Developer</span></h3>
-          <div class="description-text mb-6 text-gray-600">
-            <p class="mb-4">I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer
-              Engineering. I have been working as a Full Stack developer and Java developer around 5 years.</p>
-            <p class="mb-4">My goal is to work in companies that produce projects using technologies in the fields of
-              computer engineering and to continue to improve myself. I also continue to share many of my sample works
-              on my Github account.</p>
-            <p class="mb-6">Also I am constantly working to make life easier and trying to find solutions to the common
-              problems of people. I'm currently learning client side technologies by using especially Github and
-              Stackoverflow.</p>
-          </div>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.English.CV.pdf"
-              target="_blank"
-              class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition cv-en">Download
-              English CV</a>
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.Turkish.CV.pdf"
-              target="_blank"
-              class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300 transition cv-tr">Download
-              Turkish CV</a>
-          </div>
-        </div>
-        <div class="md:w-2/5">
-          <div class="bg-white rounded-lg shadow-lg p-6">
-            <h4 class="text-xl font-semibold mb-4 text-center connect-title">Connect With Me</h4>
-            <div class="grid grid-cols-2 gap-4">
-              <a href="https://celalaygar.github.io/" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
-                <i class="fas fa-globe text-blue-600 mr-3"></i>
-                <span>Website</span>
-              </a>
-              <a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
-                <i class="fab fa-linkedin text-blue-600 mr-3"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://github.com/celalaygar" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
-                <i class="fab fa-github text-blue-600 mr-3"></i>
-                <span>GitHub</span>
-              </a>
-              <a href="https://medium.com/@celalaygar" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
-                <i class="fab fa-medium text-blue-600 mr-3"></i>
-                <span>Medium</span>
-              </a>
-              <a href="https://www.youtube.com/@celalaygar" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
-                <i class="fab fa-youtube text-blue-600 mr-3"></i>
-                <span>YouTube</span>
-              </a>
-              <a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
-                <i class="fab fa-hackerrank text-blue-600 mr-3"></i>
-                <span>HackerRank</span>
-              </a>
-              <a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar" target="_blank"
-                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition col-span-2">
-                <i class="fab fa-stack-overflow text-blue-600 mr-3"></i>
-                <span>StackOverflow</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block about-title">About Me</h2>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-xl font-semibold mb-4 about-heading">
-            I'm Hacı Celal Aygar and <span class="text-blue-600">Full Stack developer and Java developer</span>
-          </h3>
-          <div class="about-content mb-6 text-gray-600">
-            <p class="mb-4">I graduated from Karabük University, Department of Computer Engineering. I have been working
-              as a Full Stack developer and Java developer around 5 years.</p>
-            <p class="mb-4">My goal is to work in companies that produce projects using technologies in the fields of
-              computer engineering and to continue to improve myself. I also continue to share many of my sample works
-              on my Github account.</p>
-            <p class="mb-6">Also I am constantly working to make life easier and trying to find solutions to the common
-              problems of people. I'm currently learning client side technologies by using especially Github and
-              Stackoverflow.</p>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 comm-title">Communication</h3>
-            <div class="space-y-3">
-              <div class="flex">
-                <span class="font-medium w-32 email-label">Email:</span>
-                <span>celal.aygar@gmail.com</span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 website-label">Website:</span>
-                <span><a href="https://celalaygar.github.io/" target="_blank" class="text-blue-600 hover:underline">My
-                    Web page</a></span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 degree-label">Degree:</span>
-                <span>Computer Engineer</span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 phone-label">Phone:</span>
-                <span>+90 544 835 8401</span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 city-label">City:</span>
-                <span>Turkey / Ankara</span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 youtube-label">Youtube:</span>
-                <span><a href="https://www.youtube.com/@celalaygar/featured" target="_blank"
-                    class="text-blue-600 hover:underline">My Youtube channel</a></span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 linkedin-label">Linked In:</span>
-                <span><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
-                    class="text-blue-600 hover:underline">My Linked In</a></span>
-              </div>
-              <div class="flex">
-                <span class="font-medium w-32 freelance-label">Freelance:</span>
-                <span>Available</span>
-              </div>
-            </div>
-          </div>
-          <a href="#contact"
-            class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block hire-btn">Hire
-            me!</a>
-        </div>
-        <div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 edu-title">Education</h3>
-            <div class="space-y-6">
-              <div class="timeline-item">
-                <h3 class="text-lg font-semibold">2013 - 2017</h3>
-                <h4 class="text-md font-medium text-blue-600">Computer Engineer (Bachelor Degree)</h4>
-                <h4 class="text-md font-medium">Karabük University</h4>
-                <p class="text-gray-600">Computer Engineer in Department of Computer Engineering at Karabük University
-                </p>
-              </div>
-              <div class="timeline-item">
-                <h3 class="text-lg font-semibold">2007 - 2012</h3>
-                <h4 class="text-md font-medium text-blue-600">Economics (Bachelor Degree)</h4>
-                <h4 class="text-md font-medium">Anadolu University</h4>
-                <p class="text-gray-600">Economics in Faculty of Economics at Anadolu University</p>
-              </div>
-              <div class="timeline-item">
-                <h3 class="text-lg font-semibold">2003 - 2007</h3>
-                <h4 class="text-md font-medium text-blue-600">High school</h4>
-                <p class="text-gray-600">High school at Mimar Sinan High school</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Experience Section -->
-    <section id="experience" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block exp-title">Experience</h2>
-      </div>
-      <div class="grid grid-cols-1 gap-8" id="experience-container">
-        <!-- Experience content will be dynamically loaded based on language -->
-      </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block projects-title">Projects</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Profile Track Project -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-          <div class="p-6">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center mr-4">
-                <i class="fas fa-search text-white text-xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">Profile Track</h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">Digital Footprint Discovery Tool</p>
-              </div>
-            </div>
-            <div class="project-description mb-4 text-gray-600">
-              <p class="en-text hidden mb-3">
-                Profile Track is a comprehensive system that allows users to discover websites or platforms where their 
-                email address or username might have been registered or publicly exposed. This cross-platform solution 
-                consists of a Flutter mobile application that works in conjunction with a powerful Spring Boot backend 
-                service to provide insights into your digital presence across the web.
-              </p>
-              <p class="tr-text hidden mb-3">
-                Profile Track, e-posta adresinizin veya kullanıcı adınızın kayıtlı olabileceği web sitelerini ve 
-                platformları keşfetmenizi sağlayan kapsamlı bir sistemdir. Bu çapraz platform çözümü, web'deki dijital 
-                varlığınız hakkında içgörüler sağlamak için Flutter mobil uygulamasından ve güçlü bir Spring Boot arka uç 
-                hizmetinden oluşur.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">Flutter</span>
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Spring Boot</span>
-              <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Sherlock</span>
-              <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Dart</span>
-              <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">Java</span>
-            </div>
+    <!-- Header with Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 max-w-7xl">
             <div class="flex justify-between items-center">
-              <a href="https://github.com/celalaygar/Profile-Track-Mobile-App" target="_blank"
-                class="text-blue-600 hover:text-blue-800 transition flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                <span class="github-text">GitHub</span>
-              </a>
-              <a href="https://celalaygar.github.io/main/project/profile-track/" target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
-                <span class="view-project-text">View Project</span>
-              </a>
+                <div>
+                    <h1 class="text-2xl font-bold text-blue-600">Celal Aygar Portfolio</h1>
+                    <h2 class="text-lg text-gray-600">Hacı Celal Aygar</h2>
+                </div>
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
+                        data-tr="Ana Sayfa">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="About"
+                        data-tr="Hakkımda">About</a>
+                    <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 font-medium"
+                        data-en="Experience" data-tr="Deneyim">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-blue-600 font-medium"
+                        data-en="Projects" data-tr="Projeler">Projects</a>
+                    <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-600 font-medium"
+                        data-en="Certificates" data-tr="Sertifikalar">Certificates</a>
+                    <a href="#books" class="nav-link text-gray-600 hover:text-blue-600 font-medium"
+                        data-en="Books & Hobbies" data-tr="Kitaplar & Hobiler">Books & Hobbies</a>
+                    <a href="#technologies" class="nav-link text-gray-600 hover:text-blue-600 font-medium"
+                        data-en="Technologies" data-tr="Teknolojiler">Technologies</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
+                        data-tr="İletişim">Contact</a>
+                </nav>
+                <!-- Language Selection -->
+                <div class="flex space-x-2 mr-2">
+                    <button id="en-lang"
+                        class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">EN</button>
+                    <button id="tr-lang"
+                        class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm font-medium">TR</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-          </div>
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
+                <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
+                    data-tr="Ana Sayfa">Home</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="About"
+                    data-tr="Hakkımda">About</a>
+                <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+                    data-en="Experience" data-tr="Deneyim">Experience</a>
+                <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Projects"
+                    data-tr="Projeler">Projects</a>
+                <a href="#certificates" class="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+                    data-en="Certificates" data-tr="Sertifikalar">Certificates</a>
+                <a href="#books" class="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+                    data-en="Books & Hobbies" data-tr="Kitaplar & Hobiler">Books & Hobbies</a>
+                <a href="#technologies" class="block py-2 text-gray-600 hover:text-blue-600 font-medium"
+                    data-en="Technologies" data-tr="Teknolojiler">Technologies</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
+                    data-tr="İletişim">Contact</a>
+            </nav>
         </div>
-        
-        <!-- Domain Track Project -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-          <div class="p-6">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
-                <i class="fas fa-globe text-white text-xl"></i>
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">Domain Track</h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm">Domain Intelligence Tool</p>
-              </div>
+    </header>
+    <main class="container mx-auto px-6 py-10 max-w-7xl">
+        <!-- Home Section -->
+        <section id="home" class="section active mb-16">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h3 class="text-3xl font-bold mb-4">
+                        <span class="greeting-text">Hello, My name is</span>
+                        <span class="text-blue-600">Hacı Celal Aygar</span>
+                    </h3>
+                    <h3 class="text-2xl font-semibold mb-6">I'm a <span id="typing-text"
+                            class="text-blue-600 typing-effect">Full
+                            Stack Developer</span></h3>
+                    <div class="description-text mb-6 text-gray-600">
+                        <p class="mb-4">I'm Hacı Celal Aygar. I graduated from Karabük University, Department of
+                            Computer
+                            Engineering. I have been working as a Full Stack developer and Java developer around 5
+                            years.</p>
+                        <p class="mb-4">My goal is to work in companies that produce projects using technologies in the
+                            fields of
+                            computer engineering and to continue to improve myself. I also continue to share many of my
+                            sample works
+                            on my Github account.</p>
+                        <p class="mb-6">Also I am constantly working to make life easier and trying to find solutions to
+                            the common
+                            problems of people. I'm currently learning client side technologies by using especially
+                            Github and
+                            Stackoverflow.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.English.CV.pdf"
+                            target="_blank"
+                            class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition cv-en">Download
+                            English CV</a>
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.Turkish.CV.pdf"
+                            target="_blank"
+                            class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300 transition cv-tr">Download
+                            Turkish CV</a>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-4 text-center connect-title">Connect With Me</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://celalaygar.github.io/" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                                <i class="fas fa-globe text-blue-600 mr-3"></i>
+                                <span>Website</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                                <i class="fab fa-linkedin text-blue-600 mr-3"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/celalaygar" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                                <i class="fab fa-github text-blue-600 mr-3"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://medium.com/@celalaygar" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                                <i class="fab fa-medium text-blue-600 mr-3"></i>
+                                <span>Medium</span>
+                            </a>
+                            <a href="https://www.youtube.com/@celalaygar" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                                <i class="fab fa-youtube text-blue-600 mr-3"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition">
+                                <i class="fab fa-hackerrank text-blue-600 mr-3"></i>
+                                <span>HackerRank</span>
+                            </a>
+                            <a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar" target="_blank"
+                                class="flex items-center p-3 bg-gray-100 rounded-lg hover:bg-blue-50 transition col-span-2">
+                                <i class="fab fa-stack-overflow text-blue-600 mr-3"></i>
+                                <span>StackOverflow</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-description mb-4 text-gray-600">
-              <p class="en-text hidden mb-3">
-                Domain Track is a sophisticated cross-platform mobile application built with Flutter, designed to 
-                provide comprehensive domain intelligence services. The application allows users to query domain 
-                availability across multiple TLDs and fetch detailed WHOIS registration information including registrar 
-                details, creation and expiration dates, and contact emails.
-              </p>
-              <p class="tr-text hidden mb-3">
-                Domain Track, kapsamlı alan adı istihbarat hizmetleri sağlamak için tasarlanmış, Flutter ile 
-                oluşturulmuş sofistike bir çapraz platform mobil uygulamadır. Uygulama, kullanıcıların birden çok 
-                TLD'de alan adı kullanılabilirliğini sorgulamasına ve kayıt detayları, oluşturulma ve sona erme 
-                tarihleri ile iletişim e-postaları dahil ayrıntılı WHOIS kayıt bilgilerini getirmesine olanak tanır.
-              </p>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block about-title">About Me
+                </h2>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-xs">Flutter</span>
-              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
-              <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Flask</span>
-              <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Dart</span>
-              <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">WHOIS</span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 about-heading">
+                        I'm Hacı Celal Aygar and <span class="text-blue-600">Full Stack developer and Java
+                            developer</span>
+                    </h3>
+                    <div class="about-content mb-6 text-gray-600">
+                        <p class="mb-4">I graduated from Karabük University, Department of Computer Engineering. I have
+                            been working
+                            as a Full Stack developer and Java developer around 5 years.</p>
+                        <p class="mb-4">My goal is to work in companies that produce projects using technologies in the
+                            fields of
+                            computer engineering and to continue to improve myself. I also continue to share many of my
+                            sample works
+                            on my Github account.</p>
+                        <p class="mb-6">Also I am constantly working to make life easier and trying to find solutions to
+                            the common
+                            problems of people. I'm currently learning client side technologies by using especially
+                            Github and
+                            Stackoverflow.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 comm-title">Communication
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex">
+                                <span class="font-medium w-32 email-label">Email:</span>
+                                <span>celal.aygar@gmail.com</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 website-label">Website:</span>
+                                <span><a href="https://celalaygar.github.io/" target="_blank"
+                                        class="text-blue-600 hover:underline">My
+                                        Web page</a></span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 degree-label">Degree:</span>
+                                <span>Computer Engineer</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 phone-label">Phone:</span>
+                                <span>+90 544 835 8401</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 city-label">City:</span>
+                                <span>Turkey / Ankara</span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 youtube-label">Youtube:</span>
+                                <span><a href="https://www.youtube.com/@celalaygar/featured" target="_blank"
+                                        class="text-blue-600 hover:underline">My Youtube channel</a></span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 linkedin-label">Linked In:</span>
+                                <span><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+                                        class="text-blue-600 hover:underline">My Linked In</a></span>
+                            </div>
+                            <div class="flex">
+                                <span class="font-medium w-32 freelance-label">Freelance:</span>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact"
+                        class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block hire-btn">Hire
+                        me!</a>
+                </div>
+                <div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 edu-title">Education</h3>
+                        <div class="space-y-6">
+                            <div class="timeline-item">
+                                <h3 class="text-lg font-semibold">2013 - 2017</h3>
+                                <h4 class="text-md font-medium text-blue-600">Computer Engineer (Bachelor Degree)</h4>
+                                <h4 class="text-md font-medium">Karabük University</h4>
+                                <p class="text-gray-600">Computer Engineer in Department of Computer Engineering at
+                                    Karabük University
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3 class="text-lg font-semibold">2007 - 2012</h3>
+                                <h4 class="text-md font-medium text-blue-600">Economics (Bachelor Degree)</h4>
+                                <h4 class="text-md font-medium">Anadolu University</h4>
+                                <p class="text-gray-600">Economics in Faculty of Economics at Anadolu University</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3 class="text-lg font-semibold">2003 - 2007</h3>
+                                <h4 class="text-md font-medium text-blue-600">High school</h4>
+                                <p class="text-gray-600">High school at Mimar Sinan High school</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex justify-between items-center">
-              <a href="https://github.com/celalaygar/Domain-Track-Mobile-App" target="_blank"
-                class="text-blue-600 hover:text-blue-800 transition flex items-center">
-                <i class="fab fa-github mr-2"></i>
-                <span class="github-text">GitHub</span>
-              </a>
-              <a href="https://celalaygar.github.io/main/project/domain-track/" target="_blank"
-                class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
-                <span class="view-project-text">View Project</span>
-              </a>
+        </section>
+        <!-- Experience Section -->
+        <section id="experience" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block exp-title">Experience
+                </h2>
             </div>
-          </div>
+            <div class="grid grid-cols-1 gap-8" id="experience-container">
+                <!-- Experience content will be dynamically loaded based on language -->
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block projects-title">Projects
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Profile Track Project -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-search text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Profile Track</h3>
+                                <p class="text-gray-600 text-sm">Digital Footprint Discovery Tool</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2 project-description-title">Description</h4>
+                            <p class="project-description-en text-gray-600 mb-2">
+                                Profile Track is a comprehensive system that allows users to discover websites or
+                                platforms where their email address or username might have been registered or publicly
+                                exposed. This cross-platform solution consists of a Flutter mobile application that
+                                works in conjunction with a powerful Spring Boot backend service.
+                            </p>
+                            <p class="project-description-tr text-gray-600 hidden">
+                                Profile Track, e-posta adresinizin veya kullanıcı adınızın kayıtlı olabileceği web
+                                sitelerini ve platformları keşfetmenizi sağlayan kapsamlı bir sistemdir. Bu çapraz
+                                platform çözümü, güçlü bir Spring Boot arka uç hizmetiyle birlikte çalışan bir Flutter
+                                mobil uygulamasından oluşur.
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2">Technologies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Flutter</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Spring
+                                    Boot</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Sherlock</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Java</span>
+                                <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Dart</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2 project-links-title">Links</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://celalaygar.github.io/main/project/profile-track/" target="_blank"
+                                    class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700 transition view-detail-btn">
+                                    <i class="fas fa-external-link-alt mr-1"></i> <span class="view-detail-text">View
+                                        Detail</span>
+                                </a>
+                                <a href="https://github.com/celalaygar/Profile-Track-Mobile-App" target="_blank"
+                                    class="px-3 py-1 bg-gray-800 text-white rounded-md text-sm hover:bg-gray-900 transition">
+                                    <i class="fab fa-github mr-1"></i> Mobile App
+                                </a>
+                                <a href="https://github.com/celalaygar/Search_Sherlock_Spring_Boot" target="_blank"
+                                    class="px-3 py-1 bg-gray-800 text-white rounded-md text-sm hover:bg-gray-900 transition">
+                                    <i class="fab fa-github mr-1"></i> Backend
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Domain Track Project -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-globe text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800">Domain Track</h3>
+                                <p class="text-gray-600 text-sm">Domain Intelligence Tool</p>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2 project-description-title">Description</h4>
+                            <p class="project-description-en text-gray-600 mb-2">
+                                Domain Track is a sophisticated cross-platform mobile application built with Flutter,
+                                designed to provide comprehensive domain intelligence services. The application allows
+                                users to query domain availability across multiple TLDs and fetch detailed WHOIS
+                                registration information including registrar details, creation and expiration dates, and
+                                contact emails.
+                            </p>
+                            <p class="project-description-tr text-gray-600 hidden">
+                                Domain Track, kapsamlı alan adı istihbarat hizmetleri sağlamak için Flutter ile
+                                geliştirilmiş sofistike bir çapraz platform mobil uygulamadır. Uygulama, kullanıcıların
+                                birden fazla TLD'de alan adı kullanılabilirliğini sorgulamasına ve kayıt detayları,
+                                oluşturma ve sona erme tarihleri ile iletişim e-postaları dahil olmak üzere detaylı
+                                WHOIS kayıt bilgilerini getirmesine olanak tanır.
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2">Technologies</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-800 rounded-full text-xs">Flutter</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Python</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Flask</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Dart</span>
+                                <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">WHOIS</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-700 mb-2 project-links-title">Links</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://celalaygar.github.io/main/project/domain-track/" target="_blank"
+                                    class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700 transition view-detail-btn">
+                                    <i class="fas fa-external-link-alt mr-1"></i> <span class="view-detail-text">View
+                                        Detail</span>
+                                </a>
+                                <a href="https://github.com/celalaygar/Domain-Track-Mobile-App" target="_blank"
+                                    class="px-3 py-1 bg-gray-800 text-white rounded-md text-sm hover:bg-gray-900 transition">
+                                    <i class="fab fa-github mr-1"></i> Mobile App
+                                </a>
+                                <a href="https://github.com/celalaygar/Whois_py_service" target="_blank"
+                                    class="px-3 py-1 bg-gray-800 text-white rounded-md text-sm hover:bg-gray-900 transition">
+                                    <i class="fab fa-github mr-1"></i> Backend
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Certificates Section -->
+        <section id="certificates" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block cert-title">Certificates
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fas fa-database text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">Database Design and Programming with SQL</h4>
+                        <h6 class="text-gray-600">ORACLE ACADEMY</h6>
+                        <p class="text-gray-500">26 June 2016</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Database_Design_and_Programming_with_SQL.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fab fa-react text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">REACT ile Web Programcılığı</h4>
+                        <h6 class="text-gray-600">BTK AKADEMİ</h6>
+                        <p class="text-gray-500">May 2025</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/REACT_ile_Web_Programcılığı.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fas fa-server text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">Elasticsearch v8</h4>
+                        <h6 class="text-gray-600">BTK AKADEMİ</h6>
+                        <p class="text-gray-500">June 2025</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Elasticsearch_v8_Sertifika.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fas fa-code text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">Apache Kafka</h4>
+                        <h6 class="text-gray-600">BTK AKADEMİ</h6>
+                        <p class="text-gray-500">May 2025</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Apache_Kafka.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">NoSQL - Doküman Veritabanları</h4>
+                        <h6 class="text-gray-600">BTK AKADEMİ</h6>
+                        <p class="text-gray-500">May 2025</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/NoSQL_Doküman_Veritabanları.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fab fa-java text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">JAVA ile Programlamaya Giriş</h4>
+                        <h6 class="text-gray-600">BTK AKADEMİ</h6>
+                        <p class="text-gray-500">May 2025</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/JAVA_ile_Programlamaya_Giriş_Sertifika.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="text-center mb-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
+                            <i class="fab fa-java text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold">İleri Seviye Java</h4>
+                        <h6 class="text-gray-600">BTK AKADEMİ</h6>
+                        <p class="text-gray-500">May 2025</p>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/%C4%B0leri_Seviye_Java_Sertifika.pdf"
+                            target="_blank"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Books & Hobbies Section -->
+        <section id="books" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block books-title">Books &
+                    Hobbies
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 books-section-title">Books</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Borsa 101</h4>
+                                <p class="text-gray-600 text-sm">Aysel Gündoğdu - SCALA Yayıncılık</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Assassin's Creed - Shao Jun'un Kılıcı</h4>
+                                <p class="text-gray-600 text-sm">Senpai</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Yönetim Becerileri</h4>
+                                <p class="text-gray-600 text-sm">Harvard Business Review Press - OPTMİSİT</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Gerçekten Bilmeniz Gereken 50 Ekonomi Fikri</h4>
+                                <p class="text-gray-600 text-sm">Edmund Conways - Domingo Yayınevi</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Siber Araçlar Ansiklopedisi</h4>
+                                <p class="text-gray-600 text-sm">Mustafa Atakan Kasacı - ABAKÜS KİTAP</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Bilişimin Karanlık Yüzü</h4>
+                                <p class="text-gray-600 text-sm">Kamil Burlu - Nirvana Yayınları</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start pb-3 border-b border-gray-100">
+                            <div>
+                                <h4 class="font-medium">Ethical Hacking</h4>
+                                <p class="text-gray-600 text-sm">Ömer Çıtak - ABAKÜS KİTAP</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-medium">Spring Framework</h4>
+                                <p class="text-gray-600 text-sm">Mimar Aslan - LEVEL</p>
+                            </div>
+                            <i class="fas fa-book text-blue-600"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
+                    <div class="space-y-4" id="hobbies-container">
+                        <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Playing Chess"
+                            data-tr="Satranç Oynamak">
+                            <i class="fas fa-chess text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Playing Chess</h4>
+                        </div>
+                        <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+                            data-en="Watching movies, Series, Anime" data-tr="Film, Dizi, Anime İzlemek">
+                            <i class="fas fa-film text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Watching movies, Series, Anime</h4>
+                        </div>
+                        <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+                            data-en="Following Technological Channels" data-tr="Teknolojik Kanalları Takip Etmek">
+                            <i class="fas fa-tv text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Following Technological Channels</h4>
+                        </div>
+                        <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+                            data-en="Learning New Technologies" data-tr="Yeni Teknolojiler Öğrenmek">
+                            <i class="fas fa-laptop-code text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Learning New Technologies</h4>
+                        </div>
+                        <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
+                            data-en="Solving puzzles (Sudoku, Word games, Logic problems)"
+                            data-tr="Bulmaca Çözmek (Sudoku, Kelime oyunları, Mantık problemleri)">
+                            <i class="fas fa-puzzle-piece text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Solving puzzles (Sudoku, Word games, Logic problems)</h4>
+                        </div>
+                        <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Running / Gym"
+                            data-tr="Koşu / Spor Salonu">
+                            <i class="fas fa-running text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Running / Gym</h4>
+                        </div>
+                        <div class="flex items-center hobby-item" data-en="Attending meetups and conferences"
+                            data-tr="Toplantılara ve Konferanslara Katılmak">
+                            <i class="fas fa-users text-blue-600 mr-4 text-xl"></i>
+                            <h4 class="font-medium hobby-text">Attending meetups and conferences</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technologies Section -->
+        <section id="technologies" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block tech-title">My
+                    Technologies</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 backend-title">Backend & Devops
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Java</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Spring Boot</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Spring Security</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Spring Data</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Spring MVC</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">JPA</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Hibernate</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Node Js</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Postgre Sql</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Oracle DB</span>
+                                <span>67%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 67%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Mongo DB</span>
+                                <span>55%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Docker</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Kubernates</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">OpenShift</span>
+                                <span>55%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Git</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Apache Kafka</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Redis</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 frontend-title">Frontend</h3>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Java Script</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">TypeScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Next JS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">React JS</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Angular JS</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">HTML 5</span>
+                                <span>96%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 96%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">CSS 3</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Bootstrap</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Tailwind CSS</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="section mb-16">
+            <div class="mb-10">
+                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact
+                </h2>
+            </div>
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-semibold mb-2 contact-subtitle">Any Question? Contact us!</h3>
+                <h4 class="text-xl text-gray-600 contact-description">I'm at your service</h4>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fas fa-phone text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-phone-label">Call us on</h4>
+                    </div>
+                    <p class="text-gray-600">+90 544 835 84 01</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-location-label">City / Country</h4>
+                    </div>
+                    <p class="text-gray-600">Ankara / TURKEY</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-email-label">Email</h4>
+                    </div>
+                    <p class="text-gray-600">celal.aygar@gmail.com</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fas fa-globe text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-website-label">Website</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://celalaygar.github.io/" target="_blank"
+                            class="text-blue-600 hover:underline">celalaygar.github.io</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-linkedin-label">Linkedin</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+                            class="text-blue-600 hover:underline">linkedin.com/in/celalaygar</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fab fa-github text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-github-label">GitHub</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://github.com/celalaygar" target="_blank"
+                            class="text-blue-600 hover:underline">github.com/celalaygar</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fab fa-medium text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-medium-label">Medium</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://medium.com/@celalaygar" target="_blank"
+                            class="text-blue-600 hover:underline">medium.com/@celalaygar</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fab fa-youtube text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-youtube-label">Youtube</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://www.youtube.com/@celalaygar" target="_blank"
+                            class="text-blue-600 hover:underline">youtube.com/@celalaygar</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fab fa-hackerrank text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-hackerrank-label">HackerRank</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
+                            class="text-blue-600 hover:underline">hackerrank.com/celalaygar</a></p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 card-hover md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
+                            <i class="fab fa-stack-overflow text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold contact-stackoverflow-label">StackOverflow</h4>
+                    </div>
+                    <p class="text-gray-600"><a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar"
+                            target="_blank" class="text-blue-600 hover:underline">stackoverflow.com/users/12014524</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Celal Aygar Portfolio</h3>
+                    <p class="text-gray-400">Full Stack & Java Developer</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/celalaygar" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://medium.com/@celalaygar" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-medium text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@celalaygar" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2025 Hacı Celal Aygar. All rights reserved.</p>
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- Certificates Section -->
-    <section id="certificates" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block cert-title">Certificates</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fas fa-database text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">Database Design and Programming with SQL</h4>
-            <h6 class="text-gray-600">ORACLE ACADEMY</h6>
-            <p class="text-gray-500">26 June 2016</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Database_Design_and_Programming_with_SQL.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fab fa-react text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">REACT ile Web Programcılığı</h4>
-            <h6 class="text-gray-600">BTK AKADEMİ</h6>
-            <p class="text-gray-500">May 2025</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/REACT_ile_Web_Programcılığı.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fas fa-server text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">Elasticsearch v8</h4>
-            <h6 class="text-gray-600">BTK AKADEMİ</h6>
-            <p class="text-gray-500">June 2025</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Elasticsearch_v8_Sertifika.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fas fa-code text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">Apache Kafka</h4>
-            <h6 class="text-gray-600">BTK AKADEMİ</h6>
-            <p class="text-gray-500">May 2025</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Apache_Kafka.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">NoSQL - Doküman Veritabanları</h4>
-            <h6 class="text-gray-600">BTK AKADEMİ</h6>
-            <p class="text-gray-500">May 2025</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/NoSQL_Doküman_Veritabanları.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fab fa-java text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">JAVA ile Programlamaya Giriş</h4>
-            <h6 class="text-gray-600">BTK AKADEMİ</h6>
-            <p class="text-gray-500">May 2025</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/JAVA_ile_Programlamaya_Giriş_Sertifika.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
-              <i class="fab fa-java text-blue-600 text-2xl"></i>
-            </div>
-            <h4 class="text-xl font-semibold">İleri Seviye Java</h4>
-            <h6 class="text-gray-600">BTK AKADEMİ</h6>
-            <p class="text-gray-500">May 2025</p>
-          </div>
-          <div class="text-center">
-            <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/%C4%B0leri_Seviye_Java_Sertifika.pdf"
-              target="_blank"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Books & Hobbies Section -->
-    <section id="books" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block books-title">Books & Hobbies
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 books-section-title">Books</h3>
-          <div class="space-y-4">
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Borsa 101</h4>
-                <p class="text-gray-600 text-sm">Aysel Gündoğdu - SCALA Yayıncılık</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Assassin's Creed - Shao Jun'un Kılıcı</h4>
-                <p class="text-gray-600 text-sm">Senpai</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Yönetim Becerileri</h4>
-                <p class="text-gray-600 text-sm">Harvard Business Review Press - OPTMİSİT</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Gerçekten Bilmeniz Gereken 50 Ekonomi Fikri</h4>
-                <p class="text-gray-600 text-sm">Edmund Conways - Domingo Yayınevi</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Siber Araçlar Ansiklopedisi</h4>
-                <p class="text-gray-600 text-sm">Mustafa Atakan Kasacı - ABAKÜS KİTAP</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Bilişimin Karanlık Yüzü</h4>
-                <p class="text-gray-600 text-sm">Kamil Burlu - Nirvana Yayınları</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start pb-3 border-b border-gray-100">
-              <div>
-                <h4 class="font-medium">Ethical Hacking</h4>
-                <p class="text-gray-600 text-sm">Ömer Çıtak - ABAKÜS KİTAP</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-            <div class="flex justify-between items-start">
-              <div>
-                <h4 class="font-medium">Spring Framework</h4>
-                <p class="text-gray-600 text-sm">Mimar Aslan - LEVEL</p>
-              </div>
-              <i class="fas fa-book text-blue-600"></i>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
-          <div class="space-y-4" id="hobbies-container">
-            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Playing Chess"
-              data-tr="Satranç Oynamak">
-              <i class="fas fa-chess text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Playing Chess</h4>
-            </div>
-            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
-              data-en="Watching movies, Series, Anime" data-tr="Film, Dizi, Anime İzlemek">
-              <i class="fas fa-film text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Watching movies, Series, Anime</h4>
-            </div>
-            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
-              data-en="Following Technological Channels" data-tr="Teknolojik Kanalları Takip Etmek">
-              <i class="fas fa-tv text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Following Technological Channels</h4>
-            </div>
-            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Learning New Technologies"
-              data-tr="Yeni Teknolojiler Öğrenmek">
-              <i class="fas fa-laptop-code text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Learning New Technologies</h4>
-            </div>
-            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
-              data-en="Solving puzzles (Sudoku, Word games, Logic problems)"
-              data-tr="Bulmaca Çözmek (Sudoku, Kelime oyunları, Mantık problemleri)">
-              <i class="fas fa-puzzle-piece text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Solving puzzles (Sudoku, Word games, Logic problems)</h4>
-            </div>
-            <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Running / Gym"
-              data-tr="Koşu / Spor Salonu">
-              <i class="fas fa-running text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Running / Gym</h4>
-            </div>
-            <div class="flex items-center hobby-item" data-en="Attending meetups and conferences"
-              data-tr="Toplantılara ve Konferanslara Katılmak">
-              <i class="fas fa-users text-blue-600 mr-4 text-xl"></i>
-              <h4 class="font-medium hobby-text">Attending meetups and conferences</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Technologies Section -->
-    <section id="technologies" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block tech-title">My Technologies</h2>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 backend-title">Backend & Devops</h3>
-          <div class="space-y-4">
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Java</span>
-                <span>85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Spring Boot</span>
-                <span>85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Spring Security</span>
-                <span>75%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Spring Data</span>
-                <span>85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Spring MVC</span>
-                <span>85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">JPA</span>
-                <span>75%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Hibernate</span>
-                <span>80%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Python</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Node Js</span>
-                <span>70%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Postgre Sql</span>
-                <span>70%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Oracle DB</span>
-                <span>67%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 67%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Mongo DB</span>
-                <span>55%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Docker</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Kubernates</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">OpenShift</span>
-                <span>55%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Git</span>
-                <span>75%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Apache Kafka</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Redis</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 frontend-title">Frontend</h3>
-          <div class="space-y-4">
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Java Script</span>
-                <span>85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">TypeScript</span>
-                <span>70%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Next JS</span>
-                <span>75%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">React JS</span>
-                <span>75%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Angular JS</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">HTML 5</span>
-                <span>96%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 96%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">CSS 3</span>
-                <span>80%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Bootstrap</span>
-                <span>80%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span class="font-medium">Tailwind CSS</span>
-                <span>65%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5">
-                <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="section mb-16">
-      <div class="mb-10">
-        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
-      </div>
-      <div class="text-center mb-10">
-        <h3 class="text-2xl font-semibold mb-2 contact-subtitle">Any Question? Contact us!</h3>
-        <h4 class="text-xl text-gray-600 contact-description">I'm at your service</h4>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fas fa-phone text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-phone-label">Call us on</h4>
-          </div>
-          <p class="text-gray-600">+90 544 835 84 01</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-location-label">City / Country</h4>
-          </div>
-          <p class="text-gray-600">Ankara / TURKEY</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fas fa-envelope text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-email-label">Email</h4>
-          </div>
-          <p class="text-gray-600">celal.aygar@gmail.com</p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fas fa-globe text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-website-label">Website</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://celalaygar.github.io/" target="_blank"
-              class="text-blue-600 hover:underline">celalaygar.github.io</a></p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fab fa-linkedin text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-linkedin-label">Linkedin</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
-              class="text-blue-600 hover:underline">linkedin.com/in/celalaygar</a></p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fab fa-github text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-github-label">GitHub</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://github.com/celalaygar" target="_blank"
-              class="text-blue-600 hover:underline">github.com/celalaygar</a></p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fab fa-medium text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-medium-label">Medium</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://medium.com/@celalaygar" target="_blank"
-              class="text-blue-600 hover:underline">medium.com/@celalaygar</a></p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fab fa-youtube text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-youtube-label">Youtube</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://www.youtube.com/@celalaygar" target="_blank"
-              class="text-blue-600 hover:underline">youtube.com/@celalaygar</a></p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fab fa-hackerrank text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-hackerrank-label">HackerRank</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
-              class="text-blue-600 hover:underline">hackerrank.com/celalaygar</a></p>
-        </div>
-        <div class="bg-white rounded-lg shadow-md p-6 card-hover md:col-span-2 lg:col-span-1">
-          <div class="flex items-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-              <i class="fab fa-stack-overflow text-blue-600 text-xl"></i>
-            </div>
-            <h4 class="text-lg font-semibold contact-stackoverflow-label">StackOverflow</h4>
-          </div>
-          <p class="text-gray-600"><a href="https://stackoverflow.com/users/12014524/hac%c4%b1-celal-aygar"
-              target="_blank" class="text-blue-600 hover:underline">stackoverflow.com/users/12014524</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-6 max-w-7xl">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 md:mb-0">
-          <h3 class="text-xl font-bold">Celal Aygar Portfolio</h3>
-          <p class="text-gray-400">Full Stack & Java Developer</p>
-        </div>
-        <div class="flex space-x-4">
-          <a href="https://github.com/celalaygar" target="_blank" class="text-gray-400 hover:text-white transition">
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
-            class="text-gray-400 hover:text-white transition">
-            <i class="fab fa-linkedin text-xl"></i>
-          </a>
-          <a href="https://medium.com/@celalaygar" target="_blank" class="text-gray-400 hover:text-white transition">
-            <i class="fab fa-medium text-xl"></i>
-          </a>
-          <a href="https://www.youtube.com/@celalaygar" target="_blank"
-            class="text-gray-400 hover:text-white transition">
-            <i class="fab fa-youtube text-xl"></i>
-          </a>
-        </div>
-      </div>
-      <div class="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400">
-        <p>&copy; 2025 Hacı Celal Aygar. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <script>
-    // Experience data in English and Turkish
-    const experienceData = {
-      en: [
-        {
-          period: "06/2024 - Today (1 Year 5 Months)",
-          company: "FMSS Bilisim Teknoloji",
-          position: "Full-Stack Developer & Java Developer at PAYCELL",
-          description: [
-            "This project is about money transfer",
-            "Bug fixes, new features created on the frontend and backend, new improvements made on existing features"
-          ],
-          technologies: "Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
-        },
-        {
-          period: "04/2022 - 06/2024 (2 years 4 Months)",
-          company: "Orion BT",
-          hasMultipleProjects: true,
-          projects: [
-            {
-              position: "Full-Stack Developer & Java Developer at VODAFONE",
-              projectName: "Vodafone E-Commerce Project",
-              description: [
-                "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
-                "Creating common general library and common authorization library to use for all of java Microservices.",
-                "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
-                "Using Feign Client for inter-microservice communication.",
-                "Usage of Junit and Mockita for Unit Test Coverage.",
-                "Using Git as version control system and Using Jira and Confluence to follow tasks"
-              ],
-              technologies: "Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+    </footer>
+    <script>
+        // Experience data in English and Turkish
+        const experienceData = {
+            en: [
+                {
+                    period: "06/2024 - Today (1 Year 5 Months)",
+                    company: "FMSS Bilisim Teknoloji",
+                    position: "Full-Stack Developer & Java Developer at PAYCELL",
+                    description: [
+                        "This project is about money transfer",
+                        "Bug fixes, new features created on the frontend and backend, new improvements made on existing features"
+                    ],
+                    technologies: "Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
+                },
+                {
+                    period: "04/2022 - 06/2024 (2 years 4 Months)",
+                    company: "Orion BT",
+                    hasMultipleProjects: true,
+                    projects: [
+                        {
+                            position: "Full-Stack Developer & Java Developer at VODAFONE",
+                            projectName: "Vodafone E-Commerce Project",
+                            description: [
+                                "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
+                                "Creating common general library and common authorization library to use for all of java Microservices.",
+                                "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                                "Using Feign Client for inter-microservice communication.",
+                                "Usage of Junit and Mockita for Unit Test Coverage.",
+                                "Using Git as version control system and Using Jira and Confluence to follow tasks"
+                            ],
+                            technologies: "Microservices Architecture · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+                        },
+                        {
+                            position: "Full-Stack Developer & Java Developer for the Ministry of Interior",
+                            projectName: "Ministry of Interior Project",
+                            description: [
+                                "Building over Authorization in frontend and backend for users.",
+                                "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                                "Creating microservice by using Spring boot, Redis Graph.",
+                                "Creating microservice by using Spring boot, Kafka to push data to Kafka Topic from Data Base periodically.",
+                                "Changing main module template in Frontend",
+                                "Using Trigger and Procedure as function on Plpsql for java listener service to listen trigger action.",
+                                "Using Git as version control system and Using Redmine to follow tasks"
+                            ],
+                            technologies: "Microservices Architecture · Java 8-11, Spring Boot, Security, JPA, Hibernate, Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js, Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins"
+                        }
+                    ]
+                },
+                {
+                    period: "08/2021 - 03/2022 (6 Months)",
+                    company: "OBSS",
+                    position: "Full Stack Developer & Java Software Engineer in ASELSAN",
+                    description: [
+                        "Working at ASELSAN project for OBSS",
+                        "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                        "Drawing operations were carried out on the map by communicating with 3rd party services.",
+                        "Using Git as version control system",
+                        "Using TFS and Jira to follow tasks"
+                    ],
+                    technologies: "Microservices Architecture , Java 11 , Maven , Spring boot, Docker, Kubernetes, TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache Kafka, HTML, CSS"
+                },
+                {
+                    period: "10/2020 - 06/2021 (8 Months)",
+                    company: "VİA Bilgisayar Sistemleri",
+                    position: "Full Stack Developer & Java Software Engineer",
+                    description: [
+                        "An order management system is made for the pharmaceutical warehouse.",
+                        "Jar management and Git architecture created Project architecture was created.",
+                        "I have created Authentication and Authorization in frontend and backend.",
+                        "Member registration, entry and exit procedures have been created.",
+                        "A free theme is determined to be used within the project and is fragmented and placed within the project.",
+                        "Export, Campaign Drug, Packaging and some part of Accounting and Logistics modules were made and built."
+                    ],
+                    technologies: "Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA, React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket"
+                },
+                {
+                    period: "12/2019 - 07/2020 (8 Months)",
+                    company: "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
+                    position: "Java Software Engineer",
+                    description: [
+                        "Adding new screens to the modules, adding new features to certain screens.",
+                        "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                        "integration, design and using of Jasper report",
+                        "Building R&D project about web push notification"
+                    ],
+                    technologies: "Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial (TortoiseHg), Oracle, DB2, Python, İReport."
+                }
+            ],
+            tr: [
+                {
+                    period: "06/2024 - Günümüz (1 Yıl 5 Ay)",
+                    company: "FMSS Bilisim Teknoloji",
+                    position: "PAYCELL'te Full-Stack Geliştirici & Java Geliştirici",
+                    description: [
+                        "Bu proje para transferi hakkında",
+                        "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı"
+                    ],
+                    technologies: "Mikroservisler, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
+                },
+                {
+                    period: "04/2022 - 06/2024 (2 Yıl 2 Ay)",
+                    company: "Orion BT",
+                    hasMultipleProjects: true,
+                    projects: [
+                        {
+                            position: "VODAFONE'ta Full-Stack Geliştirici & Java Geliştirici",
+                            projectName: "Vodafone E-Ticaret Projesi",
+                            description: [
+                                "Bazı mikroservislerde Spring boot sürümünü 2'den 3'e, Java sürümünü Java 11'den Java 17'ye yükseltme",
+                                "Tüm java Mikroservisleri için kullanılacak ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma.",
+                                "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+                                "Mikroservisler arası iletişim için Feign Client kullanımı.",
+                                "Birim Test Kapsamı için Junit ve Mockita kullanımı.",
+                                "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Jira ve Confluence kullanımı"
+                            ],
+                            technologies: "Mikroservis Mimarisi · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
+                        },
+                        {
+                            position: "İçişleri Bakanlığı için Full-Stack Geliştirici & Java Geliştirici",
+                            projectName: "İçişleri Bakanlığı Projesi",
+                            description: [
+                                "Kullanıcılar için ön yüz ve arka yüzde Yetkilendirme oluşturma.",
+                                "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+                                "Spring boot, Redis Graph kullanarak mikroservis oluşturma.",
+                                "Spring boot, Kafka kullanarak Veri Tabanından düzenli olarak Kafka Topic'ine veri iten mikroservis oluşturma.",
+                                "Ön Yüz'de ana modül şablonunu değiştirme",
+                                "Java dinleyici servisinin tetikleyici eylemini dinlemek için Plpsql üzerinde Tetikleyici ve Prosedür'ü fonksiyon olarak kullanma.",
+                                "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Redmine kullanımı"
+                            ],
+                            technologies: "Mikroservis Mimarisi · Java 8-11, Spring Boot, Security, JPA, Hibernate, Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js, Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins"
+                        }
+                    ]
+                },
+                {
+                    period: "08/2021 - 03/2022 (6 Ay)",
+                    company: "OBSS",
+                    position: "ASELSAN'da Full Stack Geliştirici & Java Yazılım Mühendisi",
+                    description: [
+                        "OBSS için ASELSAN projesinde çalışma",
+                        "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+                        "3. taraf hizmetlerle iletişim kurarak harita üzerinde çizim işlemleri yapıldı.",
+                        "Sürüm kontrol sistemi olarak Git kullanımı",
+                        "Görevleri takip etmek için TFS ve Jira kullanımı"
+                    ],
+                    technologies: "Mikroservis Mimarisi , Java 11 , Maven , Spring boot, Docker, Kubernetes, TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache Kafka, HTML, CSS"
+                },
+                {
+                    period: "10/2020 - 06/2021 (8 Ay)",
+                    company: "VİA Bilgisayar Sistemleri",
+                    position: "Full Stack Geliştirici & Java Yazılım Mühendisi",
+                    description: [
+                        "İlaç deposu için bir sipariş yönetim sistemi yapıldı.",
+                        "Jar yönetimi ve Git mimarisi oluşturuldu Proje mimarisi oluşturuldu.",
+                        "Ön yüz ve arka yüzde Kimlik Doğrulama ve Yetkilendirme oluşturdum.",
+                        "Üye kaydı, giriş ve çıkış işlemleri oluşturuldu.",
+                        "Proje içinde kullanılmak üzere ücretsiz bir tema belirlendi ve projeye parçalanarak yerleştirildi.",
+                        "İhracat, Kampanya İlaç, Paketleme ve Muhasebe ve Lojistik modüllerinin bazı bölümleri yapıldı ve inşa edildi."
+                    ],
+                    technologies: "Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA, React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket"
+                },
+                {
+                    period: "12/2019 - 07/2020 (8 Ay)",
+                    company: "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
+                    position: "Java Yazılım Mühendisi",
+                    description: [
+                        "Modüllere yeni ekranlar ekleme, belirli ekranlara yeni özellikler ekleme.",
+                        "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
+                        "Jasper raporunun entegrasyonu, tasarımı ve kullanımı",
+                        "Web push notification hakkında Ar-Ge projesi oluşturma"
+                    ],
+                    technologies: "Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial (TortoiseHg), Oracle, DB2, Python, İReport."
+                }
+            ]
+        };
+        // Translations
+        const translations = {
+            en: {
+                greeting: "Hello, My name is",
+                description: [
+                    "I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
+                    "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
+                    "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
+                ],
+                aboutTitle: "About Me",
+                aboutHeading: "I'm Hacı Celal Aygar and Full Stack developer and Java developer",
+                aboutContent: [
+                    "I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
+                    "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
+                    "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
+                ],
+                commTitle: "Communication",
+                emailLabel: "Email:",
+                websiteLabel: "Website:",
+                degreeLabel: "Degree:",
+                phoneLabel: "Phone:",
+                cityLabel: "City:",
+                youtubeLabel: "Youtube:",
+                linkedinLabel: "Linked In:",
+                freelanceLabel: "Freelance:",
+                eduTitle: "Education",
+                hireBtn: "Hire me!",
+                expTitle: "Experience",
+                projectsTitle: "Projects",
+                projectDescriptionTitle: "Description",
+                projectLinksTitle: "Links",
+                techTitle: "My Technologies",
+                backendTitle: "Backend & Devops",
+                frontendTitle: "Frontend",
+                certTitle: "Certificates",
+                booksTitle: "Books & Hobbies",
+                booksSectionTitle: "Books",
+                hobbiesTitle: "Hobbies",
+                contactTitle: "Contact",
+                contactSubtitle: "Any Question? Contact us!",
+                contactDescription: "I'm at your service",
+                contactPhoneLabel: "Call us on",
+                contactLocationLabel: "City / Country",
+                contactEmailLabel: "Email",
+                contactWebsiteLabel: "Website",
+                contactLinkedinLabel: "Linkedin",
+                contactGithubLabel: "GitHub",
+                contactMediumLabel: "Medium",
+                contactYoutubeLabel: "Youtube",
+                contactHackerrankLabel: "HackerRank",
+                contactStackoverflowLabel: "StackOverflow",
+                downloadBtn: "Download!",
+                cvEn: "Download English CV",
+                cvTr: "Download Turkish CV",
+                connectTitle: "Connect With Me",
+                viewDetail: "View Detail",
+                roles: ["Full Stack Developer", "Java Developer", "Software Engineer"]
             },
-            {
-              position: "Full-Stack Developer & Java Developer for the Ministry of Interior",
-              projectName: "Ministry of Interior Project",
-              description: [
-                "Building over Authorization in frontend and backend for users.",
-                "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
-                "Creating microservice by using Spring boot, Redis Graph.",
-                "Creating microservice by using Spring boot, Kafka to push data to Kafka Topic from Data Base periodically.",
-                "Changing main module template in Frontend",
-                "Using Trigger and Procedure as function on Plpsql for java listener service to listen trigger action.",
-                "Using Git as version control system and Using Redmine to follow tasks"
-              ],
-              technologies: "Microservices Architecture · Java 8-11, Spring Boot, Security, JPA, Hibernate, Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js, Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins"
+            tr: {
+                greeting: "Merhaba, Benim adım",
+                description: [
+                    "Ben Hacı Celal Aygar. Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
+                    "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
+                    "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
+                ],
+                aboutTitle: "Hakkımda",
+                aboutHeading: "Ben Hacı Celal Aygar ve Full Stack geliştirici ve Java geliştiriciyim",
+                aboutContent: [
+                    "Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
+                    "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
+                    "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
+                ],
+                commTitle: "İletişim Bilgileri",
+                emailLabel: "E-posta:",
+                websiteLabel: "Web sitesi:",
+                degreeLabel: "Eğitim:",
+                phoneLabel: "Telefon:",
+                cityLabel: "Şehir:",
+                youtubeLabel: "Youtube:",
+                linkedinLabel: "Linked In:",
+                freelanceLabel: "Freelance:",
+                eduTitle: "Eğitim",
+                hireBtn: "Beni İşe Alın!",
+                expTitle: "Deneyim",
+                projectsTitle: "Projeler",
+                projectDescriptionTitle: "Açıklama",
+                projectLinksTitle: "Bağlantılar",
+                techTitle: "Teknolojilerim",
+                backendTitle: "Backend & Devops",
+                frontendTitle: "Frontend",
+                certTitle: "Sertifikalar",
+                booksTitle: "Kitaplar & Hobiler",
+                booksSectionTitle: "Kitaplar",
+                hobbiesTitle: "Hobiler",
+                contactTitle: "İletişim",
+                contactSubtitle: "Soru mu var? Bize ulaşın!",
+                contactDescription: "Hizmetinizdeyim",
+                contactPhoneLabel: "Bizi arayın",
+                contactLocationLabel: "Şehir / Ülke",
+                contactEmailLabel: "E-posta",
+                contactWebsiteLabel: "Web sitesi",
+                contactLinkedinLabel: "Linkedin",
+                contactGithubLabel: "GitHub",
+                contactMediumLabel: "Medium",
+                contactYoutubeLabel: "Youtube",
+                contactHackerrankLabel: "HackerRank",
+                contactStackoverflowLabel: "StackOverflow",
+                downloadBtn: "İndir!",
+                cvEn: "İngilizce CV İndir",
+                cvTr: "Türkçe CV İndir",
+                connectTitle: "Benimle İletişime Geçin",
+                viewDetail: "Detayı Gör",
+                roles: ["Full Stack Geliştirici", "Java Geliştirici", "Yazılım Mühendisi"]
             }
-          ]
-        },
-        {
-          period: "08/2021 - 03/2022 (6 Months)",
-          company: "OBSS",
-          position: "Full Stack Developer & Java Software Engineer in ASELSAN",
-          description: [
-            "Working at ASELSAN project for OBSS",
-            "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
-            "Drawing operations were carried out on the map by communicating with 3rd party services.",
-            "Using Git as version control system",
-            "Using TFS and Jira to follow tasks"
-          ],
-          technologies: "Microservices Architecture , Java 11 , Maven , Spring boot, Docker, Kubernetes, TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache Kafka, HTML, CSS"
-        },
-        {
-          period: "10/2020 - 06/2021 (8 Months)",
-          company: "VİA Bilgisayar Sistemleri",
-          position: "Full Stack Developer & Java Software Engineer",
-          description: [
-            "An order management system is made for the pharmaceutical warehouse.",
-            "Jar management and Git architecture created Project architecture was created.",
-            "I have created Authentication and Authorization in frontend and backend.",
-            "Member registration, entry and exit procedures have been created.",
-            "A free theme is determined to be used within the project and is fragmented and placed within the project.",
-            "Export, Campaign Drug, Packaging and some part of Accounting and Logistics modules were made and built."
-          ],
-          technologies: "Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA, React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket"
-        },
-        {
-          period: "12/2019 - 07/2020 (8 Months)",
-          company: "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
-          position: "Java Software Engineer",
-          description: [
-            "Adding new screens to the modules, adding new features to certain screens.",
-            "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
-            "integration, design and using of Jasper report",
-            "Building R&D project about web push notification"
-          ],
-          technologies: "Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial (TortoiseHg), Oracle, DB2, Python, İReport."
+        };
+        // Current language
+        let currentLang = 'en';
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Language toggle
+        const enLangBtn = document.getElementById('en-lang');
+        const trLangBtn = document.getElementById('tr-lang');
+        enLangBtn.addEventListener('click', () => {
+            currentLang = 'en';
+            updateLanguage();
+            enLangBtn.classList.add('bg-blue-600', 'text-white');
+            enLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
+            trLangBtn.classList.add('bg-gray-200', 'text-gray-700');
+            trLangBtn.classList.remove('bg-blue-600', 'text-white');
+        });
+        trLangBtn.addEventListener('click', () => {
+            currentLang = 'tr';
+            updateLanguage();
+            trLangBtn.classList.add('bg-blue-600', 'text-white');
+            trLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
+            enLangBtn.classList.add('bg-gray-200', 'text-gray-700');
+            enLangBtn.classList.remove('bg-blue-600', 'text-white');
+        });
+        // Update language function
+        function updateLanguage() {
+            const t = translations[currentLang];
+            // Update navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const enText = link.getAttribute('data-en');
+                const trText = link.getAttribute('data-tr');
+                if (enText && trText) {
+                    link.textContent = currentLang === 'en' ? enText : trText;
+                }
+            });
+            // Update home section
+            document.querySelector('.greeting-text').textContent = t.greeting;
+            const descriptionContainer = document.querySelector('.description-text');
+            descriptionContainer.innerHTML = t.description.map(p => `<p class="mb-4">${p}</p>`).join('');
+            // Update about section
+            document.querySelector('.about-title').textContent = t.aboutTitle;
+            document.querySelector('.about-heading').innerHTML = `I'm Hacı Celal Aygar and <span class="text-blue-600">${t.aboutHeading.split('and ')[1]}</span>`;
+            const aboutContentContainer = document.querySelector('.about-content');
+            aboutContentContainer.innerHTML = t.aboutContent.map(p => `<p class="mb-4">${p}</p>`).join('');
+            // Update communication section
+            document.querySelector('.comm-title').textContent = t.commTitle;
+            document.querySelector('.email-label').textContent = t.emailLabel;
+            document.querySelector('.website-label').textContent = t.websiteLabel;
+            document.querySelector('.degree-label').textContent = t.degreeLabel;
+            document.querySelector('.phone-label').textContent = t.phoneLabel;
+            document.querySelector('.city-label').textContent = t.cityLabel;
+            document.querySelector('.youtube-label').textContent = t.youtubeLabel;
+            document.querySelector('.linkedin-label').textContent = t.linkedinLabel;
+            document.querySelector('.freelance-label').textContent = t.freelanceLabel;
+            // Update education section
+            document.querySelector('.edu-title').textContent = t.eduTitle;
+            // Update projects section
+            document.querySelector('.projects-title').textContent = t.projectsTitle;
+            document.querySelectorAll('.project-description-title').forEach(el => {
+                el.textContent = t.projectDescriptionTitle;
+            });
+            document.querySelectorAll('.project-links-title').forEach(el => {
+                el.textContent = t.projectLinksTitle;
+            });
+            // Update project descriptions
+            document.querySelectorAll('.project-description-en').forEach(el => {
+                el.classList.toggle('hidden', currentLang !== 'en');
+            });
+            document.querySelectorAll('.project-description-tr').forEach(el => {
+                el.classList.toggle('hidden', currentLang !== 'tr');
+            });
+            // Update view detail buttons
+            document.querySelectorAll('.view-detail-text').forEach(el => {
+                el.textContent = t.viewDetail;
+            });
+            // Update buttons
+            document.querySelector('.hire-btn').textContent = t.hireBtn;
+            document.querySelector('.cv-en').textContent = t.cvEn;
+            document.querySelector('.cv-tr').textContent = t.cvTr;
+            // Update section titles
+            document.querySelector('.exp-title').textContent = t.expTitle;
+            document.querySelector('.tech-title').textContent = t.techTitle;
+            document.querySelector('.backend-title').textContent = t.backendTitle;
+            document.querySelector('.frontend-title').textContent = t.frontendTitle;
+            document.querySelector('.cert-title').textContent = t.certTitle;
+            document.querySelector('.books-title').textContent = t.booksTitle;
+            document.querySelector('.books-section-title').textContent = t.booksSectionTitle;
+            document.querySelector('.hobbies-title').textContent = t.hobbiesTitle;
+            document.querySelector('.contact-title').textContent = t.contactTitle;
+            document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
+            document.querySelector('.contact-description').textContent = t.contactDescription;
+            // Update contact section
+            document.querySelector('.contact-phone-label').textContent = t.contactPhoneLabel;
+            document.querySelector('.contact-location-label').textContent = t.contactLocationLabel;
+            document.querySelector('.contact-email-label').textContent = t.contactEmailLabel;
+            document.querySelector('.contact-website-label').textContent = t.contactWebsiteLabel;
+            document.querySelector('.contact-linkedin-label').textContent = t.contactLinkedinLabel;
+            document.querySelector('.contact-github-label').textContent = t.contactGithubLabel;
+            document.querySelector('.contact-medium-label').textContent = t.contactMediumLabel;
+            document.querySelector('.contact-youtube-label').textContent = t.contactYoutubeLabel;
+            document.querySelector('.contact-hackerrank-label').textContent = t.contactHackerrankLabel;
+            document.querySelector('.contact-stackoverflow-label').textContent = t.contactStackoverflowLabel;
+            // Update download buttons
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.textContent = t.downloadBtn;
+            });
+            // Update connect title
+            document.querySelector('.connect-title').textContent = t.connectTitle;
+            // Update hobbies section
+            updateHobbiesSection();
+            // Update experience section
+            updateExperienceSection();
+            // Update typing animation roles
+            updateTypingAnimation();
         }
-      ],
-      tr: [
-        {
-          period: "06/2024 - Günümüz (1 Yıl 5 Ay)",
-          company: "FMSS Bilisim Teknoloji",
-          position: "PAYCELL'te Full-Stack Geliştirici & Java Geliştirici",
-          description: [
-            "Bu proje para transferi hakkında",
-            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı"
-          ],
-          technologies: "Mikroservisler, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
-        },
-        {
-          period: "04/2022 - 06/2024 (2 Yıl 2 Ay)",
-          company: "Orion BT",
-          hasMultipleProjects: true,
-          projects: [
-            {
-              position: "VODAFONE'ta Full-Stack Geliştirici & Java Geliştirici",
-              projectName: "Vodafone E-Ticaret Projesi",
-              description: [
-                "Bazı mikroservislerde Spring boot sürümünü 2'den 3'e, Java sürümünü Java 11'den Java 17'ye yükseltme",
-                "Tüm java Mikroservisleri için kullanılacak ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma.",
-                "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
-                "Mikroservisler arası iletişim için Feign Client kullanımı.",
-                "Birim Test Kapsamı için Junit ve Mockita kullanımı.",
-                "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Jira ve Confluence kullanımı"
-              ],
-              technologies: "Mikroservis Mimarisi · Java · Spring Boot · Gradle · Mongo Db · React.js · Kubernetes · Lens · Spring Data · Spring MVC · Spring hystrix · JIRA · Git · Github · Argo CD · Redis · Apache Kafka · JavaScript · HTML5 · CSS3 · Jenkins"
-            },
-            {
-              position: "İçişleri Bakanlığı için Full-Stack Geliştirici & Java Geliştirici",
-              projectName: "İçişleri Bakanlığı Projesi",
-              description: [
-                "Kullanıcılar için ön yüz ve arka yüzde Yetkilendirme oluşturma.",
-                "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
-                "Spring boot, Redis Graph kullanarak mikroservis oluşturma.",
-                "Spring boot, Kafka kullanarak Veri Tabanından düzenli olarak Kafka Topic'ine veri iten mikroservis oluşturma.",
-                "Ön Yüz'de ana modül şablonunu değiştirme",
-                "Java dinleyici servisinin tetikleyici eylemini dinlemek için Plpsql üzerinde Tetikleyici ve Prosedür'ü fonksiyon olarak kullanma.",
-                "Sürüm kontrol sistemi olarak Git kullanımı ve görevleri takip etmek için Redmine kullanımı"
-              ],
-              technologies: "Mikroservis Mimarisi · Java 8-11, Spring Boot, Security, JPA, Hibernate, Mongo DB, PostgreSQL, Apache Kafka, Liquibase, Redis Graph., Rancher, Docker, Kubernates, React Js, Context-API, HTML, CSS, Bootstrap 4, Git, Redmine, Linux, Jenkins"
-            }
-          ]
-        },
-        {
-          period: "08/2021 - 03/2022 (6 Ay)",
-          company: "OBSS",
-          position: "ASELSAN'da Full Stack Geliştirici & Java Yazılım Mühendisi",
-          description: [
-            "OBSS için ASELSAN projesinde çalışma",
-            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
-            "3. taraf hizmetlerle iletişim kurarak harita üzerinde çizim işlemleri yapıldı.",
-            "Sürüm kontrol sistemi olarak Git kullanımı",
-            "Görevleri takip etmek için TFS ve Jira kullanımı"
-          ],
-          technologies: "Mikroservis Mimarisi , Java 11 , Maven , Spring boot, Docker, Kubernetes, TFS, Release Builder, Flayway, Javascript, React JS, Mobx, Hibernate / ORM, Git, PostgreSQL, Apache Kafka, HTML, CSS"
-        },
-        {
-          period: "10/2020 - 06/2021 (8 Ay)",
-          company: "VİA Bilgisayar Sistemleri",
-          position: "Full Stack Geliştirici & Java Yazılım Mühendisi",
-          description: [
-            "İlaç deposu için bir sipariş yönetim sistemi yapıldı.",
-            "Jar yönetimi ve Git mimarisi oluşturuldu Proje mimarisi oluşturuldu.",
-            "Ön yüz ve arka yüzde Kimlik Doğrulama ve Yetkilendirme oluşturdum.",
-            "Üye kaydı, giriş ve çıkış işlemleri oluşturuldu.",
-            "Proje içinde kullanılmak üzere ücretsiz bir tema belirlendi ve projeye parçalanarak yerleştirildi.",
-            "İhracat, Kampanya İlaç, Paketleme ve Muhasebe ve Lojistik modüllerinin bazı bölümleri yapıldı ve inşa edildi."
-          ],
-          technologies: "Java 1.8, Maven, Spring boot, Spring Security, Spring Data, Hibernate/ORM, JPA, React JS, Redux, HTML, CSS, Bootstrap 4, Material UI, Git, PostgreSQL 12.5, Bitbucket"
-        },
-        {
-          period: "12/2019 - 07/2020 (8 Ay)",
-          company: "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
-          position: "Java Yazılım Mühendisi",
-          description: [
-            "Modüllere yeni ekranlar ekleme, belirli ekranlara yeni özellikler ekleme.",
-            "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
-            "Jasper raporunun entegrasyonu, tasarımı ve kullanımı",
-            "Web push notification hakkında Ar-Ge projesi oluşturma"
-          ],
-          technologies: "Java, Spring, Spring boot, Jdbc, Hibernate/ORM, Swing, Maven, Mercurial (TortoiseHg), Oracle, DB2, Python, İReport."
+        // Update hobbies section
+        function updateHobbiesSection() {
+            document.querySelectorAll('.hobby-item').forEach(item => {
+                const hobbyText = item.querySelector('.hobby-text');
+                const enText = item.getAttribute('data-en');
+                const trText = item.getAttribute('data-tr');
+                if (enText && trText) {
+                    hobbyText.textContent = currentLang === 'en' ? enText : trText;
+                }
+            });
         }
-      ]
-    };
-    // Translations
-    const translations = {
-      en: {
-        greeting: "Hello, My name is",
-        description: [
-          "I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
-          "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
-          "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
-        ],
-        aboutTitle: "About Me",
-        aboutHeading: "I'm Hacı Celal Aygar and Full Stack developer and Java developer",
-        aboutContent: [
-          "I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
-          "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
-          "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
-        ],
-        commTitle: "Communication",
-        emailLabel: "Email:",
-        websiteLabel: "Website:",
-        degreeLabel: "Degree:",
-        phoneLabel: "Phone:",
-        cityLabel: "City:",
-        youtubeLabel: "Youtube:",
-        linkedinLabel: "Linked In:",
-        freelanceLabel: "Freelance:",
-        eduTitle: "Education",
-        hireBtn: "Hire me!",
-        expTitle: "Experience",
-        projectsTitle: "Projects",
-        techTitle: "My Technologies",
-        backendTitle: "Backend & Devops",
-        frontendTitle: "Frontend",
-        certTitle: "Certificates",
-        booksTitle: "Books & Hobbies",
-        booksSectionTitle: "Books",
-        hobbiesTitle: "Hobbies",
-        contactTitle: "Contact",
-        contactSubtitle: "Any Question? Contact us!",
-        contactDescription: "I'm at your service",
-        contactPhoneLabel: "Call us on",
-        contactLocationLabel: "City / Country",
-        contactEmailLabel: "Email",
-        contactWebsiteLabel: "Website",
-        contactLinkedinLabel: "Linkedin",
-        contactGithubLabel: "GitHub",
-        contactMediumLabel: "Medium",
-        contactYoutubeLabel: "Youtube",
-        contactHackerrankLabel: "HackerRank",
-        contactStackoverflowLabel: "StackOverflow",
-        downloadBtn: "Download!",
-        cvEn: "Download English CV",
-        cvTr: "Download Turkish CV",
-        connectTitle: "Connect With Me",
-        roles: ["Full Stack Developer", "Java Developer", "Software Engineer"],
-        githubText: "GitHub",
-        viewProjectText: "View Project"
-      },
-      tr: {
-        greeting: "Merhaba, Benim adım",
-        description: [
-          "Ben Hacı Celal Aygar. Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
-          "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
-          "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
-        ],
-        aboutTitle: "Hakkımda",
-        aboutHeading: "Ben Hacı Celal Aygar ve Full Stack geliştirici ve Java geliştiriciyim",
-        aboutContent: [
-          "Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
-          "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
-          "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
-        ],
-        commTitle: "İletişim Bilgileri",
-        emailLabel: "E-posta:",
-        websiteLabel: "Web sitesi:",
-        degreeLabel: "Eğitim:",
-        phoneLabel: "Telefon:",
-        cityLabel: "Şehir:",
-        youtubeLabel: "Youtube:",
-        linkedinLabel: "Linked In:",
-        freelanceLabel: "Freelance:",
-        eduTitle: "Eğitim",
-        hireBtn: "Beni İşe Alın!",
-        expTitle: "Deneyim",
-        projectsTitle: "Projeler",
-        techTitle: "Teknolojilerim",
-        backendTitle: "Backend & Devops",
-        frontendTitle: "Frontend",
-        certTitle: "Sertifikalar",
-        booksTitle: "Kitaplar & Hobiler",
-        booksSectionTitle: "Kitaplar",
-        hobbiesTitle: "Hobiler",
-        contactTitle: "İletişim",
-        contactSubtitle: "Soru mu var? Bize ulaşın!",
-        contactDescription: "Hizmetinizdeyim",
-        contactPhoneLabel: "Bizi arayın",
-        contactLocationLabel: "Şehir / Ülke",
-        contactEmailLabel: "E-posta",
-        contactWebsiteLabel: "Web sitesi",
-        contactLinkedinLabel: "Linkedin",
-        contactGithubLabel: "GitHub",
-        contactMediumLabel: "Medium",
-        contactYoutubeLabel: "Youtube",
-        contactHackerrankLabel: "HackerRank",
-        contactStackoverflowLabel: "StackOverflow",
-        downloadBtn: "İndir!",
-        cvEn: "İngilizce CV İndir",
-        cvTr: "Türkçe CV İndir",
-        connectTitle: "Benimle İletişime Geçin",
-        roles: ["Full Stack Geliştirici", "Java Geliştirici", "Yazılım Mühendisi"],
-        githubText: "GitHub",
-        viewProjectText: "Projeyi İncele"
-      }
-    };
-    // Current language
-    let currentLang = 'en';
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    // Language toggle
-    const enLangBtn = document.getElementById('en-lang');
-    const trLangBtn = document.getElementById('tr-lang');
-    enLangBtn.addEventListener('click', () => {
-      currentLang = 'en';
-      updateLanguage();
-      enLangBtn.classList.add('bg-blue-600', 'text-white');
-      enLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
-      trLangBtn.classList.add('bg-gray-200', 'text-gray-700');
-      trLangBtn.classList.remove('bg-blue-600', 'text-white');
-    });
-    trLangBtn.addEventListener('click', () => {
-      currentLang = 'tr';
-      updateLanguage();
-      trLangBtn.classList.add('bg-blue-600', 'text-white');
-      trLangBtn.classList.remove('bg-gray-200', 'text-gray-700');
-      enLangBtn.classList.add('bg-gray-200', 'text-gray-700');
-      enLangBtn.classList.remove('bg-blue-600', 'text-white');
-    });
-    // Update language function
-    function updateLanguage() {
-      const t = translations[currentLang];
-      // Update navigation
-      document.querySelectorAll('.nav-link').forEach(link => {
-        const enText = link.getAttribute('data-en');
-        const trText = link.getAttribute('data-tr');
-        if (enText && trText) {
-          link.textContent = currentLang === 'en' ? enText : trText;
-        }
-      });
-      // Update home section
-      document.querySelector('.greeting-text').textContent = t.greeting;
-      const descriptionContainer = document.querySelector('.description-text');
-      descriptionContainer.innerHTML = t.description.map(p => `<p class="mb-4">${p}</p>`).join('');
-      // Update about section
-      document.querySelector('.about-title').textContent = t.aboutTitle;
-      document.querySelector('.about-heading').innerHTML = `I'm Hacı Celal Aygar and <span class="text-blue-600">${t.aboutHeading.split('and ')[1]}</span>`;
-      const aboutContentContainer = document.querySelector('.about-content');
-      aboutContentContainer.innerHTML = t.aboutContent.map(p => `<p class="mb-4">${p}</p>`).join('');
-      // Update communication section
-      document.querySelector('.comm-title').textContent = t.commTitle;
-      document.querySelector('.email-label').textContent = t.emailLabel;
-      document.querySelector('.website-label').textContent = t.websiteLabel;
-      document.querySelector('.degree-label').textContent = t.degreeLabel;
-      document.querySelector('.phone-label').textContent = t.phoneLabel;
-      document.querySelector('.city-label').textContent = t.cityLabel;
-      document.querySelector('.youtube-label').textContent = t.youtubeLabel;
-      document.querySelector('.linkedin-label').textContent = t.linkedinLabel;
-      document.querySelector('.freelance-label').textContent = t.freelanceLabel;
-      // Update education section
-      document.querySelector('.edu-title').textContent = t.eduTitle;
-      // Update buttons
-      document.querySelector('.hire-btn').textContent = t.hireBtn;
-      document.querySelector('.cv-en').textContent = t.cvEn;
-      document.querySelector('.cv-tr').textContent = t.cvTr;
-      // Update section titles
-      document.querySelector('.exp-title').textContent = t.expTitle;
-      document.querySelector('.projects-title').textContent = t.projectsTitle;
-      document.querySelector('.tech-title').textContent = t.techTitle;
-      document.querySelector('.backend-title').textContent = t.backendTitle;
-      document.querySelector('.frontend-title').textContent = t.frontendTitle;
-      document.querySelector('.cert-title').textContent = t.certTitle;
-      document.querySelector('.books-title').textContent = t.booksTitle;
-      document.querySelector('.books-section-title').textContent = t.booksSectionTitle;
-      document.querySelector('.hobbies-title').textContent = t.hobbiesTitle;
-      document.querySelector('.contact-title').textContent = t.contactTitle;
-      document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
-      document.querySelector('.contact-description').textContent = t.contactDescription;
-      // Update contact section
-      document.querySelector('.contact-phone-label').textContent = t.contactPhoneLabel;
-      document.querySelector('.contact-location-label').textContent = t.contactLocationLabel;
-      document.querySelector('.contact-email-label').textContent = t.contactEmailLabel;
-      document.querySelector('.contact-website-label').textContent = t.contactWebsiteLabel;
-      document.querySelector('.contact-linkedin-label').textContent = t.contactLinkedinLabel;
-      document.querySelector('.contact-github-label').textContent = t.contactGithubLabel;
-      document.querySelector('.contact-medium-label').textContent = t.contactMediumLabel;
-      document.querySelector('.contact-youtube-label').textContent = t.contactYoutubeLabel;
-      document.querySelector('.contact-hackerrank-label').textContent = t.contactHackerrankLabel;
-      document.querySelector('.contact-stackoverflow-label').textContent = t.contactStackoverflowLabel;
-      // Update download buttons
-      document.querySelectorAll('.download-btn').forEach(btn => {
-        btn.textContent = t.downloadBtn;
-      });
-      // Update connect title
-      document.querySelector('.connect-title').textContent = t.connectTitle;
-      // Update projects section
-      updateProjectsSection();
-      // Update hobbies section
-      updateHobbiesSection();
-      // Update experience section
-      updateExperienceSection();
-      // Update typing animation roles
-      updateTypingAnimation();
-    }
-    // Update projects section
-    function updateProjectsSection() {
-      // Show/hide English and Turkish descriptions based on current language
-      document.querySelectorAll('.en-text').forEach(el => {
-        el.classList.toggle('hidden', currentLang !== 'en');
-      });
-      document.querySelectorAll('.tr-text').forEach(el => {
-        el.classList.toggle('hidden', currentLang !== 'tr');
-      });
-      
-      // Update GitHub text
-      document.querySelectorAll('.github-text').forEach(el => {
-        el.textContent = translations[currentLang].githubText;
-      });
-      
-      // Update View Project text
-      document.querySelectorAll('.view-project-text').forEach(el => {
-        el.textContent = translations[currentLang].viewProjectText;
-      });
-    }
-    // Update hobbies section
-    function updateHobbiesSection() {
-      document.querySelectorAll('.hobby-item').forEach(item => {
-        const hobbyText = item.querySelector('.hobby-text');
-        const enText = item.getAttribute('data-en');
-        const trText = item.getAttribute('data-tr');
-        if (enText && trText) {
-          hobbyText.textContent = currentLang === 'en' ? enText : trText;
-        }
-      });
-    }
-    // Update experience section
-    function updateExperienceSection() {
-      const container = document.getElementById('experience-container');
-      const experiences = experienceData[currentLang];
-      container.innerHTML = experiences.map(exp => {
-        if (exp.hasMultipleProjects) {
-          // Special handling for Orion BT with multiple projects
-          return `
+        // Update experience section
+        function updateExperienceSection() {
+            const container = document.getElementById('experience-container');
+            const experiences = experienceData[currentLang];
+            container.innerHTML = experiences.map(exp => {
+                if (exp.hasMultipleProjects) {
+                    // Special handling for Orion BT with multiple projects
+                    return `
                         <div class="bg-white rounded-lg shadow-md p-6">
                             <div class="timeline-item">
                                 <h3 class="text-lg font-semibold">${exp.period}</h3>
@@ -1499,9 +1570,9 @@
                             </div>
                         </div>
                     `;
-        } else {
-          // Regular experience item
-          return `
+                } else {
+                    // Regular experience item
+                    return `
                         <div class="bg-white rounded-lg shadow-md p-6">
                             <div class="timeline-item">
                                 <h3 class="text-lg font-semibold">${exp.period}</h3>
@@ -1520,117 +1591,117 @@
                             </div>
                         </div>
                     `;
+                }
+            }).join('');
         }
-      }).join('');
-    }
-    // Typing effect
-    const typingText = document.getElementById('typing-text');
-    let roles = translations.en.roles;
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    function updateTypingAnimation() {
-      roles = translations[currentLang].roles;
-      roleIndex = 0;
-      charIndex = 0;
-      isDeleting = false;
-      typeEffect();
-    }
-    function typeEffect() {
-      const currentRole = roles[roleIndex];
-      if (isDeleting) {
-        typingText.textContent = currentRole.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        typingText.textContent = currentRole.substring(0, charIndex + 1);
-        charIndex++;
-      }
-      if (!isDeleting && charIndex === currentRole.length) {
-        isDeleting = true;
-        setTimeout(typeEffect, 2000);
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        setTimeout(typeEffect, 500);
-      } else {
-        setTimeout(typeEffect, isDeleting ? 50 : 150);
-      }
-    }
-    // Initialize typing animation
-    typeEffect();
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: 'smooth'
-          });
-          // Close mobile menu if open
-          mobileMenu.classList.add('hidden');
+        // Typing effect
+        const typingText = document.getElementById('typing-text');
+        let roles = translations.en.roles;
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        function updateTypingAnimation() {
+            roles = translations[currentLang].roles;
+            roleIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+            typeEffect();
         }
-      });
-    });
-    // Section visibility on scroll
-    const sections = document.querySelectorAll('.section');
-    function checkVisibility() {
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (sectionTop < windowHeight - 100) {
-          section.classList.add('active');
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                typingText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? 50 : 150);
+            }
         }
-      });
-    }
-    window.addEventListener('scroll', checkVisibility);
-    window.addEventListener('load', checkVisibility);
-    // Active navigation link on scroll
-    const navLinks = document.querySelectorAll('.nav-link');
-    function updateActiveNavLink() {
-      const scrollPosition = window.scrollY + 100;
-      sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          navLinks.forEach(link => link.classList.remove('active'));
-          navLinks[index].classList.add('active');
+        // Initialize typing animation
+        typeEffect();
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        // Section visibility on scroll
+        const sections = document.querySelectorAll('.section');
+        function checkVisibility() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('active');
+                }
+            });
         }
-      });
-    }
-    window.addEventListener('scroll', updateActiveNavLink);
-    window.addEventListener('load', updateActiveNavLink);
-    // === ANIMATE SKILL BARS ===
-    const skillBars = document.querySelectorAll('.skill-progress');
-    // Reset all skill bars to 0% and store the target width in a data attribute
-    skillBars.forEach(bar => {
-      const currentWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/);
-      if (currentWidth) {
-        const widthValue = currentWidth[1];
-        bar.setAttribute('data-width', widthValue); // Store target width
-        bar.style.width = '0%'; // Visually reset
-      }
-    });
-    // Animate skill bars when they come into view
-    function animateSkillBars() {
-      skillBars.forEach(bar => {
-        const barTop = bar.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        // Check if the bar is in the viewport and hasn't been animated yet
-        if (barTop < windowHeight - 100 && bar.style.width === '0%') {
-          const targetWidth = bar.getAttribute('data-width');
-          bar.style.width = targetWidth; // Animate to stored width
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        // Active navigation link on scroll
+        const navLinks = document.querySelectorAll('.nav-link');
+        function updateActiveNavLink() {
+            const scrollPosition = window.scrollY + 100;
+            sections.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[index].classList.add('active');
+                }
+            });
         }
-      });
-    }
-    // Run on scroll and load
-    window.addEventListener('scroll', animateSkillBars);
-    window.addEventListener('load', animateSkillBars);
-    // Initialize experience, hobbies and projects sections
-    updateExperienceSection();
-    updateHobbiesSection();
-    updateProjectsSection();
-  </script>
+        window.addEventListener('scroll', updateActiveNavLink);
+        window.addEventListener('load', updateActiveNavLink);
+        // === ANIMATE SKILL BARS ===
+        const skillBars = document.querySelectorAll('.skill-progress');
+        // Reset all skill bars to 0% and store the target width in a data attribute
+        skillBars.forEach(bar => {
+            const currentWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/);
+            if (currentWidth) {
+                const widthValue = currentWidth[1];
+                bar.setAttribute('data-width', widthValue); // Store target width
+                bar.style.width = '0%'; // Visually reset
+            }
+        });
+        // Animate skill bars when they come into view
+        function animateSkillBars() {
+            skillBars.forEach(bar => {
+                const barTop = bar.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                // Check if the bar is in the viewport and hasn't been animated yet
+                if (barTop < windowHeight - 100 && bar.style.width === '0%') {
+                    const targetWidth = bar.getAttribute('data-width');
+                    bar.style.width = targetWidth; // Animate to stored width
+                }
+            });
+        }
+        // Run on scroll and load
+        window.addEventListener('scroll', animateSkillBars);
+        window.addEventListener('load', animateSkillBars);
+        // Initialize experience and hobbies sections
+        updateExperienceSection();
+        updateHobbiesSection();
+    </script>
 </body>
+
 </html>
