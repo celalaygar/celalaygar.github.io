@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,22 +13,18 @@
       transform: translateY(20px);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
-
     .section.active {
       opacity: 1;
       transform: translateY(0);
     }
-
     .skill-progress {
       transition: width 1.5s ease-in-out;
     }
-
     .timeline-item {
       position: relative;
       padding-left: 30px;
       margin-bottom: 30px;
     }
-
     .timeline-item:before {
       content: "";
       position: absolute;
@@ -40,7 +35,6 @@
       border-radius: 50%;
       background-color: #3b82f6;
     }
-
     .timeline-item:after {
       content: "";
       position: absolute;
@@ -50,15 +44,12 @@
       height: calc(100% + 10px);
       background-color: #e5e7eb;
     }
-
     .timeline-item:last-child:after {
       display: none;
     }
-
     .nav-link {
       position: relative;
     }
-
     .nav-link:after {
       content: "";
       position: absolute;
@@ -69,33 +60,26 @@
       background-color: #3b82f6;
       transition: width 0.3s ease;
     }
-
     .nav-link:hover:after,
     .nav-link.active:after {
       width: 100%;
     }
-
     .card-hover {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .card-hover:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-
     .typing-effect {
       border-right: 2px solid #3b82f6;
       animation: blink 1s infinite;
     }
-
     @keyframes blink {
-
       0%,
       50% {
         border-color: transparent;
       }
-
       51%,
       100% {
         border-color: #3b82f6;
@@ -103,7 +87,6 @@
     }
   </style>
 </head>
-
 <body class="bg-gray-50 text-gray-800 font-sans">
   <!-- Header with Navigation -->
   <header class="bg-white shadow-md sticky top-0 z-50">
@@ -113,7 +96,6 @@
           <h1 class="text-2xl font-bold text-blue-600">Celal Aygar Portfolio</h1>
           <h2 class="text-lg text-gray-600">Hacı Celal Aygar</h2>
         </div>
-
         <!-- Navigation -->
         <nav class="hidden md:flex space-x-6">
           <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
@@ -122,6 +104,8 @@
             data-tr="Hakkımda">About</a>
           <a href="#experience" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Experience"
             data-tr="Deneyim">Experience</a>
+          <a href="#projects" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Projects"
+            data-tr="Projeler">Projects</a>
           <a href="#certificates" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Certificates"
             data-tr="Sertifikalar">Certificates</a>
           <a href="#books" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Books & Hobbies"
@@ -131,19 +115,16 @@
           <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 font-medium" data-en="Contact"
             data-tr="İletişim">Contact</a>
         </nav>
-
         <!-- Language Selection -->
         <div class="flex space-x-2 mr-2">
           <button id="en-lang" class="px-3 py-1 bg-blue-600 text-white rounded-md text-sm font-medium">EN</button>
           <button id="tr-lang" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-md text-sm font-medium">TR</button>
         </div>
-
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="md:hidden text-gray-600">
           <i class="fas fa-bars text-xl"></i>
         </button>
       </div>
-
       <!-- Mobile Navigation -->
       <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
         <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Home"
@@ -152,6 +133,8 @@
           data-tr="Hakkımda">About</a>
         <a href="#experience" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Experience"
           data-tr="Deneyim">Experience</a>
+        <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Projects"
+          data-tr="Projeler">Projects</a>
         <a href="#certificates" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Certificates"
           data-tr="Sertifikalar">Certificates</a>
         <a href="#books" class="block py-2 text-gray-600 hover:text-blue-600 font-medium" data-en="Books & Hobbies"
@@ -163,7 +146,6 @@
       </nav>
     </div>
   </header>
-
   <main class="container mx-auto px-6 py-10 max-w-7xl">
     <!-- Home Section -->
     <section id="home" class="section active mb-16">
@@ -196,7 +178,6 @@
               Turkish CV</a>
           </div>
         </div>
-
         <div class="md:w-2/5">
           <div class="bg-white rounded-lg shadow-lg p-6">
             <h4 class="text-xl font-semibold mb-4 text-center connect-title">Connect With Me</h4>
@@ -241,13 +222,11 @@
         </div>
       </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="section mb-16">
       <div class="mb-10">
         <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block about-title">About Me</h2>
       </div>
-
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
           <h3 class="text-xl font-semibold mb-4 about-heading">
@@ -263,7 +242,6 @@
               problems of people. I'm currently learning client side technologies by using especially Github and
               Stackoverflow.</p>
           </div>
-
           <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 comm-title">Communication</h3>
             <div class="space-y-3">
@@ -304,12 +282,10 @@
               </div>
             </div>
           </div>
-
           <a href="#contact"
             class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block hire-btn">Hire
             me!</a>
         </div>
-
         <div>
           <div class="bg-white rounded-lg shadow-md p-6">
             <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 edu-title">Education</h3>
@@ -337,24 +313,121 @@
         </div>
       </div>
     </section>
-
     <!-- Experience Section -->
     <section id="experience" class="section mb-16">
       <div class="mb-10">
         <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block exp-title">Experience</h2>
       </div>
-
       <div class="grid grid-cols-1 gap-8" id="experience-container">
         <!-- Experience content will be dynamically loaded based on language -->
       </div>
     </section>
-
+    <!-- Projects Section -->
+    <section id="projects" class="section mb-16">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block projects-title">Projects</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Profile Track Project -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center mr-4">
+                <i class="fas fa-search text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white">Profile Track</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Digital Footprint Discovery Tool</p>
+              </div>
+            </div>
+            <div class="project-description mb-4 text-gray-600">
+              <p class="en-text hidden mb-3">
+                Profile Track is a comprehensive system that allows users to discover websites or platforms where their 
+                email address or username might have been registered or publicly exposed. This cross-platform solution 
+                consists of a Flutter mobile application that works in conjunction with a powerful Spring Boot backend 
+                service to provide insights into your digital presence across the web.
+              </p>
+              <p class="tr-text hidden mb-3">
+                Profile Track, e-posta adresinizin veya kullanıcı adınızın kayıtlı olabileceği web sitelerini ve 
+                platformları keşfetmenizi sağlayan kapsamlı bir sistemdir. Bu çapraz platform çözümü, web'deki dijital 
+                varlığınız hakkında içgörüler sağlamak için Flutter mobil uygulamasından ve güçlü bir Spring Boot arka uç 
+                hizmetinden oluşur.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-xs">Flutter</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Spring Boot</span>
+              <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Sherlock</span>
+              <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Dart</span>
+              <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">Java</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="https://github.com/celalaygar/Profile-Track-Mobile-App" target="_blank"
+                class="text-blue-600 hover:text-blue-800 transition flex items-center">
+                <i class="fab fa-github mr-2"></i>
+                <span class="github-text">GitHub</span>
+              </a>
+              <a href="https://celalaygar.github.io/main/project/profile-track/" target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+                <span class="view-project-text">View Project</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Domain Track Project -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
+                <i class="fas fa-globe text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white">Domain Track</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Domain Intelligence Tool</p>
+              </div>
+            </div>
+            <div class="project-description mb-4 text-gray-600">
+              <p class="en-text hidden mb-3">
+                Domain Track is a sophisticated cross-platform mobile application built with Flutter, designed to 
+                provide comprehensive domain intelligence services. The application allows users to query domain 
+                availability across multiple TLDs and fetch detailed WHOIS registration information including registrar 
+                details, creation and expiration dates, and contact emails.
+              </p>
+              <p class="tr-text hidden mb-3">
+                Domain Track, kapsamlı alan adı istihbarat hizmetleri sağlamak için tasarlanmış, Flutter ile 
+                oluşturulmuş sofistike bir çapraz platform mobil uygulamadır. Uygulama, kullanıcıların birden çok 
+                TLD'de alan adı kullanılabilirliğini sorgulamasına ve kayıt detayları, oluşturulma ve sona erme 
+                tarihleri ile iletişim e-postaları dahil ayrıntılı WHOIS kayıt bilgilerini getirmesine olanak tanır.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-xs">Flutter</span>
+              <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Python</span>
+              <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-xs">Flask</span>
+              <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-xs">Dart</span>
+              <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-xs">WHOIS</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <a href="https://github.com/celalaygar/Domain-Track-Mobile-App" target="_blank"
+                class="text-blue-600 hover:text-blue-800 transition flex items-center">
+                <i class="fab fa-github mr-2"></i>
+                <span class="github-text">GitHub</span>
+              </a>
+              <a href="https://celalaygar.github.io/main/project/domain-track/" target="_blank"
+                class="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
+                <span class="view-project-text">View Project</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Certificates Section -->
     <section id="certificates" class="section mb-16">
       <div class="mb-10">
         <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block cert-title">Certificates</h2>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
@@ -371,7 +444,6 @@
               class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
@@ -387,7 +459,6 @@
               class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
@@ -403,7 +474,6 @@
               class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
@@ -419,7 +489,6 @@
               class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
@@ -435,7 +504,6 @@
               class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
@@ -451,7 +519,6 @@
               class="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition inline-block download-btn">Download!</a>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="text-center mb-4">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3">
@@ -469,14 +536,12 @@
         </div>
       </div>
     </section>
-
     <!-- Books & Hobbies Section -->
     <section id="books" class="section mb-16">
       <div class="mb-10">
         <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block books-title">Books & Hobbies
         </h2>
       </div>
-
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-white rounded-lg shadow-md p-6">
           <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 books-section-title">Books</h3>
@@ -488,7 +553,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
                 <h4 class="font-medium">Assassin's Creed - Shao Jun'un Kılıcı</h4>
@@ -496,7 +560,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
                 <h4 class="font-medium">Yönetim Becerileri</h4>
@@ -504,7 +567,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
                 <h4 class="font-medium">Gerçekten Bilmeniz Gereken 50 Ekonomi Fikri</h4>
@@ -512,7 +574,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
                 <h4 class="font-medium">Siber Araçlar Ansiklopedisi</h4>
@@ -520,7 +581,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
                 <h4 class="font-medium">Bilişimin Karanlık Yüzü</h4>
@@ -528,7 +588,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start pb-3 border-b border-gray-100">
               <div>
                 <h4 class="font-medium">Ethical Hacking</h4>
@@ -536,7 +595,6 @@
               </div>
               <i class="fas fa-book text-blue-600"></i>
             </div>
-
             <div class="flex justify-between items-start">
               <div>
                 <h4 class="font-medium">Spring Framework</h4>
@@ -546,7 +604,6 @@
             </div>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6">
           <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
           <div class="space-y-4" id="hobbies-container">
@@ -555,38 +612,32 @@
               <i class="fas fa-chess text-blue-600 mr-4 text-xl"></i>
               <h4 class="font-medium hobby-text">Playing Chess</h4>
             </div>
-
             <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
               data-en="Watching movies, Series, Anime" data-tr="Film, Dizi, Anime İzlemek">
               <i class="fas fa-film text-blue-600 mr-4 text-xl"></i>
               <h4 class="font-medium hobby-text">Watching movies, Series, Anime</h4>
             </div>
-
             <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
               data-en="Following Technological Channels" data-tr="Teknolojik Kanalları Takip Etmek">
               <i class="fas fa-tv text-blue-600 mr-4 text-xl"></i>
               <h4 class="font-medium hobby-text">Following Technological Channels</h4>
             </div>
-
             <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Learning New Technologies"
               data-tr="Yeni Teknolojiler Öğrenmek">
               <i class="fas fa-laptop-code text-blue-600 mr-4 text-xl"></i>
               <h4 class="font-medium hobby-text">Learning New Technologies</h4>
             </div>
-
             <div class="flex items-center pb-3 border-b border-gray-100 hobby-item"
               data-en="Solving puzzles (Sudoku, Word games, Logic problems)"
               data-tr="Bulmaca Çözmek (Sudoku, Kelime oyunları, Mantık problemleri)">
               <i class="fas fa-puzzle-piece text-blue-600 mr-4 text-xl"></i>
               <h4 class="font-medium hobby-text">Solving puzzles (Sudoku, Word games, Logic problems)</h4>
             </div>
-
             <div class="flex items-center pb-3 border-b border-gray-100 hobby-item" data-en="Running / Gym"
               data-tr="Koşu / Spor Salonu">
               <i class="fas fa-running text-blue-600 mr-4 text-xl"></i>
               <h4 class="font-medium hobby-text">Running / Gym</h4>
             </div>
-
             <div class="flex items-center hobby-item" data-en="Attending meetups and conferences"
               data-tr="Toplantılara ve Konferanslara Katılmak">
               <i class="fas fa-users text-blue-600 mr-4 text-xl"></i>
@@ -596,13 +647,11 @@
         </div>
       </div>
     </section>
-
     <!-- Technologies Section -->
     <section id="technologies" class="section mb-16">
       <div class="mb-10">
         <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block tech-title">My Technologies</h2>
       </div>
-
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-white rounded-lg shadow-md p-6">
           <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 backend-title">Backend & Devops</h3>
@@ -616,7 +665,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Spring Boot</span>
@@ -626,7 +674,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Spring Security</span>
@@ -636,7 +683,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Spring Data</span>
@@ -646,7 +692,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Spring MVC</span>
@@ -656,7 +701,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">JPA</span>
@@ -666,7 +710,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Hibernate</span>
@@ -676,7 +719,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Python</span>
@@ -686,7 +728,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Node Js</span>
@@ -696,7 +737,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Postgre Sql</span>
@@ -706,7 +746,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Oracle DB</span>
@@ -716,7 +755,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 67%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Mongo DB</span>
@@ -726,7 +764,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Docker</span>
@@ -736,7 +773,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Kubernates</span>
@@ -746,7 +782,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">OpenShift</span>
@@ -756,7 +791,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 55%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Git</span>
@@ -766,7 +800,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Apache Kafka</span>
@@ -776,7 +809,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Redis</span>
@@ -788,7 +820,6 @@
             </div>
           </div>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6">
           <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 frontend-title">Frontend</h3>
           <div class="space-y-4">
@@ -801,7 +832,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 85%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">TypeScript</span>
@@ -811,7 +841,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 70%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Next JS</span>
@@ -821,7 +850,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">React JS</span>
@@ -831,7 +859,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 75%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Angular JS</span>
@@ -841,7 +868,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 65%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">HTML 5</span>
@@ -851,7 +877,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 96%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">CSS 3</span>
@@ -861,7 +886,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Bootstrap</span>
@@ -871,7 +895,6 @@
                 <div class="bg-blue-600 h-2.5 rounded-full skill-progress" style="width: 80%"></div>
               </div>
             </div>
-
             <div class="skill-item">
               <div class="flex justify-between mb-1">
                 <span class="font-medium">Tailwind CSS</span>
@@ -885,18 +908,15 @@
         </div>
       </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="section mb-16">
       <div class="mb-10">
         <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
       </div>
-
       <div class="text-center mb-10">
         <h3 class="text-2xl font-semibold mb-2 contact-subtitle">Any Question? Contact us!</h3>
         <h4 class="text-xl text-gray-600 contact-description">I'm at your service</h4>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
@@ -907,7 +927,6 @@
           </div>
           <p class="text-gray-600">+90 544 835 84 01</p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -917,7 +936,6 @@
           </div>
           <p class="text-gray-600">Ankara / TURKEY</p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -927,7 +945,6 @@
           </div>
           <p class="text-gray-600">celal.aygar@gmail.com</p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -938,7 +955,6 @@
           <p class="text-gray-600"><a href="https://celalaygar.github.io/" target="_blank"
               class="text-blue-600 hover:underline">celalaygar.github.io</a></p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -949,7 +965,6 @@
           <p class="text-gray-600"><a href="https://www.linkedin.com/in/celalaygar/" target="_blank"
               class="text-blue-600 hover:underline">linkedin.com/in/celalaygar</a></p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -960,7 +975,6 @@
           <p class="text-gray-600"><a href="https://github.com/celalaygar" target="_blank"
               class="text-blue-600 hover:underline">github.com/celalaygar</a></p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -971,7 +985,6 @@
           <p class="text-gray-600"><a href="https://medium.com/@celalaygar" target="_blank"
               class="text-blue-600 hover:underline">medium.com/@celalaygar</a></p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -982,7 +995,6 @@
           <p class="text-gray-600"><a href="https://www.youtube.com/@celalaygar" target="_blank"
               class="text-blue-600 hover:underline">youtube.com/@celalaygar</a></p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -993,7 +1005,6 @@
           <p class="text-gray-600"><a href="https://www.hackerrank.com/celalaygar?hr_r=1" target="_blank"
               class="text-blue-600 hover:underline">hackerrank.com/celalaygar</a></p>
         </div>
-
         <div class="bg-white rounded-lg shadow-md p-6 card-hover md:col-span-2 lg:col-span-1">
           <div class="flex items-center mb-4">
             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
@@ -1007,7 +1018,6 @@
       </div>
     </section>
   </main>
-
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-6 max-w-7xl">
@@ -1038,7 +1048,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     // Experience data in English and Turkish
     const experienceData = {
@@ -1213,7 +1222,6 @@
         }
       ]
     };
-
     // Translations
     const translations = {
       en: {
@@ -1242,6 +1250,7 @@
         eduTitle: "Education",
         hireBtn: "Hire me!",
         expTitle: "Experience",
+        projectsTitle: "Projects",
         techTitle: "My Technologies",
         backendTitle: "Backend & Devops",
         frontendTitle: "Frontend",
@@ -1266,7 +1275,9 @@
         cvEn: "Download English CV",
         cvTr: "Download Turkish CV",
         connectTitle: "Connect With Me",
-        roles: ["Full Stack Developer", "Java Developer", "Software Engineer"]
+        roles: ["Full Stack Developer", "Java Developer", "Software Engineer"],
+        githubText: "GitHub",
+        viewProjectText: "View Project"
       },
       tr: {
         greeting: "Merhaba, Benim adım",
@@ -1294,6 +1305,7 @@
         eduTitle: "Eğitim",
         hireBtn: "Beni İşe Alın!",
         expTitle: "Deneyim",
+        projectsTitle: "Projeler",
         techTitle: "Teknolojilerim",
         backendTitle: "Backend & Devops",
         frontendTitle: "Frontend",
@@ -1318,25 +1330,22 @@
         cvEn: "İngilizce CV İndir",
         cvTr: "Türkçe CV İndir",
         connectTitle: "Benimle İletişime Geçin",
-        roles: ["Full Stack Geliştirici", "Java Geliştirici", "Yazılım Mühendisi"]
+        roles: ["Full Stack Geliştirici", "Java Geliştirici", "Yazılım Mühendisi"],
+        githubText: "GitHub",
+        viewProjectText: "Projeyi İncele"
       }
     };
-
     // Current language
     let currentLang = 'en';
-
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
-
     // Language toggle
     const enLangBtn = document.getElementById('en-lang');
     const trLangBtn = document.getElementById('tr-lang');
-
     enLangBtn.addEventListener('click', () => {
       currentLang = 'en';
       updateLanguage();
@@ -1345,7 +1354,6 @@
       trLangBtn.classList.add('bg-gray-200', 'text-gray-700');
       trLangBtn.classList.remove('bg-blue-600', 'text-white');
     });
-
     trLangBtn.addEventListener('click', () => {
       currentLang = 'tr';
       updateLanguage();
@@ -1354,11 +1362,9 @@
       enLangBtn.classList.add('bg-gray-200', 'text-gray-700');
       enLangBtn.classList.remove('bg-blue-600', 'text-white');
     });
-
     // Update language function
     function updateLanguage() {
       const t = translations[currentLang];
-
       // Update navigation
       document.querySelectorAll('.nav-link').forEach(link => {
         const enText = link.getAttribute('data-en');
@@ -1367,20 +1373,15 @@
           link.textContent = currentLang === 'en' ? enText : trText;
         }
       });
-
       // Update home section
       document.querySelector('.greeting-text').textContent = t.greeting;
-
       const descriptionContainer = document.querySelector('.description-text');
       descriptionContainer.innerHTML = t.description.map(p => `<p class="mb-4">${p}</p>`).join('');
-
       // Update about section
       document.querySelector('.about-title').textContent = t.aboutTitle;
       document.querySelector('.about-heading').innerHTML = `I'm Hacı Celal Aygar and <span class="text-blue-600">${t.aboutHeading.split('and ')[1]}</span>`;
-
       const aboutContentContainer = document.querySelector('.about-content');
       aboutContentContainer.innerHTML = t.aboutContent.map(p => `<p class="mb-4">${p}</p>`).join('');
-
       // Update communication section
       document.querySelector('.comm-title').textContent = t.commTitle;
       document.querySelector('.email-label').textContent = t.emailLabel;
@@ -1391,17 +1392,15 @@
       document.querySelector('.youtube-label').textContent = t.youtubeLabel;
       document.querySelector('.linkedin-label').textContent = t.linkedinLabel;
       document.querySelector('.freelance-label').textContent = t.freelanceLabel;
-
       // Update education section
       document.querySelector('.edu-title').textContent = t.eduTitle;
-
       // Update buttons
       document.querySelector('.hire-btn').textContent = t.hireBtn;
       document.querySelector('.cv-en').textContent = t.cvEn;
       document.querySelector('.cv-tr').textContent = t.cvTr;
-
       // Update section titles
       document.querySelector('.exp-title').textContent = t.expTitle;
+      document.querySelector('.projects-title').textContent = t.projectsTitle;
       document.querySelector('.tech-title').textContent = t.techTitle;
       document.querySelector('.backend-title').textContent = t.backendTitle;
       document.querySelector('.frontend-title').textContent = t.frontendTitle;
@@ -1412,7 +1411,6 @@
       document.querySelector('.contact-title').textContent = t.contactTitle;
       document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
       document.querySelector('.contact-description').textContent = t.contactDescription;
-
       // Update contact section
       document.querySelector('.contact-phone-label').textContent = t.contactPhoneLabel;
       document.querySelector('.contact-location-label').textContent = t.contactLocationLabel;
@@ -1424,43 +1422,56 @@
       document.querySelector('.contact-youtube-label').textContent = t.contactYoutubeLabel;
       document.querySelector('.contact-hackerrank-label').textContent = t.contactHackerrankLabel;
       document.querySelector('.contact-stackoverflow-label').textContent = t.contactStackoverflowLabel;
-
       // Update download buttons
       document.querySelectorAll('.download-btn').forEach(btn => {
         btn.textContent = t.downloadBtn;
       });
-
       // Update connect title
       document.querySelector('.connect-title').textContent = t.connectTitle;
-
+      // Update projects section
+      updateProjectsSection();
       // Update hobbies section
       updateHobbiesSection();
-
       // Update experience section
       updateExperienceSection();
-
       // Update typing animation roles
       updateTypingAnimation();
     }
-
+    // Update projects section
+    function updateProjectsSection() {
+      // Show/hide English and Turkish descriptions based on current language
+      document.querySelectorAll('.en-text').forEach(el => {
+        el.classList.toggle('hidden', currentLang !== 'en');
+      });
+      document.querySelectorAll('.tr-text').forEach(el => {
+        el.classList.toggle('hidden', currentLang !== 'tr');
+      });
+      
+      // Update GitHub text
+      document.querySelectorAll('.github-text').forEach(el => {
+        el.textContent = translations[currentLang].githubText;
+      });
+      
+      // Update View Project text
+      document.querySelectorAll('.view-project-text').forEach(el => {
+        el.textContent = translations[currentLang].viewProjectText;
+      });
+    }
     // Update hobbies section
     function updateHobbiesSection() {
       document.querySelectorAll('.hobby-item').forEach(item => {
         const hobbyText = item.querySelector('.hobby-text');
         const enText = item.getAttribute('data-en');
         const trText = item.getAttribute('data-tr');
-
         if (enText && trText) {
           hobbyText.textContent = currentLang === 'en' ? enText : trText;
         }
       });
     }
-
     // Update experience section
     function updateExperienceSection() {
       const container = document.getElementById('experience-container');
       const experiences = experienceData[currentLang];
-
       container.innerHTML = experiences.map(exp => {
         if (exp.hasMultipleProjects) {
           // Special handling for Orion BT with multiple projects
@@ -1512,14 +1523,12 @@
         }
       }).join('');
     }
-
     // Typing effect
     const typingText = document.getElementById('typing-text');
     let roles = translations.en.roles;
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-
     function updateTypingAnimation() {
       roles = translations[currentLang].roles;
       roleIndex = 0;
@@ -1527,10 +1536,8 @@
       isDeleting = false;
       typeEffect();
     }
-
     function typeEffect() {
       const currentRole = roles[roleIndex];
-
       if (isDeleting) {
         typingText.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
@@ -1538,7 +1545,6 @@
         typingText.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
       }
-
       if (!isDeleting && charIndex === currentRole.length) {
         isDeleting = true;
         setTimeout(typeEffect, 2000);
@@ -1550,68 +1556,53 @@
         setTimeout(typeEffect, isDeleting ? 50 : 150);
       }
     }
-
     // Initialize typing animation
     typeEffect();
-
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           window.scrollTo({
             top: target.offsetTop - 80,
             behavior: 'smooth'
           });
-
           // Close mobile menu if open
           mobileMenu.classList.add('hidden');
         }
       });
     });
-
     // Section visibility on scroll
     const sections = document.querySelectorAll('.section');
-
     function checkVisibility() {
       sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-
         if (sectionTop < windowHeight - 100) {
           section.classList.add('active');
         }
       });
     }
-
     window.addEventListener('scroll', checkVisibility);
     window.addEventListener('load', checkVisibility);
-
     // Active navigation link on scroll
     const navLinks = document.querySelectorAll('.nav-link');
-
     function updateActiveNavLink() {
       const scrollPosition = window.scrollY + 100;
-
       sections.forEach((section, index) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           navLinks.forEach(link => link.classList.remove('active'));
           navLinks[index].classList.add('active');
         }
       });
     }
-
     window.addEventListener('scroll', updateActiveNavLink);
     window.addEventListener('load', updateActiveNavLink);
-
     // === ANIMATE SKILL BARS ===
     const skillBars = document.querySelectorAll('.skill-progress');
-
     // Reset all skill bars to 0% and store the target width in a data attribute
     skillBars.forEach(bar => {
       const currentWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/);
@@ -1621,13 +1612,11 @@
         bar.style.width = '0%'; // Visually reset
       }
     });
-
     // Animate skill bars when they come into view
     function animateSkillBars() {
       skillBars.forEach(bar => {
         const barTop = bar.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-
         // Check if the bar is in the viewport and hasn't been animated yet
         if (barTop < windowHeight - 100 && bar.style.width === '0%') {
           const targetWidth = bar.getAttribute('data-width');
@@ -1635,15 +1624,13 @@
         }
       });
     }
-
     // Run on scroll and load
     window.addEventListener('scroll', animateSkillBars);
     window.addEventListener('load', animateSkillBars);
-
-    // Initialize experience and hobbies sections
+    // Initialize experience, hobbies and projects sections
     updateExperienceSection();
     updateHobbiesSection();
+    updateProjectsSection();
   </script>
 </body>
-
 </html>
