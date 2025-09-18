@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,22 @@
             transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
+
         .section.active {
             opacity: 1;
             transform: translateY(0);
         }
+
         .skill-progress {
             transition: width 1.5s ease-in-out;
         }
+
         .timeline-item {
             position: relative;
             padding-left: 30px;
             margin-bottom: 30px;
         }
+
         .timeline-item:before {
             content: "";
             position: absolute;
@@ -35,6 +40,7 @@
             border-radius: 50%;
             background-color: #3b82f6;
         }
+
         .timeline-item:after {
             content: "";
             position: absolute;
@@ -44,12 +50,15 @@
             height: calc(100% + 10px);
             background-color: #e5e7eb;
         }
+
         .timeline-item:last-child:after {
             display: none;
         }
+
         .nav-link {
             position: relative;
         }
+
         .nav-link:after {
             content: "";
             position: absolute;
@@ -60,26 +69,33 @@
             background-color: #3b82f6;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover:after,
         .nav-link.active:after {
             width: 100%;
         }
+
         .card-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
         .typing-effect {
             border-right: 2px solid #3b82f6;
             animation: blink 1s infinite;
         }
+
         @keyframes blink {
+
             0%,
             50% {
                 border-color: transparent;
             }
+
             51%,
             100% {
                 border-color: #3b82f6;
@@ -87,6 +103,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans">
     <!-- Header with Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -177,11 +194,11 @@
                             Stackoverflow.</p>
                     </div>
                     <div class="flex flex-wrap gap-4">
-                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.English.CV.pdf"
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/18.09.2025.Celal.Aygar.English.CV.pdf"
                             target="_blank"
                             class="px-6 py-3 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition cv-en">Download
                             English CV</a>
-                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/14.06.Celal.Aygar.Turkish.CV.pdf"
+                        <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/18.09.2025.Celal.Aygar.Turkish.CV.pdf"
                             target="_blank"
                             class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md font-medium hover:bg-gray-300 transition cv-tr">Download
                             Turkish CV</a>
@@ -1223,7 +1240,9 @@
                     position: "Full-Stack Developer & Java Developer at PAYCELL",
                     description: [
                         "This project is about money transfer",
-                        "Bug fixes, new features created on the frontend and backend, new improvements made on existing features"
+                        "Working in Microservices projects and monolithic project",
+                        "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+                        "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in 2 microservices"
                     ],
                     technologies: "Microservices, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
                 },
@@ -1237,6 +1256,7 @@
                             projectName: "Vodafone E-Commerce Project",
                             description: [
                                 "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
+                                "Working in Microservices projects",
                                 "Creating common general library and common authorization library to use for all of java Microservices.",
                                 "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
                                 "Using Feign Client for inter-microservice communication.",
@@ -1250,6 +1270,7 @@
                             projectName: "Ministry of Interior Project",
                             description: [
                                 "Building over Authorization in frontend and backend for users.",
+                                "Working in Microservices projects",
                                 "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
                                 "Creating microservice by using Spring boot, Redis Graph.",
                                 "Creating microservice by using Spring boot, Kafka to push data to Kafka Topic from Data Base periodically.",
@@ -1267,6 +1288,7 @@
                     position: "Full Stack Developer & Java Software Engineer in ASELSAN",
                     description: [
                         "Working at ASELSAN project for OBSS",
+                        "Working in Microservices projects",
                         "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
                         "Drawing operations were carried out on the map by communicating with 3rd party services.",
                         "Using Git as version control system",
@@ -1308,7 +1330,9 @@
                     position: "PAYCELL'te Full-Stack Geliştirici & Java Geliştirici",
                     description: [
                         "Bu proje para transferi hakkında",
-                        "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı"
+                        "Mikroservis projelerinde ve monolitik projelerde çalışıldı.",
+                        "Backend ve frontend de hataların çözümü, yeni modüllerin eklenmesi, mevcut modüller üzerinde güncelemeler yapılmasında görev aldım.",
+                        "2 farklı mikroservisde Spring boot versiyonu 3'e ve java versiyonu 11 den 17 ye yükseltildi."
                     ],
                     technologies: "Mikroservisler, Java 11-17, Spring Boot, Security, JPA, Hibernate, Maven, Oracle, Kafka, Redis, Docker, OpenShift, React Js, HTML, CSS, Git, Jenkins, Jira, Confluence."
                 },
@@ -1322,6 +1346,7 @@
                             projectName: "Vodafone E-Ticaret Projesi",
                             description: [
                                 "Bazı mikroservislerde Spring boot sürümünü 2'den 3'e, Java sürümünü Java 11'den Java 17'ye yükseltme",
+                                "Mikroservis proje alt yapısında çalışıldı.",
                                 "Tüm java Mikroservisleri için kullanılacak ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma.",
                                 "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
                                 "Mikroservisler arası iletişim için Feign Client kullanımı.",
@@ -1335,6 +1360,7 @@
                             projectName: "İçişleri Bakanlığı Projesi",
                             description: [
                                 "Kullanıcılar için ön yüz ve arka yüzde Yetkilendirme oluşturma.",
+                                "Mikroservis proje alt yapısında çalışıldı.",
                                 "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
                                 "Spring boot, Redis Graph kullanarak mikroservis oluşturma.",
                                 "Spring boot, Kafka kullanarak Veri Tabanından düzenli olarak Kafka Topic'ine veri iten mikroservis oluşturma.",
@@ -1352,6 +1378,7 @@
                     position: "ASELSAN'da Full Stack Geliştirici & Java Yazılım Mühendisi",
                     description: [
                         "OBSS için ASELSAN projesinde çalışma",
+                        "Mikroservis proje alt yapısında çalışıldı.",
                         "Hata düzeltme, ön yüz ve arka yüz de yenii özellikler oluşturma, var olan özellikler üzerinde yeni geliştirmeler yapıldı",
                         "3. taraf hizmetlerle iletişim kurarak harita üzerinde çizim işlemleri yapıldı.",
                         "Sürüm kontrol sistemi olarak Git kullanımı",
@@ -1795,4 +1822,5 @@
         updateHobbiesSection();
     </script>
 </body>
+
 </html>
