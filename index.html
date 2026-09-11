@@ -126,7 +126,7 @@
 
 <body class="bg-gray-50 text-gray-800 font-sans selection:bg-blue-600 selection:text-white">
     <!-- Header with Navigation -->
-    <header class="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
+    <header class="bg-white shadow-xs border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand / Logo -->
@@ -460,14 +460,18 @@
                         <span id="cv-view-label">CV Görüntüle</span>
                     </a>
                     <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf"
+                        data-cv-url="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf"
+                        data-fallback-url="./10.09.2026.Celal.Aygar.English.CV.pdf"
                         target="_blank" rel="noopener noreferrer" download="10.09.2026.Celal.Aygar.English.CV.pdf"
-                        class="inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-emerald-700 transition hover:scale-105 hover:border-emerald-500/50 hover:bg-emerald-100">
+                        class="cv-download-btn inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-emerald-700 transition hover:scale-105 hover:border-emerald-500/50 hover:bg-emerald-100">
                         <i class="fas fa-download text-xs"></i>
                         <span id="cv-download-en-label">CV İndir (EN)</span>
                     </a>
                     <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf"
+                        data-cv-url="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf"
+                        data-fallback-url="./10.09.2026.Celal.Aygar.Turkish.CV.pdf"
                         target="_blank" rel="noopener noreferrer" download="10.09.2026.Celal.Aygar.Turkish.CV.pdf"
-                        class="inline-flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-sky-700 transition hover:scale-105 hover:border-sky-500/50 hover:bg-sky-100">
+                        class="cv-download-btn inline-flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-sky-700 transition hover:scale-105 hover:border-sky-500/50 hover:bg-sky-100">
                         <i class="fas fa-download text-xs"></i>
                         <span id="cv-download-tr-label">CV İndir (TR)</span>
                     </a>
@@ -675,14 +679,14 @@
                     <span data-key="pageView">Section Page</span>
                 </span>
             </div>
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
+                <div class="mt-3">
+                    <h3 class="text-xl font-semibold text-gray-900 contact-subtitle">Any Question? Contact us!</h3>
+                    <p class="text-sm text-gray-500 contact-description mt-0.5">I'm at your service</p>
+                </div>
             </div>
-            <div class="text-center mb-10">
-                <h3 class="text-2xl font-semibold mb-2 contact-subtitle">Any Question? Contact us!</h3>
-                <h4 class="text-xl text-gray-600 contact-description">I'm at your service</h4>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="contact-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="contact-container">
                 <!-- Dynamically loaded from JSON -->
             </div>
         </section>
@@ -770,12 +774,14 @@
     },
     "resumes": {
       "english": {
-        "url": "https://raw.githubusercontent.com/celalaygar/profiles/main/10.09.2026.Celal.Aygar.English.CV.pdf",
-        "filename": "Celal_Aygar_English_CV.pdf"
+        "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf",
+        "localUrl": "./10.09.2026.Celal.Aygar.English.CV.pdf",
+        "filename": "10.09.2026.Celal.Aygar.English.CV.pdf"
       },
       "turkish": {
-        "url": "https://raw.githubusercontent.com/celalaygar/profiles/main/10.09.2026.Celal.Aygar.Turkish.CV.pdf",
-        "filename": "Celal_Aygar_Turkish_CV.pdf"
+        "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf",
+        "localUrl": "./10.09.2026.Celal.Aygar.Turkish.CV.pdf",
+        "filename": "10.09.2026.Celal.Aygar.Turkish.CV.pdf"
       }
     }
   },
@@ -3063,6 +3069,21 @@
                 }
             });
 
+            // Universal CV Download Interceptor
+            document.addEventListener('click', function(e) {
+                const cvBtn = e.target.closest('.cv-download-btn');
+                if (!cvBtn) return;
+
+                const url = cvBtn.getAttribute('data-cv-url') || cvBtn.getAttribute('href');
+                const filename = cvBtn.getAttribute('download') || 'Celal_Aygar_CV.pdf';
+                const fallbackUrl = cvBtn.getAttribute('data-fallback-url') || url;
+
+                if (!url) return;
+
+                e.preventDefault();
+                downloadCvFile(url, filename, fallbackUrl);
+            });
+
             // SPA Section Navigation Click Handler (captures all internal section hash links)
             document.addEventListener('click', function(e) {
                 const anchor = e.target.closest('a[href^="#"]');
@@ -3085,6 +3106,39 @@
             // Scroll animations & spy
             window.addEventListener('scroll', handleScrollEvents);
             window.addEventListener('load', handleScrollEvents);
+        }
+
+        // Dedicated helper to trigger authentic browser PDF file downloads
+        async function downloadCvFile(url, filename, fallbackUrl) {
+            try {
+                if (window.location.protocol.startsWith('http')) {
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const blob = await res.blob();
+                        const blobUrl = window.URL.createObjectURL(blob);
+                        const tempLink = document.createElement('a');
+                        tempLink.href = blobUrl;
+                        tempLink.download = filename || 'Celal_Aygar_CV.pdf';
+                        document.body.appendChild(tempLink);
+                        tempLink.click();
+                        document.body.removeChild(tempLink);
+                        setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
+                        return;
+                    }
+                }
+            } catch (err) {
+                console.warn('Fetch blob download fallback:', err);
+            }
+
+            // Fallback for file:// or failed fetch: create direct anchor download / window.open
+            const link = document.createElement('a');
+            link.href = fallbackUrl || url;
+            link.download = filename || 'Celal_Aygar_CV.pdf';
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         // Render Home Section Explore Grid
@@ -3153,11 +3207,13 @@
                     <span>${t.hireBtn}</span>
                 </a>
                 <a href="${p.resumes.english.url}" download="${p.resumes.english.filename}" target="_blank"
-                    class="px-5 py-3 bg-gray-100 text-gray-800 rounded-lg font-semibold hover:bg-gray-200 transition inline-flex items-center text-sm border border-gray-200 shadow-xs">
+                    data-cv-url="${p.resumes.english.url}" data-fallback-url="${p.resumes.english.localUrl || p.resumes.english.url}"
+                    class="cv-download-btn px-5 py-3 bg-gray-100 text-gray-800 rounded-lg font-semibold hover:bg-gray-200 transition inline-flex items-center text-sm border border-gray-200 shadow-xs">
                     <i class="fas fa-file-pdf mr-2 text-red-600"></i> ${t.cvEn}
                 </a>
                 <a href="${p.resumes.turkish.url}" download="${p.resumes.turkish.filename}" target="_blank"
-                    class="px-5 py-3 bg-gray-100 text-gray-800 rounded-lg font-semibold hover:bg-gray-200 transition inline-flex items-center text-sm border border-gray-200 shadow-xs">
+                    data-cv-url="${p.resumes.turkish.url}" data-fallback-url="${p.resumes.turkish.localUrl || p.resumes.turkish.url}"
+                    class="cv-download-btn px-5 py-3 bg-gray-100 text-gray-800 rounded-lg font-semibold hover:bg-gray-200 transition inline-flex items-center text-sm border border-gray-200 shadow-xs">
                     <i class="fas fa-file-pdf mr-2 text-red-600"></i> ${t.cvTr}
                 </a>
             `;
@@ -3196,12 +3252,14 @@
             // Mobile menu CV buttons
             document.getElementById('mobile-cv-container').innerHTML = `
                 <a href="${p.resumes.english.url}" download="${p.resumes.english.filename}" target="_blank"
-                    class="flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
+                    data-cv-url="${p.resumes.english.url}" data-fallback-url="${p.resumes.english.localUrl || p.resumes.english.url}"
+                    class="cv-download-btn flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
                     <i class="fas fa-file-download"></i>
                     <span>English CV (PDF)</span>
                 </a>
                 <a href="${p.resumes.turkish.url}" download="${p.resumes.turkish.filename}" target="_blank"
-                    class="flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
+                    data-cv-url="${p.resumes.turkish.url}" data-fallback-url="${p.resumes.turkish.localUrl || p.resumes.turkish.url}"
+                    class="cv-download-btn flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">
                     <i class="fas fa-file-download"></i>
                     <span>Türkçe CV (PDF)</span>
                 </a>
@@ -3244,11 +3302,13 @@
 
             document.getElementById('about-cv-buttons').innerHTML = `
                 <a href="${p.resumes.english.url}" download="${p.resumes.english.filename}" target="_blank"
-                    class="px-4 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center text-sm shadow-xs">
+                    data-cv-url="${p.resumes.english.url}" data-fallback-url="${p.resumes.english.localUrl || p.resumes.english.url}"
+                    class="cv-download-btn px-4 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center text-sm shadow-xs">
                     <i class="fas fa-file-pdf mr-2"></i> ${t.cvEn}
                 </a>
                 <a href="${p.resumes.turkish.url}" download="${p.resumes.turkish.filename}" target="_blank"
-                    class="px-4 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-medium hover:bg-gray-200 transition inline-flex items-center text-sm border border-gray-200 shadow-xs">
+                    data-cv-url="${p.resumes.turkish.url}" data-fallback-url="${p.resumes.turkish.localUrl || p.resumes.turkish.url}"
+                    class="cv-download-btn px-4 py-2.5 bg-gray-100 text-gray-800 rounded-lg font-medium hover:bg-gray-200 transition inline-flex items-center text-sm border border-gray-200 shadow-xs">
                     <i class="fas fa-file-pdf mr-2 text-red-600"></i> ${t.cvTr}
                 </a>
             `;
@@ -4134,51 +4194,148 @@
         function renderContact() {
             const t = appData.translations[currentLang];
             const c = appData.profile.contact;
+            const isTr = currentLang === 'tr';
 
             document.querySelector('.contact-title').textContent = t.contactTitle;
             document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
             document.querySelector('.contact-description').textContent = t.contactDescription;
 
             const cards = [
-                { icon: "fa-phone", label: t.contactPhoneLabel, value: c.phone, link: `tel:${c.phone}` },
-                { icon: "fa-map-marker-alt", label: t.contactLocationLabel, value: c.location[currentLang] },
-                { icon: "fa-envelope", label: t.contactEmailLabel, value: c.email, link: `mailto:${c.email}` },
-                { icon: "fa-globe", label: t.contactWebsiteLabel, value: c.websiteDisplay, link: c.website },
-                { icon: "fab fa-linkedin", label: t.contactLinkedinLabel, value: c.linkedinDisplay, link: c.linkedin },
-                { icon: "fab fa-github", label: t.contactGithubLabel, value: c.githubDisplay, link: c.github },
-                { icon: "fab fa-medium", label: t.contactMediumLabel, value: c.mediumDisplay, link: c.medium },
-                { icon: "fab fa-youtube", label: t.contactYoutubeLabel, value: "YouTube", link: c.youtube },
-                { icon: "fab fa-hackerrank", label: t.contactHackerrankLabel, value: "HackerRank", link: c.hackerrank },
-                { icon: "fab fa-stack-overflow", label: t.contactStackoverflowLabel, value: "StackOverflow", link: c.stackoverflow }
+                {
+                    icon: "fas fa-phone",
+                    iconClass: "text-emerald-600",
+                    bgClass: "bg-emerald-50 border border-emerald-200/80 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600",
+                    label: t.contactPhoneLabel,
+                    value: c.phone,
+                    link: `tel:${c.phone}`,
+                    subText: isTr ? "Doğrudan telefon ile ara" : "Direct phone call"
+                },
+                {
+                    icon: "fas fa-location-dot",
+                    iconClass: "text-rose-600",
+                    bgClass: "bg-rose-50 border border-rose-200/80 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600",
+                    label: t.contactLocationLabel,
+                    value: c.location[currentLang],
+                    link: null,
+                    subText: isTr ? "Şehir / Ülke" : "Location / Country"
+                },
+                {
+                    icon: "fas fa-envelope",
+                    iconClass: "text-blue-600",
+                    bgClass: "bg-blue-50 border border-blue-200/80 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600",
+                    label: t.contactEmailLabel,
+                    value: c.email,
+                    link: `mailto:${c.email}`,
+                    subText: isTr ? "E-posta gönder" : "Send an email"
+                },
+                {
+                    icon: "fas fa-globe",
+                    iconClass: "text-indigo-600",
+                    bgClass: "bg-indigo-50 border border-indigo-200/80 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600",
+                    label: t.contactWebsiteLabel,
+                    value: c.websiteDisplay,
+                    link: c.website,
+                    subText: isTr ? "Kişisel web sitesi" : "Personal portfolio"
+                },
+                {
+                    icon: "fab fa-linkedin-in",
+                    iconClass: "text-[#0A66C2]",
+                    bgClass: "bg-sky-50 border border-sky-200/80 group-hover:bg-[#0A66C2] group-hover:text-white group-hover:border-[#0A66C2]",
+                    label: t.contactLinkedinLabel,
+                    value: c.linkedinDisplay,
+                    link: c.linkedin,
+                    subText: isTr ? "LinkedIn profili & ağ" : "Professional network"
+                },
+                {
+                    icon: "fab fa-github",
+                    iconClass: "text-gray-900",
+                    bgClass: "bg-gray-100 border border-gray-300/80 group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900",
+                    label: t.contactGithubLabel,
+                    value: c.githubDisplay,
+                    link: c.github,
+                    subText: isTr ? "Açık kaynak projeler" : "Open source repositories"
+                },
+                {
+                    icon: "fab fa-medium",
+                    iconClass: "text-neutral-900",
+                    bgClass: "bg-neutral-100 border border-neutral-300/80 group-hover:bg-black group-hover:text-white group-hover:border-black",
+                    label: t.contactMediumLabel,
+                    value: c.mediumDisplay,
+                    link: c.medium,
+                    subText: isTr ? "Teknik makaleler & mimari" : "Technical articles"
+                },
+                {
+                    icon: "fab fa-youtube",
+                    iconClass: "text-[#FF0000]",
+                    bgClass: "bg-red-50 border border-red-200/70 group-hover:bg-[#FF0000] group-hover:text-white group-hover:border-[#FF0000]",
+                    label: t.contactYoutubeLabel,
+                    value: "YouTube",
+                    link: c.youtube,
+                    subText: isTr ? "Video içerikler & anlatımlar" : "Video tutorials"
+                },
+                {
+                    icon: "fab fa-hackerrank",
+                    iconClass: "text-[#00853E]",
+                    bgClass: "bg-emerald-50 border border-emerald-200/80 group-hover:bg-[#00853E] group-hover:text-white group-hover:border-[#00853E]",
+                    label: t.contactHackerrankLabel,
+                    value: "HackerRank",
+                    link: c.hackerrank,
+                    subText: isTr ? "Problem çözme & algoritmalar" : "Coding challenges"
+                },
+                {
+                    icon: "fab fa-stack-overflow",
+                    iconClass: "text-[#F58025]",
+                    bgClass: "bg-orange-50 border border-orange-200/80 group-hover:bg-[#F58025] group-hover:text-white group-hover:border-[#F58025]",
+                    label: t.contactStackoverflowLabel,
+                    value: "StackOverflow",
+                    link: c.stackoverflow,
+                    subText: isTr ? "Geliştirici topluluğu yanıtları" : "Developer Q&A"
+                }
             ];
 
             document.getElementById('contact-container').innerHTML = cards.map(card => `
-                <div class="bg-white rounded-lg shadow-md p-6 card-hover flex items-center">
-                    <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4 text-blue-600 text-xl shrink-0">
-                        <i class="${card.icon.startsWith('fa') ? card.icon : 'fas ' + card.icon}"></i>
+                <div class="group relative bg-white rounded-2xl border border-gray-200/90 p-5 shadow-xs card-hover flex items-center justify-between hover:border-blue-400 hover:shadow-md transition-all duration-200">
+                    <div class="flex items-center gap-4 min-w-0 flex-1">
+                        <div class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0 transition-all duration-300 shadow-2xs ${card.bgClass} ${card.iconClass}">
+                            <i class="${card.icon}"></i>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">${card.label}</span>
+                            ${card.link ? `
+                                <a href="${card.link}" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-bold text-gray-900 group-hover:text-blue-600 transition-colors truncate block mt-0.5">
+                                    ${card.value}
+                                </a>
+                            ` : `
+                                <p class="text-sm sm:text-base font-bold text-gray-900 truncate mt-0.5">${card.value}</p>
+                            `}
+                            <p class="text-xs text-gray-400 truncate mt-0.5">${card.subText}</p>
+                        </div>
                     </div>
-                    <div class="min-w-0 flex-1">
-                        <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">${card.label}</h4>
-                        ${card.link ? `
-                            <a href="${card.link}" target="_blank" class="text-sm font-semibold text-gray-900 hover:text-blue-600 transition truncate block">
-                                ${card.value}
-                            </a>
-                        ` : `
-                            <p class="text-sm font-semibold text-gray-900 truncate">${card.value}</p>
-                        `}
-                    </div>
+                    ${card.link ? `
+                        <a href="${card.link}" target="_blank" rel="noopener noreferrer" aria-label="${card.label}" class="w-9 h-9 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:scale-105 transition-all ml-2 shrink-0 border border-gray-100">
+                            <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    ` : ''}
                 </div>
             `).join('');
         }
 
         function renderFooterSocials() {
             const c = appData.profile.contact;
-            document.getElementById('footer-social-links').innerHTML = `
-                <a href="${c.github}" target="_blank" class="text-gray-400 hover:text-gray-900 transition"><i class="fab fa-github"></i></a>
-                <a href="${c.linkedin}" target="_blank" class="text-gray-400 hover:text-blue-600 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="${c.medium}" target="_blank" class="text-gray-400 hover:text-black transition"><i class="fab fa-medium"></i></a>
-                <a href="mailto:${c.email}" class="text-gray-400 hover:text-red-500 transition"><i class="fas fa-envelope"></i></a>
-            `;
+            const socials = [
+                { icon: "fab fa-github", url: c.github, hover: "hover:text-gray-900 hover:bg-gray-100" },
+                { icon: "fab fa-linkedin-in", url: c.linkedin, hover: "hover:text-[#0A66C2] hover:bg-sky-50" },
+                { icon: "fab fa-medium", url: c.medium, hover: "hover:text-black hover:bg-stone-100" },
+                { icon: "fab fa-youtube", url: c.youtube, hover: "hover:text-[#FF0000] hover:bg-red-50" },
+                { icon: "fab fa-hackerrank", url: c.hackerrank, hover: "hover:text-[#00EA64] hover:bg-emerald-50" },
+                { icon: "fab fa-stack-overflow", url: c.stackoverflow, hover: "hover:text-[#F58025] hover:bg-orange-50" },
+                { icon: "fas fa-envelope", url: `mailto:${c.email}`, hover: "hover:text-blue-600 hover:bg-blue-50" }
+            ];
+            document.getElementById('footer-social-links').innerHTML = socials.map(s => `
+                <a href="${s.url}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg flex items-center justify-center text-gray-400 ${s.hover} transition-colors">
+                    <i class="${s.icon}"></i>
+                </a>
+            `).join('');
         }
 
         // Typing Effect Animation
