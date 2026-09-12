@@ -2,712 +2,826 @@
 <html lang="tr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celal Aygar — Senior Software Engineer</title>
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/11775341?v=4">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celal Aygar — Senior Software Engineer</title>
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/11775341?v=4">
 
-    <!-- GitHub Pages SEO Meta Tags -->
-    <meta name="description" content="Hacı Celal Aygar — Senior Software Engineer, Full Stack & Java Developer. Portfolio, projects, experience, web games, and technical articles.">
-    <meta name="keywords" content="Celal Aygar, Hacı Celal Aygar, Senior Software Engineer, Full Stack Developer, Java, Spring Boot, Microservices, React, Next.js, Wixtory">
-    <meta name="author" content="Celal Aygar">
-    <link rel="canonical" href="https://celalaygar.github.io/">
+  <!-- GitHub Pages SEO Meta Tags -->
+  <meta name="description"
+    content="Hacı Celal Aygar — Senior Software Engineer, Full Stack & Java Developer. Portfolio, projects, experience, web games, and technical articles.">
+  <meta name="keywords"
+    content="Celal Aygar, Hacı Celal Aygar, Senior Software Engineer, Full Stack Developer, Java, Spring Boot, Microservices, React, Next.js, Wixtory">
+  <meta name="author" content="Celal Aygar">
+  <link rel="canonical" href="https://celalaygar.github.io/">
 
-    <!-- Open Graph / Social Media Preview Cards (LinkedIn, Twitter, WhatsApp) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://celalaygar.github.io/">
-    <meta property="og:title" content="Celal Aygar — Senior Software Engineer">
-    <meta property="og:description" content="Full Stack & Java Developer with 5+ years of experience in Spring Boot, Microservices, and modern UI.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/11775341?v=4">
+  <!-- Open Graph / Social Media Preview Cards (LinkedIn, Twitter, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://celalaygar.github.io/">
+  <meta property="og:title" content="Celal Aygar — Senior Software Engineer">
+  <meta property="og:description"
+    content="Full Stack & Java Developer with 5+ years of experience in Spring Boot, Microservices, and modern UI.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/11775341?v=4">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Celal Aygar — Senior Software Engineer">
-    <meta name="twitter:description" content="Full Stack & Java Developer with 5+ years of experience in Spring Boot, Microservices, and modern UI.">
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/11775341?v=4">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Celal Aygar — Senior Software Engineer">
+  <meta name="twitter:description"
+    content="Full Stack & Java Developer with 5+ years of experience in Spring Boot, Microservices, and modern UI.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/11775341?v=4">
 
-    <!-- Tailwind CSS & FontAwesome -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        /* Single Page App (SPA) Slide-in Section Transition */
-        .section {
-            display: none;
-            opacity: 0;
-            width: 100%;
-        }
+  <!-- Tailwind CSS & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    /* Single Page App (SPA) Slide-in Section Transition */
+    .section {
+      display: none;
+      opacity: 0;
+      width: 100%;
+    }
 
-        .section.active {
-            display: block;
-            animation: slidePageInRight 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+    .section.active {
+      display: block;
+      animation: slidePageInRight 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
 
-        .section.active.slide-from-left {
-            animation: slidePageInLeft 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
+    .section.active.slide-from-left {
+      animation: slidePageInLeft 0.38s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
 
-        @keyframes slidePageInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(45px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+    @keyframes slidePageInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(45px);
+      }
 
-        @keyframes slidePageInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-45px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
-        .skill-progress {
-            transition: width 1.5s ease-in-out;
-        }
+    @keyframes slidePageInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-45px);
+      }
 
-        .nav-link {
-            position: relative;
-        }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
-        .nav-link:after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #2563eb;
-            transition: width 0.3s ease;
-        }
+    .skill-progress {
+      transition: width 1.5s ease-in-out;
+    }
 
-        .nav-link:hover:after,
-        .nav-link.active:after {
-            width: 100%;
-        }
+    .nav-link {
+      position: relative;
+    }
 
-        .dropdown-item:after {
-            display: none !important;
-        }
+    .nav-link:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #2563eb;
+      transition: width 0.3s ease;
+    }
 
-        .dropdown-container.dropdown-open > .dropdown-panel {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: translateY(0) !important;
-            pointer-events: auto !important;
-        }
+    .nav-link:hover:after,
+    .nav-link.active:after {
+      width: 100%;
+    }
 
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .dropdown-item:after {
+      display: none !important;
+    }
 
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-        }
+    .dropdown-container.dropdown-open>.dropdown-panel {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+      pointer-events: auto !important;
+    }
 
-        .typing-effect {
-            border-right: 2px solid #2563eb;
-            animation: blink 1s infinite;
-        }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        @keyframes blink {
-            0%, 50% { border-color: transparent; }
-            51%, 100% { border-color: #2563eb; }
-        }
-    </style>
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .typing-effect {
+      border-right: 2px solid #2563eb;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      50% {
+        border-color: transparent;
+      }
+
+      51%,
+      100% {
+        border-color: #2563eb;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans selection:bg-blue-600 selection:text-white">
-    <!-- Header with Navigation -->
-    <header class="bg-white shadow-xs border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand / Logo -->
-                <a href="#home" class="flex items-center space-x-3 group shrink-0">
-                    <img id="header-avatar" src="https://avatars.githubusercontent.com/u/11775341?v=4" alt="Celal Aygar"
-                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-blue-600 object-cover shadow-sm group-hover:scale-105 transition duration-200">
-                    <div>
-                        <h1 id="header-name" class="text-base sm:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">Celal Aygar</h1>
-                        <h2 id="header-fullname" class="text-[11px] sm:text-xs text-gray-500 font-medium leading-none">Hacı Celal Aygar</h2>
+  <!-- Header with Navigation -->
+  <header class="bg-white shadow-xs border-b border-gray-100 sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand / Logo -->
+        <a href="#home" class="flex items-center space-x-3 group shrink-0">
+          <img id="header-avatar" src="https://avatars.githubusercontent.com/u/11775341?v=4" alt="Celal Aygar"
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 border-blue-600 object-cover shadow-sm group-hover:scale-105 transition duration-200">
+          <div>
+            <h1 id="header-name"
+              class="text-base sm:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+              Celal Aygar</h1>
+            <h2 id="header-fullname" class="text-[11px] sm:text-xs text-gray-500 font-medium leading-none">Hacı Celal
+              Aygar</h2>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation (lg screens and above) -->
+        <nav class="hidden lg:flex items-center space-x-1">
+          <a href="#home"
+            class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors"
+            data-key="navHome">Ana Sayfa</a>
+          <a href="#about"
+            class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors"
+            data-key="navAbout">Hakkımda</a>
+          <a href="#experience"
+            class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors"
+            data-key="navExperience">Deneyim</a>
+          <a href="#technologies"
+            class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors"
+            data-key="navTech">Teknolojiler</a>
+
+          <!-- Projects Dropdown (Projects & Games) -->
+          <div class="relative group dropdown-container">
+            <button id="dropdown-projects-btn" type="button"
+              class="nav-dropdown-trigger flex items-center gap-1.5 px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md hover:bg-gray-50 transition-colors focus:outline-none"
+              data-dropdown="projects">
+              <span data-key="navProjectsMenu">Projeler</span>
+              <i
+                class="fas fa-chevron-down text-[10px] text-gray-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+            <div
+              class="dropdown-panel absolute left-0 top-full pt-1.5 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
+              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-1.5 ring-1 ring-black/5">
+                <a href="#projects"
+                  class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
+                    <i class="fas fa-code-branch"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors"
+                      data-key="navProjects">Projeler</div>
+                    <div class="text-[11px] text-gray-500 truncate" data-key="navProjectsDesc">Web & Mobil Uygulamalar
                     </div>
+                  </div>
                 </a>
-
-                <!-- Desktop Navigation (lg screens and above) -->
-                <nav class="hidden lg:flex items-center space-x-1">
-                    <a href="#home" class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors" data-key="navHome">Ana Sayfa</a>
-                    <a href="#about" class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors" data-key="navAbout">Hakkımda</a>
-                    <a href="#experience" class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors" data-key="navExperience">Deneyim</a>
-                    <a href="#technologies" class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors" data-key="navTech">Teknolojiler</a>
-
-                    <!-- Projects Dropdown (Projects & Games) -->
-                    <div class="relative group dropdown-container">
-                        <button id="dropdown-projects-btn" type="button" class="nav-dropdown-trigger flex items-center gap-1.5 px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md hover:bg-gray-50 transition-colors focus:outline-none" data-dropdown="projects">
-                            <span data-key="navProjectsMenu">Projeler</span>
-                            <i class="fas fa-chevron-down text-[10px] text-gray-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200"></i>
-                        </button>
-                        <div class="dropdown-panel absolute left-0 top-full pt-1.5 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
-                            <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-1.5 ring-1 ring-black/5">
-                                <a href="#projects" class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
-                                    <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
-                                        <i class="fas fa-code-branch"></i>
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors" data-key="navProjects">Projeler</div>
-                                        <div class="text-[11px] text-gray-500 truncate" data-key="navProjectsDesc">Web & Mobil Uygulamalar</div>
-                                    </div>
-                                </a>
-                                <a href="#games" class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
-                                    <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
-                                        <i class="fas fa-gamepad"></i>
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors" data-key="navGames">Web Oyunları</div>
-                                        <div class="text-[11px] text-gray-500 truncate" data-key="navGamesDesc">20 İnteraktif Web Oyunu</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                <a href="#games"
+                  class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
+                    <i class="fas fa-gamepad"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors"
+                      data-key="navGames">Web Oyunları</div>
+                    <div class="text-[11px] text-gray-500 truncate" data-key="navGamesDesc">20 İnteraktif Web Oyunu
                     </div>
-
-                    <!-- Articles & Guides Dropdown (Medium & Interviews) -->
-                    <div class="relative group dropdown-container">
-                        <button id="dropdown-content-btn" type="button" class="nav-dropdown-trigger flex items-center gap-1.5 px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md hover:bg-gray-50 transition-colors focus:outline-none" data-dropdown="content">
-                            <span data-key="navContentMenu">Yazılar & Rehberler</span>
-                            <i class="fas fa-chevron-down text-[10px] text-gray-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200"></i>
-                        </button>
-                        <div class="dropdown-panel absolute left-0 top-full pt-1.5 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
-                            <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-1.5 ring-1 ring-black/5">
-                                <a href="#medium" class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
-                                    <div class="w-8 h-8 rounded-lg bg-gray-100 text-gray-800 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
-                                        <i class="fab fa-medium"></i>
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors" data-key="navArticles">Medium Makaleleri</div>
-                                        <div class="text-[11px] text-gray-500 truncate" data-key="navMediumDesc">Teknik Makaleler & Mimari</div>
-                                    </div>
-                                </a>
-                                <a href="#interviews" class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
-                                    <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
-                                        <i class="fas fa-clipboard-question"></i>
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors" data-key="navInterviews">Mülakat Soruları</div>
-                                        <div class="text-[11px] text-gray-500 truncate" data-key="navInterviewsDesc">8 Kapsamlı Hazırlık Rehberi</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- More Dropdown (Certificates & Books) -->
-                    <div class="relative group dropdown-container">
-                        <button id="dropdown-more-btn" type="button" class="nav-dropdown-trigger flex items-center gap-1.5 px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md hover:bg-gray-50 transition-colors focus:outline-none" data-dropdown="more">
-                            <span data-key="navMoreMenu">Daha Fazla</span>
-                            <i class="fas fa-chevron-down text-[10px] text-gray-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200"></i>
-                        </button>
-                        <div class="dropdown-panel absolute right-0 top-full pt-1.5 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
-                            <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-1.5 ring-1 ring-black/5">
-                                <a href="#certificates" class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
-                                    <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
-                                        <i class="fas fa-certificate"></i>
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors" data-key="navCertificates">Sertifikalar</div>
-                                        <div class="text-[11px] text-gray-500 truncate" data-key="navCertificatesDesc">Rozetler & Belgeler</div>
-                                    </div>
-                                </a>
-                                <a href="#books" class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
-                                    <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
-                                        <i class="fas fa-book-open"></i>
-                                    </div>
-                                    <div class="flex-1 min-w-0">
-                                        <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors" data-key="navBooks">Kitaplar & Hobiler</div>
-                                        <div class="text-[11px] text-gray-500 truncate" data-key="navBooksDesc">Okuma Listesi & Hobiler</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="#contact" class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors" data-key="navContact">İletişim</a>
-                </nav>
-
-                <!-- Right Actions: Language Switcher + Mobile Menu Button -->
-                <div class="flex items-center space-x-2 sm:space-x-3">
-                    <!-- Language Selection Pill -->
-                    <div class="inline-flex p-1 bg-gray-100 rounded-lg border border-gray-200">
-                        <button id="en-lang" class="px-2.5 py-1 rounded-md text-xs font-semibold text-gray-600 hover:text-gray-900 transition-all duration-150">EN</button>
-                        <button id="tr-lang" class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-xs transition-all duration-150">TR</button>
-                    </div>
-
-                    <!-- Mobile/Tablet Hamburger Toggle -->
-                    <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation"
-                        class="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
-                        <i id="menu-icon" class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+                  </div>
+                </a>
+              </div>
             </div>
+          </div>
 
-            <!-- Mobile & Tablet Dropdown Menu -->
-            <nav id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 py-4 space-y-1">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 pb-3">
-                    <a href="#home" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-home w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navHome">Home</span>
-                    </a>
-                    <a href="#about" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-user w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navAbout">About</span>
-                    </a>
-                    <a href="#experience" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-briefcase w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navExperience">Experience</span>
-                    </a>
-                    <a href="#projects" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-code-branch w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navProjects">Projects</span>
-                    </a>
-                    <a href="#games" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-gamepad w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navGames">Games</span>
-                    </a>
-                    <a href="#medium" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fab fa-medium w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navArticles">Articles</span>
-                    </a>
-                    <a href="#interviews" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-clipboard-question w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navInterviews">Interviews</span>
-                    </a>
-                    <a href="#certificates" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-certificate w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navCertificates">Certificates</span>
-                    </a>
-                    <a href="#books" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-book-open w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navBooks">Books & Hobbies</span>
-                    </a>
-                    <a href="#technologies" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-microchip w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navTech">Technologies</span>
-                    </a>
-                    <a href="#contact" class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
-                        <i class="fas fa-envelope w-6 text-blue-600 text-sm"></i>
-                        <span class="mobile-link-text" data-key="navContact">Contact</span>
-                    </a>
-                </div>
-                <!-- Quick CV Download Actions in Mobile Menu -->
-                <div class="pt-3 border-t border-gray-100 flex flex-col sm:flex-row gap-2" id="mobile-cv-container">
-                    <!-- Loaded dynamically from JSON -->
-                </div>
-            </nav>
+          <!-- Articles & Guides Dropdown (Medium & Interviews) -->
+          <div class="relative group dropdown-container">
+            <button id="dropdown-content-btn" type="button"
+              class="nav-dropdown-trigger flex items-center gap-1.5 px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md hover:bg-gray-50 transition-colors focus:outline-none"
+              data-dropdown="content">
+              <span data-key="navContentMenu">Yazılar & Rehberler</span>
+              <i
+                class="fas fa-chevron-down text-[10px] text-gray-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+            <div
+              class="dropdown-panel absolute left-0 top-full pt-1.5 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
+              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-1.5 ring-1 ring-black/5">
+                <a href="#medium"
+                  class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-gray-100 text-gray-800 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
+                    <i class="fab fa-medium"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors"
+                      data-key="navArticles">Medium Makaleleri</div>
+                    <div class="text-[11px] text-gray-500 truncate" data-key="navMediumDesc">Teknik Makaleler & Mimari
+                    </div>
+                  </div>
+                </a>
+                <a href="#interviews"
+                  class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
+                    <i class="fas fa-clipboard-question"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors"
+                      data-key="navInterviews">Mülakat Soruları</div>
+                    <div class="text-[11px] text-gray-500 truncate" data-key="navInterviewsDesc">8 Kapsamlı Hazırlık
+                      Rehberi</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Dropdown (Certificates & Books) -->
+          <div class="relative group dropdown-container">
+            <button id="dropdown-more-btn" type="button"
+              class="nav-dropdown-trigger flex items-center gap-1.5 px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md hover:bg-gray-50 transition-colors focus:outline-none"
+              data-dropdown="more">
+              <span data-key="navMoreMenu">Daha Fazla</span>
+              <i
+                class="fas fa-chevron-down text-[10px] text-gray-400 group-hover:text-blue-600 group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+            <div
+              class="dropdown-panel absolute right-0 top-full pt-1.5 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-1 group-hover:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto shadow-2xl">
+              <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-1.5 ring-1 ring-black/5">
+                <a href="#certificates"
+                  class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors"
+                      data-key="navCertificates">Sertifikalar</div>
+                    <div class="text-[11px] text-gray-500 truncate" data-key="navCertificatesDesc">Rozetler & Belgeler
+                    </div>
+                  </div>
+                </a>
+                <a href="#books"
+                  class="nav-link dropdown-item flex items-center gap-3 p-2.5 rounded-lg hover:bg-blue-50/70 transition-colors group/item">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 transition-transform">
+                    <i class="fas fa-book-open"></i>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-gray-900 group-hover/item:text-blue-600 transition-colors"
+                      data-key="navBooks">Kitaplar & Hobiler</div>
+                    <div class="text-[11px] text-gray-500 truncate" data-key="navBooksDesc">Okuma Listesi & Hobiler
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact"
+            class="nav-link px-2.5 py-2 text-[13px] 2xl:text-sm font-medium text-gray-700 hover:text-blue-600 rounded-md transition-colors"
+            data-key="navContact">İletişim</a>
+        </nav>
+
+        <!-- Right Actions: Language Switcher + Mobile Menu Button -->
+        <div class="flex items-center space-x-2 sm:space-x-3">
+          <!-- Language Selection Pill -->
+          <div class="inline-flex p-1 bg-gray-100 rounded-lg border border-gray-200">
+            <button id="en-lang"
+              class="px-2.5 py-1 rounded-md text-xs font-semibold text-gray-600 hover:text-gray-900 transition-all duration-150">EN</button>
+            <button id="tr-lang"
+              class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-xs transition-all duration-150">TR</button>
+          </div>
+
+          <!-- Mobile/Tablet Hamburger Toggle -->
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation"
+            class="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
+            <i id="menu-icon" class="fas fa-bars text-xl"></i>
+          </button>
         </div>
-    </header>
+      </div>
 
-    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-10 max-w-7xl overflow-x-hidden min-h-[75vh]">
-        <!-- Home Section -->
-        <section id="home" class="section active mb-16">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
-                <div class="md:w-3/5 mb-10 md:mb-0">
-                    <h3 class="text-3xl font-bold mb-4">
-                        <span class="greeting-text">Hello, My name is</span>
-                        <span class="text-blue-600" id="hero-name">Hacı Celal Aygar</span>
-                    </h3>
-                    <h3 class="text-2xl font-semibold mb-6"><span id="hero-ima">I'm a</span> <span id="typing-text"
-                            class="text-blue-600 typing-effect">Full Stack Developer</span></h3>
-                    <div class="description-text mb-6 text-gray-600" id="hero-bio">
-                        <!-- Loaded from JSON -->
-                    </div>
-                    <div class="flex flex-wrap gap-4 items-center" id="hero-buttons-container">
-                        <!-- Loaded from JSON -->
-                    </div>
-                </div>
-                <div class="md:w-2/5 w-full">
-                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 flex flex-col items-center">
-                        <!-- Profile Image -->
-                        <div class="relative mb-4 group">
-                            <div class="absolute -inset-1 bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                            <img id="hero-avatar" src="https://avatars.githubusercontent.com/u/11775341?v=4"
-                                alt="Hacı Celal Aygar"
-                                class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-white shadow-lg">
-                            <div class="absolute bottom-2 right-2 bg-green-500 w-4 h-4 rounded-full border-2 border-white shadow" title="Available for work"></div>
-                        </div>
-                        <h4 id="hero-card-name" class="text-xl font-bold text-gray-800 text-center">Hacı Celal Aygar</h4>
-                        <p id="hero-card-title" class="text-sm font-semibold text-blue-600 text-center mb-1">Senior Software Engineer</p>
-                        <p id="hero-card-location" class="text-xs text-gray-500 text-center mb-5 flex items-center justify-center">
-                            <i class="fas fa-map-marker-alt text-red-500 mr-1.5"></i> <span id="hero-card-location-text">Ankara, TÜRKİYE</span>
-                        </p>
-
-                        <div class="w-full border-t border-gray-100 pt-5">
-                            <h5 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3 text-center hero-connect-title">Connect With Me</h5>
-                            <div class="grid grid-cols-2 gap-3" id="hero-social-links">
-                                <!-- Loaded dynamically from JSON -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Explore Sections Navigation Grid -->
-            <div class="mt-14 pt-10 border-t border-gray-100">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
-                    <div>
-                        <h4 class="text-xl font-bold text-gray-900 home-explore-title" data-key="homeExploreTitle">Explore Profile Sections</h4>
-                        <p class="text-xs text-gray-500 mt-0.5 home-explore-subtitle" data-key="homeExploreSubtitle">Click any section to open it as a dedicated slide-in page</p>
-                    </div>
-                    <span class="text-xs font-mono text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full font-semibold self-start sm:self-auto">10 Sections</span>
-                </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5" id="home-sections-grid">
-                    <!-- Populated dynamically via renderHomeSectionsGrid() -->
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block about-title">About Me</h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4 about-heading">
-                        <!-- Loaded from JSON -->
-                    </h3>
-                    <div class="about-content text-gray-600 mb-6" id="about-story">
-                        <!-- Loaded from JSON -->
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                        <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 comm-title">Communication</h3>
-                        <ul class="space-y-3 text-sm" id="communication-container">
-                            <!-- Loaded from JSON -->
-                        </ul>
-                    </div>
-                    <div class="flex flex-wrap gap-4" id="about-cv-buttons">
-                        <!-- Loaded from JSON -->
-                    </div>
-                </div>
-                <div>
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-200">
-                            <h3 class="text-xl font-semibold edu-title">Education</h3>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
-                                <i class="fas fa-graduation-cap text-blue-600"></i>
-                                <span id="edu-badge-text">Academic</span>
-                            </span>
-                        </div>
-                        <div class="space-y-6" id="education-container">
-                            <!-- Dynamically loaded from JSON -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-10">
-                <p class="mb-2 font-mono text-sm text-emerald-600 font-semibold">
-                    <span class="text-gray-400">$</span> <span id="exp-kicker">~/deneyim</span>
-                </p>
-                <div class="flex flex-wrap items-center gap-3">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 exp-title">Deneyim & Kariyer</h2>
-                    <span class="rounded-full border border-emerald-500/30 bg-emerald-50 px-2.5 py-0.5 font-mono text-xs text-emerald-700 font-semibold" id="exp-badge">
-                        9
-                    </span>
-                </div>
-                <p class="mt-2 text-gray-500 max-w-2xl text-base exp-subtitle">
-                    Mesleki yolculuğum
-                </p>
-                <div class="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-emerald-500 to-blue-600"></div>
-            </div>
-
-            <!-- CV Callout Banner -->
-            <div class="mb-10 flex flex-col items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between shadow-xs card-hover">
-                <p class="max-w-md text-sm leading-relaxed text-gray-600" id="exp-cv-note">
-                    Detaylı kariyer geçmişimi, teknik uzmanlıklarımı ve referanslarımı içeren güncel özgeçmişimi PDF olarak indirebilirsiniz.
-                </p>
-                <div class="flex flex-wrap items-center gap-2.5 shrink-0">
-                    <a href="https://celalaygar.github.io/" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center gap-2 rounded-xl border border-violet-500/30 bg-violet-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-violet-700 transition hover:scale-105 hover:border-violet-500/50 hover:bg-violet-100">
-                        <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                        <span id="cv-view-label">CV Görüntüle</span>
-                    </a>
-                    <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf"
-                        data-cv-url="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf"
-                        data-fallback-url="./10.09.2026.Celal.Aygar.English.CV.pdf"
-                        target="_blank" rel="noopener noreferrer" download="10.09.2026.Celal.Aygar.English.CV.pdf"
-                        class="cv-download-btn inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-emerald-700 transition hover:scale-105 hover:border-emerald-500/50 hover:bg-emerald-100">
-                        <i class="fas fa-download text-xs"></i>
-                        <span id="cv-download-en-label">CV İndir (EN)</span>
-                    </a>
-                    <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf"
-                        data-cv-url="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf"
-                        data-fallback-url="./10.09.2026.Celal.Aygar.Turkish.CV.pdf"
-                        target="_blank" rel="noopener noreferrer" download="10.09.2026.Celal.Aygar.Turkish.CV.pdf"
-                        class="cv-download-btn inline-flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-sky-700 transition hover:scale-105 hover:border-sky-500/50 hover:bg-sky-100">
-                        <i class="fas fa-download text-xs"></i>
-                        <span id="cv-download-tr-label">CV İndir (TR)</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Timeline Track -->
-            <div class="relative">
-                <span aria-hidden="true" class="absolute inset-y-4 left-[17px] w-0.5 bg-gradient-to-b from-emerald-500/60 via-gray-200 to-transparent"></span>
-                <div class="space-y-8" id="experience-container">
-                    <!-- Dynamically loaded from JSON -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block projects-title">Projects</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-
-        <!-- Web Games Section -->
-        <section id="games" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-8">
-                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-3">
-                    <div>
-                        <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block games-title">Web Games</h2>
-                        <p class="text-sm text-gray-500 mt-2 games-subtitle">Interactive games developed with HTML5, Canvas & JavaScript</p>
-                    </div>
-                    <span class="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200" id="games-counter-badge">
-                        <i class="fas fa-gamepad"></i> 20 Web Games
-                    </span>
-                </div>
-                <!-- Category Filter Buttons -->
-                <div class="flex flex-wrap gap-2 pt-3" id="games-filter-container">
-                    <!-- Filter buttons rendered dynamically -->
-                </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="games-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-
-        <!-- Medium Articles Section -->
-        <section id="medium" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-8">
-                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-3">
-                    <div>
-                        <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block medium-title">Medium Articles</h2>
-                        <p class="text-sm text-gray-500 mt-2 medium-subtitle">Technical articles on Spring Boot, Microservices, Kafka & Databases</p>
-                    </div>
-                    <a href="https://medium.com/@celalaygar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 self-start sm:self-auto px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900 text-white hover:bg-black transition shadow-xs">
-                        <i class="fab fa-medium"></i>
-                        <span id="medium-follow-text">@celalaygar Follow</span>
-                    </a>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="medium-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-
-        <!-- Interview Questions Section -->
-        <section id="interviews" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-8">
-                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-3">
-                    <div>
-                        <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block interviews-title">Interview Question Guides</h2>
-                        <p class="text-sm text-gray-500 mt-2 interviews-subtitle">Comprehensive technical interview questions & preparation guides</p>
-                    </div>
-                    <span class="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200" id="interviews-counter-badge">
-                        <i class="fas fa-clipboard-question text-amber-600"></i> 8 Guides
-                    </span>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="interviews-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block cert-title">Certificates</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="certificates-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-
-        <!-- Books & Hobbies Section -->
-        <section id="books" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block books-title">Books & Hobbies</h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 books-section-title">Books</h3>
-                    <div class="space-y-4" id="books-container">
-                        <!-- Dynamically loaded from JSON -->
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
-                    <div class="space-y-4" id="hobbies-container">
-                        <!-- Dynamically loaded from JSON -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technologies Section -->
-        <section id="technologies" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-10">
-                <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block tech-title">My Technologies</h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="technologies-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section mb-16">
-            <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
-                <a href="#home" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
-                    <i class="fas fa-arrow-left text-[11px]"></i>
-                    <span data-key="backHome">Home</span>
-                </a>
-                <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                    <span data-key="pageView">Section Page</span>
-                </span>
-            </div>
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
-                <div class="mt-3">
-                    <h3 class="text-xl font-semibold text-gray-900 contact-subtitle">Any Question? Contact us!</h3>
-                    <p class="text-sm text-gray-500 contact-description mt-0.5">I'm at your service</p>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="contact-container">
-                <!-- Dynamically loaded from JSON -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-8 text-center text-sm text-gray-500">
-        <div class="container mx-auto px-6 max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-2">
-                <img src="https://avatars.githubusercontent.com/u/11775341?v=4" alt="Celal Aygar" class="w-6 h-6 rounded-full border border-blue-600">
-                <span class="font-semibold text-gray-700">Celal Aygar</span>
-                <span id="footer-copyright">© 2026 — All rights reserved.</span>
-            </div>
-            <div class="flex items-center space-x-4 text-base" id="footer-social-links">
-                <!-- Loaded from JSON -->
-            </div>
+      <!-- Mobile & Tablet Dropdown Menu -->
+      <nav id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 py-4 space-y-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 pb-3">
+          <a href="#home"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-home w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navHome">Home</span>
+          </a>
+          <a href="#about"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-user w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navAbout">About</span>
+          </a>
+          <a href="#experience"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-briefcase w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navExperience">Experience</span>
+          </a>
+          <a href="#projects"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-code-branch w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navProjects">Projects</span>
+          </a>
+          <a href="#games"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-gamepad w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navGames">Games</span>
+          </a>
+          <a href="#medium"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fab fa-medium w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navArticles">Articles</span>
+          </a>
+          <a href="#interviews"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-clipboard-question w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navInterviews">Interviews</span>
+          </a>
+          <a href="#certificates"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-certificate w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navCertificates">Certificates</span>
+          </a>
+          <a href="#books"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-book-open w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navBooks">Books & Hobbies</span>
+          </a>
+          <a href="#technologies"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-microchip w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navTech">Technologies</span>
+          </a>
+          <a href="#contact"
+            class="mobile-nav-link flex items-center px-3.5 py-2.5 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors font-medium text-sm">
+            <i class="fas fa-envelope w-6 text-blue-600 text-sm"></i>
+            <span class="mobile-link-text" data-key="navContact">Contact</span>
+          </a>
         </div>
-    </footer>
+        <!-- Quick CV Download Actions in Mobile Menu -->
+        <div class="pt-3 border-t border-gray-100 flex flex-col sm:flex-row gap-2" id="mobile-cv-container">
+          <!-- Loaded dynamically from JSON -->
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Embedded Profile JSON Data -->
-    <script id="profile-data-json" type="application/json">
+  <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-10 max-w-7xl overflow-x-hidden min-h-[75vh]">
+    <!-- Home Section -->
+    <section id="home" class="section active mb-16">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="md:w-3/5 mb-10 md:mb-0">
+          <h3 class="text-3xl font-bold mb-4">
+            <span class="greeting-text">Hello, My name is</span>
+            <span class="text-blue-600" id="hero-name">Hacı Celal Aygar</span>
+          </h3>
+          <h3 class="text-2xl font-semibold mb-6"><span id="hero-ima">I'm a</span> <span id="typing-text"
+              class="text-blue-600 typing-effect">Full Stack Developer</span></h3>
+          <div class="description-text mb-6 text-gray-600" id="hero-bio">
+            <!-- Loaded from JSON -->
+          </div>
+          <div class="flex flex-wrap gap-4 items-center" id="hero-buttons-container">
+            <!-- Loaded from JSON -->
+          </div>
+        </div>
+        <div class="md:w-2/5 w-full">
+          <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 flex flex-col items-center">
+            <!-- Profile Image -->
+            <div class="relative mb-4 group">
+              <div
+                class="absolute -inset-1 bg-gradient-to-tr from-blue-600 via-indigo-500 to-sky-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300">
+              </div>
+              <img id="hero-avatar" src="https://avatars.githubusercontent.com/u/11775341?v=4" alt="Hacı Celal Aygar"
+                class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-white shadow-lg">
+              <div class="absolute bottom-2 right-2 bg-green-500 w-4 h-4 rounded-full border-2 border-white shadow"
+                title="Available for work"></div>
+            </div>
+            <h4 id="hero-card-name" class="text-xl font-bold text-gray-800 text-center">Hacı Celal Aygar</h4>
+            <p id="hero-card-title" class="text-sm font-semibold text-blue-600 text-center mb-1">Senior Software
+              Engineer</p>
+            <p id="hero-card-location" class="text-xs text-gray-500 text-center mb-5 flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-red-500 mr-1.5"></i> <span id="hero-card-location-text">Ankara,
+                TÜRKİYE</span>
+            </p>
+
+            <div class="w-full border-t border-gray-100 pt-5">
+              <h5
+                class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3 text-center hero-connect-title">
+                Connect With Me</h5>
+              <div class="grid grid-cols-2 gap-3" id="hero-social-links">
+                <!-- Loaded dynamically from JSON -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explore Sections Navigation Grid -->
+      <div class="mt-14 pt-10 border-t border-gray-100">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+          <div>
+            <h4 class="text-xl font-bold text-gray-900 home-explore-title" data-key="homeExploreTitle">Explore Profile
+              Sections</h4>
+            <p class="text-xs text-gray-500 mt-0.5 home-explore-subtitle" data-key="homeExploreSubtitle">Click any
+              section to open it as a dedicated slide-in page</p>
+          </div>
+          <span
+            class="text-xs font-mono text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full font-semibold self-start sm:self-auto">10
+            Sections</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5" id="home-sections-grid">
+          <!-- Populated dynamically via renderHomeSectionsGrid() -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block about-title">About Me</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 about-heading">
+            <!-- Loaded from JSON -->
+          </h3>
+          <div class="about-content text-gray-600 mb-6" id="about-story">
+            <!-- Loaded from JSON -->
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h3 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 comm-title">Communication</h3>
+            <ul class="space-y-3 text-sm" id="communication-container">
+              <!-- Loaded from JSON -->
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-4" id="about-cv-buttons">
+            <!-- Loaded from JSON -->
+          </div>
+        </div>
+        <div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-200">
+              <h3 class="text-xl font-semibold edu-title">Education</h3>
+              <span
+                class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                <i class="fas fa-graduation-cap text-blue-600"></i>
+                <span id="edu-badge-text">Academic</span>
+              </span>
+            </div>
+            <div class="space-y-6" id="education-container">
+              <!-- Dynamically loaded from JSON -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-10">
+        <p class="mb-2 font-mono text-sm text-emerald-600 font-semibold">
+          <span class="text-gray-400">$</span> <span id="exp-kicker">~/deneyim</span>
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 exp-title">Deneyim & Kariyer</h2>
+          <span
+            class="rounded-full border border-emerald-500/30 bg-emerald-50 px-2.5 py-0.5 font-mono text-xs text-emerald-700 font-semibold"
+            id="exp-badge">
+            9
+          </span>
+        </div>
+        <p class="mt-2 text-gray-500 max-w-2xl text-base exp-subtitle">
+          Mesleki yolculuğum
+        </p>
+        <div class="mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-emerald-500 to-blue-600"></div>
+      </div>
+
+      <!-- CV Callout Banner -->
+      <div
+        class="mb-10 flex flex-col items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 sm:flex-row sm:items-center sm:justify-between shadow-xs card-hover">
+        <p class="max-w-md text-sm leading-relaxed text-gray-600" id="exp-cv-note">
+          Detaylı kariyer geçmişimi, teknik uzmanlıklarımı ve referanslarımı içeren güncel özgeçmişimi PDF olarak
+          indirebilirsiniz.
+        </p>
+        <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+          <a href="https://celalaygar.github.io/" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-xl border border-violet-500/30 bg-violet-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-violet-700 transition hover:scale-105 hover:border-violet-500/50 hover:bg-violet-100">
+            <i class="fas fa-arrow-up-right-from-square text-xs"></i>
+            <span id="cv-view-label">CV Görüntüle</span>
+          </a>
+          <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf"
+            data-cv-url="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf"
+            data-fallback-url="./10.09.2026.Celal.Aygar.English.CV.pdf" target="_blank" rel="noopener noreferrer"
+            download="10.09.2026.Celal.Aygar.English.CV.pdf"
+            class="cv-download-btn inline-flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-emerald-700 transition hover:scale-105 hover:border-emerald-500/50 hover:bg-emerald-100">
+            <i class="fas fa-download text-xs"></i>
+            <span id="cv-download-en-label">CV İndir (EN)</span>
+          </a>
+          <a href="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf"
+            data-cv-url="https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf"
+            data-fallback-url="./10.09.2026.Celal.Aygar.Turkish.CV.pdf" target="_blank" rel="noopener noreferrer"
+            download="10.09.2026.Celal.Aygar.Turkish.CV.pdf"
+            class="cv-download-btn inline-flex items-center gap-2 rounded-xl border border-sky-500/30 bg-sky-50 px-4 py-2.5 text-xs md:text-sm font-semibold text-sky-700 transition hover:scale-105 hover:border-sky-500/50 hover:bg-sky-100">
+            <i class="fas fa-download text-xs"></i>
+            <span id="cv-download-tr-label">CV İndir (TR)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Timeline Track -->
+      <div class="relative">
+        <span aria-hidden="true"
+          class="absolute inset-y-4 left-[17px] w-0.5 bg-gradient-to-b from-emerald-500/60 via-gray-200 to-transparent"></span>
+        <div class="space-y-8" id="experience-container">
+          <!-- Dynamically loaded from JSON -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block projects-title">Projects</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+
+    <!-- Web Games Section -->
+    <section id="games" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-3">
+          <div>
+            <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block games-title">Web Games</h2>
+            <p class="text-sm text-gray-500 mt-2 games-subtitle">Interactive games developed with HTML5, Canvas &
+              JavaScript</p>
+          </div>
+          <span
+            class="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200"
+            id="games-counter-badge">
+            <i class="fas fa-gamepad"></i> 20 Web Games
+          </span>
+        </div>
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap gap-2 pt-3" id="games-filter-container">
+          <!-- Filter buttons rendered dynamically -->
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="games-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+
+    <!-- Medium Articles Section -->
+    <section id="medium" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-3">
+          <div>
+            <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block medium-title">Medium Articles
+            </h2>
+            <p class="text-sm text-gray-500 mt-2 medium-subtitle">Technical articles on Spring Boot, Microservices,
+              Kafka & Databases</p>
+          </div>
+          <a href="https://medium.com/@celalaygar" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 self-start sm:self-auto px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900 text-white hover:bg-black transition shadow-xs">
+            <i class="fab fa-medium"></i>
+            <span id="medium-follow-text">@celalaygar Follow</span>
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="medium-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+
+    <!-- Interview Questions Section -->
+    <section id="interviews" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-8">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-3">
+          <div>
+            <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block interviews-title">Interview
+              Question Guides</h2>
+            <p class="text-sm text-gray-500 mt-2 interviews-subtitle">Comprehensive technical interview questions &
+              preparation guides</p>
+          </div>
+          <span
+            class="inline-flex items-center gap-1.5 self-start sm:self-auto px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200"
+            id="interviews-counter-badge">
+            <i class="fas fa-clipboard-question text-amber-600"></i> 8 Guides
+          </span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="interviews-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block cert-title">Certificates</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="certificates-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+
+    <!-- Books & Hobbies Section -->
+    <section id="books" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block books-title">Books & Hobbies
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 books-section-title">Books</h3>
+          <div class="space-y-4" id="books-container">
+            <!-- Dynamically loaded from JSON -->
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 hobbies-title">Hobbies</h3>
+          <div class="space-y-4" id="hobbies-container">
+            <!-- Dynamically loaded from JSON -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold mb-6 pb-2 border-b-2 border-blue-600 inline-block tech-title">My Technologies</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="technologies-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section mb-16">
+      <div class="flex items-center justify-between pb-3 mb-6 border-b border-gray-100">
+        <a href="#home"
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-2xs">
+          <i class="fas fa-arrow-left text-[11px]"></i>
+          <span data-key="backHome">Home</span>
+        </a>
+        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider font-medium flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <span data-key="pageView">Section Page</span>
+        </span>
+      </div>
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold pb-2 border-b-2 border-blue-600 inline-block contact-title">Contact</h2>
+        <div class="mt-3">
+          <h3 class="text-xl font-semibold text-gray-900 contact-subtitle">Any Question? Contact us!</h3>
+          <p class="text-sm text-gray-500 contact-description mt-0.5">I'm at your service</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="contact-container">
+        <!-- Dynamically loaded from JSON -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-8 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6 max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <img src="https://avatars.githubusercontent.com/u/11775341?v=4" alt="Celal Aygar"
+          class="w-6 h-6 rounded-full border border-blue-600">
+        <span class="font-semibold text-gray-700">Celal Aygar</span>
+        <span id="footer-copyright">© 2026 — All rights reserved.</span>
+      </div>
+      <div class="flex items-center space-x-4 text-base" id="footer-social-links">
+        <!-- Loaded from JSON -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Embedded Profile JSON Data -->
+  <script id="profile-data-json" type="application/json">
 {
   "profile": {
     "name": "Celal Aygar",
@@ -1133,8 +1247,8 @@
     },
     {
       "id": "9",
-      "company": "Wixtory (Sole Proprietorship)",
-      "companyTr": "Wixtory (Şahıs Şirketi)",
+      "company": "Sole Proprietorship",
+      "companyTr": "Şahıs Şirketi",
       "position": "Full Stack Engineer & Java & Python Developer",
       "positionTr": "Full Stack Engineer & Java & Python Developer",
       "employmentType": "Full-time",
@@ -2866,302 +2980,302 @@
 }
     </script>
 
-    <!-- Main Application Script -->
-    <script>
-        // Global state with embedded JSON
-        let currentLang = 'tr';
-        const appData = JSON.parse(document.getElementById('profile-data-json').textContent);
-        let activeGameCategory = 'all';
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typingTimeout = null;
+  <!-- Main Application Script -->
+  <script>
+    // Global state with embedded JSON
+    let currentLang = 'tr';
+    const appData = JSON.parse(document.getElementById('profile-data-json').textContent);
+    let activeGameCategory = 'all';
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingTimeout = null;
 
-        const SECTION_ORDER = [
-            'home', 'about', 'experience', 'projects', 'games',
-            'medium', 'interviews', 'certificates', 'books', 'technologies', 'contact'
-        ];
+    const SECTION_ORDER = [
+      'home', 'about', 'experience', 'projects', 'games',
+      'medium', 'interviews', 'certificates', 'books', 'technologies', 'contact'
+    ];
 
-        let activeSectionId = 'home';
+    let activeSectionId = 'home';
 
-        function showSection(targetId, updateHistory = true) {
-            if (!SECTION_ORDER.includes(targetId)) targetId = 'home';
+    function showSection(targetId, updateHistory = true) {
+      if (!SECTION_ORDER.includes(targetId)) targetId = 'home';
 
-            const prevIndex = SECTION_ORDER.indexOf(activeSectionId);
-            const nextIndex = SECTION_ORDER.indexOf(targetId);
-            const isForward = nextIndex >= prevIndex;
+      const prevIndex = SECTION_ORDER.indexOf(activeSectionId);
+      const nextIndex = SECTION_ORDER.indexOf(targetId);
+      const isForward = nextIndex >= prevIndex;
 
-            // Activate target section with slide animation and deactivate others
-            SECTION_ORDER.forEach(id => {
-                const sec = document.getElementById(id);
-                if (!sec) return;
-                if (id === targetId) {
-                    sec.style.display = 'block';
-                    sec.classList.remove('slide-from-left');
-                    if (!isForward && activeSectionId !== targetId) {
-                        sec.classList.add('slide-from-left');
-                    }
-                    // Reflow to re-trigger CSS keyframe animation
-                    void sec.offsetWidth;
-                    sec.classList.add('active');
-                } else {
-                    sec.classList.remove('active', 'slide-from-left');
-                    sec.style.display = 'none';
-                }
-            });
-
-            activeSectionId = targetId;
-
-            // Update Desktop Nav Links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                const href = link.getAttribute('href');
-                const isTarget = href === '#' + targetId;
-                if (isTarget) {
-                    link.classList.add('active', 'text-blue-600');
-                    link.classList.remove('text-gray-700');
-                    if (link.classList.contains('dropdown-item')) {
-                        link.classList.add('bg-blue-50/80');
-                    }
-                } else {
-                    link.classList.remove('active', 'text-blue-600', 'bg-blue-50/80');
-                    link.classList.add('text-gray-700');
-                }
-            });
-
-            // Update Dropdown Parent Active States
-            const DROPDOWN_GROUPS = {
-                'dropdown-projects-btn': ['projects', 'games'],
-                'dropdown-content-btn': ['medium', 'interviews'],
-                'dropdown-more-btn': ['certificates', 'books']
-            };
-            Object.entries(DROPDOWN_GROUPS).forEach(([btnId, sections]) => {
-                const btn = document.getElementById(btnId);
-                if (!btn) return;
-                if (sections.includes(targetId)) {
-                    btn.classList.add('active', 'text-blue-600', 'bg-blue-50/70', 'font-semibold');
-                    btn.classList.remove('text-gray-700');
-                } else {
-                    btn.classList.remove('active', 'text-blue-600', 'bg-blue-50/70', 'font-semibold');
-                    btn.classList.add('text-gray-700');
-                }
-            });
-
-            // Close any touch-opened dropdowns
-            document.querySelectorAll('.dropdown-container').forEach(c => c.classList.remove('dropdown-open'));
-
-            // Update Mobile Nav Links
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                const href = link.getAttribute('href');
-                if (href === '#' + targetId) {
-                    link.classList.add('bg-blue-50', 'text-blue-600');
-                    link.classList.remove('text-gray-700');
-                } else {
-                    link.classList.remove('bg-blue-50', 'text-blue-600');
-                    link.classList.add('text-gray-700');
-                }
-            });
-
-            // Close mobile menu if open
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-                if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
-            }
-
-            // Scroll to top of section view
-            window.scrollTo({ top: 0, behavior: 'instant' });
-
-            // Animate skills if technologies section
-            if (targetId === 'technologies') {
-                setTimeout(() => {
-                    document.querySelectorAll('.skill-progress').forEach(bar => {
-                        const targetWidth = bar.getAttribute('data-width');
-                        if (targetWidth) bar.style.width = targetWidth;
-                    });
-                }, 100);
-            }
-
-            if (updateHistory) {
-                if (window.location.hash !== '#' + targetId) {
-                    history.pushState(null, '', '#' + targetId);
-                }
-            }
+      // Activate target section with slide animation and deactivate others
+      SECTION_ORDER.forEach(id => {
+        const sec = document.getElementById(id);
+        if (!sec) return;
+        if (id === targetId) {
+          sec.style.display = 'block';
+          sec.classList.remove('slide-from-left');
+          if (!isForward && activeSectionId !== targetId) {
+            sec.classList.add('slide-from-left');
+          }
+          // Reflow to re-trigger CSS keyframe animation
+          void sec.offsetWidth;
+          sec.classList.add('active');
+        } else {
+          sec.classList.remove('active', 'slide-from-left');
+          sec.style.display = 'none';
         }
+      });
 
-        // Initialize application directly from embedded JSON
-        function initApp() {
-            try {
-                setupInteractions();
-                updateAllSections();
-                startTypingAnimation();
-                const initialHash = window.location.hash.slice(1);
-                showSection(SECTION_ORDER.includes(initialHash) ? initialHash : 'home', false);
-            } catch (renderError) {
-                console.error('Render error:', renderError);
-            }
+      activeSectionId = targetId;
+
+      // Update Desktop Nav Links
+      document.querySelectorAll('.nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+        const isTarget = href === '#' + targetId;
+        if (isTarget) {
+          link.classList.add('active', 'text-blue-600');
+          link.classList.remove('text-gray-700');
+          if (link.classList.contains('dropdown-item')) {
+            link.classList.add('bg-blue-50/80');
+          }
+        } else {
+          link.classList.remove('active', 'text-blue-600', 'bg-blue-50/80');
+          link.classList.add('text-gray-700');
         }
+      });
 
-        // Event listeners & UI toggles
-        function setupInteractions() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    const isHidden = mobileMenu.classList.toggle('hidden');
-                    if (menuIcon) {
-                        menuIcon.className = isHidden ? 'fas fa-bars text-xl' : 'fas fa-times text-xl';
-                    }
-                });
-
-                document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                    link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
-                        if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
-                    });
-                });
-            }
-
-            // Language toggles
-            const enLangBtn = document.getElementById('en-lang');
-            const trLangBtn = document.getElementById('tr-lang');
-
-            enLangBtn.addEventListener('click', () => {
-                if (currentLang === 'en') return;
-                currentLang = 'en';
-                enLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-xs transition-all duration-150';
-                trLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-gray-600 hover:text-gray-900 transition-all duration-150';
-                updateAllSections();
-                startTypingAnimation();
-            });
-
-            trLangBtn.addEventListener('click', () => {
-                if (currentLang === 'tr') return;
-                currentLang = 'tr';
-                trLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-xs transition-all duration-150';
-                enLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-gray-600 hover:text-gray-900 transition-all duration-150';
-                updateAllSections();
-                startTypingAnimation();
-            });
-
-            // Dropdown Toggle (Click & Touch support)
-            document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
-                trigger.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const container = trigger.closest('.dropdown-container');
-                    document.querySelectorAll('.dropdown-container').forEach(other => {
-                        if (other !== container) {
-                            other.classList.remove('dropdown-open');
-                        }
-                    });
-                    if (container) {
-                        container.classList.toggle('dropdown-open');
-                    }
-                });
-            });
-
-            // Close dropdowns on outside click
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.dropdown-container')) {
-                    document.querySelectorAll('.dropdown-container').forEach(container => {
-                        container.classList.remove('dropdown-open');
-                    });
-                }
-            });
-
-            // Universal CV Download Interceptor
-            document.addEventListener('click', function(e) {
-                const cvBtn = e.target.closest('.cv-download-btn');
-                if (!cvBtn) return;
-
-                const url = cvBtn.getAttribute('data-cv-url') || cvBtn.getAttribute('href');
-                const filename = cvBtn.getAttribute('download') || 'Celal_Aygar_CV.pdf';
-                const fallbackUrl = cvBtn.getAttribute('data-fallback-url') || url;
-
-                if (!url) return;
-
-                e.preventDefault();
-                downloadCvFile(url, filename, fallbackUrl);
-            });
-
-            // SPA Section Navigation Click Handler (captures all internal section hash links)
-            document.addEventListener('click', function(e) {
-                const anchor = e.target.closest('a[href^="#"]');
-                if (!anchor) return;
-                const href = anchor.getAttribute('href');
-                if (!href || href === '#') return;
-                const targetId = href.slice(1);
-                if (SECTION_ORDER.includes(targetId)) {
-                    e.preventDefault();
-                    showSection(targetId, true);
-                }
-            });
-
-            // Popstate for browser Back/Forward navigation
-            window.addEventListener('popstate', function() {
-                const hash = window.location.hash.slice(1);
-                showSection(SECTION_ORDER.includes(hash) ? hash : 'home', false);
-            });
-
-            // Scroll animations & spy
-            window.addEventListener('scroll', handleScrollEvents);
-            window.addEventListener('load', handleScrollEvents);
+      // Update Dropdown Parent Active States
+      const DROPDOWN_GROUPS = {
+        'dropdown-projects-btn': ['projects', 'games'],
+        'dropdown-content-btn': ['medium', 'interviews'],
+        'dropdown-more-btn': ['certificates', 'books']
+      };
+      Object.entries(DROPDOWN_GROUPS).forEach(([btnId, sections]) => {
+        const btn = document.getElementById(btnId);
+        if (!btn) return;
+        if (sections.includes(targetId)) {
+          btn.classList.add('active', 'text-blue-600', 'bg-blue-50/70', 'font-semibold');
+          btn.classList.remove('text-gray-700');
+        } else {
+          btn.classList.remove('active', 'text-blue-600', 'bg-blue-50/70', 'font-semibold');
+          btn.classList.add('text-gray-700');
         }
+      });
 
-        // Dedicated helper to trigger authentic browser PDF file downloads
-        async function downloadCvFile(url, filename, fallbackUrl) {
-            try {
-                if (window.location.protocol.startsWith('http')) {
-                    const res = await fetch(url);
-                    if (res.ok) {
-                        const blob = await res.blob();
-                        const blobUrl = window.URL.createObjectURL(blob);
-                        const tempLink = document.createElement('a');
-                        tempLink.href = blobUrl;
-                        tempLink.download = filename || 'Celal_Aygar_CV.pdf';
-                        document.body.appendChild(tempLink);
-                        tempLink.click();
-                        document.body.removeChild(tempLink);
-                        setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
-                        return;
-                    }
-                }
-            } catch (err) {
-                console.warn('Fetch blob download fallback:', err);
-            }
+      // Close any touch-opened dropdowns
+      document.querySelectorAll('.dropdown-container').forEach(c => c.classList.remove('dropdown-open'));
 
-            // Fallback for file:// or failed fetch: create direct anchor download / window.open
-            const link = document.createElement('a');
-            link.href = fallbackUrl || url;
-            link.download = filename || 'Celal_Aygar_CV.pdf';
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+      // Update Mobile Nav Links
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === '#' + targetId) {
+          link.classList.add('bg-blue-50', 'text-blue-600');
+          link.classList.remove('text-gray-700');
+        } else {
+          link.classList.remove('bg-blue-50', 'text-blue-600');
+          link.classList.add('text-gray-700');
         }
+      });
 
-        // Render Home Section Explore Grid
-        function renderHomeSectionsGrid() {
-            const grid = document.getElementById('home-sections-grid');
-            if (!grid) return;
-            const isTr = currentLang === 'tr';
-            const items = [
-                { id: 'about', icon: 'fas fa-user text-blue-600 bg-blue-50', title: isTr ? 'Hakkımda' : 'About Me', desc: isTr ? 'Biyografi ve kariyer özeti' : 'Bio & background' },
-                { id: 'experience', icon: 'fas fa-briefcase text-emerald-600 bg-emerald-50', title: isTr ? 'Deneyim' : 'Experience', desc: isTr ? 'Şirketler & roller' : 'Work history & roles' },
-                { id: 'projects', icon: 'fas fa-code-branch text-purple-600 bg-purple-50', title: isTr ? 'Projeler' : 'Projects', desc: isTr ? 'Web & mobil projeler' : 'Web & mobile apps' },
-                { id: 'technologies', icon: 'fas fa-microchip text-teal-600 bg-teal-50', title: isTr ? 'Teknolojiler' : 'Technologies', desc: isTr ? 'Teknoloji yığını & diller' : 'Tech stack & skills' },
-                { id: 'games', icon: 'fas fa-gamepad text-amber-600 bg-amber-50', title: isTr ? 'Web Oyunları' : 'Web Games', desc: isTr ? 'Geliştirilen oyunlar' : 'Playable web games' },
-                { id: 'medium', icon: 'fab fa-medium text-gray-800 bg-gray-100', title: isTr ? 'Makaleler' : 'Articles', desc: isTr ? 'Teknik yazılar & Medium' : 'Technical articles' },
-                { id: 'interviews', icon: 'fas fa-clipboard-question text-cyan-600 bg-cyan-50', title: isTr ? 'Mülakatlar' : 'Interviews', desc: isTr ? 'Mülakat rehberleri' : 'Interview guides' },
-                { id: 'certificates', icon: 'fas fa-certificate text-indigo-600 bg-indigo-50', title: isTr ? 'Sertifikalar' : 'Certificates', desc: isTr ? 'Rozetler & belgeler' : 'Badges & credentials' },
-                { id: 'books', icon: 'fas fa-book-open text-rose-600 bg-rose-50', title: isTr ? 'Kitaplar & Hobiler' : 'Books & Hobbies', desc: isTr ? 'Okunan kitaplar & hobiler' : 'Books read & hobbies' },
-                { id: 'contact', icon: 'fas fa-envelope text-sky-600 bg-sky-50', title: isTr ? 'İletişim' : 'Contact', desc: isTr ? 'Mesaj gönderin & ulaşın' : 'Get in touch' }
-            ];
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
+      }
 
-            grid.innerHTML = items.map(item => `
+      // Scroll to top of section view
+      window.scrollTo({ top: 0, behavior: 'instant' });
+
+      // Animate skills if technologies section
+      if (targetId === 'technologies') {
+        setTimeout(() => {
+          document.querySelectorAll('.skill-progress').forEach(bar => {
+            const targetWidth = bar.getAttribute('data-width');
+            if (targetWidth) bar.style.width = targetWidth;
+          });
+        }, 100);
+      }
+
+      if (updateHistory) {
+        if (window.location.hash !== '#' + targetId) {
+          history.pushState(null, '', '#' + targetId);
+        }
+      }
+    }
+
+    // Initialize application directly from embedded JSON
+    function initApp() {
+      try {
+        setupInteractions();
+        updateAllSections();
+        startTypingAnimation();
+        const initialHash = window.location.hash.slice(1);
+        showSection(SECTION_ORDER.includes(initialHash) ? initialHash : 'home', false);
+      } catch (renderError) {
+        console.error('Render error:', renderError);
+      }
+    }
+
+    // Event listeners & UI toggles
+    function setupInteractions() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.toggle('hidden');
+          if (menuIcon) {
+            menuIcon.className = isHidden ? 'fas fa-bars text-xl' : 'fas fa-times text-xl';
+          }
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
+          });
+        });
+      }
+
+      // Language toggles
+      const enLangBtn = document.getElementById('en-lang');
+      const trLangBtn = document.getElementById('tr-lang');
+
+      enLangBtn.addEventListener('click', () => {
+        if (currentLang === 'en') return;
+        currentLang = 'en';
+        enLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-xs transition-all duration-150';
+        trLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-gray-600 hover:text-gray-900 transition-all duration-150';
+        updateAllSections();
+        startTypingAnimation();
+      });
+
+      trLangBtn.addEventListener('click', () => {
+        if (currentLang === 'tr') return;
+        currentLang = 'tr';
+        trLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-600 text-white shadow-xs transition-all duration-150';
+        enLangBtn.className = 'px-2.5 py-1 rounded-md text-xs font-semibold text-gray-600 hover:text-gray-900 transition-all duration-150';
+        updateAllSections();
+        startTypingAnimation();
+      });
+
+      // Dropdown Toggle (Click & Touch support)
+      document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const container = trigger.closest('.dropdown-container');
+          document.querySelectorAll('.dropdown-container').forEach(other => {
+            if (other !== container) {
+              other.classList.remove('dropdown-open');
+            }
+          });
+          if (container) {
+            container.classList.toggle('dropdown-open');
+          }
+        });
+      });
+
+      // Close dropdowns on outside click
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown-container')) {
+          document.querySelectorAll('.dropdown-container').forEach(container => {
+            container.classList.remove('dropdown-open');
+          });
+        }
+      });
+
+      // Universal CV Download Interceptor
+      document.addEventListener('click', function (e) {
+        const cvBtn = e.target.closest('.cv-download-btn');
+        if (!cvBtn) return;
+
+        const url = cvBtn.getAttribute('data-cv-url') || cvBtn.getAttribute('href');
+        const filename = cvBtn.getAttribute('download') || 'Celal_Aygar_CV.pdf';
+        const fallbackUrl = cvBtn.getAttribute('data-fallback-url') || url;
+
+        if (!url) return;
+
+        e.preventDefault();
+        downloadCvFile(url, filename, fallbackUrl);
+      });
+
+      // SPA Section Navigation Click Handler (captures all internal section hash links)
+      document.addEventListener('click', function (e) {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        const href = anchor.getAttribute('href');
+        if (!href || href === '#') return;
+        const targetId = href.slice(1);
+        if (SECTION_ORDER.includes(targetId)) {
+          e.preventDefault();
+          showSection(targetId, true);
+        }
+      });
+
+      // Popstate for browser Back/Forward navigation
+      window.addEventListener('popstate', function () {
+        const hash = window.location.hash.slice(1);
+        showSection(SECTION_ORDER.includes(hash) ? hash : 'home', false);
+      });
+
+      // Scroll animations & spy
+      window.addEventListener('scroll', handleScrollEvents);
+      window.addEventListener('load', handleScrollEvents);
+    }
+
+    // Dedicated helper to trigger authentic browser PDF file downloads
+    async function downloadCvFile(url, filename, fallbackUrl) {
+      try {
+        if (window.location.protocol.startsWith('http')) {
+          const res = await fetch(url);
+          if (res.ok) {
+            const blob = await res.blob();
+            const blobUrl = window.URL.createObjectURL(blob);
+            const tempLink = document.createElement('a');
+            tempLink.href = blobUrl;
+            tempLink.download = filename || 'Celal_Aygar_CV.pdf';
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+            setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('Fetch blob download fallback:', err);
+      }
+
+      // Fallback for file:// or failed fetch: create direct anchor download / window.open
+      const link = document.createElement('a');
+      link.href = fallbackUrl || url;
+      link.download = filename || 'Celal_Aygar_CV.pdf';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Render Home Section Explore Grid
+    function renderHomeSectionsGrid() {
+      const grid = document.getElementById('home-sections-grid');
+      if (!grid) return;
+      const isTr = currentLang === 'tr';
+      const items = [
+        { id: 'about', icon: 'fas fa-user text-blue-600 bg-blue-50', title: isTr ? 'Hakkımda' : 'About Me', desc: isTr ? 'Biyografi ve kariyer özeti' : 'Bio & background' },
+        { id: 'experience', icon: 'fas fa-briefcase text-emerald-600 bg-emerald-50', title: isTr ? 'Deneyim' : 'Experience', desc: isTr ? 'Şirketler & roller' : 'Work history & roles' },
+        { id: 'projects', icon: 'fas fa-code-branch text-purple-600 bg-purple-50', title: isTr ? 'Projeler' : 'Projects', desc: isTr ? 'Web & mobil projeler' : 'Web & mobile apps' },
+        { id: 'technologies', icon: 'fas fa-microchip text-teal-600 bg-teal-50', title: isTr ? 'Teknolojiler' : 'Technologies', desc: isTr ? 'Teknoloji yığını & diller' : 'Tech stack & skills' },
+        { id: 'games', icon: 'fas fa-gamepad text-amber-600 bg-amber-50', title: isTr ? 'Web Oyunları' : 'Web Games', desc: isTr ? 'Geliştirilen oyunlar' : 'Playable web games' },
+        { id: 'medium', icon: 'fab fa-medium text-gray-800 bg-gray-100', title: isTr ? 'Makaleler' : 'Articles', desc: isTr ? 'Teknik yazılar & Medium' : 'Technical articles' },
+        { id: 'interviews', icon: 'fas fa-clipboard-question text-cyan-600 bg-cyan-50', title: isTr ? 'Mülakatlar' : 'Interviews', desc: isTr ? 'Mülakat rehberleri' : 'Interview guides' },
+        { id: 'certificates', icon: 'fas fa-certificate text-indigo-600 bg-indigo-50', title: isTr ? 'Sertifikalar' : 'Certificates', desc: isTr ? 'Rozetler & belgeler' : 'Badges & credentials' },
+        { id: 'books', icon: 'fas fa-book-open text-rose-600 bg-rose-50', title: isTr ? 'Kitaplar & Hobiler' : 'Books & Hobbies', desc: isTr ? 'Okunan kitaplar & hobiler' : 'Books read & hobbies' },
+        { id: 'contact', icon: 'fas fa-envelope text-sky-600 bg-sky-50', title: isTr ? 'İletişim' : 'Contact', desc: isTr ? 'Mesaj gönderin & ulaşın' : 'Get in touch' }
+      ];
+
+      grid.innerHTML = items.map(item => `
                 <a href="#${item.id}" class="group relative p-4 rounded-xl border border-gray-200/90 bg-white hover:border-blue-500 hover:shadow-md hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
                     <div>
                         <div class="w-9 h-9 rounded-lg flex items-center justify-center text-sm mb-3 ${item.icon}"></div>
@@ -3174,36 +3288,36 @@
                     </div>
                 </a>
             `).join('');
-        }
+    }
 
-        // Master update function for all sections
-        function updateAllSections() {
-            if (!appData) return;
-            const t = appData.translations[currentLang];
-            const p = appData.profile;
-            const isTr = currentLang === 'tr';
+    // Master update function for all sections
+    function updateAllSections() {
+      if (!appData) return;
+      const t = appData.translations[currentLang];
+      const p = appData.profile;
+      const isTr = currentLang === 'tr';
 
-            // 1. Navigation Text
-            document.querySelectorAll('[data-key]').forEach(el => {
-                const key = el.getAttribute('data-key');
-                if (t[key]) el.textContent = t[key];
-            });
+      // 1. Navigation Text
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (t[key]) el.textContent = t[key];
+      });
 
-            // 1.1 Render Home Quick Sections Grid
-            renderHomeSectionsGrid();
+      // 1.1 Render Home Quick Sections Grid
+      renderHomeSectionsGrid();
 
-            // 2. Header & Branding
-            document.getElementById('header-name').textContent = p.name;
-            document.getElementById('header-fullname').textContent = p.fullName;
-            document.getElementById('header-avatar').src = p.avatar;
+      // 2. Header & Branding
+      document.getElementById('header-name').textContent = p.name;
+      document.getElementById('header-fullname').textContent = p.fullName;
+      document.getElementById('header-avatar').src = p.avatar;
 
-            // 3. Hero / Home Section
-            document.querySelector('.greeting-text').textContent = p.greeting[currentLang];
-            document.getElementById('hero-name').textContent = p.fullName;
-            document.getElementById('hero-avatar').src = p.avatar;
-            document.getElementById('hero-bio').innerHTML = p.bio[currentLang].map(paragraph => `<p class="mb-4 leading-relaxed">${paragraph}</p>`).join('');
+      // 3. Hero / Home Section
+      document.querySelector('.greeting-text').textContent = p.greeting[currentLang];
+      document.getElementById('hero-name').textContent = p.fullName;
+      document.getElementById('hero-avatar').src = p.avatar;
+      document.getElementById('hero-bio').innerHTML = p.bio[currentLang].map(paragraph => `<p class="mb-4 leading-relaxed">${paragraph}</p>`).join('');
 
-            document.getElementById('hero-buttons-container').innerHTML = `
+      document.getElementById('hero-buttons-container').innerHTML = `
                 <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition shadow-sm inline-flex items-center gap-2">
                     <i class="fas fa-paper-plane text-xs"></i>
                     <span>${t.hireBtn}</span>
@@ -3220,39 +3334,39 @@
                 </a>
             `;
 
-            // Hero Card
-            const cardName = document.getElementById('hero-card-name');
-            if (cardName) cardName.textContent = p.fullName;
-            const cardTitle = document.getElementById('hero-card-title');
-            if (cardTitle) cardTitle.textContent = p.title[currentLang];
-            const cardLoc = document.getElementById('hero-card-location-text');
-            if (cardLoc) cardLoc.textContent = p.contact.location[currentLang];
-            const heroConnTitle = document.querySelector('.hero-connect-title');
-            if (heroConnTitle) heroConnTitle.textContent = t.connectTitle;
+      // Hero Card
+      const cardName = document.getElementById('hero-card-name');
+      if (cardName) cardName.textContent = p.fullName;
+      const cardTitle = document.getElementById('hero-card-title');
+      if (cardTitle) cardTitle.textContent = p.title[currentLang];
+      const cardLoc = document.getElementById('hero-card-location-text');
+      if (cardLoc) cardLoc.textContent = p.contact.location[currentLang];
+      const heroConnTitle = document.querySelector('.hero-connect-title');
+      if (heroConnTitle) heroConnTitle.textContent = t.connectTitle;
 
-            const c = p.contact;
-            const heroSocialLinksEl = document.getElementById('hero-social-links');
-            if (heroSocialLinksEl) {
-                const heroSocials = [
-                    { icon: "fas fa-globe text-blue-600", label: "Website", url: c.website },
-                    { icon: "fab fa-linkedin text-blue-600", label: "LinkedIn", url: c.linkedin },
-                    { icon: "fab fa-github text-gray-800", label: "GitHub", url: c.github },
-                    { icon: "fab fa-medium text-gray-800", label: "Medium", url: c.medium },
-                    { icon: "fab fa-youtube text-red-600", label: "YouTube", url: c.youtube },
-                    { icon: "fab fa-hackerrank text-green-600", label: "HackerRank", url: c.hackerrank },
-                    { icon: "fab fa-stack-overflow text-orange-500", label: "StackOverflow", url: c.stackoverflow, colSpan: true }
-                ];
-                heroSocialLinksEl.innerHTML = heroSocials.map(s => `
+      const c = p.contact;
+      const heroSocialLinksEl = document.getElementById('hero-social-links');
+      if (heroSocialLinksEl) {
+        const heroSocials = [
+          { icon: "fas fa-globe text-blue-600", label: "Website", url: c.website },
+          { icon: "fab fa-linkedin text-blue-600", label: "LinkedIn", url: c.linkedin },
+          { icon: "fab fa-github text-gray-800", label: "GitHub", url: c.github },
+          { icon: "fab fa-medium text-gray-800", label: "Medium", url: c.medium },
+          { icon: "fab fa-youtube text-red-600", label: "YouTube", url: c.youtube },
+          { icon: "fab fa-hackerrank text-green-600", label: "HackerRank", url: c.hackerrank },
+          { icon: "fab fa-stack-overflow text-orange-500", label: "StackOverflow", url: c.stackoverflow, colSpan: true }
+        ];
+        heroSocialLinksEl.innerHTML = heroSocials.map(s => `
                     <a href="${s.url}" target="_blank"
                         class="flex items-center p-2.5 sm:p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition border border-gray-100 ${s.colSpan ? 'col-span-2' : ''}">
                         <i class="${s.icon} mr-2.5 text-base shrink-0"></i>
                         <span class="text-xs sm:text-sm font-medium truncate">${s.label}</span>
                     </a>
                 `).join('');
-            }
+      }
 
-            // Mobile menu CV buttons
-            document.getElementById('mobile-cv-container').innerHTML = `
+      // Mobile menu CV buttons
+      document.getElementById('mobile-cv-container').innerHTML = `
                 <a href="${p.resumes.english.url}" download="${p.resumes.english.filename}" target="_blank"
                     data-cv-url="${p.resumes.english.url}" data-fallback-url="${p.resumes.english.localUrl || p.resumes.english.url}"
                     class="cv-download-btn flex items-center justify-center gap-2 py-2.5 px-3 text-xs font-semibold text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
@@ -3267,16 +3381,16 @@
                 </a>
             `;
 
-            // 4. About Section
-            document.querySelector('.about-title').textContent = t.aboutTitle;
-            document.querySelector('.about-heading').innerHTML = isTr 
-                ? `Ben <span class="text-blue-600">${p.fullName}</span> & Full Stack Geliştirici & Java Geliştiriciyim`
-                : `I'm <span class="text-blue-600">${p.fullName}</span> & Full Stack Developer & Java Developer`;
-            document.getElementById('about-story').innerHTML = p.aboutContent[currentLang];
+      // 4. About Section
+      document.querySelector('.about-title').textContent = t.aboutTitle;
+      document.querySelector('.about-heading').innerHTML = isTr
+        ? `Ben <span class="text-blue-600">${p.fullName}</span> & Full Stack Geliştirici & Java Geliştiriciyim`
+        : `I'm <span class="text-blue-600">${p.fullName}</span> & Full Stack Developer & Java Developer`;
+      document.getElementById('about-story').innerHTML = p.aboutContent[currentLang];
 
-            // Communication
-            document.querySelector('.comm-title').textContent = t.commTitle;
-            document.getElementById('communication-container').innerHTML = `
+      // Communication
+      document.querySelector('.comm-title').textContent = t.commTitle;
+      document.getElementById('communication-container').innerHTML = `
                 <li class="flex items-center justify-between py-1.5 border-b border-gray-100">
                     <span class="font-semibold text-gray-500">${t.emailLabel}</span>
                     <a href="mailto:${p.contact.email}" class="text-blue-600 hover:underline font-mono">${p.contact.email}</a>
@@ -3302,7 +3416,7 @@
                 </li>
             `;
 
-            document.getElementById('about-cv-buttons').innerHTML = `
+      document.getElementById('about-cv-buttons').innerHTML = `
                 <a href="${p.resumes.english.url}" download="${p.resumes.english.filename}" target="_blank"
                     data-cv-url="${p.resumes.english.url}" data-fallback-url="${p.resumes.english.localUrl || p.resumes.english.url}"
                     class="cv-download-btn px-4 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition inline-flex items-center text-sm shadow-xs">
@@ -3315,66 +3429,66 @@
                 </a>
             `;
 
-            // 5. Render Education
-            renderEducation();
+      // 5. Render Education
+      renderEducation();
 
-            // 6. Render Experience
-            renderExperience();
+      // 6. Render Experience
+      renderExperience();
 
-            // 7. Render Projects
-            renderProjects();
+      // 7. Render Projects
+      renderProjects();
 
-            // 8. Render Games
-            renderGames();
+      // 8. Render Games
+      renderGames();
 
-            // 9. Render Medium Articles
-            renderArticles();
+      // 9. Render Medium Articles
+      renderArticles();
 
-            // 10. Render Interviews
-            renderInterviews();
+      // 10. Render Interviews
+      renderInterviews();
 
-            // 11. Render Certificates
-            renderCertificates();
+      // 11. Render Certificates
+      renderCertificates();
 
-            // 12. Render Books & Hobbies
-            renderBooksAndHobbies();
+      // 12. Render Books & Hobbies
+      renderBooksAndHobbies();
 
-            // 13. Render Technologies
-            renderTechnologies();
+      // 13. Render Technologies
+      renderTechnologies();
 
-            // 14. Render Contact
-            renderContact();
+      // 14. Render Contact
+      renderContact();
 
-            // 15. Footer Socials
-            renderFooterSocials();
+      // 15. Footer Socials
+      renderFooterSocials();
 
-            // 16. Dynamic labels
-            const heroIma = document.getElementById('hero-ima');
-            if (heroIma && t.imA) heroIma.textContent = t.imA;
+      // 16. Dynamic labels
+      const heroIma = document.getElementById('hero-ima');
+      if (heroIma && t.imA) heroIma.textContent = t.imA;
 
-            const mediumFollow = document.getElementById('medium-follow-text');
-            if (mediumFollow && t.articlesFollow) mediumFollow.textContent = `@celalaygar ${t.articlesFollow}`;
+      const mediumFollow = document.getElementById('medium-follow-text');
+      if (mediumFollow && t.articlesFollow) mediumFollow.textContent = `@celalaygar ${t.articlesFollow}`;
 
-            const footerCopy = document.getElementById('footer-copyright');
-            if (footerCopy && t.allRightsReserved) footerCopy.textContent = `© 2026 — ${t.allRightsReserved}`;
-        }
+      const footerCopy = document.getElementById('footer-copyright');
+      if (footerCopy && t.allRightsReserved) footerCopy.textContent = `© 2026 — ${t.allRightsReserved}`;
+    }
 
-        // Section Renderers
-        function renderEducation() {
-            const container = document.getElementById('education-container');
-            if (!container) return;
-            const t = appData.translations[currentLang];
-            const isTr = currentLang === 'tr';
-            document.querySelector('.edu-title').textContent = t.eduTitle;
-            document.getElementById('edu-badge-text').textContent = `${appData.education.length} ${t.academicDegrees || (isTr ? "Akademik Derece" : "Academic Degrees")}`;
+    // Section Renderers
+    function renderEducation() {
+      const container = document.getElementById('education-container');
+      if (!container) return;
+      const t = appData.translations[currentLang];
+      const isTr = currentLang === 'tr';
+      document.querySelector('.edu-title').textContent = t.eduTitle;
+      document.getElementById('edu-badge-text').textContent = `${appData.education.length} ${t.academicDegrees || (isTr ? "Akademik Derece" : "Academic Degrees")}`;
 
-            container.innerHTML = appData.education.map((item, idx) => {
-                const degree = item.degree[currentLang];
-                const school = item.school[currentLang];
-                const period = item.period[currentLang];
-                const note = item.note[currentLang];
+      container.innerHTML = appData.education.map((item, idx) => {
+        const degree = item.degree[currentLang];
+        const school = item.school[currentLang];
+        const period = item.period[currentLang];
+        const note = item.note[currentLang];
 
-                return `
+        return `
                     <div class="relative pl-6 pb-6 ${idx !== appData.education.length - 1 ? 'border-l-2 border-blue-200' : ''} group">
                         <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full ${item.current ? 'bg-blue-600 ring-4 ring-blue-100' : 'bg-gray-300 group-hover:bg-blue-500'} transition-all"></div>
                         <div class="flex items-center gap-2 flex-wrap mb-1">
@@ -3393,90 +3507,90 @@
                         <p class="text-xs text-gray-600 leading-relaxed">${note}</p>
                     </div>
                 `;
-            }).join('');
+      }).join('');
+    }
+
+    function renderExperience() {
+      const container = document.getElementById('experience-container');
+      if (!container) return;
+      const t = appData.translations[currentLang];
+      const isTr = currentLang === 'tr';
+
+      // Update Experience section heading & CV callout
+      const titleEl = document.querySelector('.exp-title');
+      if (titleEl) titleEl.textContent = t.expTitle || (isTr ? "Deneyim & Kariyer" : "Experience & Career");
+
+      const kickerEl = document.getElementById('exp-kicker');
+      if (kickerEl) kickerEl.textContent = t.expKicker || (isTr ? "~/deneyim" : "~/experience");
+
+      const subtitleEl = document.querySelector('.exp-subtitle');
+      if (subtitleEl) subtitleEl.textContent = t.expSubtitle || (isTr ? "Mesleki yolculuğum" : "My professional journey");
+
+      const badgeEl = document.getElementById('exp-badge');
+      if (badgeEl) badgeEl.textContent = String(appData.experience.length);
+
+      const cvNoteEl = document.getElementById('exp-cv-note');
+      if (cvNoteEl) cvNoteEl.textContent = t.experienceCvNote || (isTr ? "Detaylı kariyer geçmişimi, teknik uzmanlıklarımı ve referanslarımı içeren güncel özgeçmişimi PDF olarak indirebilirsiniz." : "You can download my up-to-date resume containing my detailed career history, technical expertise, and references as a PDF.");
+
+      const cvViewLabel = document.getElementById('cv-view-label');
+      if (cvViewLabel) cvViewLabel.textContent = t.cvView || (isTr ? "CV Görüntüle" : "View Online");
+
+      const cvDownloadEnLabel = document.getElementById('cv-download-en-label');
+      if (cvDownloadEnLabel) cvDownloadEnLabel.textContent = t.cvDownloadEn || (isTr ? "CV İndir (EN)" : "Download CV (EN)");
+
+      const cvDownloadTrLabel = document.getElementById('cv-download-tr-label');
+      if (cvDownloadTrLabel) cvDownloadTrLabel.textContent = t.cvDownloadTr || (isTr ? "CV İndir (TR)" : "Download CV (TR)");
+
+      function isCurrentRole(endDate) {
+        return endDate === "Today";
+      }
+
+      function formatEnd(endDate) {
+        if (isCurrentRole(endDate)) return t.present || (isTr ? "Devam Ediyor" : "Present");
+        return endDate;
+      }
+
+      function formatDuration(duration) {
+        if (!duration) return "";
+        if (!isTr) return duration;
+        return duration
+          .replace(/(\d+)\s+Years?/g, "$1 Yıl")
+          .replace(/(\d+)\s+Months?/g, "$1 Ay");
+      }
+
+      function parseLink(raw) {
+        if (!raw) return null;
+        let urlStr = '';
+        let labelStr = '';
+        if (typeof raw === 'object') {
+          urlStr = raw.url || '';
+          labelStr = raw.label || '';
+        } else {
+          urlStr = String(raw);
         }
-
-        function renderExperience() {
-            const container = document.getElementById('experience-container');
-            if (!container) return;
-            const t = appData.translations[currentLang];
-            const isTr = currentLang === 'tr';
-
-            // Update Experience section heading & CV callout
-            const titleEl = document.querySelector('.exp-title');
-            if (titleEl) titleEl.textContent = t.expTitle || (isTr ? "Deneyim & Kariyer" : "Experience & Career");
-
-            const kickerEl = document.getElementById('exp-kicker');
-            if (kickerEl) kickerEl.textContent = t.expKicker || (isTr ? "~/deneyim" : "~/experience");
-
-            const subtitleEl = document.querySelector('.exp-subtitle');
-            if (subtitleEl) subtitleEl.textContent = t.expSubtitle || (isTr ? "Mesleki yolculuğum" : "My professional journey");
-
-            const badgeEl = document.getElementById('exp-badge');
-            if (badgeEl) badgeEl.textContent = String(appData.experience.length);
-
-            const cvNoteEl = document.getElementById('exp-cv-note');
-            if (cvNoteEl) cvNoteEl.textContent = t.experienceCvNote || (isTr ? "Detaylı kariyer geçmişimi, teknik uzmanlıklarımı ve referanslarımı içeren güncel özgeçmişimi PDF olarak indirebilirsiniz." : "You can download my up-to-date resume containing my detailed career history, technical expertise, and references as a PDF.");
-
-            const cvViewLabel = document.getElementById('cv-view-label');
-            if (cvViewLabel) cvViewLabel.textContent = t.cvView || (isTr ? "CV Görüntüle" : "View Online");
-
-            const cvDownloadEnLabel = document.getElementById('cv-download-en-label');
-            if (cvDownloadEnLabel) cvDownloadEnLabel.textContent = t.cvDownloadEn || (isTr ? "CV İndir (EN)" : "Download CV (EN)");
-
-            const cvDownloadTrLabel = document.getElementById('cv-download-tr-label');
-            if (cvDownloadTrLabel) cvDownloadTrLabel.textContent = t.cvDownloadTr || (isTr ? "CV İndir (TR)" : "Download CV (TR)");
-
-            function isCurrentRole(endDate) {
-                return endDate === "Today";
+        if (!urlStr) return null;
+        if (!labelStr) {
+          try {
+            const parsed = new URL(urlStr);
+            const host = parsed.hostname.replace(/^www\./, "");
+            if (host === "play.google.com") labelStr = "Google Play";
+            else if (host === "apps.apple.com") labelStr = "App Store";
+            else {
+              const firstSegment = parsed.pathname.split("/").filter(Boolean)[0];
+              labelStr = firstSegment ? `${host}/${firstSegment}` : host;
             }
+          } catch (e) {
+            labelStr = urlStr;
+          }
+        }
+        return { url: urlStr, label: labelStr };
+      }
 
-            function formatEnd(endDate) {
-                if (isCurrentRole(endDate)) return t.present || (isTr ? "Devam Ediyor" : "Present");
-                return endDate;
-            }
-
-            function formatDuration(duration) {
-                if (!duration) return "";
-                if (!isTr) return duration;
-                return duration
-                    .replace(/(\d+)\s+Years?/g, "$1 Yıl")
-                    .replace(/(\d+)\s+Months?/g, "$1 Ay");
-            }
-
-            function parseLink(raw) {
-                if (!raw) return null;
-                let urlStr = '';
-                let labelStr = '';
-                if (typeof raw === 'object') {
-                    urlStr = raw.url || '';
-                    labelStr = raw.label || '';
-                } else {
-                    urlStr = String(raw);
-                }
-                if (!urlStr) return null;
-                if (!labelStr) {
-                    try {
-                        const parsed = new URL(urlStr);
-                        const host = parsed.hostname.replace(/^www\./, "");
-                        if (host === "play.google.com") labelStr = "Google Play";
-                        else if (host === "apps.apple.com") labelStr = "App Store";
-                        else {
-                            const firstSegment = parsed.pathname.split("/").filter(Boolean)[0];
-                            labelStr = firstSegment ? `${host}/${firstSegment}` : host;
-                        }
-                    } catch (e) {
-                        labelStr = urlStr;
-                    }
-                }
-                return { url: urlStr, label: labelStr };
-            }
-
-            function renderLinkChips(links) {
-                if (!links || !links.length) return '';
-                const parsed = links.map(parseLink).filter(Boolean);
-                if (!parsed.length) return '';
-                return `
+      function renderLinkChips(links) {
+        if (!links || !links.length) return '';
+        const parsed = links.map(parseLink).filter(Boolean);
+        if (!parsed.length) return '';
+        return `
                     <div class="mt-4">
                         <p class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-gray-500 font-bold">
                             <i class="fas fa-arrow-up-right-from-square text-xs text-emerald-600"></i>
@@ -3484,15 +3598,15 @@
                         </p>
                         <ul class="mt-2.5 flex flex-wrap gap-2">
                             ${parsed.map(l => {
-                                const isApple = l.url.includes('apps.apple.com') || (l.label && l.label.toLowerCase().includes('apple') || l.label === 'App Store');
-                                const isPlay = l.url.includes('play.google.com') || (l.label && l.label.toLowerCase().includes('google play'));
-                                let btnLabel = l.label;
-                                if (btnLabel === 'Wixtory Projects' || btnLabel === 'wixtory.com/projects') {
-                                    btnLabel = 'Web Page';
-                                }
+          const isApple = l.url.includes('apps.apple.com') || (l.label && l.label.toLowerCase().includes('apple') || l.label === 'App Store');
+          const isPlay = l.url.includes('play.google.com') || (l.label && l.label.toLowerCase().includes('google play'));
+          let btnLabel = l.label;
+          if (btnLabel === 'Wixtory Projects' || btnLabel === 'wixtory.com/projects') {
+            btnLabel = 'Web Page';
+          }
 
-                                if (isApple) {
-                                    return `
+          if (isApple) {
+            return `
                                         <li>
                                             <a href="${l.url}" target="_blank" rel="noopener noreferrer" aria-label="App Store"
                                                 class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-900 bg-gray-900 px-3.5 h-[38px] font-sans text-xs font-semibold text-white transition-all hover:bg-black hover:scale-105 shadow-xs">
@@ -3502,9 +3616,9 @@
                                             </a>
                                         </li>
                                     `;
-                                }
-                                if (isPlay) {
-                                    return `
+          }
+          if (isPlay) {
+            return `
                                         <li>
                                             <a href="${l.url}" target="_blank" rel="noopener noreferrer" aria-label="Google Play"
                                                 class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-900 bg-gray-900 px-3.5 h-[38px] font-sans text-xs font-semibold text-white transition-all hover:bg-black hover:scale-105 shadow-xs">
@@ -3514,8 +3628,8 @@
                                             </a>
                                         </li>
                                     `;
-                                }
-                                return `
+          }
+          return `
                                     <li>
                                         <a href="${l.url}" target="_blank" rel="noopener noreferrer" aria-label="${btnLabel}"
                                             class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-900 bg-gray-900 px-3.5 h-[38px] font-sans text-xs font-semibold text-white transition-all hover:bg-black hover:scale-105 shadow-xs">
@@ -3525,15 +3639,15 @@
                                         </a>
                                     </li>
                                 `;
-                            }).join('')}
+        }).join('')}
                         </ul>
                     </div>
                 `;
-            }
+      }
 
-            function renderTechChips(techs, customLabel) {
-                if (!techs || !techs.length) return '';
-                return `
+      function renderTechChips(techs, customLabel) {
+        if (!techs || !techs.length) return '';
+        return `
                     <div class="mt-4">
                         <p class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-gray-500 font-bold">
                             <i class="fas fa-wrench text-xs text-emerald-600"></i>
@@ -3548,11 +3662,11 @@
                         </ul>
                     </div>
                 `;
-            }
+      }
 
-            function renderResponsibilities(items) {
-                if (!items || !items.length) return '';
-                return `
+      function renderResponsibilities(items) {
+        if (!items || !items.length) return '';
+        return `
                     <div class="mt-4">
                         <p class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-gray-500 font-bold">
                             <i class="fas fa-list-check text-xs text-emerald-600"></i>
@@ -3568,25 +3682,25 @@
                         </ul>
                     </div>
                 `;
-            }
+      }
 
-            container.innerHTML = appData.experience.map(item => {
-                const current = isCurrentRole(item.endDate);
-                const company = isTr ? (item.companyTr || item.company) : item.company;
-                const position = isTr ? (item.positionTr || item.position) : item.position;
-                const project = isTr ? (item.projectTr || item.project) : item.project;
-                const employmentType = isTr ? (item.employmentTypeTr || item.employmentType) : item.employmentType;
-                const endDateStr = formatEnd(item.endDate);
-                const durationStr = formatDuration(item.durationTr || item.duration);
-                const locationStr = isTr ? (item.locationTr || item.location) : item.location;
-                const responsibilities = (isTr ? item.responsibilitiesTr : item.responsibilities) || [];
-                const toolsTechnologies = item.toolsTechnologies || [];
-                const isWixtory = (item.company && item.company.toLowerCase().includes('wixtory')) || item.id === '9';
+      container.innerHTML = appData.experience.map(item => {
+        const current = isCurrentRole(item.endDate);
+        const company = isTr ? (item.companyTr || item.company) : item.company;
+        const position = isTr ? (item.positionTr || item.position) : item.position;
+        const project = isTr ? (item.projectTr || item.project) : item.project;
+        const employmentType = isTr ? (item.employmentTypeTr || item.employmentType) : item.employmentType;
+        const endDateStr = formatEnd(item.endDate);
+        const durationStr = formatDuration(item.durationTr || item.duration);
+        const locationStr = isTr ? (item.locationTr || item.location) : item.location;
+        const responsibilities = (isTr ? item.responsibilitiesTr : item.responsibilities) || [];
+        const toolsTechnologies = item.toolsTechnologies || [];
+        const isWixtory = (item.company && item.company.toLowerCase().includes('wixtory')) || item.id === '9';
 
-                let subProjectsHtml = '';
-                if (item.subProjects && item.subProjects.length > 0) {
-                    if (isWixtory) {
-                        subProjectsHtml = `
+        let subProjectsHtml = '';
+        if (item.subProjects && item.subProjects.length > 0) {
+          if (isWixtory) {
+            subProjectsHtml = `
                             <div class="mt-6 pt-5 border-t border-gray-100">
                                 <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
                                     <p class="font-mono text-[11px] uppercase tracking-wider text-gray-500 font-bold flex items-center gap-2">
@@ -3600,19 +3714,19 @@
                                 </div>
                                 <div class="grid gap-4 xl:grid-cols-2">
                                     ${item.subProjects.map(sub => {
-                                        const subCurrent = isCurrentRole(sub.endDate);
-                                        const subProject = isTr ? (sub.projectTr || sub.project) : sub.project;
-                                        const subPosition = isTr ? (sub.positionTr || sub.position || sub.roleTr || sub.role) : (sub.position || sub.role);
-                                        const subEndDate = formatEnd(sub.endDate);
-                                        const subDuration = formatDuration(sub.durationTr || sub.duration);
-                                        const subLocation = isTr ? (sub.locationTr || sub.location) : sub.location;
-                                        const subResp = (isTr ? (sub.responsibilitiesTr || (sub.descriptionTr ? [sub.descriptionTr] : [])) : (sub.responsibilities || (sub.description ? [sub.description] : []))) || [];
-                                        const subTech = sub.toolsTechnologies || sub.technologies || [];
+              const subCurrent = isCurrentRole(sub.endDate);
+              const subProject = isTr ? (sub.projectTr || sub.project) : sub.project;
+              const subPosition = isTr ? (sub.positionTr || sub.position || sub.roleTr || sub.role) : (sub.position || sub.role);
+              const subEndDate = formatEnd(sub.endDate);
+              const subDuration = formatDuration(sub.durationTr || sub.duration);
+              const subLocation = isTr ? (sub.locationTr || sub.location) : sub.location;
+              const subResp = (isTr ? (sub.responsibilitiesTr || (sub.descriptionTr ? [sub.descriptionTr] : [])) : (sub.responsibilities || (sub.description ? [sub.description] : []))) || [];
+              const subTech = sub.toolsTechnologies || sub.technologies || [];
 
-                                        const isLangBox = sub.project && sub.project.toLowerCase().includes('language');
-                                        const isDomainTrack = sub.project && sub.project.toLowerCase().includes('domain');
+              const isLangBox = sub.project && sub.project.toLowerCase().includes('language');
+              const isDomainTrack = sub.project && sub.project.toLowerCase().includes('domain');
 
-                                        const iconBadge = isLangBox ? `
+              const iconBadge = isLangBox ? `
                                             <div class="flex size-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-xs shrink-0">
                                                 <i class="fas fa-language text-xl"></i>
                                             </div>
@@ -3626,13 +3740,13 @@
                                             </div>
                                         `;
 
-                                        const subtitle = isLangBox
-                                            ? (isTr ? "Mobil Dil Öğrenme & AI Asistanı" : "Mobile Language Learning & AI Assistant")
-                                            : isDomainTrack
-                                            ? (isTr ? "Domain, SSL & WHOIS Takip Sistemi" : "Domain, SSL & WHOIS Tracker")
-                                            : "";
+              const subtitle = isLangBox
+                ? (isTr ? "Mobil Dil Öğrenme & AI Asistanı" : "Mobile Language Learning & AI Assistant")
+                : isDomainTrack
+                  ? (isTr ? "Domain, SSL & WHOIS Takip Sistemi" : "Domain, SSL & WHOIS Tracker")
+                  : "";
 
-                                        return `
+              return `
                                             <div class="rounded-xl border border-gray-200 bg-gray-50/70 p-5 hover:border-gray-300 transition flex flex-col justify-between">
                                                 <div>
                                                     <div class="flex items-start justify-between gap-3">
@@ -3687,12 +3801,12 @@
                                                 </div>
                                             </div>
                                         `;
-                                    }).join('')}
+            }).join('')}
                                 </div>
                             </div>
                         `;
-                    } else {
-                        subProjectsHtml = `
+          } else {
+            subProjectsHtml = `
                             <div class="mt-6 pt-5 border-t border-gray-100">
                                 <p class="font-mono text-[11px] uppercase tracking-wider text-gray-500 font-bold flex items-center gap-2 mb-3">
                                     <i class="fas fa-layer-group text-xs text-emerald-600"></i>
@@ -3700,16 +3814,16 @@
                                 </p>
                                 <div class="grid gap-4 xl:grid-cols-2">
                                     ${item.subProjects.map(sub => {
-                                        const subCurrent = isCurrentRole(sub.endDate);
-                                        const subProject = isTr ? (sub.projectTr || sub.project) : sub.project;
-                                        const subPosition = isTr ? (sub.positionTr || sub.position || sub.roleTr || sub.role) : (sub.position || sub.role);
-                                        const subEndDate = formatEnd(sub.endDate);
-                                        const subDuration = formatDuration(sub.durationTr || sub.duration);
-                                        const subLocation = isTr ? (sub.locationTr || sub.location) : sub.location;
-                                        const subResp = (isTr ? (sub.responsibilitiesTr || (sub.descriptionTr ? [sub.descriptionTr] : [])) : (sub.responsibilities || (sub.description ? [sub.description] : []))) || [];
-                                        const subTech = sub.toolsTechnologies || sub.technologies || [];
+              const subCurrent = isCurrentRole(sub.endDate);
+              const subProject = isTr ? (sub.projectTr || sub.project) : sub.project;
+              const subPosition = isTr ? (sub.positionTr || sub.position || sub.roleTr || sub.role) : (sub.position || sub.role);
+              const subEndDate = formatEnd(sub.endDate);
+              const subDuration = formatDuration(sub.durationTr || sub.duration);
+              const subLocation = isTr ? (sub.locationTr || sub.location) : sub.location;
+              const subResp = (isTr ? (sub.responsibilitiesTr || (sub.descriptionTr ? [sub.descriptionTr] : [])) : (sub.responsibilities || (sub.description ? [sub.description] : []))) || [];
+              const subTech = sub.toolsTechnologies || sub.technologies || [];
 
-                                        return `
+              return `
                                             <div class="rounded-xl border border-gray-200 bg-gray-50/70 p-5 hover:border-gray-300 transition">
                                                 <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
                                                     <p class="flex items-center gap-2 font-mono text-xs font-semibold text-emerald-600">
@@ -3749,14 +3863,14 @@
                                                 ${renderTechChips(subTech)}
                                             </div>
                                         `;
-                                    }).join('')}
+            }).join('')}
                                 </div>
                             </div>
                         `;
-                    }
-                }
+          }
+        }
 
-                return `
+        return `
                     <div class="relative pl-12 sm:pl-16">
                         <!-- Timeline Node -->
                         <span aria-hidden="true"
@@ -3844,27 +3958,27 @@
                         </article>
                     </div>
                 `;
-            }).join('');
-        }
+      }).join('');
+    }
 
-        function renderProjects() {
-            const container = document.getElementById('projects-container');
-            if (!container) return;
-            const t = appData.translations[currentLang];
-            const isTr = currentLang === 'tr';
-            document.querySelector('.projects-title').textContent = t.projectsTitle;
+    function renderProjects() {
+      const container = document.getElementById('projects-container');
+      if (!container) return;
+      const t = appData.translations[currentLang];
+      const isTr = currentLang === 'tr';
+      document.querySelector('.projects-title').textContent = t.projectsTitle;
 
-            container.innerHTML = appData.projects.map(project => {
-                const isApp = project.type === "app";
-                const typeIcon = isApp ? '<i class="fas fa-mobile-alt mr-1"></i>' : '<i class="fas fa-globe mr-1"></i>';
-                const typeLabel = isApp ? (isTr ? "Uygulama" : "App") : "Web";
-                const shortDesc = project.short_description[currentLang];
-                const longDesc = project.long_description[currentLang];
-                const chips = project.technologies || [];
-                const visibleChips = chips.slice(0, 5);
-                const primaryRedirectUrl = project.appStoreUrl || project.url;
+      container.innerHTML = appData.projects.map(project => {
+        const isApp = project.type === "app";
+        const typeIcon = isApp ? '<i class="fas fa-mobile-alt mr-1"></i>' : '<i class="fas fa-globe mr-1"></i>';
+        const typeLabel = isApp ? (isTr ? "Uygulama" : "App") : "Web";
+        const shortDesc = project.short_description[currentLang];
+        const longDesc = project.long_description[currentLang];
+        const chips = project.technologies || [];
+        const visibleChips = chips.slice(0, 5);
+        const primaryRedirectUrl = project.appStoreUrl || project.url;
 
-                return `
+        return `
                     <div class="bg-white rounded-2xl overflow-hidden flex flex-col group border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 h-full card-hover">
                         <a href="${primaryRedirectUrl}" target="_blank" rel="noopener noreferrer" class="relative h-36 overflow-hidden bg-slate-900 flex items-center justify-center p-4 block group/img">
                             <img src="${project.image_url}" alt="${project.name}" class="h-20 w-auto max-w-full object-contain group-hover:scale-110 transition-transform duration-500">
@@ -3954,47 +4068,47 @@
                         </div>
                     </div>
                 `;
-            }).join('');
-        }
+      }).join('');
+    }
 
-        function renderGames() {
-            const t = appData.translations[currentLang];
-            const isTr = currentLang === 'tr';
-            document.querySelector('.games-title').textContent = t.gamesTitle;
-            document.querySelector('.games-subtitle').textContent = t.gamesSubtitle;
-            document.getElementById('games-counter-badge').innerHTML = `<i class="fas fa-gamepad"></i> ${appData.games.length} ${t.webGamesCounter || (isTr ? "Web Oyunu" : "Web Games")}`;
+    function renderGames() {
+      const t = appData.translations[currentLang];
+      const isTr = currentLang === 'tr';
+      document.querySelector('.games-title').textContent = t.gamesTitle;
+      document.querySelector('.games-subtitle').textContent = t.gamesSubtitle;
+      document.getElementById('games-counter-badge').innerHTML = `<i class="fas fa-gamepad"></i> ${appData.games.length} ${t.webGamesCounter || (isTr ? "Web Oyunu" : "Web Games")}`;
 
-            // Render category filter buttons
-            const categories = ['all', 'Klasik', 'Strateji', 'Bulmaca', 'Kelime', 'Beceri'];
-            const categoryLabels = {
-                all: isTr ? `Tümü (${appData.games.length})` : `All (${appData.games.length})`,
-                Klasik: isTr ? "Klasik" : "Classic",
-                Strateji: isTr ? "Strateji" : "Strategy",
-                Bulmaca: isTr ? "Bulmaca" : "Puzzle",
-                Kelime: isTr ? "Kelime" : "Word",
-                Beceri: isTr ? "Beceri" : "Arcade"
-            };
+      // Render category filter buttons
+      const categories = ['all', 'Klasik', 'Strateji', 'Bulmaca', 'Kelime', 'Beceri'];
+      const categoryLabels = {
+        all: isTr ? `Tümü (${appData.games.length})` : `All (${appData.games.length})`,
+        Klasik: isTr ? "Klasik" : "Classic",
+        Strateji: isTr ? "Strateji" : "Strategy",
+        Bulmaca: isTr ? "Bulmaca" : "Puzzle",
+        Kelime: isTr ? "Kelime" : "Word",
+        Beceri: isTr ? "Beceri" : "Arcade"
+      };
 
-            document.getElementById('games-filter-container').innerHTML = categories.map(cat => {
-                const isActive = activeGameCategory === cat;
-                return `
+      document.getElementById('games-filter-container').innerHTML = categories.map(cat => {
+        const isActive = activeGameCategory === cat;
+        return `
                     <button onclick="filterGames('${cat}')"
                         class="game-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold ${isActive ? 'bg-blue-600 text-white shadow-xs' : 'bg-gray-100 hover:bg-gray-200 text-gray-700'} transition">
                         ${categoryLabels[cat] || cat}
                     </button>
                 `;
-            }).join('');
+      }).join('');
 
-            // Render cards
-            const filtered = activeGameCategory === 'all'
-                ? appData.games
-                : appData.games.filter(g => g.category.tr === activeGameCategory || g.category.en === activeGameCategory);
+      // Render cards
+      const filtered = activeGameCategory === 'all'
+        ? appData.games
+        : appData.games.filter(g => g.category.tr === activeGameCategory || g.category.en === activeGameCategory);
 
-            document.getElementById('games-container').innerHTML = filtered.map(game => {
-                const desc = game.long_description[currentLang];
-                const catLabel = game.category[currentLang];
+      document.getElementById('games-container').innerHTML = filtered.map(game => {
+        const desc = game.long_description[currentLang];
+        const catLabel = game.category[currentLang];
 
-                return `
+        return `
                     <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group card-hover">
                         <div class="h-24 bg-gradient-to-br ${game.accent || 'from-blue-600 to-indigo-700'} relative p-4 flex items-center justify-between text-white overflow-hidden">
                             <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-black/30 backdrop-blur-xs text-white/90 relative z-10">
@@ -4021,24 +4135,24 @@
                         </div>
                     </div>
                 `;
-            }).join('');
-        }
+      }).join('');
+    }
 
-        function filterGames(cat) {
-            activeGameCategory = cat;
-            renderGames();
-        }
+    function filterGames(cat) {
+      activeGameCategory = cat;
+      renderGames();
+    }
 
-        function renderArticles() {
-            const t = appData.translations[currentLang];
-            document.querySelector('.medium-title').textContent = t.mediumTitle;
-            document.querySelector('.medium-subtitle').textContent = t.mediumSubtitle;
+    function renderArticles() {
+      const t = appData.translations[currentLang];
+      document.querySelector('.medium-title').textContent = t.mediumTitle;
+      document.querySelector('.medium-subtitle').textContent = t.mediumSubtitle;
 
-            document.getElementById('medium-container').innerHTML = appData.articles.map(article => {
-                const title = article.title[currentLang];
-                const desc = article.short_description[currentLang];
+      document.getElementById('medium-container').innerHTML = appData.articles.map(article => {
+        const title = article.title[currentLang];
+        const desc = article.short_description[currentLang];
 
-                return `
+        return `
                     <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group card-hover">
                         <div class="p-5 flex flex-col flex-1">
                             <div class="flex items-center justify-between gap-2 mb-3">
@@ -4069,21 +4183,21 @@
                         </div>
                     </div>
                 `;
-            }).join('');
-        }
+      }).join('');
+    }
 
-        function renderInterviews() {
-            const t = appData.translations[currentLang];
-            const isTr = currentLang === 'tr';
-            document.querySelector('.interviews-title').textContent = t.interviewsTitle;
-            document.querySelector('.interviews-subtitle').textContent = t.interviewsSubtitle;
-            document.getElementById('interviews-counter-badge').innerHTML = `<i class="fas fa-clipboard-question text-amber-600"></i> ${appData.interviews.length} ${t.interviewGuides || (isTr ? "Kapsamlı Rehber" : "Guides")}`;
+    function renderInterviews() {
+      const t = appData.translations[currentLang];
+      const isTr = currentLang === 'tr';
+      document.querySelector('.interviews-title').textContent = t.interviewsTitle;
+      document.querySelector('.interviews-subtitle').textContent = t.interviewsSubtitle;
+      document.getElementById('interviews-counter-badge').innerHTML = `<i class="fas fa-clipboard-question text-amber-600"></i> ${appData.interviews.length} ${t.interviewGuides || (isTr ? "Kapsamlı Rehber" : "Guides")}`;
 
-            document.getElementById('interviews-container').innerHTML = appData.interviews.map(item => {
-                const title = item.title[currentLang];
-                const desc = item.short_description[currentLang];
+      document.getElementById('interviews-container').innerHTML = appData.interviews.map(item => {
+        const title = item.title[currentLang];
+        const desc = item.short_description[currentLang];
 
-                return `
+        return `
                     <div class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col overflow-hidden group card-hover">
                         <div class="h-20 bg-gradient-to-r from-slate-900 to-blue-950 p-4 relative flex items-center justify-between text-white">
                             <span class="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-500/30 text-blue-200 border border-blue-400/30">
@@ -4115,14 +4229,14 @@
                         </div>
                     </div>
                 `;
-            }).join('');
-        }
+      }).join('');
+    }
 
-        function renderCertificates() {
-            const t = appData.translations[currentLang];
-            document.querySelector('.cert-title').textContent = t.certTitle;
+    function renderCertificates() {
+      const t = appData.translations[currentLang];
+      document.querySelector('.cert-title').textContent = t.certTitle;
 
-            document.getElementById('certificates-container').innerHTML = appData.certificates.map(cert => `
+      document.getElementById('certificates-container').innerHTML = appData.certificates.map(cert => `
                 <div class="bg-white rounded-lg shadow-md p-6 card-hover flex flex-col justify-between">
                     <div class="text-center mb-4">
                         <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-3 text-blue-600 text-2xl">
@@ -4140,15 +4254,15 @@
                     </div>
                 </div>
             `).join('');
-        }
+    }
 
-        function renderBooksAndHobbies() {
-            const t = appData.translations[currentLang];
-            document.querySelector('.books-title').textContent = t.booksTitle;
-            document.querySelector('.books-section-title').textContent = t.booksSectionTitle;
-            document.querySelector('.hobbies-title').textContent = t.hobbiesTitle;
+    function renderBooksAndHobbies() {
+      const t = appData.translations[currentLang];
+      document.querySelector('.books-title').textContent = t.booksTitle;
+      document.querySelector('.books-section-title').textContent = t.booksSectionTitle;
+      document.querySelector('.hobbies-title').textContent = t.hobbiesTitle;
 
-            document.getElementById('books-container').innerHTML = appData.books.map(book => `
+      document.getElementById('books-container').innerHTML = appData.books.map(book => `
                 <div class="flex justify-between items-start pb-3 border-b border-gray-100">
                     <div>
                         <h4 class="font-medium text-gray-900 text-sm">${book.title}</h4>
@@ -4158,20 +4272,20 @@
                 </div>
             `).join('');
 
-            document.getElementById('hobbies-container').innerHTML = appData.hobbies.map(hobby => `
+      document.getElementById('hobbies-container').innerHTML = appData.hobbies.map(hobby => `
                 <div class="flex items-center pb-3 border-b border-gray-100">
                     <i class="fas ${hobby.icon} text-blue-600 mr-4 text-lg w-5 text-center"></i>
                     <h4 class="font-medium text-gray-800 text-sm">${hobby.name[currentLang]}</h4>
                 </div>
             `).join('');
-        }
+    }
 
-        function renderTechnologies() {
-            const t = appData.translations[currentLang];
-            document.querySelector('.tech-title').textContent = t.techTitle;
+    function renderTechnologies() {
+      const t = appData.translations[currentLang];
+      document.querySelector('.tech-title').textContent = t.techTitle;
 
-            const tech = appData.technologies;
-            document.getElementById('technologies-container').innerHTML = `
+      const tech = appData.technologies;
+      document.getElementById('technologies-container').innerHTML = `
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 backend-title">${t.backendTitle}</h3>
                     <div class="space-y-4">
@@ -4206,111 +4320,111 @@
                     </div>
                 </div>
             `;
+    }
+
+    function renderContact() {
+      const t = appData.translations[currentLang];
+      const c = appData.profile.contact;
+      const isTr = currentLang === 'tr';
+
+      document.querySelector('.contact-title').textContent = t.contactTitle;
+      document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
+      document.querySelector('.contact-description').textContent = t.contactDescription;
+
+      const cards = [
+        {
+          icon: "fas fa-phone",
+          iconClass: "text-emerald-600",
+          bgClass: "bg-emerald-50 border border-emerald-200/80 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600",
+          label: t.contactPhoneLabel,
+          value: c.phone,
+          link: `tel:${c.phone}`,
+          subText: isTr ? "Doğrudan telefon ile ara" : "Direct phone call"
+        },
+        {
+          icon: "fas fa-location-dot",
+          iconClass: "text-rose-600",
+          bgClass: "bg-rose-50 border border-rose-200/80 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600",
+          label: t.contactLocationLabel,
+          value: c.location[currentLang],
+          link: null,
+          subText: isTr ? "Şehir / Ülke" : "Location / Country"
+        },
+        {
+          icon: "fas fa-envelope",
+          iconClass: "text-blue-600",
+          bgClass: "bg-blue-50 border border-blue-200/80 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600",
+          label: t.contactEmailLabel,
+          value: c.email,
+          link: `mailto:${c.email}`,
+          subText: isTr ? "E-posta gönder" : "Send an email"
+        },
+        {
+          icon: "fas fa-globe",
+          iconClass: "text-indigo-600",
+          bgClass: "bg-indigo-50 border border-indigo-200/80 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600",
+          label: t.contactWebsiteLabel,
+          value: c.websiteDisplay,
+          link: c.website,
+          subText: isTr ? "Kişisel web sitesi" : "Personal portfolio"
+        },
+        {
+          icon: "fab fa-linkedin-in",
+          iconClass: "text-[#0A66C2]",
+          bgClass: "bg-sky-50 border border-sky-200/80 group-hover:bg-[#0A66C2] group-hover:text-white group-hover:border-[#0A66C2]",
+          label: t.contactLinkedinLabel,
+          value: c.linkedinDisplay,
+          link: c.linkedin,
+          subText: isTr ? "LinkedIn profili & ağ" : "Professional network"
+        },
+        {
+          icon: "fab fa-github",
+          iconClass: "text-gray-900",
+          bgClass: "bg-gray-100 border border-gray-300/80 group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900",
+          label: t.contactGithubLabel,
+          value: c.githubDisplay,
+          link: c.github,
+          subText: isTr ? "Açık kaynak projeler" : "Open source repositories"
+        },
+        {
+          icon: "fab fa-medium",
+          iconClass: "text-neutral-900",
+          bgClass: "bg-neutral-100 border border-neutral-300/80 group-hover:bg-black group-hover:text-white group-hover:border-black",
+          label: t.contactMediumLabel,
+          value: c.mediumDisplay,
+          link: c.medium,
+          subText: isTr ? "Teknik makaleler & mimari" : "Technical articles"
+        },
+        {
+          icon: "fab fa-youtube",
+          iconClass: "text-[#FF0000]",
+          bgClass: "bg-red-50 border border-red-200/70 group-hover:bg-[#FF0000] group-hover:text-white group-hover:border-[#FF0000]",
+          label: t.contactYoutubeLabel,
+          value: "YouTube",
+          link: c.youtube,
+          subText: isTr ? "Video içerikler & anlatımlar" : "Video tutorials"
+        },
+        {
+          icon: "fab fa-hackerrank",
+          iconClass: "text-[#00853E]",
+          bgClass: "bg-emerald-50 border border-emerald-200/80 group-hover:bg-[#00853E] group-hover:text-white group-hover:border-[#00853E]",
+          label: t.contactHackerrankLabel,
+          value: "HackerRank",
+          link: c.hackerrank,
+          subText: isTr ? "Problem çözme & algoritmalar" : "Coding challenges"
+        },
+        {
+          icon: "fab fa-stack-overflow",
+          iconClass: "text-[#F58025]",
+          bgClass: "bg-orange-50 border border-orange-200/80 group-hover:bg-[#F58025] group-hover:text-white group-hover:border-[#F58025]",
+          label: t.contactStackoverflowLabel,
+          value: "StackOverflow",
+          link: c.stackoverflow,
+          subText: isTr ? "Geliştirici topluluğu yanıtları" : "Developer Q&A"
         }
+      ];
 
-        function renderContact() {
-            const t = appData.translations[currentLang];
-            const c = appData.profile.contact;
-            const isTr = currentLang === 'tr';
-
-            document.querySelector('.contact-title').textContent = t.contactTitle;
-            document.querySelector('.contact-subtitle').textContent = t.contactSubtitle;
-            document.querySelector('.contact-description').textContent = t.contactDescription;
-
-            const cards = [
-                {
-                    icon: "fas fa-phone",
-                    iconClass: "text-emerald-600",
-                    bgClass: "bg-emerald-50 border border-emerald-200/80 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600",
-                    label: t.contactPhoneLabel,
-                    value: c.phone,
-                    link: `tel:${c.phone}`,
-                    subText: isTr ? "Doğrudan telefon ile ara" : "Direct phone call"
-                },
-                {
-                    icon: "fas fa-location-dot",
-                    iconClass: "text-rose-600",
-                    bgClass: "bg-rose-50 border border-rose-200/80 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600",
-                    label: t.contactLocationLabel,
-                    value: c.location[currentLang],
-                    link: null,
-                    subText: isTr ? "Şehir / Ülke" : "Location / Country"
-                },
-                {
-                    icon: "fas fa-envelope",
-                    iconClass: "text-blue-600",
-                    bgClass: "bg-blue-50 border border-blue-200/80 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600",
-                    label: t.contactEmailLabel,
-                    value: c.email,
-                    link: `mailto:${c.email}`,
-                    subText: isTr ? "E-posta gönder" : "Send an email"
-                },
-                {
-                    icon: "fas fa-globe",
-                    iconClass: "text-indigo-600",
-                    bgClass: "bg-indigo-50 border border-indigo-200/80 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600",
-                    label: t.contactWebsiteLabel,
-                    value: c.websiteDisplay,
-                    link: c.website,
-                    subText: isTr ? "Kişisel web sitesi" : "Personal portfolio"
-                },
-                {
-                    icon: "fab fa-linkedin-in",
-                    iconClass: "text-[#0A66C2]",
-                    bgClass: "bg-sky-50 border border-sky-200/80 group-hover:bg-[#0A66C2] group-hover:text-white group-hover:border-[#0A66C2]",
-                    label: t.contactLinkedinLabel,
-                    value: c.linkedinDisplay,
-                    link: c.linkedin,
-                    subText: isTr ? "LinkedIn profili & ağ" : "Professional network"
-                },
-                {
-                    icon: "fab fa-github",
-                    iconClass: "text-gray-900",
-                    bgClass: "bg-gray-100 border border-gray-300/80 group-hover:bg-gray-900 group-hover:text-white group-hover:border-gray-900",
-                    label: t.contactGithubLabel,
-                    value: c.githubDisplay,
-                    link: c.github,
-                    subText: isTr ? "Açık kaynak projeler" : "Open source repositories"
-                },
-                {
-                    icon: "fab fa-medium",
-                    iconClass: "text-neutral-900",
-                    bgClass: "bg-neutral-100 border border-neutral-300/80 group-hover:bg-black group-hover:text-white group-hover:border-black",
-                    label: t.contactMediumLabel,
-                    value: c.mediumDisplay,
-                    link: c.medium,
-                    subText: isTr ? "Teknik makaleler & mimari" : "Technical articles"
-                },
-                {
-                    icon: "fab fa-youtube",
-                    iconClass: "text-[#FF0000]",
-                    bgClass: "bg-red-50 border border-red-200/70 group-hover:bg-[#FF0000] group-hover:text-white group-hover:border-[#FF0000]",
-                    label: t.contactYoutubeLabel,
-                    value: "YouTube",
-                    link: c.youtube,
-                    subText: isTr ? "Video içerikler & anlatımlar" : "Video tutorials"
-                },
-                {
-                    icon: "fab fa-hackerrank",
-                    iconClass: "text-[#00853E]",
-                    bgClass: "bg-emerald-50 border border-emerald-200/80 group-hover:bg-[#00853E] group-hover:text-white group-hover:border-[#00853E]",
-                    label: t.contactHackerrankLabel,
-                    value: "HackerRank",
-                    link: c.hackerrank,
-                    subText: isTr ? "Problem çözme & algoritmalar" : "Coding challenges"
-                },
-                {
-                    icon: "fab fa-stack-overflow",
-                    iconClass: "text-[#F58025]",
-                    bgClass: "bg-orange-50 border border-orange-200/80 group-hover:bg-[#F58025] group-hover:text-white group-hover:border-[#F58025]",
-                    label: t.contactStackoverflowLabel,
-                    value: "StackOverflow",
-                    link: c.stackoverflow,
-                    subText: isTr ? "Geliştirici topluluğu yanıtları" : "Developer Q&A"
-                }
-            ];
-
-            document.getElementById('contact-container').innerHTML = cards.map(card => `
+      document.getElementById('contact-container').innerHTML = cards.map(card => `
                 <div class="group relative bg-white rounded-2xl border border-gray-200/90 p-5 shadow-xs card-hover flex items-center justify-between hover:border-blue-400 hover:shadow-md transition-all duration-200">
                     <div class="flex items-center gap-4 min-w-0 flex-1">
                         <div class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0 transition-all duration-300 shadow-2xs ${card.bgClass} ${card.iconClass}">
@@ -4335,78 +4449,78 @@
                     ` : ''}
                 </div>
             `).join('');
-        }
+    }
 
-        function renderFooterSocials() {
-            const c = appData.profile.contact;
-            const socials = [
-                { icon: "fab fa-github", url: c.github, hover: "hover:text-gray-900 hover:bg-gray-100" },
-                { icon: "fab fa-linkedin-in", url: c.linkedin, hover: "hover:text-[#0A66C2] hover:bg-sky-50" },
-                { icon: "fab fa-medium", url: c.medium, hover: "hover:text-black hover:bg-stone-100" },
-                { icon: "fab fa-youtube", url: c.youtube, hover: "hover:text-[#FF0000] hover:bg-red-50" },
-                { icon: "fab fa-hackerrank", url: c.hackerrank, hover: "hover:text-[#00EA64] hover:bg-emerald-50" },
-                { icon: "fab fa-stack-overflow", url: c.stackoverflow, hover: "hover:text-[#F58025] hover:bg-orange-50" },
-                { icon: "fas fa-envelope", url: `mailto:${c.email}`, hover: "hover:text-blue-600 hover:bg-blue-50" }
-            ];
-            document.getElementById('footer-social-links').innerHTML = socials.map(s => `
+    function renderFooterSocials() {
+      const c = appData.profile.contact;
+      const socials = [
+        { icon: "fab fa-github", url: c.github, hover: "hover:text-gray-900 hover:bg-gray-100" },
+        { icon: "fab fa-linkedin-in", url: c.linkedin, hover: "hover:text-[#0A66C2] hover:bg-sky-50" },
+        { icon: "fab fa-medium", url: c.medium, hover: "hover:text-black hover:bg-stone-100" },
+        { icon: "fab fa-youtube", url: c.youtube, hover: "hover:text-[#FF0000] hover:bg-red-50" },
+        { icon: "fab fa-hackerrank", url: c.hackerrank, hover: "hover:text-[#00EA64] hover:bg-emerald-50" },
+        { icon: "fab fa-stack-overflow", url: c.stackoverflow, hover: "hover:text-[#F58025] hover:bg-orange-50" },
+        { icon: "fas fa-envelope", url: `mailto:${c.email}`, hover: "hover:text-blue-600 hover:bg-blue-50" }
+      ];
+      document.getElementById('footer-social-links').innerHTML = socials.map(s => `
                 <a href="${s.url}" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg flex items-center justify-center text-gray-400 ${s.hover} transition-colors">
                     <i class="${s.icon}"></i>
                 </a>
             `).join('');
+    }
+
+    // Typing Effect Animation
+    function startTypingAnimation() {
+      if (!appData) return;
+      if (typingTimeout) clearTimeout(typingTimeout);
+      roleIndex = 0;
+      charIndex = 0;
+      isDeleting = false;
+      typeStep();
+    }
+
+    function typeStep() {
+      const roles = appData.profile.roles[currentLang] || ["Full Stack Developer"];
+      const currentRole = roles[roleIndex];
+      const typingText = document.getElementById('typing-text');
+
+      if (!typingText) return;
+
+      if (isDeleting) {
+        typingText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        typingTimeout = setTimeout(typeStep, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingTimeout = setTimeout(typeStep, 500);
+      } else {
+        typingTimeout = setTimeout(typeStep, isDeleting ? 40 : 120);
+      }
+    }
+
+    // Scroll Events
+    function handleScrollEvents() {
+      // Animate skill bars when visible
+      const windowHeight = window.innerHeight;
+      document.querySelectorAll('.skill-progress').forEach(bar => {
+        if (bar.getBoundingClientRect().top < windowHeight - 50) {
+          const targetWidth = bar.getAttribute('data-width');
+          if (targetWidth) bar.style.width = targetWidth;
         }
+      });
+    }
 
-        // Typing Effect Animation
-        function startTypingAnimation() {
-            if (!appData) return;
-            if (typingTimeout) clearTimeout(typingTimeout);
-            roleIndex = 0;
-            charIndex = 0;
-            isDeleting = false;
-            typeStep();
-        }
-
-        function typeStep() {
-            const roles = appData.profile.roles[currentLang] || ["Full Stack Developer"];
-            const currentRole = roles[roleIndex];
-            const typingText = document.getElementById('typing-text');
-
-            if (!typingText) return;
-
-            if (isDeleting) {
-                typingText.textContent = currentRole.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentRole.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentRole.length) {
-                isDeleting = true;
-                typingTimeout = setTimeout(typeStep, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                typingTimeout = setTimeout(typeStep, 500);
-            } else {
-                typingTimeout = setTimeout(typeStep, isDeleting ? 40 : 120);
-            }
-        }
-
-        // Scroll Events
-        function handleScrollEvents() {
-            // Animate skill bars when visible
-            const windowHeight = window.innerHeight;
-            document.querySelectorAll('.skill-progress').forEach(bar => {
-                if (bar.getBoundingClientRect().top < windowHeight - 50) {
-                    const targetWidth = bar.getAttribute('data-width');
-                    if (targetWidth) bar.style.width = targetWidth;
-                }
-            });
-        }
-
-        // Run application
-        initApp();
-    </script>
+    // Run application
+    initApp();
+  </script>
 </body>
 
 </html>
