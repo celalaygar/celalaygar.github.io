@@ -1690,8 +1690,8 @@
       "id": "1",
       "name": "Wixtory: Language Box",
       "short_description": {
-        "tr": "Play Store'da yayında",
-        "en": "Published on Play Store"
+        "tr": "App Store & Google Play'de yayında",
+        "en": "Published on App Store & Google Play"
       },
       "long_description": {
         "tr": "İnteraktif egzersizler ve quizlerle dil öğrenme uygulaması.",
@@ -1719,15 +1719,15 @@
       "image_url": "https://raw.githubusercontent.com/celalaygar/main/refs/heads/main/project/language-box/Language-Box-Logo.png",
       "featured": true,
       "year": "2024",
-      "appStoreUrl": "https://apps.apple.com/tr/app/lingua-bubble/id6752529243",
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.new.language&hl=en&gl=US"
+      "appStoreUrl": "https://apps.apple.com/tr/app/wixtory-language-box/id6761607811",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.wixbook.language_box"
     },
     {
       "id": "2",
       "name": "Wixtory Domain Track",
       "short_description": {
-        "tr": "Yakında",
-        "en": "Coming Soon"
+        "tr": "App Store & Google Play'de yayında",
+        "en": "Published on App Store & Google Play"
       },
       "long_description": {
         "tr": "Uygun alan adını kolayca bulun.",
@@ -1754,7 +1754,9 @@
       "url": "https://domain-track.wixtory.com/",
       "image_url": "https://raw.githubusercontent.com/celalaygar/main/refs/heads/main/project/wixtory-domain-track/domain-track-logo.png",
       "featured": true,
-      "year": "2025"
+      "year": "2025",
+      "appStoreUrl": "https://apps.apple.com/tr/app/wixtory-domain-track/id6790164419",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.wixtory.domain_track"
     },
     {
       "id": "3",
@@ -3860,33 +3862,28 @@
                 const longDesc = project.long_description[currentLang];
                 const chips = project.technologies || [];
                 const visibleChips = chips.slice(0, 5);
-
-                let storeButtons = '';
-                if (project.playStoreUrl) {
-                    storeButtons += `
-                        <a href="${project.playStoreUrl}" target="_blank" class="text-gray-500 hover:text-green-600 transition" title="Google Play">
-                            <i class="fab fa-google-play"></i>
-                        </a>
-                    `;
-                }
-                if (project.appStoreUrl) {
-                    storeButtons += `
-                        <a href="${project.appStoreUrl}" target="_blank" class="text-gray-500 hover:text-gray-900 transition" title="App Store">
-                            <i class="fab fa-apple"></i>
-                        </a>
-                    `;
-                }
+                const primaryRedirectUrl = project.appStoreUrl || project.url;
 
                 return `
                     <div class="bg-white rounded-2xl overflow-hidden flex flex-col group border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 h-full card-hover">
-                        <div class="relative h-36 overflow-hidden bg-slate-900 flex items-center justify-center p-4">
+                        <a href="${primaryRedirectUrl}" target="_blank" rel="noopener noreferrer" class="relative h-36 overflow-hidden bg-slate-900 flex items-center justify-center p-4 block group/img">
                             <img src="${project.image_url}" alt="${project.name}" class="h-20 w-auto max-w-full object-contain group-hover:scale-110 transition-transform duration-500">
                             <div class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-slate-950/80 to-transparent pointer-events-none"></div>
 
-                            <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                            <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 flex-wrap">
                                 <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-black/70 backdrop-blur-sm text-[11px] font-medium text-cyan-300 border border-cyan-500/30">
                                     ${typeIcon} ${typeLabel}
                                 </span>
+                                ${project.appStoreUrl ? `
+                                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-sm text-[11px] font-medium text-white border border-white/20">
+                                        <i class="fab fa-apple text-xs"></i> iOS
+                                    </span>
+                                ` : ''}
+                                ${project.playStoreUrl ? `
+                                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-sm text-[11px] font-medium text-emerald-400 border border-emerald-500/30">
+                                        <i class="fab fa-google-play text-[10px]"></i> Android
+                                    </span>
+                                ` : ''}
                                 ${project.featured ? `
                                     <span class="inline-flex items-center px-1.5 py-0.5 rounded-md bg-amber-500/25 backdrop-blur-sm text-[11px] text-amber-300 border border-amber-500/30">
                                         <i class="fas fa-star text-[10px]"></i>
@@ -3900,13 +3897,15 @@
                                     ${project.year}
                                 </span>
                             </div>
-                        </div>
+                        </a>
 
                         <div class="p-5 flex flex-col gap-2.5 flex-1">
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
-                                    ${project.name}
-                                </h3>
+                                <a href="${primaryRedirectUrl}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-1">
+                                        ${project.name}
+                                    </h3>
+                                </a>
                                 <p class="text-xs text-blue-600 font-semibold mt-0.5">
                                     ${shortDesc}
                                 </p>
@@ -3924,14 +3923,32 @@
                                 `).join('')}
                             </div>
 
-                            <div class="pt-3 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
-                                <a href="${project.url}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center gap-1">
-                                    <i class="fas fa-external-link-alt text-[10px]"></i>
-                                    <span>${t.visit || (isTr ? "Ziyaret Et" : "Visit")}</span>
-                                </a>
-                                <div class="flex items-center gap-2">
-                                    ${storeButtons}
-                                    <span class="text-blue-600 group-hover:translate-x-1 transition-transform font-bold text-sm">→</span>
+                            <div class="pt-3 mt-2 border-t border-gray-100 flex flex-wrap items-center justify-between gap-2 text-xs">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    ${project.appStoreUrl ? `
+                                        <a href="${project.appStoreUrl}" target="_blank" rel="noopener noreferrer" aria-label="App Store" title="App Store"
+                                            class="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gray-900 bg-gray-900 px-3 h-[34px] font-sans text-xs font-semibold text-white transition-all hover:bg-black hover:scale-105 shadow-xs">
+                                            <i class="fab fa-apple text-sm leading-none text-white"></i>
+                                            <span>App Store</span>
+                                            <i class="fas fa-arrow-up-right-from-square text-[9px] opacity-70 ml-0.5 text-white"></i>
+                                        </a>
+                                    ` : ''}
+                                    ${project.playStoreUrl ? `
+                                        <a href="${project.playStoreUrl}" target="_blank" rel="noopener noreferrer" aria-label="Google Play" title="Google Play"
+                                            class="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gray-900 bg-gray-900 px-3 h-[34px] font-sans text-xs font-semibold text-white transition-all hover:bg-black hover:scale-105 shadow-xs">
+                                            <i class="fab fa-google-play text-xs leading-none text-white"></i>
+                                            <span>Google Play</span>
+                                            <i class="fas fa-arrow-up-right-from-square text-[9px] opacity-70 ml-0.5 text-white"></i>
+                                        </a>
+                                    ` : ''}
+                                    ${project.url ? `
+                                        <a href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="${isTr ? "Web Sitesi" : "Website"}" title="${isTr ? "Web Sitesi" : "Website"}"
+                                            class="inline-flex items-center justify-center gap-1.5 rounded-xl border border-gray-200 bg-gray-50 px-2.5 h-[34px] font-sans text-xs font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200 transition-all">
+                                            <i class="fas fa-globe text-xs"></i>
+                                            <span>${project.appStoreUrl ? (isTr ? "Web" : "Web") : (t.visit || (isTr ? "Ziyaret Et" : "Visit"))}</span>
+                                            <i class="fas fa-arrow-up-right-from-square text-[9px] opacity-60"></i>
+                                        </a>
+                                    ` : ''}
                                 </div>
                             </div>
                         </div>
