@@ -1,0 +1,2154 @@
+{
+  "profile": {
+    "name": "Celal Aygar",
+    "fullName": "Hacı Celal Aygar",
+    "avatar": "https://avatars.githubusercontent.com/u/11775341?v=4",
+    "title": {
+      "en": "Senior Software Engineer",
+      "tr": "Kıdemli Yazılım Mühendisi"
+    },
+    "roles": {
+      "en": [
+        "Full Stack Developer",
+        "Java Developer",
+        "Software Engineer"
+      ],
+      "tr": [
+        "Full Stack Geliştirici",
+        "Java Geliştirici",
+        "Yazılım Mühendisi"
+      ]
+    },
+    "greeting": {
+      "en": "Hello, My name is",
+      "tr": "Merhaba, Benim adım"
+    },
+    "bio": {
+      "en": [
+        "I'm Hacı Celal Aygar. I graduated from Karabük University, Department of Computer Engineering. I have been working as a Full Stack developer and Java developer around 5 years.",
+        "My goal is to work in companies that produce projects using technologies in the fields of computer engineering and to continue to improve myself. I also continue to share many of my sample works on my Github account.",
+        "Also I am constantly working to make life easier and trying to find solutions to the common problems of people. I'm currently learning client side technologies by using especially Github and Stackoverflow."
+      ],
+      "tr": [
+        "Ben Hacı Celal Aygar. Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nden mezun oldum. Yaklaşık 5 yıldır Full Stack geliştirici ve Java geliştirici olarak çalışıyorum.",
+        "Hedefim, bilgisayar mühendisliği alanlarında teknolojiler kullanarak projeler üreten şirketlerde çalışmak ve kendimi sürekli geliştirmektir. Ayrıca örnek çalışmalarımın birçoğunu Github hesabımda paylaşmaya devam ediyorum.",
+        "Ayrıca hayatı kolaylaştırmak ve insanların ortak sorunlarına çözümler bulmak için sürekli çalışıyorum. Özellikle Github ve Stackoverflow kullanarak istemci tarafı teknolojilerini öğrenmeye devam ediyorum."
+      ]
+    },
+    "aboutContent": {
+      "en": "<p class='mb-4'>I’m <b>Hacı Celal Aygar</b>, a Computer Engineering graduate from Karabük University and a Full Stack & Java Developer with around <b>5 years of professional experience</b> in building scalable and maintainable software systems.</p><p class='mb-4'>Software development for me is not just a profession — it’s a continuous learning journey. I specialize in backend technologies such as <b>Java, Python, Node Js, Spring Boot, Spring Security, and reactive programming</b>, while also developing rich front-end experiences using <b>JavaScript, React, Next.js, and other modern UI technologies</b>.</p><p class='mb-6'>My goal is to work in innovative companies where I contribute to creating impactful solutions and elevate user experiences through clean, efficient code. I actively share many sample projects on my GitHub to help others learn and to document my growth. I also engage with communities on GitHub and StackOverflow to expand my knowledge and support others.</p><p class='mb-6'>I enjoy adapting to new technologies, collaborating with dynamic teams, and working on cross-disciplinary projects. My long-term ambition is to be recognized as a software engineer who builds robust architectures and contributes meaningfully to global tech communities.</p>",
+      "tr": "<p class='mb-4'>Ben <b>Hacı Celal Aygar</b>. Karabük Üniversitesi Bilgisayar Mühendisliği bölümünden mezun oldum ve yaklaşık <b>5 yıldır Full Stack ve Java geliştiricisi</b> olarak profesyonel yazılım projelerinde çalışıyorum.</p><p class='mb-4'>Yazılım mühendisliği benim için yalnızca bir meslek değil aynı zamanda sürekli öğrenmeyi, problem çözmeyi ve teknolojiyi yaratıcı biçimde kullanmayı ifade ediyor. Backend tarafında özellikle <b>Java, Python, Node js, Spring Boot, Spring Security ve reaktif programlamaya</b> dayalı çözümler üretirken; frontend tarafında <b>JavaScript, React, Next.js ve modern UI teknolojileri</b> üzerinde aktif olarak çalışıyorum.</p><p class='mb-6'>Profesyonel hedefim, sadece yazılım geliştirmek değil; insanların günlük yaşantısını kolaylaştıracak yenilikçi çözümler üretmek. Açık kaynak kodlu projeler oluşturup bunları GitHub hesabımda paylaşarak hem kendi becerilerimi geliştirmeye hem de topluluğa katkı sağlamaya devam ediyorum. Ayrıca özellikle GitHub ve StackOverflow gibi platformlarda etkin rol oynayarak hem öğreniyor hem de öğrendiklerimi başkalarıyla paylaşıyorum.</p><p class='mb-6'>Yeni teknolojilere adapte olmayı, dinamik ekiplerle çalışmayı ve disiplinler arası projelerde yer almayı seviyorum. Uzun vadeli hedefim, güçlü yazılım mimarileri tasarlayan ve çözüm odaklı yazılımlar üreten bir mühendis olarak global arenada tanınmak ve katkı sağlamaktır.</p>"
+    },
+    "contact": {
+      "phone": "+90 544 835 84 01",
+      "email": "celal.aygar@gmail.com",
+      "location": {
+        "en": "Ankara / TURKEY",
+        "tr": "Ankara / TÜRKİYE"
+      },
+      "website": "https://celalaygar.github.io/",
+      "websiteDisplay": "celalaygar.github.io",
+      "linkedin": "https://www.linkedin.com/in/celalaygar/",
+      "linkedinDisplay": "linkedin.com/in/celalaygar",
+      "github": "https://github.com/celalaygar",
+      "githubDisplay": "github.com/celalaygar",
+      "medium": "https://medium.com/@celalaygar",
+      "mediumDisplay": "medium.com/@celalaygar",
+      "youtube": "https://youtube.com",
+      "hackerrank": "https://hackerrank.com",
+      "stackoverflow": "https://stackoverflow.com",
+      "freelance": {
+        "en": "Available",
+        "tr": "Müsait"
+      }
+    },
+    "resumes": {
+      "english": {
+        "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.English.CV.pdf",
+        "localUrl": "./10.09.2026.Celal.Aygar.English.CV.pdf",
+        "filename": "10.09.2026.Celal.Aygar.English.CV.pdf"
+      },
+      "turkish": {
+        "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/10.09.2026.Celal.Aygar.Turkish.CV.pdf",
+        "localUrl": "./10.09.2026.Celal.Aygar.Turkish.CV.pdf",
+        "filename": "10.09.2026.Celal.Aygar.Turkish.CV.pdf"
+      }
+    }
+  },
+  "translations": {
+    "en": {
+      "navHome": "Home",
+      "navAbout": "About",
+      "navExperience": "Experience",
+      "navTech": "Technologies",
+      "navProjectsMenu": "Projects",
+      "navProjects": "Projects",
+      "navProjectsDesc": "Web & Mobile Applications",
+      "navGames": "Web Games",
+      "navGamesDesc": "20 Interactive Web Games",
+      "navContentMenu": "Articles & Guides",
+      "navArticles": "Medium Articles",
+      "navMediumDesc": "Technical Articles & Architecture",
+      "navInterviews": "Interview Question Guides",
+      "navInterviewsDesc": "8 Preparation Guides",
+      "navMoreMenu": "More",
+      "navCertificates": "Certificates",
+      "navCertificatesDesc": "Badges & Credentials",
+      "navBooks": "Books & Hobbies",
+      "navBooksDesc": "Reading List & Hobbies",
+      "navContact": "Contact",
+      "aboutTitle": "About Me",
+      "aboutHeading": "I'm Hacı Celal Aygar & Full Stack developer & Java developer",
+      "commTitle": "Communication",
+      "emailLabel": "Email:",
+      "websiteLabel": "Website:",
+      "degreeLabel": "Degree:",
+      "phoneLabel": "Phone:",
+      "cityLabel": "City:",
+      "youtubeLabel": "Youtube:",
+      "linkedinLabel": "Linked In:",
+      "freelanceLabel": "Freelance:",
+      "eduTitle": "Education",
+      "hireBtn": "Get in Touch",
+      "expTitle": "Experience & Career",
+      "projectsTitle": "Projects",
+      "projectDescriptionTitle": "Description",
+      "projectLinksTitle": "Links",
+      "gamesTitle": "Web Games",
+      "gamesSubtitle": "Interactive web games developed with HTML5, Canvas & JavaScript",
+      "playGame": "Play Game",
+      "mediumTitle": "Medium Articles",
+      "mediumSubtitle": "Technical articles on Spring Boot, Microservices, Kafka & Databases",
+      "readMedium": "Read on Medium",
+      "interviewsTitle": "Interview Question Guides",
+      "interviewsSubtitle": "Comprehensive technical interview questions & preparation guides",
+      "viewQuestions": "View Questions",
+      "techTitle": "My Technologies",
+      "backendTitle": "Backend & Devops",
+      "frontendTitle": "Frontend",
+      "certTitle": "Certificates",
+      "booksTitle": "Books & Hobbies",
+      "booksSectionTitle": "Books",
+      "hobbiesTitle": "Hobbies",
+      "contactTitle": "Contact",
+      "contactSubtitle": "Any Question? Contact us!",
+      "contactDescription": "I'm at your service",
+      "contactPhoneLabel": "Call us on",
+      "contactLocationLabel": "City / Country",
+      "contactEmailLabel": "Email",
+      "contactWebsiteLabel": "Website",
+      "contactLinkedinLabel": "Linkedin",
+      "contactGithubLabel": "GitHub",
+      "contactMediumLabel": "Medium",
+      "contactYoutubeLabel": "Youtube",
+      "contactHackerrankLabel": "HackerRank",
+      "contactStackoverflowLabel": "StackOverflow",
+      "downloadBtn": "Download!",
+      "cvEn": "Download English CV",
+      "cvTr": "Download Turkish CV",
+      "connectTitle": "Connect With Me",
+      "viewDetail": "View Detail",
+      "imA": "I'm a",
+      "academicDegrees": "Academic Degrees",
+      "webGamesCounter": "Web Games",
+      "articlesFollow": "Follow",
+      "interviewGuides": "Guides",
+      "allRightsReserved": "All rights reserved.",
+      "visit": "Visit",
+      "techUsed": "Tech:",
+      "present": "Present",
+      "allFilter": "All",
+      "expSubtitle": "My professional journey",
+      "expKicker": "~/experience",
+      "experienceCvNote": "You can download my up-to-date resume containing my detailed career history, technical expertise, and references as a PDF.",
+      "expCurrent": "Current Role",
+      "expSubProjects": "Sub-Projects",
+      "expResp": "Responsibilities",
+      "expTechUsed": "Technologies Used",
+      "expLinks": "Links",
+      "cvView": "View Online",
+      "cvDownloadEn": "Download English CV",
+      "cvDownloadTr": "Download Turkish CV",
+      "backHome": "Home",
+      "pageView": "Section Page",
+      "homeExploreTitle": "Explore Profile Sections",
+      "homeExploreSubtitle": "Click any section to slide in as a dedicated page"
+    },
+    "tr": {
+      "navHome": "Ana Sayfa",
+      "navAbout": "Hakkımda",
+      "navExperience": "Deneyim",
+      "navTech": "Teknolojiler",
+      "navProjectsMenu": "Projeler",
+      "navProjects": "Projeler",
+      "navProjectsDesc": "Web & Mobil Uygulamalar",
+      "navGames": "Web Oyunları",
+      "navGamesDesc": "20 İnteraktif Web Oyunu",
+      "navContentMenu": "Yazılar & Rehberler",
+      "navArticles": "Medium Yazıları",
+      "navMediumDesc": "Teknik Makaleler & Mimari",
+      "navInterviews": "Mülakat Soruları",
+      "navInterviewsDesc": "8 Kapsamlı Hazırlık Rehberi",
+      "navMoreMenu": "Daha Fazla",
+      "navCertificates": "Sertifikalar",
+      "navCertificatesDesc": "Rozetler & Belgeler",
+      "navBooks": "Kitaplar & Hobiler",
+      "navBooksDesc": "Okuma Listesi & Hobiler",
+      "navContact": "İletişim",
+      "aboutTitle": "Hakkımda",
+      "aboutHeading": "Ben Hacı Celal Aygar & Full Stack geliştirici & Java geliştiriciyim",
+      "commTitle": "İletişim Bilgileri",
+      "emailLabel": "E-posta:",
+      "websiteLabel": "Web sitesi:",
+      "degreeLabel": "Eğitim:",
+      "phoneLabel": "Telefon:",
+      "cityLabel": "Şehir:",
+      "youtubeLabel": "Youtube:",
+      "linkedinLabel": "Linked In:",
+      "freelanceLabel": "Freelance:",
+      "eduTitle": "Eğitim",
+      "hireBtn": "İletişime Geç",
+      "expTitle": "Deneyim & Kariyer",
+      "projectsTitle": "Projeler",
+      "projectDescriptionTitle": "Açıklama",
+      "projectLinksTitle": "Bağlantılar",
+      "gamesTitle": "Web Oyunları",
+      "gamesSubtitle": "HTML5, Canvas ve JavaScript ile geliştirdiğim interaktif web oyunları",
+      "playGame": "Oyunu Oyna",
+      "mediumTitle": "Medium Yazıları",
+      "mediumSubtitle": "Spring Boot, Mikroservisler, Kafka ve Veritabanları üzerine teknik makalelerim",
+      "readMedium": "Medium'da Oku",
+      "interviewsTitle": "Mülakat Soru Paylaşımları",
+      "interviewsSubtitle": "Yazılım mühendisliği için kapsamlı mülakat soruları ve hazırlık rehberleri",
+      "viewQuestions": "Soruları İncele",
+      "techTitle": "Teknolojilerim",
+      "backendTitle": "Backend & Devops",
+      "frontendTitle": "Frontend",
+      "certTitle": "Sertifikalar",
+      "booksTitle": "Kitaplar & Hobiler",
+      "booksSectionTitle": "Kitaplar",
+      "hobbiesTitle": "Hobiler",
+      "contactTitle": "İletişim",
+      "contactSubtitle": "Soru mu var? Bize ulaşın!",
+      "contactDescription": "Hizmetinizdeyim",
+      "contactPhoneLabel": "Bizi arayın",
+      "contactLocationLabel": "Şehir / Ülke",
+      "contactEmailLabel": "E-posta",
+      "contactWebsiteLabel": "Web sitesi",
+      "contactLinkedinLabel": "Linkedin",
+      "contactGithubLabel": "GitHub",
+      "contactMediumLabel": "Medium",
+      "contactYoutubeLabel": "Youtube",
+      "contactHackerrankLabel": "HackerRank",
+      "contactStackoverflowLabel": "StackOverflow",
+      "downloadBtn": "İndir!",
+      "cvEn": "İngilizce CV İndir",
+      "cvTr": "Türkçe CV İndir",
+      "connectTitle": "Benimle İletişime Geçin",
+      "viewDetail": "Detayı Gör",
+      "imA": "Ben bir",
+      "academicDegrees": "Akademik Derece",
+      "webGamesCounter": "Web Oyunu",
+      "articlesFollow": "Takip Et",
+      "interviewGuides": "Kapsamlı Rehber",
+      "allRightsReserved": "Tüm hakları saklıdır.",
+      "visit": "Ziyaret Et",
+      "techUsed": "Teknolojiler:",
+      "present": "Devam Ediyor",
+      "allFilter": "Tümü",
+      "expSubtitle": "Mesleki yolculuğum",
+      "expKicker": "~/deneyim",
+      "experienceCvNote": "Detaylı kariyer geçmişimi, teknik uzmanlıklarımı ve referanslarımı içeren güncel özgeçmişimi PDF olarak indirebilirsiniz.",
+      "expCurrent": "Aktif Görev",
+      "expSubProjects": "Alt Projeler",
+      "expResp": "Sorumluluklar",
+      "expTechUsed": "Kullanılan Teknolojiler",
+      "expLinks": "Bağlantılar",
+      "cvView": "CV Görüntüle",
+      "cvDownloadEn": "İngilizce CV İndir",
+      "cvDownloadTr": "Türkçe CV İndir",
+      "backHome": "Ana Sayfa",
+      "pageView": "Bölüm Sayfası",
+      "homeExploreTitle": "Profil Bölümlerini Keşfedin",
+      "homeExploreSubtitle": "İstediğiniz bölüme tıklayarak sayfa olarak açabilirsiniz"
+    }
+  },
+  "education": [
+    {
+      "id": "edu-msc",
+      "degree": {
+        "tr": "Yüksek Lisans — Bilgi Güvenliği",
+        "en": "Master's Degree — Information Security"
+      },
+      "school": {
+        "tr": "Hacettepe Üniversitesi",
+        "en": "Hacettepe University"
+      },
+      "period": {
+        "tr": "Ocak 2026 — Devam Ediyor",
+        "en": "Jan 2026 — Present"
+      },
+      "note": {
+        "tr": "Ocak 2026'da Hacettepe Üniversitesi'ne giriş yaptım; Bilgi Güvenliği alanında yüksek lisans eğitimime devam ediyorum.",
+        "en": "I started at Hacettepe University in January 2026 and continue my master's studies in Information Security."
+      },
+      "current": true
+    },
+    {
+      "id": "edu-karabuk",
+      "degree": {
+        "tr": "Bilgisayar Mühendisliği (Lisans)",
+        "en": "Computer Engineer (Bachelor Degree)"
+      },
+      "school": {
+        "tr": "Karabük Üniversitesi",
+        "en": "Karabük University"
+      },
+      "period": {
+        "tr": "2013 — 2017",
+        "en": "2013 — 2017"
+      },
+      "note": {
+        "tr": "Karabük Üniversitesi Bilgisayar Mühendisliği Bölümü'nde Bilgisayar Mühendisliği lisans eğitimi.",
+        "en": "Computer Engineering Bachelor Degree at Karabük University Department of Computer Engineering."
+      }
+    },
+    {
+      "id": "edu-anadolu",
+      "degree": {
+        "tr": "İktisat (Lisans)",
+        "en": "Economics (Bachelor Degree)"
+      },
+      "school": {
+        "tr": "Anadolu Üniversitesi",
+        "en": "Anadolu University"
+      },
+      "period": {
+        "tr": "2007 — 2012",
+        "en": "2007 — 2012"
+      },
+      "note": {
+        "tr": "Anadolu Üniversitesi İktisat Fakültesi'nde İktisat lisans eğitimi.",
+        "en": "Economics Bachelor Degree at Anadolu University Faculty of Economics."
+      }
+    },
+    {
+      "id": "edu-highschool",
+      "degree": {
+        "tr": "Lise",
+        "en": "High School"
+      },
+      "school": {
+        "tr": "Mimar Sinan Lisesi",
+        "en": "Mimar Sinan High School"
+      },
+      "period": {
+        "tr": "2003 — 2007",
+        "en": "2003 — 2007"
+      },
+      "note": {
+        "tr": "Mimar Sinan Lisesi'nde lise eğitimi.",
+        "en": "High school education at Mimar Sinan High School."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "id": "1",
+      "company": "SESASIS Bilgi Teknolojileri",
+      "position": "Full-Stack Developer & Java Developer at SGK",
+      "positionTr": "Full-Stack Developer & Java Developer — SGK",
+      "startDate": "04/2026",
+      "endDate": "Today",
+      "duration": "5 Months",
+      "responsibilities": [
+        "Work was done on a microservice project infrastructure.",
+        "Work was done on a renovation and transformation project.",
+        "Bug fixes, new features, and improvements were made in both the backend and frontend.",
+        "Analysis studies are being conducted regarding the modules. ER diagrams, workflow diagrams, research and development work are being carried out.",
+        "An end-to-end analysis of the inventory module is being conducted.",
+        "SQL scripts related to data transfer are being prepared.",
+        "AI-Assisted Development processes are applied.",
+        "LLM & Code Integration is performed."
+      ],
+      "responsibilitiesTr": [
+        "Mikroservis proje altyapısı üzerinde çalışıldı.",
+        "Yenileme ve dönüşüm projesinde çalışmalar gerçekleştirildi.",
+        "Hem backend hem de frontend tarafında hata düzeltmeleri, yeni özellikler ve geliştirmeler yapıldı.",
+        "Modüller ile ilgili analiz çalışmaları yürütülmektedir. ER diyagramları, iş akış diyagramları, araştırma ve geliştirme (Ar-Ge) çalışmaları gerçekleştirilmektedir.",
+        "Envanter modülü için uçtan uca analiz yürütülüyor.",
+        "Veri aktarımına ilişkin SQL scriptleri hazırlanıyor.",
+        "Yapay zeka destekli geliştirme (AI-Assisted Development) süreçleri uygulanmaktadır.",
+        "LLM ve kod entegrasyonları (LLM & Code Integration) gerçekleştirilmektedir."
+      ],
+      "toolsTechnologies": [
+        "Microservices",
+        "Java 25",
+        "Spring Boot",
+        "Security",
+        "JPA",
+        "Hibernate",
+        "Maven",
+        "PostgreSQL",
+        "Kafka",
+        "Redis",
+        "Mongo DB",
+        "Docker",
+        "Kubernetes",
+        "Argo CD",
+        "React Js",
+        "Vite js",
+        "Redux",
+        "Flyway",
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "Tailwind",
+        "Git",
+        "Jenkins",
+        "Jira",
+        "Confluence",
+        "SonarQube",
+        "Nginx",
+        "Linux Ubuntu server",
+        "Claude Code",
+        "Open Code / Open Source LLMs",
+        "NoteBook LLM",
+        "Antigravity"
+      ],
+      "companyTr": "SESASIS Bilgi Teknolojileri",
+      "durationTr": "5 Ay"
+    },
+    {
+      "id": "9",
+      "company": "Wixtory (Sole Proprietorship)",
+      "companyTr": "Wixtory (Şahıs Şirketi)",
+      "position": "Full Stack Engineer & Java & Python Developer",
+      "positionTr": "Full Stack Engineer & Java & Python Developer",
+      "employmentType": "Full-time",
+      "employmentTypeTr": "Tam Zamanlı",
+      "startDate": "01/2026",
+      "endDate": "Today",
+      "duration": "9 Months",
+      "responsibilities": [
+        "I am currently developing a few different mobile and web projects."
+      ],
+      "responsibilitiesTr": [
+        "Şu anda birkaç farklı mobil ve web projesi geliştiriyorum."
+      ],
+      "links": [
+        "https://www.wixtory.com/projects"
+      ],
+      "subProjects": [
+        {
+          "position": "Mobile App Developer (Android & iOS)",
+          "positionTr": "Mobil Uygulama Geliştiricisi (Android & iOS)",
+          "project": "Wixtory Language Box",
+          "projectTr": "Wixtory Language Box",
+          "startDate": "01/2026",
+          "endDate": "Today",
+          "duration": "9 Months",
+          "responsibilities": [
+            "I am currently developing the \"Wixtory Language Box\" mobile app for Android and iOS."
+          ],
+          "responsibilitiesTr": [
+            "\"Wixtory Language Box\" mobil uygulamasını Android ve iOS için geliştiriyorum."
+          ],
+          "links": [
+            {
+              "label": "Web Page",
+              "url": "https://language-box.wixtory.com/"
+            },
+            {
+              "label": "App Store",
+              "url": "https://apps.apple.com/tr/app/wixtory-language-box/id6761607811"
+            },
+            {
+              "label": "Google Play",
+              "url": "https://play.google.com/store/apps/details?id=com.wixbook.language_box"
+            }
+          ],
+          "toolsTechnologies": [
+            "Microservices",
+            "Java 21",
+            "Flutter (Dart)",
+            "Java",
+            "Spring Boot",
+            "Python",
+            "FastAPI",
+            "Mongo DB",
+            "Hibernate",
+            "JPA",
+            "Flask API",
+            "Docker",
+            "Nginx",
+            "Ubuntu Server",
+            "Copilot"
+          ],
+          "durationTr": "9 Ay",
+          "technologies": [
+            "Microservices",
+            "Java 21",
+            "Flutter (Dart)",
+            "Java",
+            "Spring Boot",
+            "Python",
+            "FastAPI",
+            "Mongo DB",
+            "Hibernate",
+            "JPA",
+            "Flask API",
+            "Docker",
+            "Nginx",
+            "Ubuntu Server",
+            "Copilot"
+          ]
+        },
+        {
+          "position": "Mobile App Developer (Android & iOS)",
+          "positionTr": "Mobil Uygulama Geliştiricisi (Android & iOS)",
+          "project": "Wixtory Domain Track",
+          "projectTr": "Wixtory Domain Track",
+          "startDate": "01/2026",
+          "endDate": "Today",
+          "duration": "9 Months",
+          "responsibilities": [
+            "I am currently developing the \"Wixtory Domain Track\" mobile app for Android and iOS."
+          ],
+          "responsibilitiesTr": [
+            "\"Wixtory Domain Track\" mobil uygulamasını Android ve iOS için geliştiriyorum."
+          ],
+          "links": [
+            {
+              "label": "Web Page",
+              "url": "https://domain-track.wixtory.com/"
+            },
+            {
+              "label": "App Store",
+              "url": "https://apps.apple.com/tr/app/wixtory-domain-track/id6790164419"
+            },
+            {
+              "label": "Google Play",
+              "url": "https://play.google.com/store/apps/details?id=com.wixtory.domain_track"
+            }
+          ],
+          "toolsTechnologies": [
+            "Flutter (Dart)",
+            "Java",
+            "Spring Boot",
+            "Security",
+            "Python",
+            "FastAPI",
+            "Mongo DB",
+            "Hibernate",
+            "JPA",
+            "Flask API",
+            "Docker",
+            "Nginx",
+            "Ubuntu Server",
+            "Copilot"
+          ],
+          "durationTr": "9 Ay",
+          "technologies": [
+            "Flutter (Dart)",
+            "Java",
+            "Spring Boot",
+            "Security",
+            "Python",
+            "FastAPI",
+            "Mongo DB",
+            "Hibernate",
+            "JPA",
+            "Flask API",
+            "Docker",
+            "Nginx",
+            "Ubuntu Server",
+            "Copilot"
+          ]
+        }
+      ],
+      "durationTr": "9 Ay"
+    },
+    {
+      "id": "2",
+      "company": "FMSS Bilisim Teknoloji",
+      "position": "Full-Stack Developer & Java Developer at PAYCELL",
+      "positionTr": "Full-Stack Developer & Java Developer — PAYCELL",
+      "startDate": "06/2024",
+      "endDate": "04/2025",
+      "duration": "11 Months",
+      "responsibilities": [
+        "This project is about money transfer",
+        "Worked in Microservices projects and monolithic project",
+        "Bug fixes, new features created on the frontend and backend, new improvements made on existing features",
+        "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in 2 microservices"
+      ],
+      "responsibilitiesTr": [
+        "Para transferi konulu projede çalıştım",
+        "Mikroservis ve monolitik projelerde çalıştım",
+        "Frontend ve backend'de hata düzeltmeleri, yeni özellikler ve mevcut özelliklerde iyileştirmeler yaptım",
+        "2 mikroserviste Spring Boot sürümünü 2'den 3'e, Java sürümünü 11'den 17'ye yükselttim"
+      ],
+      "toolsTechnologies": [
+        "Microservices",
+        "Java 11-17",
+        "Spring Boot",
+        "Security",
+        "JPA",
+        "Hibernate",
+        "Maven",
+        "Oracle",
+        "Kafka",
+        "Redis",
+        "Docker",
+        "OpenShift",
+        "React Js",
+        "HTML",
+        "CSS",
+        "Git",
+        "Jenkins",
+        "Jira",
+        "Confluence"
+      ],
+      "companyTr": "FMSS Bilisim Teknoloji",
+      "durationTr": "11 Ay"
+    },
+    {
+      "id": "3",
+      "company": "Orion BT",
+      "position": "Full-Stack Developer & Java Developer",
+      "positionTr": "Full-Stack Developer & Java Developer",
+      "project": "Vodafone E-Commerce Project & Ministry of Interior Project",
+      "projectTr": "Vodafone E-Ticaret Projesi & İçişleri Bakanlığı Projesi",
+      "startDate": "04/2022",
+      "endDate": "06/2024",
+      "duration": "2 Years 4 Months",
+      "responsibilities": [],
+      "toolsTechnologies": [],
+      "subProjects": [
+        {
+          "position": "Full-Stack Developer & Java Developer at VODAFONE",
+          "positionTr": "Full-Stack Developer & Java Developer — VODAFONE",
+          "project": "Vodafone E-Commerce Project",
+          "projectTr": "Vodafone E-Ticaret Projesi",
+          "startDate": "04/2022",
+          "endDate": "06/2024",
+          "duration": "2 Years 4 Months",
+          "responsibilities": [
+            "Upgrading Spring boot version to 3 from 2, Java version to Java 17 from Java 11 in some microservices",
+            "Working in Microservices projects",
+            "Creating common general library and common authorization library for Java microservices",
+            "Bug fixes, new features created on the frontend and backend",
+            "Using Feign Client for inter-microservice communication",
+            "Usage of Junit and Mockito for unit tests",
+            "Using Git, Jira and Confluence for project tracking"
+          ],
+          "responsibilitiesTr": [
+            "Bazı mikroservislerde Spring Boot sürümünü 2'den 3'e, Java sürümünü 11'den 17'ye yükseltme",
+            "Mikroservis projelerinde çalışma",
+            "Java mikroservisleri için ortak genel kütüphane ve ortak yetkilendirme kütüphanesi oluşturma",
+            "Frontend ve backend'de hata düzeltmeleri, yeni özellikler geliştirme",
+            "Mikroservisler arası iletişim için Feign Client kullanma",
+            "Birim testleri için Junit ve Mockito kullanma",
+            "Proje takibi için Git, Jira ve Confluence kullanma"
+          ],
+          "toolsTechnologies": [
+            "Microservices Architecture",
+            "Java",
+            "Spring Boot",
+            "Gradle",
+            "MongoDB",
+            "React.js",
+            "Kubernetes",
+            "Lens",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Hystrix",
+            "JIRA",
+            "Git",
+            "GitHub",
+            "Argo CD",
+            "Redis",
+            "Apache Kafka",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Jenkins"
+          ],
+          "durationTr": "2 Yıl 4 Ay",
+          "technologies": [
+            "Microservices Architecture",
+            "Java",
+            "Spring Boot",
+            "Gradle",
+            "MongoDB",
+            "React.js",
+            "Kubernetes",
+            "Lens",
+            "Spring Data",
+            "Spring MVC",
+            "Spring Hystrix",
+            "JIRA",
+            "Git",
+            "GitHub",
+            "Argo CD",
+            "Redis",
+            "Apache Kafka",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Jenkins"
+          ]
+        },
+        {
+          "position": "Full-Stack Developer & Java Developer for the Ministry of Interior",
+          "positionTr": "Full-Stack Developer & Java Developer — İçişleri Bakanlığı",
+          "project": "Ministry of Interior Project",
+          "projectTr": "İçişleri Bakanlığı Projesi",
+          "startDate": "04/2022",
+          "endDate": "06/2024",
+          "duration": "2 Years 2 Months",
+          "responsibilities": [
+            "Building authorization system on frontend and backend",
+            "Working in Microservices projects",
+            "Bug fixes and new feature development",
+            "Creating microservices with Spring Boot and Redis Graph",
+            "Creating Kafka microservice to push data periodically from database",
+            "Changing main module template in frontend",
+            "Using PL/SQL triggers and procedures for listener services",
+            "Using Git and Redmine for task tracking"
+          ],
+          "responsibilitiesTr": [
+            "Frontend ve backend'de yetkilendirme sistemi kurma",
+            "Mikroservis projelerinde çalışma",
+            "Hata düzeltmeleri ve yeni özellik geliştirme",
+            "Spring Boot ve Redis Graph ile mikroservis oluşturma",
+            "Veritabanından periyodik veri itmek için Kafka mikroservisi oluşturma",
+            "Frontend'de ana modül şablonunu değiştirme",
+            "Listener servisleri için PL/SQL trigger ve procedure kullanma",
+            "Görev takibi için Git ve Redmine kullanma"
+          ],
+          "toolsTechnologies": [
+            "Microservices Architecture",
+            "Java 8-11",
+            "Spring Boot",
+            "Security",
+            "JPA",
+            "Hibernate",
+            "MongoDB",
+            "PostgreSQL",
+            "Apache Kafka",
+            "Liquibase",
+            "Redis Graph",
+            "Rancher",
+            "Docker",
+            "Kubernetes",
+            "React Js",
+            "Context API",
+            "HTML",
+            "CSS",
+            "Bootstrap 4",
+            "Git",
+            "Redmine",
+            "Linux",
+            "Jenkins"
+          ],
+          "durationTr": "2 Yıl 2 Ay",
+          "technologies": [
+            "Microservices Architecture",
+            "Java 8-11",
+            "Spring Boot",
+            "Security",
+            "JPA",
+            "Hibernate",
+            "MongoDB",
+            "PostgreSQL",
+            "Apache Kafka",
+            "Liquibase",
+            "Redis Graph",
+            "Rancher",
+            "Docker",
+            "Kubernetes",
+            "React Js",
+            "Context API",
+            "HTML",
+            "CSS",
+            "Bootstrap 4",
+            "Git",
+            "Redmine",
+            "Linux",
+            "Jenkins"
+          ]
+        }
+      ],
+      "companyTr": "Orion BT",
+      "durationTr": "2 Yıl 4 Ay"
+    },
+    {
+      "id": "4",
+      "company": "OBSS",
+      "position": "Full Stack Developer & Java Software Engineer in ASELSAN",
+      "positionTr": "Full Stack Developer & Java Software Engineer — ASELSAN",
+      "startDate": "08/2021",
+      "endDate": "03/2022",
+      "duration": "6 Months",
+      "responsibilities": [
+        "Working at ASELSAN project for OBSS",
+        "Working in Microservices projects",
+        "Bug fixes and new feature development",
+        "Map drawing operations using third-party services",
+        "Using Git as version control",
+        "Using TFS and Jira for task management"
+      ],
+      "responsibilitiesTr": [
+        "OBSS için ASELSAN projesinde çalışıyorum",
+        "Mikroservis projelerinde çalışıyorum",
+        "Hata düzeltmeleri ve yeni özellik geliştirme",
+        "Üçüncü taraf servisler kullanarak harita çizim işlemleri",
+        "Versiyon kontrol olarak Git kullanıyorum",
+        "Görev yönetimi için TFS ve Jira kullanıyorum"
+      ],
+      "toolsTechnologies": [
+        "Microservices Architecture",
+        "Java 11",
+        "Maven",
+        "Spring Boot",
+        "Docker",
+        "Kubernetes",
+        "TFS",
+        "Release Builder",
+        "Flyway",
+        "JavaScript",
+        "React JS",
+        "Mobx",
+        "Hibernate",
+        "Git",
+        "PostgreSQL",
+        "Apache Kafka",
+        "HTML",
+        "CSS"
+      ],
+      "companyTr": "OBSS",
+      "durationTr": "6 Ay"
+    },
+    {
+      "id": "5",
+      "company": "VİA Bilgisayar Sistemleri",
+      "position": "Full Stack Developer & Java Software Engineer",
+      "positionTr": "Full Stack Developer & Java Software Engineer",
+      "startDate": "10/2020",
+      "endDate": "06/2021",
+      "duration": "8 Months",
+      "responsibilities": [
+        "Developed order management system for pharmaceutical warehouse",
+        "Created jar management and Git architecture",
+        "Implemented authentication and authorization in frontend and backend",
+        "Implemented member registration and login system",
+        "Integrated UI theme into project",
+        "Developed modules for Export, Campaign Drug, Packaging, Accounting and Logistics"
+      ],
+      "responsibilitiesTr": [
+        "Eczane deposu için sipariş yönetim sistemi geliştirdim",
+        "Jar yönetimi ve Git mimarisi oluşturdum",
+        "Frontend ve backend'de kimlik doğrulama ve yetkilendirme uyguladım",
+        "Üye kayıt ve giriş sistemi geliştirdim",
+        "UI temasını projeye entegre ettim",
+        "İhracat, Kampanya İlacı, Paketleme, Muhasebe ve Lojistik modülleri geliştirdim"
+      ],
+      "toolsTechnologies": [
+        "Java 1.8",
+        "Maven",
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data",
+        "Hibernate",
+        "JPA",
+        "React JS",
+        "Redux",
+        "HTML",
+        "CSS",
+        "Bootstrap 4",
+        "Material UI",
+        "Git",
+        "PostgreSQL",
+        "Bitbucket"
+      ],
+      "companyTr": "VİA Bilgisayar Sistemleri",
+      "durationTr": "8 Ay"
+    },
+    {
+      "id": "6",
+      "company": "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
+      "position": "Java Software Engineer",
+      "positionTr": "Java Software Engineer",
+      "startDate": "12/2019",
+      "endDate": "07/2020",
+      "duration": "8 Months",
+      "responsibilities": [
+        "Adding new screens and features to modules",
+        "Bug fixes and feature improvements",
+        "Integration and design of Jasper Reports",
+        "Building R&D project about web push notification"
+      ],
+      "responsibilitiesTr": [
+        "Modüllere yeni ekranlar ve özellikler ekleme",
+        "Hata düzeltmeleri ve özellik iyileştirmeleri",
+        "Jasper Reports entegrasyonu ve tasarımı",
+        "Web push notification hakkında Ar-Ge projesi geliştirme"
+      ],
+      "toolsTechnologies": [
+        "Java",
+        "Spring",
+        "Spring Boot",
+        "JDBC",
+        "Hibernate",
+        "Swing",
+        "Maven",
+        "Mercurial",
+        "Oracle",
+        "DB2",
+        "Python",
+        "iReport"
+      ],
+      "companyTr": "ERC Mühendislik Danışmanlık ve ARGE Hizmetleri",
+      "durationTr": "8 Ay"
+    },
+    {
+      "id": "7",
+      "company": "Tesla Otomasyon Mühendislik",
+      "position": "Engineering Intern",
+      "positionTr": "Mühendislik Stajyeri",
+      "startDate": "08/2016",
+      "endDate": "09/2016",
+      "duration": "1 Month",
+      "location": "Ankara, Turkey",
+      "responsibilities": [
+        "A job tracking system, including the membership system, where the contents of the work done and to be done are explained, has been made."
+      ],
+      "responsibilitiesTr": [
+        "Yapılan ve yapılacak işlerin içeriklerinin açıklandığı, üyelik sistemi de dahil olmak üzere bir iş takip sistemi geliştirildi."
+      ],
+      "toolsTechnologies": [
+        "Java",
+        "Spring Boot",
+        "Hibernate/ORM",
+        "Thymeleaf",
+        "Bootstrap 3",
+        "HTML5",
+        "CSS3",
+        "MySQL"
+      ],
+      "companyTr": "Tesla Otomasyon Mühendislik",
+      "durationTr": "1 Ay",
+      "locationTr": "Ankara, Türkiye"
+    },
+    {
+      "id": "8",
+      "company": "Havelsan Teknoloji Radar",
+      "position": "R&D Engineering Intern",
+      "positionTr": "Ar-Ge Mühendislik Stajyeri",
+      "startDate": "07/2016",
+      "endDate": "08/2016",
+      "duration": "1 Month",
+      "location": "Ankara, Turkey",
+      "responsibilities": [
+        "Presentation and management of the coordinates received over the security camera network on Google maps.",
+        "The process of collecting data from sensors via SNMP with Java, Swing and presenting this data on a graph was carried out."
+      ],
+      "responsibilitiesTr": [
+        "Güvenlik kamerası ağı üzerinden alınan koordinatların Google Map üzerinde sunumu ve yönetimi sağlandı.",
+        "Java ve Swing kullanılarak sensörlerden SNMP protokolü üzerinden veri toplama ve bu verileri grafik üzerinde sunma süreci gerçekleştirildi."
+      ],
+      "toolsTechnologies": [
+        "JavaSE",
+        "Swing",
+        "PHP",
+        "PostgreSQL",
+        "Google Maps API",
+        "SNMP",
+        "JFreeChart"
+      ],
+      "companyTr": "Havelsan Teknoloji Radar",
+      "durationTr": "1 Ay",
+      "locationTr": "Ankara, Türkiye"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "name": "Wixtory: Language Box",
+      "short_description": {
+        "tr": "App Store & Google Play'de yayında",
+        "en": "Published on App Store & Google Play"
+      },
+      "long_description": {
+        "tr": "İnteraktif egzersizler ve quizlerle dil öğrenme uygulaması.",
+        "en": "A language learning app with interactive exercises and quizzes."
+      },
+      "type": "app",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Java",
+        "Spring Boot",
+        "JPA",
+        "Hibernate",
+        "MongoDB",
+        "Nginx",
+        "Ubuntu Server",
+        "Docker",
+        "REST API",
+        "Spring Security",
+        "JWT",
+        "Python",
+        "FastAPI"
+      ],
+      "url": "https://language-box.wixtory.com/",
+      "image_url": "https://raw.githubusercontent.com/celalaygar/main/refs/heads/main/project/language-box/Language-Box-Logo.png",
+      "featured": true,
+      "year": "2024",
+      "appStoreUrl": "https://apps.apple.com/tr/app/wixtory-language-box/id6761607811",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.wixbook.language_box"
+    },
+    {
+      "id": "2",
+      "name": "Wixtory Domain Track",
+      "short_description": {
+        "tr": "App Store & Google Play'de yayında",
+        "en": "Published on App Store & Google Play"
+      },
+      "long_description": {
+        "tr": "Uygun alan adını kolayca bulun.",
+        "en": "Find Your Perfect Domain With Ease."
+      },
+      "type": "app",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Java",
+        "Spring Boot",
+        "JPA",
+        "Hibernate",
+        "MongoDB",
+        "Nginx",
+        "Ubuntu Server",
+        "Docker",
+        "REST API",
+        "Spring Security",
+        "JWT",
+        "Python",
+        "FastAPI"
+      ],
+      "url": "https://domain-track.wixtory.com/",
+      "image_url": "https://raw.githubusercontent.com/celalaygar/main/refs/heads/main/project/wixtory-domain-track/domain-track-logo.png",
+      "featured": true,
+      "year": "2025",
+      "appStoreUrl": "https://apps.apple.com/tr/app/wixtory-domain-track/id6790164419",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.wixtory.domain_track"
+    },
+    {
+      "id": "3",
+      "name": "Wixtory Software Development",
+      "short_description": {
+        "tr": "Web sitesinde yayında",
+        "en": "Published on Website"
+      },
+      "long_description": {
+        "tr": "Wixtory.com resmi web sitesi. Çeşitli yazılım geliştirme hizmetleri sunar.",
+        "en": "The official website of Wixtory. Offers various software development services."
+      },
+      "type": "web",
+      "technologies": [
+        "Next Js",
+        "Tailwind CSS",
+        "Radix UI",
+        "TypeScript",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "JPA",
+        "Hibernate",
+        "MongoDB",
+        "Nginx",
+        "Ubuntu Server",
+        "Docker"
+      ],
+      "url": "https://wixtory.com",
+      "image_url": "https://raw.githubusercontent.com/celalaygar/main/refs/heads/main/project/wixtory/logo.png",
+      "featured": true,
+      "year": "2023"
+    },
+    {
+      "id": "4",
+      "name": "Job Ts",
+      "short_description": {
+        "tr": "Web sitesinde yayında",
+        "en": "Published on Website"
+      },
+      "long_description": {
+        "tr": "İş takip sistemi. Kullanıcıların işlerini kolayca takip etmelerini sağlar.",
+        "en": "Job tracking system. Helps users track their tasks and projects efficiently."
+      },
+      "type": "web",
+      "technologies": [
+        "Next Js",
+        "Tailwind CSS",
+        "Radix UI",
+        "TypeScript",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "JPA",
+        "Hibernate",
+        "MongoDB",
+        "Nginx",
+        "Ubuntu Server",
+        "Docker"
+      ],
+      "url": "https://jobts.probablythebestever.info/",
+      "image_url": "https://raw.githubusercontent.com/celalaygar/main/refs/heads/main/project/job-tracking-system-v2/job-ts-9.png",
+      "featured": true,
+      "year": "2024"
+    },
+    {
+      "id": "10",
+      "name": "celalaygar.com",
+      "short_description": {
+        "tr": "Kişisel web sayfası",
+        "en": "Personal Web Page"
+      },
+      "long_description": {
+        "tr": "Kişisel bilgilerimi, blog yazılarımı ve projelerimi paylaştığım kişisel web sitem.",
+        "en": "My personal website where I share information about my personal details, blog posts, and projects."
+      },
+      "type": "web",
+      "technologies": [
+        "Next Js",
+        "Tailwind CSS",
+        "Radix UI",
+        "TypeScript",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "JPA",
+        "Hibernate",
+        "MongoDB",
+        "Nginx",
+        "Ubuntu Server",
+        "Docker"
+      ],
+      "url": "https://celalaygar.com",
+      "image_url": "https://avatars.githubusercontent.com/u/11775341?v=4",
+      "featured": true,
+      "year": "2023"
+    }
+  ],
+  "games": [
+    {
+      "id": "19",
+      "name": "Tower Defense 1",
+      "short_description": {
+        "tr": "Tower Defense Oyunu",
+        "en": "Tower Defense Game"
+      },
+      "long_description": {
+        "tr": "Üssünüzü düşman dalgalarından koruyun. Stratejik kule savunma oyunu.",
+        "en": "Strategic tower defense game where you protect your base from waves of enemies."
+      },
+      "url": "https://celalaygar.github.io/main/game/tower-defense-1/",
+      "category": {
+        "tr": "Strateji",
+        "en": "Strategy"
+      },
+      "icon": "fa-shield-halved",
+      "accent": "from-blue-600 to-indigo-700"
+    },
+    {
+      "id": "20",
+      "name": "Tower Defense 2",
+      "short_description": {
+        "tr": "Tower Defense Oyunu 2",
+        "en": "Tower Defense Game 2"
+      },
+      "long_description": {
+        "tr": "Yeni kuleler, düşmanlar ve zorlu seviyelerle gelişmiş tower defense.",
+        "en": "Advanced tower defense with new towers, enemies and challenging levels."
+      },
+      "url": "https://celalaygar.github.io/main/game/tower-defense-2/",
+      "category": {
+        "tr": "Strateji",
+        "en": "Strategy"
+      },
+      "icon": "fa-fort-awesome",
+      "accent": "from-indigo-600 to-purple-700"
+    },
+    {
+      "id": "1",
+      "name": "Snake Game",
+      "short_description": {
+        "tr": "Snake Game",
+        "en": "Snake Game"
+      },
+      "long_description": {
+        "tr": "Modern grafikler ve akıcı kontrollerle klasik yılan oyunu.",
+        "en": "Classic snake game with modern graphics and smooth controls."
+      },
+      "url": "https://celalaygar.github.io/main/game/snake-game/",
+      "category": {
+        "tr": "Klasik",
+        "en": "Classic"
+      },
+      "icon": "fa-staff-snake",
+      "accent": "from-green-600 to-emerald-700"
+    },
+    {
+      "id": "2",
+      "name": "Flappy Bird",
+      "short_description": {
+        "tr": "Flappy Bird",
+        "en": "Flappy Bird"
+      },
+      "long_description": {
+        "tr": "Bu bağımlılık yapan uçuş oyununda engellerden geçin.",
+        "en": "Navigate through obstacles in this addictive flying game."
+      },
+      "url": "https://celalaygar.github.io/main/game/flappy-bird-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-dove",
+      "accent": "from-amber-500 to-yellow-600"
+    },
+    {
+      "id": "3",
+      "name": "Tetris",
+      "short_description": {
+        "tr": "Tetris",
+        "en": "Tetris"
+      },
+      "long_description": {
+        "tr": "Modern dokunuşlarla klasik blok istifleme bulmaca oyunu.",
+        "en": "Classic block-stacking puzzle game with modern twist."
+      },
+      "url": "https://celalaygar.github.io/main/game/tetris-game/",
+      "category": {
+        "tr": "Bulmaca",
+        "en": "Puzzle"
+      },
+      "icon": "fa-cubes",
+      "accent": "from-cyan-600 to-blue-700"
+    },
+    {
+      "id": "4",
+      "name": "Pac Man",
+      "short_description": {
+        "tr": "Pac Man",
+        "en": "Pac Man"
+      },
+      "long_description": {
+        "tr": "Labirentte gezin, noktaları yiyin ve hayaletlerden kaçının.",
+        "en": "Navigate the maze, eat dots, and avoid ghosts in this classic."
+      },
+      "url": "https://celalaygar.github.io/main/game/pac-man/",
+      "category": {
+        "tr": "Klasik",
+        "en": "Classic"
+      },
+      "icon": "fa-ghost",
+      "accent": "from-yellow-500 to-amber-600"
+    },
+    {
+      "id": "5",
+      "name": "Break Out",
+      "short_description": {
+        "tr": "Break Out",
+        "en": "Break Out"
+      },
+      "long_description": {
+        "tr": "Blokları kırın ve yüksek puan kazanın.",
+        "en": "Break blocks and score high points."
+      },
+      "url": "https://celalaygar.github.io/main/game/breakout-game/",
+      "category": {
+        "tr": "Klasik",
+        "en": "Classic"
+      },
+      "icon": "fa-grip",
+      "accent": "from-rose-600 to-pink-700"
+    },
+    {
+      "id": "6",
+      "name": "Scrambled Word Game",
+      "short_description": {
+        "tr": "Karışık Kelime Oyunu",
+        "en": "Scrambled Word Game"
+      },
+      "long_description": {
+        "tr": "Karışık harflerden doğru kelimeleri oluşturun.",
+        "en": "Form correct words from mixed letters."
+      },
+      "url": "https://celalaygar.github.io/main/game/scrambled-word-game/",
+      "category": {
+        "tr": "Kelime",
+        "en": "Word"
+      },
+      "icon": "fa-font",
+      "accent": "from-teal-600 to-emerald-700"
+    },
+    {
+      "id": "7",
+      "name": "2048 Game",
+      "short_description": {
+        "tr": "2048 Oyunu",
+        "en": "2048 Game"
+      },
+      "long_description": {
+        "tr": "Sayıları birleştirerek 2048'e ulaşmaya çalışın.",
+        "en": "Try to reach 2048 by combining numbers."
+      },
+      "url": "https://celalaygar.github.io/main/game/2048-game/",
+      "category": {
+        "tr": "Bulmaca",
+        "en": "Puzzle"
+      },
+      "icon": "fa-square-binary",
+      "accent": "from-orange-500 to-red-600"
+    },
+    {
+      "id": "8",
+      "name": "Simon Says",
+      "short_description": {
+        "tr": "Simon Says",
+        "en": "Simon Says"
+      },
+      "long_description": {
+        "tr": "Hafızanızı test edin ve renk sırasını tekrarlayın.",
+        "en": "Test your memory and repeat the color sequence."
+      },
+      "url": "https://celalaygar.github.io/main/game/simon-says-game/",
+      "category": {
+        "tr": "Hafıza",
+        "en": "Memory"
+      },
+      "icon": "fa-brain",
+      "accent": "from-violet-600 to-purple-700"
+    },
+    {
+      "id": "9",
+      "name": "Endless Runner",
+      "short_description": {
+        "tr": "Endless Runner",
+        "en": "Endless Runner"
+      },
+      "long_description": {
+        "tr": "Engellerden kaçarak sürekli koşun.",
+        "en": "Keep running by avoiding obstacles."
+      },
+      "url": "https://celalaygar.github.io/main/game/endless-runne-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-person-running",
+      "accent": "from-sky-600 to-blue-700"
+    },
+    {
+      "id": "10",
+      "name": "Missing Word Game",
+      "short_description": {
+        "tr": "Cümlede Eksik Kelime Oyunu",
+        "en": "Missing Word Game in Sentence"
+      },
+      "long_description": {
+        "tr": "Cümledeki eksik kelimeyi bularak dil becerilerinizi geliştirin.",
+        "en": "Improve your language skills by finding the missing word in the sentence."
+      },
+      "url": "https://celalaygar.github.io/main/game/missing-word-game-in-sentence/",
+      "category": {
+        "tr": "Kelime",
+        "en": "Word"
+      },
+      "icon": "fa-magnifying-glass",
+      "accent": "from-indigo-500 to-blue-600"
+    },
+    {
+      "id": "11",
+      "name": "Sentence Builder Game",
+      "short_description": {
+        "tr": "Cümle Kurma Oyunu",
+        "en": "Sentence Builder Game"
+      },
+      "long_description": {
+        "tr": "Kelimeleri doğru sıraya koyarak anlamlı cümleler oluşturun.",
+        "en": "Create meaningful sentences by putting words in the correct order."
+      },
+      "url": "https://celalaygar.github.io/main/game/sentence-builder-game/",
+      "category": {
+        "tr": "Kelime",
+        "en": "Word"
+      },
+      "icon": "fa-spell-check",
+      "accent": "from-emerald-600 to-teal-700"
+    },
+    {
+      "id": "12",
+      "name": "Tic Tac Toe",
+      "short_description": {
+        "tr": "X-O Oyunu",
+        "en": "X-O Game"
+      },
+      "long_description": {
+        "tr": "Klasik X-O oyununda rakibinizi yenin.",
+        "en": "Beat your opponent in the classic X-O game."
+      },
+      "url": "https://celalaygar.github.io/main/game/tic-tac-toe-game/",
+      "category": {
+        "tr": "Strateji",
+        "en": "Strategy"
+      },
+      "icon": "fa-xmarks-lines",
+      "accent": "from-blue-700 to-slate-800"
+    },
+    {
+      "id": "13",
+      "name": "Asteroids",
+      "short_description": {
+        "tr": "Asteroids",
+        "en": "Asteroids"
+      },
+      "long_description": {
+        "tr": "Asteroidleri yok ederek uzayda hayatta kalın.",
+        "en": "Survive in space by destroying asteroids."
+      },
+      "url": "https://celalaygar.github.io/main/game/asteroids-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-meteor",
+      "accent": "from-stone-700 to-neutral-900"
+    },
+    {
+      "id": "14",
+      "name": "Space Invaders",
+      "short_description": {
+        "tr": "Space Invaders",
+        "en": "Space Invaders"
+      },
+      "long_description": {
+        "tr": "Dünyayı uzaylılardan korumak için savaşın.",
+        "en": "Fight to protect Earth from aliens."
+      },
+      "url": "https://celalaygar.github.io/main/game/space-invaders-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-shuttle-space",
+      "accent": "from-violet-700 to-slate-900"
+    },
+    {
+      "id": "15",
+      "name": "Helicopter",
+      "short_description": {
+        "tr": "Helikopter Oyunu",
+        "en": "Helicopter Game"
+      },
+      "long_description": {
+        "tr": "Helikopteri kontrol edin ve engellerden kaçının.",
+        "en": "Control the helicopter and avoid obstacles."
+      },
+      "url": "https://celalaygar.github.io/main/game/helicopter-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-helicopter",
+      "accent": "from-amber-600 to-orange-700"
+    },
+    {
+      "id": "16",
+      "name": "Platform Jumper Game",
+      "short_description": {
+        "tr": "Platform Zıplama Oyunu",
+        "en": "Platform Jumper Game"
+      },
+      "long_description": {
+        "tr": "Platformlar arasında atlayarak yükselmeye çalışın.",
+        "en": "Try to rise by jumping between platforms."
+      },
+      "url": "https://celalaygar.github.io/main/game/platform-jumper-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-arrows-up-to-line",
+      "accent": "from-lime-600 to-green-700"
+    },
+    {
+      "id": "17",
+      "name": "Tower Blocks Game",
+      "short_description": {
+        "tr": "Tower Blocks Oyunu",
+        "en": "Tower Blocks Game"
+      },
+      "long_description": {
+        "tr": "Blokları istifleyerek en yüksek kuleyi inşa edin.",
+        "en": "Build the highest tower by stacking blocks."
+      },
+      "url": "https://celalaygar.github.io/main/game/tower-blocks-game/",
+      "category": {
+        "tr": "Beceri",
+        "en": "Arcade"
+      },
+      "icon": "fa-building",
+      "accent": "from-blue-600 to-cyan-700"
+    },
+    {
+      "id": "18",
+      "name": "Word Search Game",
+      "short_description": {
+        "tr": "Kelime Bulma Oyunu",
+        "en": "Word Search Game"
+      },
+      "long_description": {
+        "tr": "Harf ızgarasında gizli kelimeleri bulun.",
+        "en": "Find hidden words in the letter grid."
+      },
+      "url": "https://celalaygar.github.io/main/game/word-search-game/",
+      "category": {
+        "tr": "Kelime",
+        "en": "Word"
+      },
+      "icon": "fa-table-cells",
+      "accent": "from-purple-600 to-pink-700"
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "title": {
+        "tr": "Mikroservislerde Yarış Koşulu (Race Condition)",
+        "en": "Race Condition in Microservices"
+      },
+      "short_description": {
+        "tr": "Monolitik sistemlerde synchronized veya ReentrantLock ile JVM seviyesinde kaynakları koruyabiliriz. Mikroservislerde ise dağıtık kilitler gereklidir.",
+        "en": "In monolithic systems, we protect resources with synchronized or ReentrantLock. In microservices, distributed locks are required."
+      },
+      "link": "https://medium.com/@celalaygar/mikroservislerde-yarış-koşulu-race-condition-cbe487450fea",
+      "category": "Microservices",
+      "date": "2024"
+    },
+    {
+      "id": "2",
+      "title": {
+        "tr": "Kafka ile \"Transactional Outbox Pattern\" ve Veri Tutarlılığı",
+        "en": "Transactional Outbox Pattern with Kafka & Data Consistency"
+      },
+      "short_description": {
+        "tr": "Transactional Outbox Pattern ve Debezium ile mikroservisler arasında %100 güvenilir veri tutarlılığı sağlama.",
+        "en": "Ensuring 100% reliable data consistency between microservices using Transactional Outbox Pattern and Debezium."
+      },
+      "link": "https://medium.com/@celalaygar/kafka-ile-transactional-outbox-pattern-ve-veri-tutarlılığı-1011f2eed084",
+      "category": "Kafka",
+      "date": "2024"
+    },
+    {
+      "id": "3",
+      "title": {
+        "tr": "Virtual Threads ve Spring Boot'ta Kullanımı",
+        "en": "Virtual Threads and Their Usage in Spring Boot"
+      },
+      "short_description": {
+        "tr": "Java 21 ile gelen sanal iş parçacıklarının geleneksel thread modellerine göre üstünlükleri ve Spring Boot konfigürasyonu.",
+        "en": "Advantages of Java 21 Virtual Threads over platform threads and practical Spring Boot configuration."
+      },
+      "link": "https://medium.com/@celalaygar/virtual-threads-sanal-i̇ş-parçacıkları-ve-spring-bootta-kullanımı-d06be37de8f5",
+      "category": "Spring Boot",
+      "date": "2024"
+    },
+    {
+      "id": "4",
+      "title": {
+        "tr": "Dinamik İstek Gövdeleri (Dynamic Request Bodies) Spring Boot",
+        "en": "Dynamic Request Bodies in Spring Boot"
+      },
+      "short_description": {
+        "tr": "Spring Boot uygulamasında tek REST endpoint üzerinden gelen içeriğe göre polimorfik JSON deserialization.",
+        "en": "Polymorphic JSON deserialization into different Java classes on a single REST endpoint in Spring Boot."
+      },
+      "link": "https://medium.com/@celalaygar/dinamik-i̇stek-gövdeleri-dynamic-request-bodies-spring-boot-7f2a13f2710b",
+      "category": "Spring Boot",
+      "date": "2024"
+    },
+    {
+      "id": "5",
+      "title": {
+        "tr": "Spring Boot: Spring MVC ve WebFlux Arasındaki Farklar",
+        "en": "Spring Boot: Differences Between Spring MVC and WebFlux"
+      },
+      "short_description": {
+        "tr": "Geleneksel imperative Spring MVC mimarisi ile reactive non-blocking WebFlux mimarisinin detaylı karşılaştırması.",
+        "en": "Detailed comparison between traditional imperative Spring MVC and reactive non-blocking WebFlux architecture."
+      },
+      "link": "https://medium.com/@celalaygar/spring-boot-spring-mvc-ve-webflux-arasındaki-farklar-158d1fb1b5a8",
+      "category": "Spring Boot",
+      "date": "2024"
+    },
+    {
+      "id": "6",
+      "title": {
+        "tr": "Spring Boot ve Hystrix kullanımı",
+        "en": "Using Spring Boot with Hystrix"
+      },
+      "short_description": {
+        "tr": "Hystrix circuit breaker ile mikroservislerde zincirleme çöküşlerin önüne geçilmesi ve fallback mekanizmaları.",
+        "en": "Preventing cascading failures in microservices and setting fallback mechanisms with Hystrix Circuit Breaker."
+      },
+      "link": "https://medium.com/@celalaygar/spring-boot-ve-hystrix-kullanımı-0bbe9a3a48f7",
+      "category": "Spring Boot",
+      "date": "2024"
+    },
+    {
+      "id": "7",
+      "title": {
+        "tr": "MongoDB'de normalizasyon ve denormalizasyon",
+        "en": "Normalization and Denormalization in MongoDB"
+      },
+      "short_description": {
+        "tr": "MongoDB NoSQL mimarisinde veri modelleme stratejileri: Gömülü belgeler vs referanslı yapılar.",
+        "en": "Data modeling strategies in MongoDB NoSQL: Embedded documents vs referenced structures."
+      },
+      "link": "https://medium.com/@celalaygar/mongodbde-normalizasyon-ve-denormalizasyon-d9d0ad46c3a1",
+      "category": "MongoDB",
+      "date": "2024"
+    },
+    {
+      "id": "8",
+      "title": {
+        "tr": "SQL'de normalizasyon nedir?",
+        "en": "What is Normalization in SQL?"
+      },
+      "short_description": {
+        "tr": "1NF, 2NF, 3NF ve BCNF normalizasyon kuralları ile veri tekrarını ve anormallikleri ortadan kaldırma.",
+        "en": "Eliminating redundancy and anomalies through 1NF, 2NF, 3NF and BCNF normalization forms."
+      },
+      "link": "https://medium.com/@celalaygar/sqlde-normalizasyon-nedir-5a2b177e9e10",
+      "category": "SQL",
+      "date": "2024"
+    },
+    {
+      "id": "9",
+      "title": {
+        "tr": "PostgreSql de UNION ve UNION ALL kullanımı ve farkları",
+        "en": "UNION vs UNION ALL in PostgreSQL: Usage and Differences"
+      },
+      "short_description": {
+        "tr": "PostgreSQL sorgularında UNION ile UNION ALL arasındaki performans, tekilleştirme ve yürütme planı farkları.",
+        "en": "Performance, deduplication and execution plan differences between UNION and UNION ALL in PostgreSQL queries."
+      },
+      "link": "https://medium.com/@celalaygar/postgresql-de-union-ve-union-all-kullanımı-ve-arasındaki-farklar-17b233b188a1",
+      "category": "PostgreSQL",
+      "date": "2024"
+    },
+    {
+      "id": "10",
+      "title": {
+        "tr": "Spring Boot ile Resilience4j",
+        "en": "Resilience4j with Spring Boot"
+      },
+      "short_description": {
+        "tr": "Modern mikroservislerde Circuit Breaker, Rate Limiter, Retry ve TimeLimiter desenlerinin uygulanması.",
+        "en": "Implementing Circuit Breaker, Rate Limiter, Retry and TimeLimiter patterns in modern microservices."
+      },
+      "link": "https://medium.com/@celalaygar/spring-boot-ileresilience4j-9219294fe684",
+      "category": "Spring Boot",
+      "date": "2024"
+    },
+    {
+      "id": "11",
+      "title": {
+        "tr": "Postgresql de index tipleri",
+        "en": "Index Types in PostgreSQL"
+      },
+      "short_description": {
+        "tr": "B-Tree, Hash, GiST, SP-GiST, GIN ve BRIN indeks tipleri ve doğru kullanım senaryoları.",
+        "en": "B-Tree, Hash, GiST, SP-GiST, GIN and BRIN index types and optimal use case scenarios."
+      },
+      "link": "https://medium.com/@celalaygar/postgresql-de-index-tipleri-f1315cfb06a5",
+      "category": "PostgreSQL",
+      "date": "2024"
+    },
+    {
+      "id": "12",
+      "title": {
+        "tr": "Spring Boot üzerinde cron job'ları kullanmak",
+        "en": "Using Cron Jobs in Spring Boot"
+      },
+      "short_description": {
+        "tr": "@Scheduled anotasyonu ve cron ifadeleriyle zamanlanmış görevlerin konfigürasyonu ve yönetimi.",
+        "en": "Configuring and managing scheduled tasks with @Scheduled annotation and cron expressions."
+      },
+      "link": "https://medium.com/@celalaygar/spring-boot-üzerinde-cron-jobları-kullanmak-5edd336279cd",
+      "category": "Spring Boot",
+      "date": "2024"
+    },
+    {
+      "id": "13",
+      "title": {
+        "tr": "MongoDB'de indeksleme",
+        "en": "Indexing in MongoDB"
+      },
+      "short_description": {
+        "tr": "Single field, Compound, Multikey ve Geospatial indekslerle MongoDB sorgu optimizasyonu.",
+        "en": "Optimizing MongoDB query performance using single field, compound, multikey and geospatial indexes."
+      },
+      "link": "https://medium.com/@celalaygar/mongodbde-indeksleme-3f00143a1a59",
+      "category": "MongoDB",
+      "date": "2024"
+    },
+    {
+      "id": "14",
+      "title": {
+        "tr": "MongoDB ve SQL veritabanları arasında temel farklar",
+        "en": "Key Differences Between MongoDB and SQL Databases"
+      },
+      "short_description": {
+        "tr": "ACID vs BASE, şema esnekliği, yatay vs dikey ölçeklenebilirlik karşılaştırması.",
+        "en": "In-depth comparison of ACID vs BASE, schema flexibility, and horizontal vs vertical scalability."
+      },
+      "link": "https://medium.com/@celalaygar/mongodb-ve-sql-veritabanları-arasında-temel-farklar-dbec9aad4f7f",
+      "category": "Database",
+      "date": "2024"
+    },
+    {
+      "id": "15",
+      "title": {
+        "tr": "Spring Boot Security Örneği",
+        "en": "Spring Boot Security Example"
+      },
+      "short_description": {
+        "tr": "Spring Security 6 filtre zinciri, JWT token doğrulaması ve role dayalı yetkilendirme örneği.",
+        "en": "Spring Security 6 filter chain, JWT authentication and role-based authorization example."
+      },
+      "link": "https://medium.com/@celalaygar/spring-boot-security-örneği-62f344124f7d",
+      "category": "Security",
+      "date": "2024"
+    },
+    {
+      "id": "16",
+      "title": {
+        "tr": "Spring Boot, Spring MVC Anotasyon",
+        "en": "Spring Boot, Spring MVC Annotations"
+      },
+      "short_description": {
+        "tr": "@RestController, @GetMapping, @RequestBody, @PathVariable gibi sık kullanılan anotasyonların işlevleri.",
+        "en": "Comprehensive guide to core annotations like @RestController, @GetMapping, @RequestBody, @PathVariable."
+      },
+      "link": "https://medium.com/@celalaygar/spring-boot-ile-spring-mvc-1-478ebcce3756",
+      "category": "Spring Boot",
+      "date": "2024"
+    }
+  ],
+  "interviews": [
+    {
+      "id": "1",
+      "title": {
+        "tr": "Java, Spring Boot, Veritabanı & React Mülakat Soruları",
+        "en": "Java, Spring Boot, Database & React Interview Questions"
+      },
+      "short_description": {
+        "tr": "Backend ve frontend mimarisi, mikroservisler ve performans optimizasyonu konularını kapsayan mülakat soruları.",
+        "en": "Comprehensive interview questions covering backend and frontend architecture, microservices, and performance optimization."
+      },
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "Database",
+        "React"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-1/",
+      "date": "2024-08",
+      "icon": "fa-code"
+    },
+    {
+      "id": "2",
+      "title": {
+        "tr": "ELK, Docker ve K8S Mülakat Soruları",
+        "en": "ELK, Docker and K8S Interview Questions"
+      },
+      "short_description": {
+        "tr": "Konteynerleştirme, orkestrasyon ve merkezi loglama teknolojileri için mülakat soruları.",
+        "en": "Interview questions for containerization, orchestration, and centralized logging technologies."
+      },
+      "tags": [
+        "Docker",
+        "Kubernetes",
+        "ELK"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-2/",
+      "date": "2024-09",
+      "icon": "fa-docker"
+    },
+    {
+      "id": "3",
+      "title": {
+        "tr": "Spring & Mikroservisler Mülakat Soruları",
+        "en": "Spring & Microservices Interview Questions"
+      },
+      "short_description": {
+        "tr": "Spring Framework derinlikleri, servis keşfi, API Gateway ve dağıtık mimari soruları.",
+        "en": "Deep-dive questions on Spring Framework, service discovery, API Gateway and distributed architecture."
+      },
+      "tags": [
+        "Spring Boot",
+        "Microservices",
+        "Cloud"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-3/",
+      "date": "2024-10",
+      "icon": "fa-server"
+    },
+    {
+      "id": "4",
+      "title": {
+        "tr": "Kafka ve RabbitMQ Mülakat Soruları",
+        "en": "Kafka and RabbitMQ Interview Questions"
+      },
+      "short_description": {
+        "tr": "Mesaj kuyrukları, pub/sub mimarileri ve yüksek hacimli olay akışı (event streaming) soruları.",
+        "en": "Message queues, pub/sub architectures and high-throughput event streaming questions."
+      },
+      "tags": [
+        "Kafka",
+        "RabbitMQ",
+        "Streaming"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-4/",
+      "date": "2024-11",
+      "icon": "fa-diagram-project"
+    },
+    {
+      "id": "5",
+      "title": {
+        "tr": "ELK Stack Mülakat Soruları",
+        "en": "ELK Stack Interview Questions"
+      },
+      "short_description": {
+        "tr": "Elasticsearch indeksleme mimarisi, Logstash pipeline konfigürasyonu ve Kibana görselleştirme soruları.",
+        "en": "Elasticsearch indexing architecture, Logstash pipeline configuration and Kibana visualization questions."
+      },
+      "tags": [
+        "Elasticsearch",
+        "Logstash",
+        "Kibana"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-5/",
+      "date": "2024-12",
+      "icon": "fa-magnifying-glass-chart"
+    },
+    {
+      "id": "6",
+      "title": {
+        "tr": "Senior Seviye Kubernetes Mülakat Soruları",
+        "en": "Senior Level Kubernetes Interview Questions"
+      },
+      "short_description": {
+        "tr": "İleri düzey Pod lifecycle, Ingress, NetworkPolicy, HPA, Helm ve üretim ortamı K8s yönetimi.",
+        "en": "Advanced Pod lifecycle, Ingress, NetworkPolicy, HPA, Helm and production-grade K8s management."
+      },
+      "tags": [
+        "Kubernetes",
+        "DevOps",
+        "Senior Level"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-6/",
+      "date": "2025-01",
+      "icon": "fa-dharmachakra"
+    },
+    {
+      "id": "7",
+      "title": {
+        "tr": "Redis Senior Seviye Mülakat Soruları",
+        "en": "Redis Senior Level Interview Questions"
+      },
+      "short_description": {
+        "tr": "Redis veri yapıları, önbellekleme stratejileri, Sentinel, Cluster ve bellek optimizasyonu soruları.",
+        "en": "Redis data structures, caching strategies, Sentinel, Cluster and memory optimization questions."
+      },
+      "tags": [
+        "Redis",
+        "Caching",
+        "Senior Level"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-7/",
+      "date": "2025-02",
+      "icon": "fa-database"
+    },
+    {
+      "id": "8",
+      "title": {
+        "tr": "Kafka Architect: 140+ Soru & Debezium Çözümü",
+        "en": "Kafka Architect: 140+ Questions & Debezium Solutions"
+      },
+      "short_description": {
+        "tr": "140+ Senior Seviye Soru ve Debezium ile çözülen 10 gerçek dünya mimari senaryosu.",
+        "en": "140+ Senior Level Questions and 10 detailed real-world architectural scenarios solved with Debezium."
+      },
+      "tags": [
+        "Kafka",
+        "Debezium",
+        "Architect",
+        "CDC"
+      ],
+      "url": "https://celalaygar.github.io/main/interview_q-8/",
+      "date": "2025-03",
+      "icon": "fa-network-wired"
+    }
+  ],
+  "certificates": [
+    {
+      "id": "1",
+      "title": "Database Design and Programming with SQL",
+      "organization": "ORACLE ACADEMY",
+      "date": "26 June 2016",
+      "icon": "fa-database",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Database_Design_and_Programming_with_SQL.pdf"
+    },
+    {
+      "id": "2",
+      "title": "REACT ile Web Programcılığı",
+      "organization": "BTK AKADEMİ",
+      "date": "May 2025",
+      "icon": "fa-react",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/REACT_ile_Web_Programcılığı.pdf"
+    },
+    {
+      "id": "3",
+      "title": "Elasticsearch v8",
+      "organization": "BTK AKADEMİ",
+      "date": "June 2025",
+      "icon": "fa-server",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Elasticsearch_v8_Sertifika.pdf"
+    },
+    {
+      "id": "4",
+      "title": "Apache Kafka",
+      "organization": "BTK AKADEMİ",
+      "date": "May 2025",
+      "icon": "fa-code",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/Apache_Kafka.pdf"
+    },
+    {
+      "id": "5",
+      "title": "NoSQL - Doküman Veritabanları",
+      "organization": "BTK AKADEMİ",
+      "date": "May 2025",
+      "icon": "fa-database",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/NoSQL_Doküman_Veritabanları.pdf"
+    },
+    {
+      "id": "6",
+      "title": "JAVA ile Programlamaya Giriş",
+      "organization": "BTK AKADEMİ",
+      "date": "May 2025",
+      "icon": "fa-coffee",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/JAVA_ile_Programlamaya_Giriş_Sertifika.pdf"
+    },
+    {
+      "id": "7",
+      "title": "İleri Seviye Java",
+      "organization": "BTK AKADEMİ",
+      "date": "May 2025",
+      "icon": "fa-laptop-code",
+      "url": "https://raw.githubusercontent.com/celalaygar/pdfs/main/sertifikalar/%C4%B0leri_Seviye_Java_Sertifika.pdf"
+    }
+  ],
+  "books": [
+    {
+      "id": "1",
+      "title": "Borsa 101",
+      "author": "Aysel Gündoğdu",
+      "publisher": "SCALA Yayıncılık"
+    },
+    {
+      "id": "2",
+      "title": "Assassin's Creed - Shao Jun'un Kılıcı",
+      "author": "Senpai",
+      "publisher": "Senpai"
+    },
+    {
+      "id": "3",
+      "title": "Yönetim Becerileri",
+      "author": "Harvard Business Review Press",
+      "publisher": "OPTİMİST"
+    },
+    {
+      "id": "4",
+      "title": "Gerçekten Bilmeniz Gereken 50 Ekonomi Fikri",
+      "author": "Edmund Conways",
+      "publisher": "Domingo Yayınevi"
+    },
+    {
+      "id": "5",
+      "title": "Siber Araçlar Ansiklopedisi",
+      "author": "Mustafa Atakan Kasacı",
+      "publisher": "ABAKÜS KİTAP"
+    },
+    {
+      "id": "6",
+      "title": "Bilişimin Karanlık Yüzü",
+      "author": "Kamil Burlu",
+      "publisher": "Nirvana Yayınları"
+    },
+    {
+      "id": "7",
+      "title": "Ethical Hacking",
+      "author": "Ömer Çıtak",
+      "publisher": "ABAKÜS KİTAP"
+    },
+    {
+      "id": "8",
+      "title": "Spring Framework",
+      "author": "Mimar Aslan",
+      "publisher": "LEVEL"
+    }
+  ],
+  "hobbies": [
+    {
+      "id": "1",
+      "icon": "fa-chess",
+      "name": {
+        "en": "Playing Chess",
+        "tr": "Satranç Oynamak"
+      }
+    },
+    {
+      "id": "2",
+      "icon": "fa-film",
+      "name": {
+        "en": "Watching movies, Series, Anime",
+        "tr": "Film, Dizi, Anime İzlemek"
+      }
+    },
+    {
+      "id": "3",
+      "icon": "fa-tv",
+      "name": {
+        "en": "Following Technological Channels",
+        "tr": "Teknolojik Kanalları Takip Etmek"
+      }
+    },
+    {
+      "id": "4",
+      "icon": "fa-laptop-code",
+      "name": {
+        "en": "Learning New Technologies",
+        "tr": "Yeni Teknolojiler Öğrenmek"
+      }
+    },
+    {
+      "id": "5",
+      "icon": "fa-puzzle-piece",
+      "name": {
+        "en": "Solving puzzles (Sudoku, Word games, Logic problems)",
+        "tr": "Bulmaca Çözmek (Sudoku, Kelime oyunları, Mantık problemleri)"
+      }
+    },
+    {
+      "id": "6",
+      "icon": "fa-running",
+      "name": {
+        "en": "Running / Gym",
+        "tr": "Koşu / Spor Salonu"
+      }
+    },
+    {
+      "id": "7",
+      "icon": "fa-users",
+      "name": {
+        "en": "Attending meetups and conferences",
+        "tr": "Toplantılara ve Konferanslara Katılmak"
+      }
+    }
+  ],
+  "technologies": {
+    "backend": [
+      {
+        "name": "Java",
+        "level": 85
+      },
+      {
+        "name": "Spring Boot",
+        "level": 85
+      },
+      {
+        "name": "Microservices",
+        "level": 80
+      },
+      {
+        "name": "PostgreSql",
+        "level": 80
+      },
+      {
+        "name": "Oracle DB",
+        "level": 75
+      },
+      {
+        "name": "Mongo DB",
+        "level": 70
+      },
+      {
+        "name": "Kafka",
+        "level": 70
+      },
+      {
+        "name": "Docker",
+        "level": 70
+      },
+      {
+        "name": "Kubernetes",
+        "level": 60
+      }
+    ],
+    "frontend": [
+      {
+        "name": "Java Script",
+        "level": 85
+      },
+      {
+        "name": "TypeScript",
+        "level": 70
+      },
+      {
+        "name": "Next JS",
+        "level": 75
+      },
+      {
+        "name": "React JS",
+        "level": 75
+      },
+      {
+        "name": "Angular JS",
+        "level": 65
+      },
+      {
+        "name": "HTML 5",
+        "level": 96
+      },
+      {
+        "name": "CSS 3",
+        "level": 80
+      },
+      {
+        "name": "Bootstrap",
+        "level": 80
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": 65
+      }
+    ]
+  }
+}
